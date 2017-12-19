@@ -1,0 +1,158 @@
+@import "../../sass/sass/variables";
+
+.about_container_content {
+  &_vacancy-form {
+    padding: 30px 60px 41px 30px;
+    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-bottom: 57px;
+
+    &_header {
+      color: #231F20;
+      font-family: $font_ubuntu;
+      font-size: 30px;
+      font-weight: 500;
+      line-height: 35px;
+      padding-bottom: 16px;
+    }
+
+    &_text {
+      color: #7F7873;
+      font-family: $font_ubuntu;
+      font-size: 16px;
+      line-height: 24px;
+      width: 740px;
+    }
+
+    &_form {
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 20px;
+
+      &_group {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        margin-top: 10px;
+
+        &_label {
+          color: #231F20;
+          font-family: $font_ubuntu;
+          font-size: 16px;
+          font-weight: 500;
+          line-height: 22px;
+          text-align: right;
+        }
+
+        select {
+          padding: 13px 20px;
+          width: 395px;
+          border: 1px solid #E6E3E1;
+          background-color: #FFFFFF;
+          border-radius: 2px;
+          -webkit-appearance: none;
+          color: #231F20;
+          font-family: $font_ubuntu;
+          font-size: 14px;
+          line-height: 16px;
+          cursor: pointer;
+          outline: none;
+
+        }
+
+        &_arrow {
+          position: absolute;
+          font-size: 24px;
+          z-index: 1;
+          top: 12px;
+          right: 17px;
+          transform: rotate(90deg);
+          cursor: pointer;
+
+        }
+
+        &_input {
+          border: 1px solid #E6E3E1;
+          border-radius: 2px;
+          padding: 13px 20px;
+          width: 353px;
+          color: #231F20;
+          font-family: $font_ubuntu;
+          font-size: 14px;
+          line-height: 16px;
+        }
+
+        &_resume-label {
+          color: #FFFFFF;
+          font-family: $font_ubuntu;
+          font-size: 14px;
+          line-height: 16px;
+          cursor: pointer;
+          background-color: #7F7873;
+          padding: 15px 10px 13px 50px;
+          margin-right: 60px;
+          border-radius: 2px;
+
+        }
+
+        &_inputfile {
+
+          width: 0.1px;
+          height: 0.1px;
+          opacity: 0;
+          overflow: hidden;
+          position: absolute;
+          z-index: -1;
+
+          &_icon {
+            //@include sp__file_icon;
+            background: url(../../sass/sass/icons/file_icon.svg) no-repeat;
+            width: 15px;
+            height: 20px;
+            position: absolute;
+            left: 158px;
+          }
+        }
+
+        &_textarea {
+          margin-left: 33px;
+          width: 361px;
+          height: 82px;
+          border: 1px solid #E6E3E1;
+          border-radius: 2px;
+          padding: 20px 16px 0;
+          resize: none;
+          color: #231F20;
+          font-family: $font_ubuntu;
+          font-size: 14px;
+          line-height: 16px;
+          outline: none;
+        }
+
+        &_submit {
+          height: 44px;
+          padding: 0 15px;
+          border-radius: 2px;
+          background-color: #332C26;
+          margin: 20px auto 0;
+          color: #FFFFFF;
+          font-family: $font_ubuntu;
+          font-size: 16px;
+          font-weight: bold;
+          line-height: 22px;
+          text-align: center;
+          cursor: pointer;
+          outline: none;
+        }
+      }
+    }
+  }
+}

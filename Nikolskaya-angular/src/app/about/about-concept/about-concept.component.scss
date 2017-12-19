@@ -1,0 +1,39 @@
+@import "../../sass/sass/variables";
+
+.about_container_content {
+  display: flex;
+  flex-direction: column;
+
+  &_project {
+    display: flex;
+    flex-direction: column;
+    background-color: #FFFFFF;
+    padding: 25px 30px 30px;
+    border-radius: 0 0 4px 4px;
+    border: 1px solid #E6E3E1;
+    margin-bottom: 40px;
+
+    &_header {
+      color: #231F20;
+      font-family: $font_ubuntu;
+      font-size: 30px;
+      font-weight: 500;
+      padding-bottom: 16px;
+      width: 606px;
+      line-height: 42px;
+    }
+    &_text {
+      color: #7F7873;
+      font-family: $font_ubuntu;
+      font-size: 16px;
+      line-height: 24px;
+      width: 770px;
+      span:first-child {
+        margin-bottom: 25px;
+        display: block;
+      }
+    }
+
+
+  }
+}

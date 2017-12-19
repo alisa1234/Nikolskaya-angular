@@ -1,0 +1,48 @@
+@import "../sass/sass/_variables";
+@import "../sass/sass/_svg-sprite";
+@import "../sass/sass/_png-sprite";
+
+.main {
+  .content_menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 37px 40px;
+    &_about {
+      @include sp__Logo1;
+    }
+    &_other {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      font-family: $font_condensed;
+      height: 43px;
+      &_item {
+        color: #231F20;
+        font-size: 16px;
+        line-height: 18px;
+        margin-right: 40px;
+        cursor: pointer;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+      }
+      &_search {
+        @include sp__Search;
+        cursor: pointer;
+      }
+      &_basket {
+        @include sp__basket;
+        cursor: pointer;
+
+      }
+      &_personality {
+        @include sp__User;
+        margin-right: 40px;
+        cursor: pointer;
+      }
+    }
+  }
+}

@@ -1,0 +1,74 @@
+@import "../sass/sass/_variables";
+@import "../sass/sass/_svg-sprite";
+@import "../sass/sass/_png-sprite";
+
+
+.stocks-menu-tabs-all {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    background-color: #FFFFFF;
+
+    &_tabs {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      font-family: $font_condensed;
+      font-size: 16px;
+      line-height: 18px;
+      font-weight: 100;
+
+      &_item {
+        margin-right: 44px;
+        text-transform: uppercase;
+        padding: 25px 0;
+        cursor: pointer;
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        &_dropdown {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+        }
+
+      }
+      .active {
+        color: #A67B2C;
+        border-bottom: 3px solid #DAC69C;
+      }
+    }
+
+    &_calendar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #FFFFFF;
+      height: 42px;
+      width: 138px;
+      font-family: $font_ubuntu;
+      border-radius: 2px;
+      background-color: #4D4239;
+      box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+      font-size: 14px;
+      line-height: 16px;
+      font-weight: normal;
+
+      &_icon {
+        @include sp__calendar;
+        margin-right: 16px;
+      }
+
+    }
+    .calendar_widget {
+      position: absolute;
+      top: 0;
+      width: 387px;
+    }
+
+  }

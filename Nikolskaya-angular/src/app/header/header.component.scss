@@ -1,0 +1,232 @@
+@import "../sass/sass/_variables";
+@import "../sass/sass/_svg-sprite";
+@import "../sass/sass/_png-sprite";
+
+.main {
+  .header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+    background-color: #FFFFFF;
+    box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.1);
+    padding: 0 40px;
+
+    &_adress {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      &_name {
+        padding-right: 25px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        &_location {
+          @include sp__location;
+          margin-right: 10px;
+        }
+        span {
+          color: #7F7873;
+          font-family: $font_ubuntu;
+          font-size: 14px;
+          line-height: 17px;
+        }
+      }
+      &_time {
+        padding-right: 30px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        &_logo {
+          @include sp__time;
+          margin-right: 10px;
+        }
+        span {
+          color: #7F7873;
+          font-family: $font_ubuntu;
+          font-size: 14px;
+          line-height: 17px;
+        }
+      }
+      &_language {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        ul {
+          background: url(../sass/images/language.png) no-repeat;
+          width: 22px;
+          height: 14px;
+
+          li {
+            display: none;
+          }
+        }
+
+        &_triangle {
+          @include sp__Triangle2;
+          height: 6px;
+          width: 8px;
+          margin-left: 7px;
+        }
+      }
+
+    }
+    &_tabs {
+      display: flex;
+      flex-direction: row;
+      &_search {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding-right: 20px;
+        &_logo {
+          @include sp__Search;
+          margin-right: 10px;
+          cursor: pointer;
+        }
+        input {
+          height: 17px;
+          width: 80px;
+          color: #7F7873;
+          font-family: $font_ubuntu;
+          font-size: 14px;
+          line-height: 17px;
+          border: none;
+          outline: none;
+        }
+      }
+      &_login {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding-right: 30px;
+        cursor: pointer;
+        &_logo {
+          @include sp__User;
+          margin-right: 10px
+        }
+        span {
+          height: 17px;
+          width: 32px;
+          color: #231F20;
+          font-family: $font_ubuntu;
+          font-size: 14px;
+          line-height: 17px;
+        }
+      }
+      &_bucket {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        cursor: pointer;
+        &_logo {
+          @include sp__basket;
+          margin-right: 10px;
+        }
+        span {
+          height: 17px;
+          width: 55px;
+          color: #231F20;
+          font-family: $font_ubuntu;
+          font-size: 14px;
+          line-height: 17px;
+        }
+      }
+
+    }
+  }
+  .menu-tabs {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 35px 40px;
+    &_menu {
+      display: flex;
+      flex-direction: row;
+      font-family: $font_condensed;
+      font-size: 16px;
+      color: #231F20;
+      font-weight: 600;
+      line-height: 20px;
+      text-align: center;
+      text-transform: uppercase;
+      &_item {
+        padding-right: 40px;
+        cursor: pointer;
+
+        a {
+          text-decoration: none;
+          color: inherit;
+        }
+
+        &:last-child {
+          padding-right: 0;
+        }
+      }
+    }
+    &_logo {
+      @include sp__Logo;
+      margin-left: 5px;
+      cursor: pointer;
+    }
+    &_addit {
+      display: flex;
+      flex-direction: row;
+      &_delivery {
+        display: flex;
+        flex-direction: row;
+        padding-right: 30px;
+        font-family: $font_ubuntu;
+        font-size: 14px;
+        line-height: 17px;
+        text-align: right;
+        color: #7F7873;
+        &_item {
+          padding-right: 20px;
+          cursor: pointer;
+
+          a {
+            color: inherit;
+            text-decoration: none;
+          }
+
+          &:last-child {
+            padding-right: 0;
+          }
+
+        }
+      }
+      &_socials {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        &_item {
+          margin-right: 18px;
+          cursor: pointer;
+
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+        .vk {
+          @include sp__vk;
+        }
+        .facebook {
+          @include sp__facebook;
+        }
+        .twitter {
+          @include sp__twitter;
+        }
+        .instagram {
+          @include sp__instagram;
+        }
+        .pinterest {
+          @include sp__pinterest;
+        }
+      }
+    }
+  }
+}

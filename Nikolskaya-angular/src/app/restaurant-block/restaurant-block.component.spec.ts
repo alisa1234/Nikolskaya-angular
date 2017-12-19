@@ -1,0 +1,25 @@
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+
+import { RestaurantBlockComponent } from './restaurant-block.component';
+
+describe('RestaurantBlockComponent', () => {
+  let component: RestaurantBlockComponent;
+  let fixture: ComponentFixture<RestaurantBlockComponent>;
+
+  beforeEach(async(() => {
+    TestBed.configureTestingModule({
+      declarations: [ RestaurantBlockComponent ]
+    })
+    .compileComponents();
+  }));
+
+  beforeEach(() => {
+    fixture = TestBed.createComponent(RestaurantBlockComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
+
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
+});

@@ -1,0 +1,21 @@
+<div class="main">
+  <div class="menu-tabs_all">
+  <div class="menu-tabs_all_tabs">
+    <div (click)="chooseMenu('all')" class="menu-tabs_all_tabs_item" [class.active]="type_menu['all']">Все</div>
+    <div (click)="chooseMenu('burgers')" class="menu-tabs_all_tabs_item" [class.active]="type_menu['burgers']">Бургеры</div>
+    <div (click)="chooseMenu('noodles')" class="menu-tabs_all_tabs_item" [class.active]="type_menu['noodles']">Лапша</div>
+    <div (click)="chooseMenu('sandwiches')" class="menu-tabs_all_tabs_item" [class.active]="type_menu['sandwiches']">Сендвичи</div>
+    <div (click)="chooseMenu('pizza')" class="menu-tabs_all_tabs_item" [class.active]="type_menu['pizza']">Пицца</div>
+    <div class="menu-tabs_all_tabs_item">
+      <div class="menu-tabs_all_tabs_item_dropdown">
+        <ul>
+          <li>Еще</li>
+        </ul>
+        <div class="header_adress_language_triangle"></div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+</div>

@@ -1,0 +1,37 @@
+<div class="wrapper">
+  <div class="main">
+    <div class="banner event">
+      <img src="app/sass/images/events-list-banner2.png">
+    </div>
+
+    <app-submenu-calendar></app-submenu-calendar>
+
+    <div class="events_list">
+      <app-events-block routerLink="/event"></app-events-block>
+      <app-events-block></app-events-block>
+      <app-events-block></app-events-block>
+      <div class="slider">
+        <owl-carousel [options]="{items: 1, dots: false,nav: true, navText: ['','']}" [carouselClasses]="['owl-theme', 'row', 'sliding']">
+          <div class="item"><img src="app/sass/images/slider-banner.png"></div>
+          <div class="item"><img src="app/sass/images/slider-banner.png"></div>
+          <div class="item"><img src="app/sass/images/slider-banner.png"></div>
+          <div class="item"><img src="app/sass/images/slider-banner.png"></div>
+        </owl-carousel>
+      </div>
+      <app-events-block></app-events-block>
+      <app-events-block></app-events-block>
+      <app-events-block></app-events-block>
+      <app-events-block></app-events-block>
+      <app-events-block></app-events-block>
+      <app-events-block></app-events-block>
+      <app-events-block></app-events-block>
+      <app-events-block></app-events-block>
+      <app-events-block></app-events-block>
+
+    </div>
+
+    <div class="events_show-more">Показать еще</div>
+
+  </div>
+</div>
+<app-instagram-content></app-instagram-content>

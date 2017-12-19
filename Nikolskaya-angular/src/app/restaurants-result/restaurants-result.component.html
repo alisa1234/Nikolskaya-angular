@@ -1,0 +1,85 @@
+<app-submenu></app-submenu>
+<div class="main_content">
+  <div class="restaurants_choosing">
+    <div class="restaurants_choosing_item active" id="restaurants">
+      <div class="restaurants_choosing_item_text">
+        <div class="restaurants_choosing_item_text_name">Рестораны</div>
+        <div class="restaurants_choosing_item_text_quantity">6</div>
+      </div>
+      <div class="restaurants_choosing_item_rectangle"></div>
+    </div>
+    <div class="restaurants_choosing_item" id="eat">
+      <div class="restaurants_choosing_item_text">
+        <div class="restaurants_choosing_item_text_name">Блюда</div>
+        <div class="restaurants_choosing_item_text_quantity">8</div>
+      </div>
+      <div class="restaurants_choosing_item_rectangle"></div>
+    </div>
+  </div>
+  <div class="content_corners">
+    <div class="content_corners_items">
+       <app-restaurant-block></app-restaurant-block>
+       <app-restaurant-block></app-restaurant-block>
+       <app-restaurant-block></app-restaurant-block>
+       <app-restaurant-block></app-restaurant-block>
+       <app-restaurant-block></app-restaurant-block>
+       <app-restaurant-block></app-restaurant-block>
+    </div>
+  </div>
+</div>
+
+
+<div class="main_content">
+  <div class="dish-output">
+    <div class="restaurants_choosing">
+      <div class="restaurants_choosing_item active" id="restaurants_dish" data-item-type="dish">
+        <div class="restaurants_choosing_item_text">
+          <div class="restaurants_choosing_item_text_name">Блюда</div>
+          <div class="restaurants_choosing_item_text_quantity">6</div>
+        </div>
+        <div class="restaurants_choosing_item_rectangle"></div>
+      </div>
+      <div class="restaurants_choosing_item" id="eat_dish" data-item-type="dish">
+        <div class="restaurants_choosing_item_text">
+          <div class="restaurants_choosing_item_text_name">Рестораны</div>
+          <div class="restaurants_choosing_item_text_quantity">8</div>
+        </div>
+        <div class="restaurants_choosing_item_rectangle"></div>
+      </div>
+    </div>
+    <div class="dish-output_result">
+      <div class="dish-output_result_overview">
+        <div class="dish-output_result_overview_header">
+          <div class="dish-output_result_overview_header_name">
+            <div class="dish-output_result_overview_header_name_restaurant">Burger Factory</div>
+            <div class="dish-output_result_overview_header_name_tags">
+              <div class="content_corners_items_item_content-kitchen">
+                <div class="content_corners_items_item_content-kitchen_item">Бургеры</div>
+                <div class="content_corners_items_item_content-kitchen_delimiter"></div>
+                <div class="content_corners_items_item_content-kitchen_item">Салаты</div>
+                <div class="content_corners_items_item_content-kitchen_delimiter"></div>
+                <div class="content_corners_items_item_content-kitchen_item">Сендвичи</div>
+              </div>
+            </div>
+          </div>
+          <div class="dish-output_result_overview_header_time">
+            <div class="content_corners_items_item_content_time">15 мин</div>
+          </div>
+        </div>
+        <div class="dish-output_result_overview_text">
+          За несколько десятков лет
+          рамен превратился из еды японских рабочих кварталов в мировой культурный
+          феномен. Безусловно, такой быстрый успех был бы невозможен без рамен-шопов,
+          которые и популяризировали …
+        </div>
+      </div>
+      <div class="dish-output_result_items">
+        <app-dish-block></app-dish-block>
+        <app-dish-block></app-dish-block>
+        <app-dish-block></app-dish-block>
+        <app-dish-block></app-dish-block>
+      </div>
+    </div>
+
+  </div>
+</div>

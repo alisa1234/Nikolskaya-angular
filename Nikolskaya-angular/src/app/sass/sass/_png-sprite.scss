@@ -1,0 +1,104 @@
+%sprite_png {
+    content: '';
+    background: url('../sass/sass/inc/png-sprite.png') no-repeat;
+    background-size: 210px 172px;
+    display: inline-block;
+
+}
+
+@mixin sp__AMEX {
+    @extend %sprite_png;
+    background-position: -0px -152px;
+    width: 58px;
+    height: 20px;
+}
+@mixin sp__Logo1 {
+    @extend %sprite_png;
+    background-position: -0px -0px;
+    width: 160px;
+    height: 39px;
+}
+@mixin sp__MasterCard {
+    @extend %sprite_png;
+    background-position: -165px -0px;
+    width: 45px;
+    height: 28px;
+}
+@mixin sp__PayPal {
+    @extend %sprite_png;
+    background-position: -63px -152px;
+    width: 61px;
+    height: 18px;
+}
+@mixin sp__Triangle2 {
+    @extend %sprite_png;
+    background-position: -186px -99px;
+    width: 8px;
+    height: 6px;
+}
+@mixin sp__Visa {
+    @extend %sprite_png;
+    background-position: -165px -57px;
+    width: 41px;
+    height: 14px;
+}
+@mixin sp__bar {
+    @extend %sprite_png;
+    background-position: -108px -98px;
+    width: 34px;
+    height: 49px;
+}
+@mixin sp__basket_small {
+    @extend %sprite_png;
+    background-position: -165px -99px;
+    width: 16px;
+    height: 20px;
+}
+@mixin sp__decus {
+    @extend %sprite_png;
+    background-position: -165px -33px;
+    width: 45px;
+    height: 19px;
+}
+@mixin sp__facebook_sircle {
+    @extend %sprite_png;
+    background-position: -54px -98px;
+    width: 49px;
+    height: 49px;
+}
+@mixin sp__instagram_sircle {
+    @extend %sprite_png;
+    background-position: -0px -98px;
+    width: 49px;
+    height: 49px;
+}
+@mixin sp__pinterest_sircle {
+    @extend %sprite_png;
+    background-position: -108px -44px;
+    width: 49px;
+    height: 49px;
+}
+@mixin sp__search_small {
+    @extend %sprite_png;
+    background-position: -165px -76px;
+    width: 18px;
+    height: 18px;
+}
+@mixin sp__twitter_sircle {
+    @extend %sprite_png;
+    background-position: -54px -44px;
+    width: 49px;
+    height: 49px;
+}
+@mixin sp__user_small {
+    @extend %sprite_png;
+    background-position: -188px -76px;
+    width: 14px;
+    height: 18px;
+}
+@mixin sp__vk_sircle {
+    @extend %sprite_png;
+    background-position: -0px -44px;
+    width: 49px;
+    height: 49px;
+}

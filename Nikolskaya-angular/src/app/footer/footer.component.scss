@@ -1,0 +1,233 @@
+@import "../sass/sass/_variables";
+@import "../sass/sass/_svg-sprite";
+@import "../sass/sass/_png-sprite";
+
+.main {
+  .subscribe_content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 1px solid #D9D5D2;
+    padding: 33px 0;
+    width: 1200px;
+    margin: 0 auto;
+
+    &_socials {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      &_vk {
+        @include sp__vk_sircle;
+        margin-right: 10px;
+        cursor: pointer;
+      }
+      &_fb {
+        @include sp__facebook_sircle;
+        margin-right: 10px;
+        cursor: pointer;
+      }
+      &_twit {
+        @include sp__twitter_sircle;
+        margin-right: 10px;
+        cursor: pointer;
+      }
+      &_inst {
+        @include sp__instagram_sircle;
+        margin-right: 10px;
+        cursor: pointer;
+      }
+      &_pint {
+        @include sp__pinterest_sircle;
+        cursor: pointer;
+      }
+    }
+    &_main {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      font-family: $font_ubuntu;
+      align-items: center;
+      &_text {
+        color: #1A1718;
+        font-size: 16px;
+        line-height: 24px;
+        margin-right: 10px;
+      }
+      &_form {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        input[type=email] {
+          border: 1px solid #CCC8C4;
+          border-radius: 2px;
+          background-color: #FFFFFF;
+          padding: 10px;
+          margin-right: 10px;
+          font-size: 16px;
+        }
+        button {
+          height: 44px;
+          width: 147px;
+          border-radius: 2px;
+          background-color: #332C26;
+          border: none;
+          color: #FFFFFF;
+          font-size: 16px;
+          line-height: 16px;
+          cursor: pointer;
+          outline: none;
+        }
+      }
+    }
+  }
+  .footer {
+    display: flex;
+    padding: 0 40px;
+    flex-direction: column;
+    background-color: #FFFFFF;
+    box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.1);
+    &_main {
+      display: flex;
+      flex-direction: row;
+      padding: 74px 0 32px;
+      width: 100%;
+      justify-content: space-between;
+
+      &_menu {
+        display: flex;
+        flex-direction: column;
+        width: 297px;
+
+        &_header {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+
+          &_item {
+            font-size: 16px;
+            color: #231F20;
+            line-height: 16px;
+            font-family: $font_ubuntu;
+            cursor: pointer;
+          }
+        }
+
+        &_items {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          padding: 20px 12px 0 0;
+          &_item {
+            font-size: 13px;
+            color: #7F7873;
+            line-height: 13px;
+            font-family: $font_ubuntu;
+            cursor: pointer;
+          }
+
+        }
+
+      }
+
+      &_contacts {
+        display: flex;
+        flex-direction: column;
+
+        &_header {
+          font-size: 16px;
+          color: #231F20;
+          line-height: 16px;
+          font-family: $font_ubuntu;
+          padding-bottom: 15px;
+
+        }
+
+        &_blocks {
+          display: flex;
+          flex-direction: row;
+
+          &_items {
+
+            &_item {
+              font-size: 13px;
+              color: #1A1718;
+              line-height: 26px;
+              font-family: $font_ubuntu;
+            }
+
+            &:first-child {
+              padding-right: 40px;
+            }
+          }
+        }
+
+      }
+    }
+
+    &_info {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      width: 100%;
+      padding: 0 0 32px;
+
+      &_copyright {
+        font-size: 13px;
+        color: #7F7873;
+        line-height: 13px;
+        font-family: $font_ubuntu;
+        font-weight: 500;
+        padding-right: 81px;
+        width: 249px;
+
+      }
+
+      &_payments {
+        display: flex;
+        flex-direction: row;
+        margin-right: 156px;
+        align-items: center;
+
+        &_visa {
+          @include sp__Visa;
+          margin-right: 19px;
+        }
+        &_american-express {
+          @include sp__AMEX;
+          margin-right: 21px;
+        }
+
+        &_master-card {
+          @include sp__MasterCard;
+          margin-right: 24px;
+
+        }
+
+        &_paypal {
+          @include sp__PayPal;
+        }
+
+      }
+
+      &_made-by {
+        display: flex;
+        flex-direction: row;
+
+        &_text {
+          font-size: 13px;
+          color: #1A1718;
+          line-height: 24px;
+          font-family: $font_ubuntu;
+          padding-right: 10px;
+        }
+
+        &_icon {
+          @include sp__decus;
+          cursor: pointer;
+        }
+
+      }
+    }
+  }
+}

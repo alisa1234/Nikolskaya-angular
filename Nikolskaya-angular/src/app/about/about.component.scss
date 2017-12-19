@@ -1,0 +1,69 @@
+@import "../sass/sass/variables";
+
+//:host(.host) {
+//  width: 1180px;
+//  margin: 0 auto 40px;
+//  padding: 50px 50px 0;
+//  background-color: #F8F5F5;
+//  display: flex;
+//  flex-direction: row;
+//  justify-content: space-between;
+//}
+.about_container {
+  width: 1180px;
+  margin: 0 auto 40px;
+  padding: 50px 50px 0;
+  background-color: #F8F5F5;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  &_nav {
+    height: 160px;
+    background-color: #FFFFFF;
+    width: 230px;
+    padding: 30px 20px 30px 30px;
+
+
+    &_item {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      cursor: pointer;
+      margin-bottom: 52px;
+
+      &:last-child {
+
+        margin-bottom: 0;
+      }
+
+      &_text {
+        color: #231F20;
+        font-family: $font_ubuntu;
+        text-transform: uppercase;
+        font-size: 16px;
+        line-height: 18px;
+
+      }
+
+      &_icon {
+        color: #231F20;
+        font-family: $font_ubuntu;
+        text-transform: uppercase;
+        font-size: 16px;
+        line-height: 18px;
+      }
+    }
+
+    .active {
+
+      .about_container_nav_item_text {
+        color: #A67B2C;
+      }
+      .about_container_nav_item_icon {
+        color: #A67B2C;
+      }
+    }
+  }
+
+}

@@ -1,0 +1,37 @@
+@import "../sass/sass/_variables";
+@import "../sass/sass/_svg-sprite";
+@import "../sass/sass/_png-sprite";
+
+.main {
+  .instagram_content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 40px 40px 0;
+    font-family: $font_ubuntu;
+
+    &_item {
+      width: 263px;
+      height: 263px;
+      position: relative;
+
+      &_main-text {
+        color: #7F7873;
+        font-size: 26px;
+        font-weight: 500;
+        line-height: 30px;
+        padding-top: 76px;
+        left: 50%;
+        position: absolute;
+        transform: translateX(-50%);
+
+      }
+    }
+    .slider-footer_delivery_moreinfo-text {
+      width: 100%;
+      top: 55%;
+      left: 54%;
+      transform: translate(-50%, -55%)
+    }
+  }
+}

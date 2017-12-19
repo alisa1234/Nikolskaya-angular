@@ -1,0 +1,252 @@
+//@import "../about/about-vacancies/about-vacancies.component";
+@import "../footer/footer.component";
+
+agm-map {
+  height: 500px;
+}
+.contacts {
+  //width: auto;
+  margin: 0 auto 40px;
+  background-color: #F8F5F5;
+  padding: 32px 50px 38px 50px;
+  display: flex;
+  flex-direction: column;
+  //align-items: flex-start;
+
+  &_breadcrumbs {
+    color: #7F7873;
+    font-size: 13px;
+    line-height: 14px;
+    font-family: $font_ubuntu;
+    padding-bottom: 27px;
+  }
+
+  &_info {
+
+    .delivery_info_overview_header {
+      padding-bottom: 0;
+    }
+
+    &_header {
+        color: #231F20;
+        font-family: $font_ubuntu;
+        font-size: 30px;
+        font-weight: 500;
+        line-height: 35px;
+    }
+
+    &_main {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+
+      &_connections {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        &_delivery {
+          padding-top: 70px;
+          margin-bottom: 100px;
+        }
+        &_subscribe_content_socials {
+          &_vk {
+            @include sp__vk_circle-white;
+            cursor: pointer;
+
+          }
+          &_fb {
+            @include sp__facebook_circle-white;
+            cursor: pointer;
+
+
+          }
+          &_twit {
+            @include sp__twitter-circle-white;
+            cursor: pointer;
+
+
+          }
+          &_inst {
+            @include sp__instagram_circle-white;
+            cursor: pointer;
+
+
+          }
+          &_pint {
+            @include sp__pinterest-circle-white;
+            cursor: pointer;
+
+
+          }
+        }
+      }
+
+      &_form {
+        padding: 23px 30px 30px 30px;
+        background-color: #FFFFFF;
+        display: flex;
+        flex-direction: column;
+        //width: 442px;442
+        //height: 388px;
+        margin-right: 67px;
+
+        &_header {
+          color: #231F20;
+          font-family: $font_ubuntu;
+          font-size: 18px;
+          font-weight: 500;
+          line-height: 21px;
+          padding-bottom: 17px;
+          border-bottom: 1px solid #CCC8C4;
+        }
+
+        &_form {
+          margin: 0 auto;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: space-between;
+          padding-top: 20px;
+
+
+
+          &_rectangle {
+            height: 1px;
+            width: 442px;
+            background-color: #CCC8C4;
+            //box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+          }
+
+          &_group {
+            position: relative;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            margin-top: 10px;
+
+            &_label {
+              color: #231F20;
+              font-family: $font_ubuntu;
+              font-size: 16px;
+              font-weight: 500;
+              line-height: 22px;
+              text-align: right;
+            }
+
+            select {
+              padding: 13px 20px;
+              width: 395px;
+              border: 1px solid #E6E3E1;
+              background-color: #FFFFFF;
+              border-radius: 2px;
+              -webkit-appearance: none;
+              color: #231F20;
+              font-family: $font_ubuntu;
+              font-size: 14px;
+              line-height: 16px;
+              cursor: pointer;
+              outline: none;
+
+            }
+
+            &_arrow {
+              position: absolute;
+              font-size: 24px;
+              z-index: 1;
+              top: 12px;
+              right: 17px;
+              transform: rotate(90deg);
+              cursor: pointer;
+
+            }
+
+            &_input {
+              border: 1px solid #E6E3E1;
+              border-radius: 2px;
+              padding: 13px 20px;
+              width: 353px;
+              color: #231F20;
+              font-family: $font_ubuntu;
+              font-size: 14px;
+              line-height: 16px;
+            }
+
+            &_textarea {
+              margin-left: 33px;
+              width: 361px;
+              height: 82px;
+              border: 1px solid #E6E3E1;
+              border-radius: 2px;
+              padding: 20px 16px 0;
+              resize: none;
+              color: #231F20;
+              font-family: $font_ubuntu;
+              font-size: 14px;
+              line-height: 16px;
+              outline: none;
+            }
+
+            &_submit {
+              height: 44px;
+              padding: 0 15px;
+              border-radius: 2px;
+              background-color: #332C26;
+              margin: 20px auto 0;
+              color: #FFFFFF;
+              font-family: $font_ubuntu;
+              font-size: 16px;
+              font-weight: bold;
+              line-height: 22px;
+              text-align: center;
+              cursor: pointer;
+              outline: none;
+            }
+          }
+        }
+
+      }
+    }
+  }
+
+
+  &_all {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 40px;
+
+    &_block {
+      display: flex;
+      flex-direction: column;
+
+      .footer_main_contacts_header {
+        padding-bottom: 20px;
+      }
+    }
+  }
+
+  .subscribe_content_socials {
+    padding-top: 101px;
+    width: 285px;
+  }
+
+  .main_map {
+    padding:40px 0;
+  }
+
+}
+
+.contacts-main {
+  .subscribe_content {
+    padding: 0 0 30px;
+
+    .subscribe_content_socials {
+      padding-top: 0;
+    }
+  }
+}

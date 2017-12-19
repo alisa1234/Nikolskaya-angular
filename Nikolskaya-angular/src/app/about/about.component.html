@@ -1,0 +1,19 @@
+<div class="about_container">
+  <div class="about_container_nav">
+    <div class="about_container_nav_item" [class.active]="type_content['concept']==false" (click)="showContent('concept')">
+      <div class="about_container_nav_item_text">Концепция</div>
+      <div class="about_container_nav_item_icon">&rsaquo;</div>
+    </div>
+    <div class="about_container_nav_item" [class.active]="type_content['news']==false" (click)="showContent('news')">
+      <div class="about_container_nav_item_text">Новости</div>
+      <div class="about_container_nav_item_icon">&rsaquo;</div>
+    </div>
+    <div class="about_container_nav_item" [class.active]="type_content['vacancies']==false" (click)="showContent('vacancies')">
+      <div class="about_container_nav_item_text">Вакансии</div>
+      <div class="about_container_nav_item_icon">&rsaquo;</div>
+    </div>
+  </div>
+  <app-about-concept [hidden]="type_content['concept']"></app-about-concept>
+  <app-about-news [hidden]="type_content['news']"></app-about-news>
+  <app-about-vacancies [hidden]="type_content['vacancies']"></app-about-vacancies>
+</div>

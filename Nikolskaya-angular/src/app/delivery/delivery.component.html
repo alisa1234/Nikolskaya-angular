@@ -1,0 +1,82 @@
+<div class="main">
+  <div class="delivery_banner">
+    <div class="delivery_banner_header">Идеальная доставка вкуснейшей еды</div>
+    <div class="delivery_banner_info">
+      <div class="delivery_banner_info_block">
+        <div class="delivery_banner_info_block_circle">
+          <div class="delivery_banner_info_block_circle_time"></div>
+        </div>
+        <div class="delivery_banner_info_block_text">Доставка в течение часа</div>
+      </div>
+      <div class="delivery_banner_info_block">
+        <div class="delivery_banner_info_block_circle">
+          <div class="delivery_banner_info_block_circle_currenсy"></div>
+        </div>
+        <div class="delivery_banner_info_block_text">Бесплатно от 1000 рублей</div>
+      </div>
+      <div class="delivery_banner_info_block">
+        <div class="delivery_banner_info_block_circle">
+          <div class="delivery_banner_info_block_circle_card"></div>
+        </div>
+        <div class="delivery_banner_info_block_text">Оплачивайте картами и наличными</div>
+      </div>
+    </div>
+    <div class="delivery_banner_button">
+      <div class="delivery_banner_button_text">Заказать доставку</div>
+    </div>
+
+  </div>
+</div>
+<div class="main">
+  <div class="delivery_info">
+    <div class="delivery_info_breadcrumbs">Главная / Доставка и оплата</div>
+    <div class="delivery_info_overview">
+      <div class="delivery_info_overview_header">
+        <div class="delivery_info_overview_header_text">Доставка и оплата</div>
+        <div class="delivery_info_overview_header_showmore"><span>Подробнее</span></div>
+      </div>
+      <div class="delivery_info_overview_text">
+                <span>Купить очень просто — выбираете товар в разделе,
+                    который Вас интересует, нажимаете на «корзина»
+                    и товар попадает в корзину. Далее нажимаете на «корзина»,
+                    затем оформляете заказ: введя адрес доставки, электронную почту
+                    и Ваш контактный телефон. После чего, в течении нескольких минут
+                    (режим работы с 09.00 до 21.00 по МСК) с Вами свяжется личный менеджер
+                    и согласует условия оплаты и доставки товара.
+                </span>
+        <span>Ежегодно наш сайт проходит аудит безопасности по
+                    международному стандарту и у нас есть все сертификаты
+                    соответствия на хранение персональных данных в соответствии с
+                    законом ФЗ 152 «О персональных данных». Наличие криптографического
+                    протокола TLS гарантирует безопасность передачи данных в сети и
+                    защиту от фишинга.
+                </span>
+      </div>
+    </div>
+    <div class="delivery_info_payments">
+      <div class="delivery_info_payments_header">Способ оплаты</div>
+      <div class="delivery_info_payments_methods">
+        <div class="delivery_info_payments_methods_item"></div>
+      </div>
+    </div>
+    <div class="main_map">
+      <div class="main_map_widget">
+        <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom">
+          <agm-marker [latitude]="lat" [longitude]="lng">
+            <agm-snazzy-info-window [maxWidth]="200" [closeWhenOthersOpen]="true" [isOpen]="true">
+              <ng-template>
+                My first Snazzy Info Window!
+              </ng-template>
+            </agm-snazzy-info-window>
+          </agm-marker>
+        </agm-map>
+      </div>
+      <div class="main_map_buttons">
+        <div class="main_map_buttons_button active"><div class="main_map_buttons_button_text">Зона доставки</div></div>
+        <div class="main_map_buttons_button"><div class="main_map_buttons_button_text">Парковки</div></div>
+        <div class="main_map_buttons_button"><div class="main_map_buttons_button_text">От метро</div></div>
+        <div class="main_map_buttons_button"><div class="main_map_buttons_button_text">Схема зала</div></div>
+      </div>
+    </div>
+  </div>
+</div>
