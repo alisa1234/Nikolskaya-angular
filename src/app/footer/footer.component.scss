@@ -12,10 +12,21 @@
     width: 1200px;
     margin: 0 auto;
 
+    @media screen and (max-width: 768px) {
+      width: 100%;
+      flex-direction: column;
+      padding: 30px 0 20px;
+    }
+
     &_socials {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
+
+      @media screen and (max-width: 768px) {
+        margin: 0 auto 20px;
+        max-width: 420px;
+      }
 
       &_vk {
         @include sp__vk_sircle;
@@ -48,11 +59,25 @@
       justify-content: space-between;
       font-family: $font_ubuntu;
       align-items: center;
+
+      @media screen and (max-width: 768px) {
+        flex-direction: column;
+      }
+
       &_text {
         color: #1A1718;
         font-size: 16px;
         line-height: 24px;
         margin-right: 10px;
+
+        @media screen and (max-width: 768px) {
+          width: calc(100% - 80px);
+          margin: 0 40px 10px;
+          color: #6C6560;
+          font-size: 13px;
+          line-height: 20px;
+          text-align: center;
+        }
       }
       &_form {
         display: flex;
@@ -65,6 +90,12 @@
           padding: 10px;
           margin-right: 10px;
           font-size: 16px;
+
+          @media screen and (max-width: 768px) {
+            width: 130px;
+            font-size: 13px;
+            line-height: 13px;
+          }
         }
         button {
           height: 44px;
@@ -78,6 +109,12 @@
           cursor: pointer;
           outline: none;
         }
+        @media screen and (max-width: 768px) {
+          width: 119px;
+          font-size: 13px;
+          line-height: 13px;
+        }
+
       }
     }
   }
@@ -87,6 +124,11 @@
     flex-direction: column;
     background-color: #FFFFFF;
     box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.1);
+
+    @media screen and (max-width: 768px) {
+      width: calc(100% - 40px);
+      padding: 0 20px;
+    }
     &_main {
       display: flex;
       flex-direction: row;
@@ -94,10 +136,19 @@
       width: 100%;
       justify-content: space-between;
 
+      @media screen and (max-width: 768px) {
+        flex-direction: column;
+        padding: 20px 0 32px;
+      }
+
       &_menu {
         display: flex;
         flex-direction: column;
         width: 297px;
+
+        @media screen and (max-width: 768px) {
+          width: 100%;
+        }
 
         &_header {
           display: flex;
@@ -110,6 +161,19 @@
             line-height: 16px;
             font-family: $font_ubuntu;
             cursor: pointer;
+
+            @media screen and (max-width: 768px) {
+              font-size: 13px;
+              font-weight: 500;
+              line-height: 13px;
+            }
+
+            &:last-child {
+              display: none;
+              @media screen and (max-width: 768px) {
+                display: block;
+              }
+            }
           }
         }
 
@@ -134,6 +198,10 @@
         display: flex;
         flex-direction: column;
 
+        @media screen and (max-width: 768px) {
+          margin-top: 30px;
+        }
+
         &_header {
           font-size: 16px;
           color: #231F20;
@@ -147,13 +215,26 @@
           display: flex;
           flex-direction: row;
 
+          @media screen and (max-width: 768px) {
+            flex-direction: column;
+          }
+
           &_items {
+
+            @media screen and (max-width: 768px) {
+              margin-top: 10px;
+            }
 
             &_item {
               font-size: 13px;
               color: #1A1718;
               line-height: 26px;
               font-family: $font_ubuntu;
+
+              @media screen and (max-width: 768px) {
+
+                line-height: 20px;
+              }
             }
 
             &:first-child {
@@ -172,6 +253,10 @@
       width: 100%;
       padding: 0 0 32px;
 
+      @media screen and (max-width: 768px) {
+        flex-direction: column;
+      }
+
       &_copyright {
         font-size: 13px;
         color: #7F7873;
@@ -181,6 +266,13 @@
         padding-right: 81px;
         width: 249px;
 
+        @media screen and (max-width: 768px) {
+          padding: 0;
+          width: 100%;
+          margin-bottom: 30px;
+          text-align: center;
+        }
+
       }
 
       &_payments {
@@ -188,6 +280,10 @@
         flex-direction: row;
         margin-right: 156px;
         align-items: center;
+
+        @media screen and (max-width: 768px) {
+          margin: 0;
+        }
 
         &_visa {
           @include sp__Visa;
@@ -213,6 +309,10 @@
       &_made-by {
         display: flex;
         flex-direction: row;
+
+        @media screen and (max-width: 768px) {
+          display: none;
+        }
 
         &_text {
           font-size: 13px;

@@ -38,7 +38,14 @@
 <app-menu-tabs-inside></app-menu-tabs-inside>
 <div class="main_content">
   <div class="content_corners">
-    <div class="content_corners_title">Корнеры</div>
+    <div class="content_corners_title">
+      <div class="content_corners_title_text">Корнеры</div>
+      <div class="content_corners_title_moreinfo-text-mobile">
+        <div class="content_corners_title_moreinfo-text-mobile_text">смотреть все</div>
+        <div class="content_corners_title_moreinfo-text-mobile_right-dash"></div>
+      </div>
+
+    </div>
     <div class="content_corners_items">
       <app-restaurant-block></app-restaurant-block>
       <app-restaurant-block></app-restaurant-block>
@@ -70,24 +77,30 @@
   </div>
 </div>
 <div class="app_content">
-  <div class="app_content_items">
-    <div class="app_content_items_text">
-      <div class="app_content_items_text_main">
-        Заказывайте еду с доставкой и делайте предзаказ
-      </div>
-      <div class="app_content_items_text_other">
-        Cамым удобным способом -
-        через мобильное приложение!
-      </div>
-      <div class="app_content_items_text_download">
-        <div class="app_content_items_text_download_google"></div>
-        <div class="app_content_items_text_download_apple"></div>
-      </div>
-      <div class="app_content_items_text_logo"></div>
-      <div class="app_content_items_text_url">Отправить ссылку <a >сообщением</a> или на <a>email</a></div>
+  <div class="app_content_images">
+    <div class="app_content_images_bg">
+      <img src="app/sass/images/phones_bg.png" class="app_content_images_bg-desktop">
+      <img src="app/sass/images/phones_bg_mobile.png" class="app_content_images_bg-mobile">
     </div>
-    <div class="app_content_items_img"></div>
-
+    <div class="app_content_images_phones">
+      <img src="app/sass/images/phones.png" class="app_content_images_phones-desktop">
+      <img src="app/sass/images/phones_mobile.png" class="app_content_images_phones-mobile">
+    </div>
+  </div>
+  <div class="app_content_text">
+    <div class="app_content_text_main">
+      Заказывайте еду с доставкой и делайте предзаказ
+    </div>
+    <div class="app_content_text_other">
+      Cамым удобным способом -
+      через мобильное приложение!
+    </div>
+    <div class="app_content_text_download">
+      <div class="app_content_text_download_google"></div>
+      <div class="app_content_text_download_apple"></div>
+    </div>
+    <div class="app_content_text_logo"></div>
+    <div class="app_content_text_url">Отправить ссылку <a href="">сообщением</a> или на <a href="">email</a></div>
   </div>
 
 </div>
@@ -101,6 +114,10 @@
       <div class="about_content_items_text_header">30 ресторанов и кафе Аркадия Новикова, Бориса Зарькова и
         Владимира Мухина.
       </div>
+      <div class="about_content_items_text_mobile-img">
+        <img src="../sass/images/30eating-mobile.png">
+
+      </div>
       <div class="about_content_items_text_description"><span>Гастромаркет Вокруг Света - это микс национальных культур,
                 мнопродуктовых концепций, идей, вкусов,
                 актуальных трендов с использованием сезонных и локальных продуктов от лучших шефов Москвы и мира.</span>
@@ -108,7 +125,8 @@
                 интересные сочетания вкусов, а туристы утолят голод в любопытство, открывая для себя новую Москву.</span>
       </div>
       <div class="about_content_items_text_moreinfo">
-        <div class="about_content_items_text_moreinfo_left-dash"></div>
+        <div class="about_content_items_text_moreinfo_left-dash">
+        </div>
         <div class="about_content_items_text_moreinfo_text">Подробнее</div>
         <div class="about_content_items_text_moreinfo_right-dash"></div>
       </div>

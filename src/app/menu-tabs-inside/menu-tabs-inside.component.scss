@@ -9,6 +9,11 @@
     justify-content: space-between;
     align-items: center;
     padding: 37px 40px;
+
+    @media screen and (max-width: 768px) {
+      display: none;
+    }
+
     &_about {
       @include sp__Logo1;
     }
