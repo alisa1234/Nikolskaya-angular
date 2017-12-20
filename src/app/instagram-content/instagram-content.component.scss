@@ -10,10 +10,40 @@
     padding: 40px 40px 0;
     font-family: $font_ubuntu;
 
+    @media screen and (max-width: 768px) {
+      flex-wrap: wrap;
+      margin-top: 30px;
+      padding: 40px 20px 40px;
+    }
+
     &_item {
       width: 263px;
       height: 263px;
       position: relative;
+
+      @media screen and (max-width: 768px) {
+        height: auto;
+        width: 48%;
+        margin-bottom: 20px;
+
+        img {
+          width: 100%;
+
+        }
+
+        &:first-child {
+          top: 0;
+          width: calc(100% - 40px);
+          height: 100%;
+          display: block;
+          position: absolute;
+
+        }
+
+        &:last-child {
+          display: block;
+        }
+      }
 
       &_main-text {
         color: #7F7873;
@@ -25,13 +55,31 @@
         position: absolute;
         transform: translateX(-50%);
 
+        @media screen and (max-width: 768px) {
+          padding: 0;
+          left: 0;
+          transform: none;
+          font-size: 24px;
+          font-weight: 500;
+          line-height: 26px;
+
+        }
+
       }
     }
     .slider-footer_delivery_moreinfo-text {
       width: 100%;
       top: 55%;
       left: 54%;
-      transform: translate(-50%, -55%)
+      transform: translate(-50%, -55%);
+
+      @media screen and (max-width: 768px) {
+        display: flex;
+        top: 100%;
+        left: 44%;
+        width: auto;
+        min-width: 250px;
+      }
     }
   }
 }

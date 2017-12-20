@@ -2,6 +2,11 @@
 @import "../sass/sass/_svg-sprite";
 @import "../sass/sass/_png-sprite";
 
+:host(.root) {
+  width: calc(100% - 40px);
+  padding: 0;
+  margin: 20px auto 0;
+}
       .content_corners_items_item{
         width: 380px;
         border: 1px solid #E6E3E1;
@@ -11,12 +16,25 @@
         margin: 30px 0 0;
         position: relative;
         cursor: pointer;
+
+        @media screen and (max-width: 768px) {
+          width: calc(100% - 40px);
+          padding: 0;
+          margin: 20px auto 0;
+          //padding: 0 40px;
+        }
+
         &_img {
           position: relative;
 
           &_main {
             width: 380px;
             height: 214px;
+
+            @media screen and (max-width: 768px) {
+              width: 100%;
+              height: auto;
+            }
           }
           .logo {
             position: absolute;
@@ -32,6 +50,10 @@
           justify-content: space-between;
           font-family: $font_ubuntu;
           padding: 15px 20px 10px;
+
+          @media screen and (max-width: 768px) {
+            padding: 10% 20px 10px;
+          }
 
           &_name {
             color: #231F20;
@@ -57,6 +79,12 @@
             padding: 10px 133px 20px 20px;
             align-items: center;
             font-family: $font_ubuntu;
+
+            @media screen and (max-width: 768px) {
+              width: 195px;
+              font-size: 11px;
+              line-height: 11px;
+            }
 
             &_item {
 
@@ -107,5 +135,6 @@
             }
           }
         }
+
       }
 
