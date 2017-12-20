@@ -1,0 +1,76 @@
+@import "../sass/sass/_variables";
+@import "../sass/sass/_svg-sprite";
+@import "../sass/sass/_png-sprite";
+
+.content_corners_items_item-shadow {
+  width: 380px;
+  border: 1px solid #E6E3E1;
+  border-radius: 0 0 4px 4px;
+  background-color: #FFFFFF;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+  margin: 30px 0 0;
+  position: relative;
+  cursor: pointer;
+
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+
+  &_img {
+    position: relative;
+    height: 214px;
+
+    &_main {
+      width: 380px;
+      height: 214px;
+      @media screen and (max-width: 768px) {
+        width: 100%;
+        height: auto;
+      }
+
+    }
+
+  }
+  &-hover {
+    font-family: $font_ubuntu;
+
+    &_main {
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 55px 30px 50px;
+      position: absolute;
+      top: 0;
+
+      &_text {
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 20px;
+        color: #FFFFFF;
+        width: 319px;
+      }
+      &_checkin {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        color: #FFFFFF;
+        margin-top: 20px;
+        align-items: center;
+        font-family: $font_ubuntu;
+        &_item {
+          background-color: #1A1718;
+          padding: 5px 10px;
+          margin-right: 5px;
+          span {
+            color: #FFFFFF;
+            font-size: 13px;
+            line-height: 19px;
+            text-align: center;
+          }
+
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+  }
+}

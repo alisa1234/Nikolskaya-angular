@@ -8,7 +8,7 @@
     flex-direction: row;
     justify-content: space-between;
     border-bottom: 1px solid #D9D5D2;
-    padding: 33px 0;
+    padding: 35px 0;
     width: 1200px;
     margin: 0 auto;
 
@@ -169,7 +169,7 @@
             }
 
             &:last-child {
-              display: none;
+              //display: none;
               @media screen and (max-width: 768px) {
                 display: block;
               }

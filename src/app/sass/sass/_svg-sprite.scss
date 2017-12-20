@@ -70,13 +70,13 @@
     width: 13px;
     height: 22px;
 }
-@mixin sp__instagram {
+@mixin sp__time {
     @extend %sprite;
     background-position: -133px -62px;
     width: 20px;
     height: 20px;
 }
-@mixin sp__time {
+@mixin sp__instagram {
     @extend %sprite;
     background-position: -158px -62px;
     width: 20px;
@@ -99,6 +99,12 @@
     background-position: -111px -62px;
     width: 14px;
     height: 20px;
+}
+@mixin sp__burger {
+    @extend %sprite;
+    background-position: -133px -87px;
+    width: 20px;
+    height: 14px;
 }
 @mixin sp__Search {
     @extend %sprite;
@@ -126,7 +132,7 @@
 }
 @mixin sp__close {
     @extend %sprite;
-    background-position: -133px -87px;
+    background-position: -70px -87px;
     width: 17px;
     height: 17px;
 }
@@ -138,13 +144,13 @@
 }
 @mixin sp__twitter {
     @extend %sprite;
-    background-position: -155px -87px;
+    background-position: -158px -87px;
     width: 16px;
     height: 13px;
 }
 @mixin sp__facebook {
     @extend %sprite;
-    background-position: -70px -87px;
+    background-position: -92px -87px;
     width: 8px;
     height: 16px;
 }

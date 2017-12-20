@@ -154,9 +154,16 @@
     }
 
     &_burger {
+      display: flex;
+      justify-content: center;
+      align-items: center;
       width: 60px;
       height: 59px;
       border-right: 1px rgba(231, 227, 225, 1) solid;
+
+      &_icon {
+        @include sp__burger;
+      }
 
     }
 
