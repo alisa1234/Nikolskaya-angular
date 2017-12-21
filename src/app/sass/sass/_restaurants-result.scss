@@ -1,10 +1,11 @@
-
-
 .restaurants_choosing {
   padding: 35px 0 0 40px;
   display: flex;
   flex-direction: row;
   align-items: flex-end;
+  @media screen and (max-width: 1024px) {
+    padding: 35px 0 0 20px;
+  }
   &_item {
     position: relative;
     cursor: pointer;
@@ -14,6 +15,10 @@
 
     &:nth-child(2) {
       padding-left: 28px;
+
+      @media screen and (max-width: 1024px) {
+        display: none;
+      }
     }
 
     &_text {
@@ -27,6 +32,13 @@
         font-size: 20px;
         font-weight: 500;
         line-height: 24px;
+
+        @media screen and (max-width: 1024px) {
+          font-size: 20px;
+          line-height: 20px;
+          font-weight: normal;
+          text-transform: uppercase;
+        }
 
       }
 
@@ -56,6 +68,9 @@
       box-shadow: inset 0 1px 0 0 #E6E3E1, 0 1px 3px 0 rgba(0, 0, 0, 0.1);
       right: 0;
       bottom: 0;
+      @media screen and (max-width: 1024px) {
+        display: none;
+      }
 
     }
   }
@@ -98,41 +113,71 @@
     display: flex;
     flex-direction: column;
     padding: 20px 40px 22px 40px;
-    width: 1200px;
+    width: 100%;
+    max-width: 1280px;
+
+    @media screen and (max-width: 1024px) {
+      max-width: 100%;
+      padding: 0;
+    }
 
     &_overview {
       display: flex;
       flex-direction: column;
-      width: 1200px;
+      width: calc(100% - 80px);
+      max-width: 1200px;
+      @media screen and (max-width: 1024px) {
+        max-width: 100%;
+      }
 
       &_header {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
 
+        @media screen and (max-width: 1024px) {
+          padding: 20px
+        }
         &_name {
           display: flex;
           flex-direction: row;
           align-items: baseline;
+
+          @media screen and (max-width: 1024px) {
+            flex-direction: column;
+          }
           &_restaurant {
             color: #231F20;
             font-family: $font_ubuntu;
             font-size: 18px;
             font-weight: bold;
             line-height: 21px;
+
+            @media screen and (max-width: 1024px) {
+              font-size: 16px;
+              line-height: 16px;
+              font-weight: normal;
+            }
           }
 
           &_tags {
+
             .content_corners_items_item_content-kitchen {
               width: 226px;
+              padding-left: 0;
 
               &_item {
                 font-size: 13px;
                 line-height: 13px;
               }
 
-
             }
+          }
+        }
+
+        &_time {
+          @media screen and (max-width: 1024px) {
+            display: none;
           }
         }
       }
@@ -143,14 +188,23 @@
         font-size: 16px;
         line-height: 24px;
         padding-right: 156px;
+        @media screen and (max-width: 1024px) {
+          display: none;
+        }
       }
     }
 
     &_items {
       display: flex;
       flex-direction: row;
-      justify-content: space-between;
       margin-top: 20px;
+      width: 100%;
+      max-width: 1200px;
+      justify-content: center;
+      flex-wrap: wrap;
+      @media screen and (max-width: 1024px) {
+        max-width: 100%;
+      }
 
       &_item {
         display: flex;
@@ -160,6 +214,7 @@
         background-color: #FFFFFF;
         border-radius: 0 0 4px 4px;
         box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+        margin: 10px;
 
         &_img {
           width: 280px;

@@ -6,12 +6,16 @@ agm-map {
 }
 .contacts {
   //width: auto;
-  margin: 0 auto 40px;
+  margin: 0 auto;
   background-color: #F8F5F5;
   padding: 32px 50px 38px 50px;
   display: flex;
   flex-direction: column;
-  //align-items: flex-start;
+
+  @media screen and (max-width: 1024px) {
+    padding: 0;
+    width: 100%;
+  }
 
   &_breadcrumbs {
     color: #7F7873;
@@ -19,9 +23,20 @@ agm-map {
     line-height: 14px;
     font-family: $font_ubuntu;
     padding-bottom: 27px;
+
+    @media screen and (max-width: 1024px) {
+      display: none;
+    }
+
+
   }
 
   &_info {
+
+    @media screen and (max-width: 1024px) {
+     padding:30px 20px 0;
+      width:calc(100% - 40px);
+    }
 
     .delivery_info_overview_header {
       padding-bottom: 0;
@@ -41,17 +56,40 @@ agm-map {
       justify-content: space-between;
       align-items: flex-start;
 
+      @media screen and (max-width: 1024px) {
+        width: 100%;
+        flex-direction: column;
+      }
+
       &_connections {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         align-items: flex-start;
 
+        @media screen and (max-width: 1024px) {
+          width: 100%;
+        }
+
         &_delivery {
           padding-top: 70px;
           margin-bottom: 100px;
+
+          @media screen and (max-width: 1024px) {
+            padding-top: 4px;
+            margin-bottom: 40px;
+          }
         }
         &_subscribe_content_socials {
+
+          @media screen and (max-width: 1024px) {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 100%;
+            margin-bottom: 20px;
+          }
+
           &_vk {
             @include sp__vk_circle-white;
             cursor: pointer;
@@ -89,9 +127,14 @@ agm-map {
         background-color: #FFFFFF;
         display: flex;
         flex-direction: column;
-        //width: 442px;442
-        //height: 388px;
         margin-right: 67px;
+
+        @media screen and (max-width: 1024px) {
+         padding: 0;
+          margin: 0;
+          width: 100%;
+          background-color: transparent;
+        }
 
         &_header {
           color: #231F20;
@@ -101,6 +144,23 @@ agm-map {
           line-height: 21px;
           padding-bottom: 17px;
           border-bottom: 1px solid #CCC8C4;
+
+          @media screen and (max-width: 1024px) {
+            border-radius: 2px;
+            background-color: #332c26;
+            box-shadow:0 1px 3px 0 rgba(0,0,0,0.1 );
+            color: #FFFFFF;
+            cursor: pointer;
+            font-size: 13px;
+            line-height: 13px;
+            font-weight: normal;
+            width: 100%;
+            text-align: center;
+            padding: 14px 0 17px;
+            min-width: 360px;
+            margin: 0 auto;
+
+          }
         }
 
         &_form {
@@ -110,6 +170,10 @@ agm-map {
           align-items: center;
           justify-content: space-between;
           padding-top: 20px;
+
+          @media screen and (max-width: 1024px) {
+            display: none;
+          }
 
 
 
@@ -220,12 +284,28 @@ agm-map {
     justify-content: space-between;
     margin-top: 40px;
 
+    @media screen and (max-width: 1024px) {
+     padding: 0 20px 5px;
+      flex-direction: column;
+      margin-top: 0;
+    }
+
     &_block {
       display: flex;
       flex-direction: column;
 
+      @media screen and (max-width: 1024px) {
+        margin-bottom: 20px;
+        font-size: 13px;
+        line-height: 20px;
+      }
+
       .footer_main_contacts_header {
         padding-bottom: 20px;
+
+        @media screen and (max-width: 1024px) {
+          padding-bottom: 0;
+        }
       }
     }
   }

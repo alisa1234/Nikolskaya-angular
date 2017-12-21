@@ -8,9 +8,9 @@
     flex-direction: row;
     justify-content: space-between;
     border-bottom: 1px solid #D9D5D2;
-    padding: 33px 0;
-    width: 1200px;
+    padding: 35px 40px;
     margin: 0 auto;
+    max-width: 1200px;
 
     @media screen and (max-width: 768px) {
       width: 100%;
@@ -169,7 +169,7 @@
             }
 
             &:last-child {
-              display: none;
+              //display: none;
               @media screen and (max-width: 768px) {
                 display: block;
               }

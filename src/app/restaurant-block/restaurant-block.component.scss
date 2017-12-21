@@ -3,9 +3,12 @@
 @import "../sass/sass/_png-sprite";
 
 :host(.root) {
-  width: calc(100% - 40px);
-  padding: 0;
-  margin: 20px auto 0;
+  @media screen and (max-width: 1024px) {
+    width: 100%;
+    padding: 0;
+    margin: 0 auto;
+    //padding: 0 40px;
+  }
 }
       .content_corners_items_item{
         width: 380px;
@@ -13,11 +16,11 @@
         border-radius: 0 0 4px 4px;
         background-color: #FFFFFF;
         box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
-        margin: 30px 0 0;
+        margin: 30px 30px 0 30px;
         position: relative;
         cursor: pointer;
 
-        @media screen and (max-width: 768px) {
+        @media screen and (max-width: 1024px) {
           width: calc(100% - 40px);
           padding: 0;
           margin: 20px auto 0;
@@ -31,7 +34,7 @@
             width: 380px;
             height: 214px;
 
-            @media screen and (max-width: 768px) {
+            @media screen and (max-width: 1024px) {
               width: 100%;
               height: auto;
             }
@@ -51,7 +54,7 @@
           font-family: $font_ubuntu;
           padding: 15px 20px 10px;
 
-          @media screen and (max-width: 768px) {
+          @media screen and (max-width: 1024px) {
             padding: 10% 20px 10px;
           }
 
@@ -80,7 +83,7 @@
             align-items: center;
             font-family: $font_ubuntu;
 
-            @media screen and (max-width: 768px) {
+            @media screen and (max-width: 1024px) {
               width: 195px;
               font-size: 11px;
               line-height: 11px;

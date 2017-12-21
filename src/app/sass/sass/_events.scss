@@ -3,7 +3,8 @@
 .wrapper {
   background-color: #F8F5F5;
   padding-bottom: 55px;
-  width: 1280px;
+  width: 100%;
+  max-width: 1280px;
   margin: 0 auto;
 
   .banner {
@@ -22,7 +23,8 @@
       white-space: nowrap;
     }
     img {
-      width: 1200px;
+      max-width: 1200px;
+      width: 100%;
     }
 
   }
@@ -31,7 +33,8 @@
     flex-direction: row;
     justify-content: space-between;
     padding: 0 40px;
-    width: 1200px;
+    max-width: 1200px;
+    flex-wrap: wrap;
 
     &_text {
       background-color: #FFFFFF;

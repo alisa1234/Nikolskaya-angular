@@ -10,10 +10,11 @@
     padding: 40px 40px 0;
     font-family: $font_ubuntu;
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 1024px) {
       flex-wrap: wrap;
       margin-top: 30px;
       padding: 40px 20px 40px;
+      position: relative;
     }
 
     &_item {
@@ -21,7 +22,11 @@
       height: 263px;
       position: relative;
 
-      @media screen and (max-width: 768px) {
+      &:last-child {
+        display: none;
+      }
+
+      @media screen and (max-width: 1024px) {
         height: auto;
         width: 48%;
         margin-bottom: 20px;
@@ -45,6 +50,7 @@
         }
       }
 
+
       &_main-text {
         color: #7F7873;
         font-size: 26px;
@@ -55,7 +61,7 @@
         position: absolute;
         transform: translateX(-50%);
 
-        @media screen and (max-width: 768px) {
+        @media screen and (max-width: 1024px) {
           padding: 0;
           left: 0;
           transform: none;
@@ -73,12 +79,12 @@
       left: 54%;
       transform: translate(-50%, -55%);
 
-      @media screen and (max-width: 768px) {
+      @media screen and (max-width: 1024px) {
         display: flex;
         top: 100%;
-        left: 44%;
-        width: auto;
-        min-width: 250px;
+        justify-content: center;
+        left: 50%;
+        transform: translate(-50%,-100%);
       }
     }
   }
