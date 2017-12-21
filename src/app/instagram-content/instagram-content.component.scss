@@ -12,7 +12,7 @@
     max-width: 1200px;
     flex-wrap: wrap;
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 1024px) {
       flex-wrap: wrap;
       margin-top: 30px;
       padding: 40px 20px 40px;
@@ -32,7 +32,7 @@
         margin: 0;
       }
 
-      @media screen and (max-width: 768px) {
+      @media screen and (max-width: 1024px) {
         height: auto;
         width: 48%;
         margin-bottom: 20px;
@@ -67,7 +67,7 @@
         position: absolute;
         transform: translateX(-50%);
 
-        @media screen and (max-width: 768px) {
+        @media screen and (max-width: 1024px) {
           padding: 0;
           left: 0;
           transform: none;
@@ -85,7 +85,7 @@
       left: 54%;
       transform: translate(-50%, -55%);
 
-      @media screen and (max-width: 768px) {
+      @media screen and (max-width: 1024px) {
         display: flex;
         top: 100%;
         justify-content: center;
