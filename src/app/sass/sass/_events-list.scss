@@ -1,11 +1,16 @@
-
-
 .wrapper {
 
   .event {
     padding: 0;
     width: 100%;
     height: 490px;
+
+    @media screen and (max-width: 1024px) {
+      padding: 0;
+      width: 100%;
+      min-height: 335px;
+      height: auto;
+    }
 
     img {
       width: 100%;
@@ -21,6 +26,12 @@
     flex-wrap: wrap;
     background-color: #F8F5F5;
     padding: 30px 40px 30px;
+    @media screen and (max-width: 1024px) {
+      width: calc(100% - 40px);
+      padding: 0 20px;
+      max-width: 380px;
+      margin: 0 auto;
+    }
 
     .content_events {
       padding: 30px 0 0 33px;
@@ -99,6 +110,16 @@
     line-height: 21px;
     text-align: center;
     cursor: pointer;
+
+    @media screen and (max-width: 1024px) {
+      width: calc(100% - 40px);
+      margin: 20px auto;
+      font-size: 13px;
+      line-height: 13px;
+      max-width: 380px;
+      height: auto;
+      padding: 14px 0 17px;
+    }
 
   }
 }

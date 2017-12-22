@@ -9,6 +9,86 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
+
+  @media screen and (max-width: 1024px) {
+    background: #1B2226;
+    height: auto;
+  }
+
+  &_mobile-images {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    overflow: hidden;
+
+    &_cabbage {
+      position: absolute;
+      left: -34px;
+      top: 25px;
+      background-image: url(../sass/images/cabbage.png);
+      width: 136px;
+      height: 192px;
+      transform: scale(0.5);
+
+    }
+
+    &_white-dots {
+      position: absolute;
+      bottom: -40px;
+      left: -47px;
+      background-image: url(../sass/images/white-dots.png);
+      width: 188px;
+      height: 208px;
+      transform: scale(0.5);
+    }
+
+    &_arugula {
+      position: absolute;
+      bottom: -21px;
+      left: 10%;
+      background-image: url(../sass/images/arugula.png);
+      width: 190px;
+      height: 86px;
+      transform: scale(0.5);
+    }
+
+    &_meal {
+      position: absolute;
+      bottom: -41px;
+      right: -66px;
+      background-image: url(../sass/images/meal.png);
+      width: 264px;
+      height: 162px;
+      transform: scale(0.5);
+    }
+
+    &_bread {
+      position: absolute;
+      top: -17px;
+      right: -30px;
+      background-image: url(../sass/images/bread.png);
+      width: 118px;
+      height: 370px;
+      transform: scale(0.5);
+    }
+
+    &_garlic {
+      position: absolute;
+      top: -43px;
+      left: -8%;
+      background-image: url(../sass/images/garlic.png);
+      width: 318px;
+      height: 170px;
+      transform: scale(0.5);
+    }
+    @media screen and (min-width: 1024px) {
+      display: none;
+    }
+  }
 
   &_header {
     color: #FFFFFF;
@@ -17,6 +97,19 @@
     font-weight: 500;
     line-height: 44px;
     padding: 69px 0 50px;
+    position: relative;
+    z-index: 1;
+
+    @media screen and (max-width: 1024px) {
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 28px;
+      padding: 0;
+      text-align: center;
+      margin: 60px auto 30px;
+      width: 70%;
+
+    }
   }
 
   &_info {
@@ -24,12 +117,24 @@
     flex-direction: row;
     width: 1000px;
     margin: 0 auto;
+    position: relative;
+    z-index: 1;
+
+    @media screen and (max-width: 1024px) {
+      width: 100%;
+      justify-content: center;
+      margin: 0 auto 30px;
+    }
 
     &_block {
       display: flex;
       flex-direction: column;
       align-items: center;
       width: 334px;
+
+      @media screen and (max-width: 1024px) {
+        width: 30%;
+      }
 
       &_circle {
         width: 140px;
@@ -41,14 +146,27 @@
         align-items: center;
         justify-content: center;
 
+        @media screen and (max-width: 1024px) {
+          width: 80px;
+          height: 80px;
+
+        }
+
         &_time {
           @include sp__time_icon;
+          @media screen and (max-width: 1024px) {
+            transform: scale(0.8);
+          }
         }
         &_currenсy {
           @include sp__rub_icon;
+
         }
         &_card {
           @include sp__card_icon;
+          @media screen and (max-width: 1024px) {
+            transform: scale(0.8);
+          }
         }
       }
 
@@ -58,6 +176,10 @@
         font-size: 18px;
         font-weight: bold;
         line-height: 21px;
+
+        @media screen and (max-width: 1024px) {
+          display: none;
+        }
 
       }
 
@@ -72,13 +194,29 @@
     height: 40px;
     margin-top: 35px;
     background-color: #B68D39;
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+    @media screen and (max-width: 1024px) {
+      margin-top: 0;
+      width: calc(100% - 40px);
+      max-width: 280px;
+    }
 
     &_text {
       color: #FFFFFF;
       font-family: $font_ubuntu;
       font-size: 16px;
       line-height: 18px;
+      @media screen and (max-width: 1024px) {
+        font-size: 13px;
+        line-height: 13px;
+      }
 
+    }
+    @media screen and (max-width: 1024px) {
+      margin-bottom: 40px;
+      margin-top: 0;
     }
 
   }
@@ -91,6 +229,10 @@
   flex-direction: column;
   justify-content: flex-start;
   padding: 30px 40px 55px 50px;
+  @media screen and (max-width: 1024px) {
+    width: 100%;
+    padding: 30px 0 20px;
+  }
 
   &_breadcrumbs {
     color: #7F7873;
@@ -98,12 +240,19 @@
     line-height: 14px;
     font-family: $font_ubuntu;
     padding-bottom: 27px;
+
+    @media screen and (max-width: 1024px) {
+      display: none;
+    }
   }
 
   &_overview {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    @media screen and (max-width: 1024px) {
+      padding: 0 20px;
+    }
 
     &_header {
       display: flex;
@@ -117,6 +266,15 @@
         font-family: $font_ubuntu;
         padding-bottom: 27px;
         padding-right: 16px;
+        @media screen and (max-width: 1024px) {
+          font-size: 20px;
+          line-height: 20px;
+          text-transform: uppercase;
+          font-weight: normal;
+          font-family: $font_condensed;
+          padding-bottom: 20px;
+
+        }
       }
 
       &_showmore {
@@ -129,6 +287,10 @@
         display: flex;
         justify-content: center;
         align-items: center;
+
+        @media screen and (max-width: 1024px) {
+          display: none;
+        }
 
         span {
           color: #231F20;
@@ -155,11 +317,53 @@
       flex-direction: column;
       height: 203px;
       justify-content: space-between;
+
+      @media screen and (max-width: 1024px) {
+        font-size: 13px;
+        line-height: 20px;
+        padding-bottom: 0;
+        height: auto;
+        span:nth-child(2) {
+          display: none;
+        }
+      }
+
     }
 
   }
+
+  &_mobile-showmore {
+    width: calc(100% - 20px);
+    max-width: 280px;
+    text-align: center;
+    padding: 14px 0 17px;
+    border-radius: 2px;
+    background-color: #332C26;
+    margin: 20px auto 0;
+    color: #FFFFFF;
+    font-family: $font_ubuntu;
+    font-size: 13px;
+    line-height: 13px;
+    cursor: pointer;
+    @media screen and (min-width: 1024px) {
+      display: none;
+    }
+  }
+
+  &_payments {
+    @media screen and (max-width: 1024px) {
+      display: none;
+    }
+  }
   .main_map {
     padding: 40px 0;
+    @media screen and (max-width: 1024px) {
+      padding: 0;
+
+      &_buttons {
+        width: calc(100% - 20px);
+      }
+    }
   }
 
 }
