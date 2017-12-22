@@ -7,7 +7,7 @@ import {Component, OnInit, HostListener, ElementRef, Input, Injectable} from '@a
 })
 export class SearchBlockComponent implements OnInit {
 
-  public hidden: boolean = false;
+  @Input() hidden: boolean = false;
 
   @Input() clicker;
 
@@ -16,10 +16,14 @@ export class SearchBlockComponent implements OnInit {
   @HostListener('document:click', ['$event'])
 
   clickout(event) {
-    if(this.eRef.nativeElement.contains(event.target) || event.target == this.clicker) {
+    if(this.eRef.nativeElement.contains(event.target) || event.target == this.clicker || event.target.closest('.menu_tabs_dishes_dropdown')) {
     } else {
-      this.clicker.style.display='inline-block';
-      this.hidden = false;
+      if(typeof this.clicker != 'undefined'){
+        this.clicker.style.display='inline-block';
+        this.hidden = false;
+      }
+
+
     }
   }
 

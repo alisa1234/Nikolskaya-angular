@@ -1,15 +1,198 @@
 <div class="main">
-  <div class="header_about">
-    <div class="header_about_back">
-      <div class="header_about_back_arrow"></div>
-      <div class="header_about_back_text">Вернутся к списку ресторанов</div>
-    </div>
-    <div class="header_about_title">
-      <div class="header_about_title_text">Burger Factory</div>
-      <div class="header_about_title_instatags">
-        <div class="header_about_title_instatags_icon"></div>
-        <div class="header_about_title_instatags_tag"></div>
 
+  <div class="header_about">
+    <div class="header_about_text">
+      <div class="header_about_text_back">
+        <div class="header_about_text_back_arrow"></div>
+        <div class="header_about_text_back_text">Вернутся к списку ресторанов</div>
+      </div>
+      <div class="header_about_text_title">
+        <div class="header_about_text_title_text">Burger Factory</div>
+        <div class="header_about_text_title_instatags">
+          <div class="header_about_text_title_instatags_icon"></div>
+          <div class="header_about_text_title_instatags_tag">#BurgerFactory</div>
+          <div class="header_about_text_title_instatags_tag">#едиммясо</div>
+          <div class="header_about_text_title_instatags_tag">#булочкавкусная</div>
+
+        </div>
+        <div class="header_about_text_title_icon-share"></div>
+      </div>
+      <div class="header_about_text_main-text">
+        За несколько десятков лет рамен превратился из еды японских рабочих кварталов в мировой культурный феномен. Безусловно, такой быстрый успех был бы невозможен без рамен-шопов, которые и популяризировали это блюдо среди европейцев и американцев.
+      </div>
+      <app-restaurant-block-footer></app-restaurant-block-footer>
+    </div>
+    <div class="header_about_img">
+      <img src="app/sass/images/restaurants-main.png">
+    </div>
+  </div>
+
+  <div class="menu_tabs_dishes">
+    <div class="menu_tabs_dishes_dropdown" (click)="showDishes()">
+      <ul>
+        <li>Избранные блюда</li>
+        <div [hidden]="!show_dishes" class="menu_tabs_dishes_dropdown_submenu">
+          <ul>
+            <li>Избранные блюда</li>
+            <li>Избранные блюда</li>
+          </ul>
+        </div>
+
+      </ul>
+      <div class="menu_tabs_dishes_dropdown_arrow"></div>
+    </div>
+    <app-search-block [hidden]="false"></app-search-block>
+  </div>
+
+  <div class="dishes_content">
+    <div class="dishes_content_menu">
+      <div class="dishes_content_menu_blocks">
+        <app-dish-block></app-dish-block>
+        <app-dish-block></app-dish-block>
+        <app-dish-block></app-dish-block>
+        <app-dish-block></app-dish-block>
+        <app-dish-block></app-dish-block>
+        <app-dish-block></app-dish-block>
+        <app-dish-block></app-dish-block>
+        <app-dish-block></app-dish-block>
+        <app-dish-block></app-dish-block>
+
+        <div class="dishes_content_menu_blocks_title">Бизнес ланч</div>
+
+        <div class="dishes_content_menu_blocks_lunch">
+          <app-dish-block></app-dish-block>
+          <app-dish-block></app-dish-block>
+          <app-dish-block></app-dish-block>
+          <app-dish-block></app-dish-block>
+          <app-dish-block></app-dish-block>
+          <app-dish-block></app-dish-block>
+          <app-dish-block></app-dish-block>
+          <app-dish-block></app-dish-block>
+          <app-dish-block></app-dish-block>
+
+          <div class="events_show-more">Показать еще</div>
+        </div>
+      </div>
+      <div class="dishes_content_menu_banner">
+        <div class="dishes_content_menu_banner_text">Заказывайте еду с доставкой и делайте предзаказ</div>
+        <div class="dishes_content_menu_banner_subtext">Cамым удобным способом -
+          Через сайт или мобильное приложение!</div>
+        <div class="dishes_content_menu_banner_app">
+          <div class="dishes_content_menu_banner_app_google"></div>
+          <div class="dishes_content_menu_banner_app_apple"></div>
+        </div>
+        <img src="app/sass/images/phones_restaurants.png">
+      </div>
+      <div class="dishes_content_menu_bucket">
+        <div class="dishes_content_menu_bucket_title">
+          В корзине 6 шт.
+        </div>
+        <div class="dishes_content_menu_bucket_items">
+          <div class="dishes_content_menu_bucket_items_item">
+            <div class="dishes_content_menu_bucket_items_item_title">Сендвич с курицей</div>
+            <div class="dishes_content_menu_bucket_items_item_content">
+              <div class="dishes_content_menu_bucket_items_item_content_count">
+                <div class="dishes_content_menu_bucket_items_item_content_count_remove"></div>
+                <div class="dishes_content_menu_bucket_items_item_content_count_text"><span>1</span>шт</div>
+                <div class="dishes_content_menu_bucket_items_item_content_count_add"></div>
+              </div>
+              <div class="dishes_content_menu_bucket_items_item_content_price"><span>395 руб.</span></div>
+            </div>
+          </div>
+          <div class="dishes_content_menu_bucket_items_item">
+            <div class="dishes_content_menu_bucket_items_item_title">Сендвич с курицей</div>
+            <div class="dishes_content_menu_bucket_items_item_content">
+              <div class="dishes_content_menu_bucket_items_item_content_count">
+                <div class="dishes_content_menu_bucket_items_item_content_count_remove"></div>
+                <div class="dishes_content_menu_bucket_items_item_content_count_text"><span>1</span>шт</div>
+                <div class="dishes_content_menu_bucket_items_item_content_count_add"></div>
+              </div>
+              <div class="dishes_content_menu_bucket_items_item_content_price"><span>395 руб.</span></div>
+            </div>
+          </div>
+          <div class="dishes_content_menu_bucket_items_item">
+            <div class="dishes_content_menu_bucket_items_item_title">Сендвич с курицей Сендвич с курицей Сендвич с курицей</div>
+            <div class="dishes_content_menu_bucket_items_item_content">
+              <div class="dishes_content_menu_bucket_items_item_content_count">
+                <div class="dishes_content_menu_bucket_items_item_content_count_remove"></div>
+                <div class="dishes_content_menu_bucket_items_item_content_count_text"><span>1</span>шт</div>
+                <div class="dishes_content_menu_bucket_items_item_content_count_add"></div>
+              </div>
+              <div class="dishes_content_menu_bucket_items_item_content_price"><span>395 руб.</span></div>
+            </div>
+          </div>
+          <div class="dishes_content_menu_bucket_items_item">
+            <div class="dishes_content_menu_bucket_items_item_title">Сендвич с курицей</div>
+            <div class="dishes_content_menu_bucket_items_item_content">
+              <div class="dishes_content_menu_bucket_items_item_content_count">
+                <div class="dishes_content_menu_bucket_items_item_content_count_remove"></div>
+                <div class="dishes_content_menu_bucket_items_item_content_count_text"><span>1</span>шт</div>
+                <div class="dishes_content_menu_bucket_items_item_content_count_add"></div>
+              </div>
+              <div class="dishes_content_menu_bucket_items_item_content_price"><span>395 руб.</span></div>
+            </div>
+          </div>
+
+
+        </div>
+        <div class="dishes_content_menu_bucket_total">
+          <div class="dishes_content_menu_bucket_total_text">Общая сумма</div>
+          <div class="dishes_content_menu_bucket_total_price">1800руб.</div>
+        </div>
+        <div class="events_show-more">Оформить заказ</div>
+      </div>
+    </div>
+    <div class="dishes_content_restaurants-title">рестораны европейской кухни</div>
+    <div class="dishes_content_restaurants">
+      <app-restaurant-block></app-restaurant-block>
+      <app-restaurant-block></app-restaurant-block>
+      <app-restaurant-block></app-restaurant-block>
+      <app-restaurant-block></app-restaurant-block>
+      <app-restaurant-block></app-restaurant-block>
+      <app-restaurant-block></app-restaurant-block>
+    </div>
+
+    <div class="dishes_content_collections">
+      <div class="dishes_content_collections_title">подборки</div>
+      <div class="dishes_content_collections_items">
+        <div class="dishes_content_collections_items_item">
+          <img src="app/sass/images/collections_1.png">
+          <span>Азиатская кухня</span>
+        </div>
+        <div class="dishes_content_collections_items_item">
+          <img src="app/sass/images/collections_2.png">
+          <span>Азиатская кухня</span>
+
+        </div>
+        <div class="dishes_content_collections_items_item">
+          <img src="app/sass/images/collections_3.png">
+          <span>Азиатская кухня</span>
+
+        </div>
+        <div class="dishes_content_collections_items_item">
+          <img src="app/sass/images/collections_4.png">
+          <span>Азиатская кухня</span>
+
+        </div>
+        <div class="dishes_content_collections_items_item">
+          <img src="app/sass/images/collections_5.png">
+          <span>Азиатская кухня</span>
+
+        </div>
+        <div class="dishes_content_collections_items_item">
+          <img src="app/sass/images/collections_6.png">
+          <span>Азиатская кухня</span>
+
+        </div>
+        <div class="dishes_content_collections_items_item">
+          <img src="app/sass/images/collections_7.png">
+          <span>Азиатская кухня</span>
+
+        </div>
+        <div class="dishes_content_collections_items_item">
+          <img src="app/sass/images/collections_8.png">
+          <span>Азиатская кухня</span>
+        </div>
       </div>
     </div>
   </div>

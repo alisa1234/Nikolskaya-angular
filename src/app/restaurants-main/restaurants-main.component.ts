@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RestaurantsMainComponent implements OnInit {
 
+  show_dishes: boolean = false;
   constructor() { }
 
   ngOnInit() {
   }
 
+  showDishes(){
+    if(this.show_dishes == true) {
+      this.show_dishes = false;
+    }else this.show_dishes = true;
+
+  }
 }

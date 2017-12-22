@@ -37,6 +37,7 @@ import { StocksComponent } from './stocks/stocks.component';
 import { SearchBlockComponent } from './search-block/search-block.component';
 import { RestaurantsStockBlockComponent } from './restaurants-stock-block/restaurants-stock-block.component';
 import { RestaurantsMainComponent } from './restaurants-main/restaurants-main.component';
+import { RestaurantBlockFooterComponent } from './restaurant-block-footer/restaurant-block-footer.component';
 
 const AppRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -49,6 +50,7 @@ const AppRoutes: Routes = [
   { path: 'corners', component: RestaurantsListComponent },
   { path: 'results', component: RestaurantsResultComponent },
   { path: 'stocks', component: StocksComponent },
+  { path: 'restaurants-main', component: RestaurantsMainComponent },
 ];
 
 @NgModule({
@@ -78,7 +80,8 @@ const AppRoutes: Routes = [
     StocksComponent,
     SearchBlockComponent,
     RestaurantsStockBlockComponent,
-    RestaurantsMainComponent
+    RestaurantsMainComponent,
+    RestaurantBlockFooterComponent
   ],
   imports: [
     BrowserModule,

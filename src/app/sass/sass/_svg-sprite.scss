@@ -3,7 +3,7 @@
 %sprite {
     content: '';
     background: url("../sass/sass/inc/svg-sprite.svg") no-repeat;
-    background-size: 244px 186px;
+    background-size: 243px 233px;
     display: inline-block;
     .no-svg & {
         background-image: url("../sass/sass/inc/svg-sprite.png");
@@ -16,153 +16,201 @@
     width: 123px;
     height: 52px;
 }
-@mixin sp__card_icon {
+@mixin sp__Playstore {
     @extend %sprite;
     background-position: -5px -62px;
+    width: 107px;
+    height: 32px;
+}
+@mixin sp__Appstore {
+    @extend %sprite;
+    background-position: -133px -5px;
+    width: 105px;
+    height: 31px;
+}
+@mixin sp__card_icon {
+    @extend %sprite;
+    background-position: -133px -41px;
     width: 60px;
     height: 42px;
 }
 @mixin sp__time_icon {
     @extend %sprite;
-    background-position: -133px -5px;
+    background-position: -5px -99px;
     width: 52px;
     height: 52px;
 }
-@mixin sp__vk_circle-white {
-    @extend %sprite;
-    background-position: -5px -109px;
-    width: 49px;
-    height: 49px;
-}
 @mixin sp__pinterest_circle-white {
     @extend %sprite;
-    background-position: -59px -109px;
-    width: 49px;
-    height: 49px;
-}
-@mixin sp__facebook_circle-white {
-    @extend %sprite;
-    background-position: -113px -109px;
-    width: 49px;
-    height: 49px;
-}
-@mixin sp__twitter_circle-white {
-    @extend %sprite;
-    background-position: -190px -5px;
+    background-position: -62px -99px;
     width: 49px;
     height: 49px;
 }
 @mixin sp__instagram_circle-white {
     @extend %sprite;
-    background-position: -190px -59px;
+    background-position: -116px -99px;
+    width: 49px;
+    height: 49px;
+}
+@mixin sp__twitter_circle-white {
+    @extend %sprite;
+    background-position: -170px -99px;
+    width: 49px;
+    height: 49px;
+}
+@mixin sp__facebook_circle-white {
+    @extend %sprite;
+    background-position: -5px -156px;
+    width: 49px;
+    height: 49px;
+}
+@mixin sp__vk_circle-white {
+    @extend %sprite;
+    background-position: -59px -156px;
     width: 49px;
     height: 49px;
 }
 @mixin sp__rub_icon {
     @extend %sprite;
-    background-position: -190px -113px;
+    background-position: -198px -41px;
     width: 22px;
     height: 29px;
 }
 @mixin sp__array {
     @extend %sprite;
-    background-position: -217px -113px;
+    background-position: -225px -41px;
     width: 13px;
     height: 22px;
 }
+@mixin sp__insta-restaurants {
+    @extend %sprite;
+    background-position: -113px -156px;
+    width: 20px;
+    height: 20px;
+}
 @mixin sp__time {
     @extend %sprite;
-    background-position: -133px -62px;
+    background-position: -138px -156px;
     width: 20px;
     height: 20px;
 }
 @mixin sp__instagram {
     @extend %sprite;
-    background-position: -158px -62px;
+    background-position: -163px -156px;
     width: 20px;
     height: 20px;
 }
 @mixin sp__basket {
     @extend %sprite;
-    background-position: -70px -62px;
+    background-position: -188px -156px;
+    width: 16px;
+    height: 20px;
+}
+@mixin sp__share-icon {
+    @extend %sprite;
+    background-position: -209px -156px;
+    width: 16px;
+    height: 20px;
+}
+@mixin sp__arrow-restaurants {
+    @extend %sprite;
+    background-position: -113px -181px;
     width: 16px;
     height: 20px;
 }
 @mixin sp__file_icon {
     @extend %sprite;
-    background-position: -91px -62px;
+    background-position: -134px -181px;
     width: 15px;
     height: 20px;
 }
 @mixin sp__location {
     @extend %sprite;
-    background-position: -111px -62px;
+    background-position: -224px -99px;
     width: 14px;
     height: 20px;
 }
 @mixin sp__burger {
     @extend %sprite;
-    background-position: -133px -87px;
+    background-position: -154px -181px;
     width: 20px;
     height: 14px;
 }
 @mixin sp__Search {
     @extend %sprite;
-    background-position: -167px -109px;
+    background-position: -5px -210px;
     width: 18px;
     height: 18px;
 }
 @mixin sp__calendar {
     @extend %sprite;
-    background-position: -167px -132px;
+    background-position: -28px -210px;
     width: 16px;
     height: 18px;
 }
 @mixin sp__pinterest {
     @extend %sprite;
-    background-position: -5px -163px;
+    background-position: -49px -210px;
     width: 15px;
     height: 18px;
 }
 @mixin sp__User {
     @extend %sprite;
-    background-position: -25px -163px;
+    background-position: -224px -124px;
     width: 14px;
     height: 18px;
 }
 @mixin sp__close {
     @extend %sprite;
-    background-position: -70px -87px;
+    background-position: -69px -210px;
     width: 17px;
     height: 17px;
 }
 @mixin sp__vk {
     @extend %sprite;
-    background-position: -190px -147px;
+    background-position: -179px -181px;
     width: 17px;
     height: 11px;
 }
 @mixin sp__twitter {
     @extend %sprite;
-    background-position: -158px -87px;
+    background-position: -91px -210px;
     width: 16px;
     height: 13px;
 }
 @mixin sp__facebook {
     @extend %sprite;
-    background-position: -92px -87px;
+    background-position: -117px -62px;
     width: 8px;
     height: 16px;
 }
+@mixin sp__arrow-dishes {
+    @extend %sprite;
+    background-position: -198px -75px;
+    width: 13px;
+    height: 8px;
+}
 @mixin sp__rectangle {
     @extend %sprite;
-    background-position: -212px -147px;
+    background-position: -117px -83px;
     width: 9px;
     height: 9px;
 }
+@mixin sp__add-icon {
+    @extend %sprite;
+    background-position: -216px -75px;
+    width: 8px;
+    height: 8px;
+}
+@mixin sp__remove-icon {
+    @extend %sprite;
+    background-position: -225px -68px;
+    width: 8px;
+    height: 2px;
+}
 @mixin sp__rectangle_small {
     @extend %sprite;
-    background-position: -226px -147px;
+    background-position: -229px -75px;
     width: 5px;
     height: 5px;
 }
