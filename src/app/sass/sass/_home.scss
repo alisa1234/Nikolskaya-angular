@@ -412,9 +412,9 @@
       justify-content: center;
 
       @media screen and (max-width: 1024px) {
-        min-width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
         width: 100%;
-        flex-direction: column;
 
         .content_corners_items_item:nth-child(3) ~ .content_corners_items_item {
           display: none;

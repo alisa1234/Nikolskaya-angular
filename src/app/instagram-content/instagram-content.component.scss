@@ -29,12 +29,12 @@
         display: none;
       }
       &:nth-child(4) {
-        margin: 0;
+        //margin: 0;
       }
 
       @media screen and (max-width: 1024px) {
         height: auto;
-        width: 48%;
+        width: 45%;
         margin-bottom: 20px;
 
         img {
