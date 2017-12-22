@@ -9,26 +9,30 @@
         <div class="header_adress_time_logo"></div>
         <span>8:00 - 23:00</span>
       </div>
-      <div class="header_adress_language">
-        <div class="header_adress_language_active">
-          <div class="header_adress_language_active_lang-icon">
-            <img src="app/sass/images/language.png">
-          </div>
-          <div class="header_adress_language_active_arrow"></div>
-        </div>
-        <div class="header_adress_language_list">
-          <div class="header_adress_language_list_item">
-            <div class="header_adress_language_list_item_lang-icon">
-              <img src="app/sass/images/language.png">
-            </div>
-            <div class="header_adress_language_list_item_arrow"></div>
-          </div>
-          <div class="header_adress_language_list_item">
-            <div class="header_adress_language_list_item_lang-icon">
-              <img src="app/sass/images/language.png">
-            </div>
-          </div>
-        </div>
+      <div class="header_adress_language" (click)="selectLanguage()" [class.active]="show_language">
+        <ul>
+          <!--<li class="active_li"><img src="app/sass/images/language.png"></li>-->
+          <li [hidden]="!show_language"><img src="app/sass/images/language.png"></li>
+        </ul>
+        <!--<div class="header_adress_language_active">-->
+          <!--<div class="header_adress_language_active_lang-icon">-->
+            <!--<img src="app/sass/images/language.png">-->
+          <!--</div>-->
+          <!--<div class="header_adress_language_active_arrow"></div>-->
+        <!--</div>-->
+        <!--<div class="header_adress_language_list">-->
+          <!--<div class="header_adress_language_list_item">-->
+            <!--<div class="header_adress_language_list_item_lang-icon">-->
+              <!--<img src="app/sass/images/language.png">-->
+            <!--</div>-->
+            <div class="header_adress_language_triangle"></div>
+          <!--</div>-->
+          <!--<div class="header_adress_language_list_item">-->
+            <!--<div class="header_adress_language_list_item_lang-icon">-->
+              <!--<img src="app/sass/images/language.png">-->
+            <!--</div>-->
+          <!--</div>-->
+        <!--</div>-->
       </div>
     </div>
     <div class="header_tabs">

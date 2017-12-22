@@ -36,6 +36,7 @@ import { SubmenuCalendarComponent } from './submenu-calendar/submenu-calendar.co
 import { StocksComponent } from './stocks/stocks.component';
 import { SearchBlockComponent } from './search-block/search-block.component';
 import { RestaurantsStockBlockComponent } from './restaurants-stock-block/restaurants-stock-block.component';
+import { RestaurantsMainComponent } from './restaurants-main/restaurants-main.component';
 
 const AppRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -76,7 +77,8 @@ const AppRoutes: Routes = [
     SubmenuCalendarComponent,
     StocksComponent,
     SearchBlockComponent,
-    RestaurantsStockBlockComponent
+    RestaurantsStockBlockComponent,
+    RestaurantsMainComponent
   ],
   imports: [
     BrowserModule,

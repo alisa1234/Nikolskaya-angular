@@ -6,9 +6,11 @@
   .instagram_content {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     padding: 40px 40px 0;
     font-family: $font_ubuntu;
+    max-width: 1200px;
+    flex-wrap: wrap;
 
     @media screen and (max-width: 1024px) {
       flex-wrap: wrap;
@@ -21,14 +23,18 @@
       width: 263px;
       height: 263px;
       position: relative;
+      margin-right: 35px;
 
       &:last-child {
         display: none;
       }
+      &:nth-child(4) {
+        //margin: 0;
+      }
 
       @media screen and (max-width: 1024px) {
         height: auto;
-        width: 48%;
+        width: 45%;
         margin-bottom: 20px;
 
         img {
