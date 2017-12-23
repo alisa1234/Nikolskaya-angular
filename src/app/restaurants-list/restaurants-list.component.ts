@@ -12,7 +12,7 @@ export class RestaurantsListComponent implements OnInit {
 
   base_url: string;
   getRestaurants_list: string;
-  restauants_list: any[];
+  restauants_list: any;
 
 
 
@@ -21,8 +21,23 @@ export class RestaurantsListComponent implements OnInit {
     this.base_url = urlAdresses.base_url;
     this.getRestaurants_list = urlAdresses.getRestaurants_list;
 
-    this.http.get(this.base_url+this.getRestaurants_list)
-        .subscribe(data => {console.log(data)})
+
+
+
+    if(localStorage.getItem('restaurants_list') != null){
+      this.restauants_list = JSON.parse(localStorage.getItem('restaurants_list'));
+      debugger;
+    }else{
+      this.http.get(this.base_url+this.getRestaurants_list)
+          .subscribe(data => {
+            this.restauants_list = data;
+            localStorage.setItem('restaurants_list',JSON.stringify(this.restauants_list));
+
+          })
+    }
+
+
+
 
 
   }

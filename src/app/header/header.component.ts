@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class HeaderComponent implements OnInit {
 
   show_language: boolean = false;
+  show_menu: boolean = false;
   constructor() { }
 
   ngOnInit() {
@@ -17,5 +18,11 @@ export class HeaderComponent implements OnInit {
       this.show_language = false;
     }else this.show_language = true;
 
+  }
+  showMenu() {
+    this.show_menu = true;
+  }
+  closeMenu() {
+    this.show_menu = false;
   }
 }

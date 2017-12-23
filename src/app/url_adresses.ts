@@ -4,5 +4,5 @@
 
 export class UrlAdresses {
     base_url: string = 'http://decusagency.westeurope.cloudapp.azure.com:8090/VirtualCardSecureService.svc';
-    getRestaurants_list: string = '/Restaurants';
+    getRestaurants_list: string = '/GetRestaurantsMenu';
 }

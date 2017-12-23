@@ -7,8 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RestaurantsMainComponent implements OnInit {
 
+  restaurant_list: any;
   show_dishes: boolean = false;
-  constructor() { }
+  constructor() {
+    this.restaurant_list = JSON.parse(localStorage.getItem('restaurants_list'));
+    console.log(this.restaurant_list)
+    debugger;
+  }
 
   ngOnInit() {
   }
