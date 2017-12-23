@@ -88,13 +88,13 @@
     width: 20px;
     height: 20px;
 }
-@mixin sp__insta-restaurants {
+@mixin sp__instagram {
     @extend %sprite;
     background-position: -138px -156px;
     width: 20px;
     height: 20px;
 }
-@mixin sp__instagram {
+@mixin sp__insta-restaurants {
     @extend %sprite;
     background-position: -163px -156px;
     width: 20px;
@@ -112,15 +112,9 @@
     width: 16px;
     height: 20px;
 }
-@mixin sp__arrow-restaurants {
-    @extend %sprite;
-    background-position: -113px -181px;
-    width: 16px;
-    height: 20px;
-}
 @mixin sp__file_icon {
     @extend %sprite;
-    background-position: -134px -181px;
+    background-position: -113px -181px;
     width: 15px;
     height: 20px;
 }
@@ -132,7 +126,7 @@
 }
 @mixin sp__burger {
     @extend %sprite;
-    background-position: -154px -181px;
+    background-position: -133px -181px;
     width: 20px;
     height: 14px;
 }
@@ -180,7 +174,7 @@
 }
 @mixin sp__vk {
     @extend %sprite;
-    background-position: -179px -181px;
+    background-position: -158px -181px;
     width: 17px;
     height: 11px;
 }
@@ -189,6 +183,12 @@
     background-position: -134px -210px;
     width: 16px;
     height: 13px;
+}
+@mixin sp__arrow-restaurants {
+    @extend %sprite;
+    background-position: -155px -210px;
+    width: 16px;
+    height: 12px;
 }
 @mixin sp__facebook {
     @extend %sprite;
