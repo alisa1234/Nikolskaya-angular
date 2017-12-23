@@ -3,7 +3,7 @@
 @import "../sass/sass/_png-sprite";
 
 @mixin calendar_black {
-    @include sp__calendar_black;
+  @include sp__calendar_black;
 }
 %calendar_black {
   @include calendar_black;
@@ -108,10 +108,11 @@
         background-position: -49px -210px;
         width: 16px;
         height: 18px;
+
+      }
     }
 
 
-    }
   }
 
 }
@@ -121,5 +122,4 @@
   top: 0;
   width: 387px;
 }
-
 

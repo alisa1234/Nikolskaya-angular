@@ -165,18 +165,21 @@
         }
 
         #resume_link {
+          display: none;
           @media screen and (max-width: 1024px) {
             display: block;
           }
         }
 
         #for_resume {
+          display: block;
           @media screen and (max-width: 1024px) {
             display: none;
           }
         }
 
         #for_resume_link {
+          display: none;
           @media screen and (max-width: 1024px) {
             display: block;
           }
@@ -201,6 +204,7 @@
         }
 
         #comment_input {
+          display: none;
           @media screen and (max-width: 1024px) {
             display: block;
           }
