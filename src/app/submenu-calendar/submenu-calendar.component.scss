@@ -2,6 +2,19 @@
 @import "../sass/sass/_svg-sprite";
 @import "../sass/sass/_png-sprite";
 
+@mixin calendar_black {
+    @include sp__calendar_black;
+}
+%calendar_black {
+  @include calendar_black;
+}
+@mixin calendar {
+  @include sp__calendar;
+}
+%calendar {
+  @include calendar;
+}
+
 .stocks-menu-tabs-all {
   display: flex;
   flex-direction: row;
@@ -84,16 +97,29 @@
     }
 
     &_icon {
-      @include sp__calendar;
+      @extend %sprite;
+      background-position: -28px -210px;
+      width: 16px;
+      height: 18px;
+      //@include sp__calendar;
       margin-right: 16px;
-      background-color: #000000;
+      //@extend %calendar_black;
+      @media screen and (max-width: 1024px) {
+        background-position: -49px -210px;
+        width: 16px;
+        height: 18px;
     }
 
-  }
-  .calendar_widget {
-    position: absolute;
-    top: 0;
-    width: 387px;
+
+    }
   }
 
 }
+
+.calendar_widget {
+  position: absolute;
+  top: 0;
+  width: 387px;
+}
+
+

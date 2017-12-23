@@ -11,7 +11,6 @@
       </div>
       <div class="header_adress_language" (click)="selectLanguage()" [class.active]="show_language">
         <ul>
-          <!--<li class="active_li"><img src="app/sass/images/language.png"></li>-->
           <li [hidden]="!show_language"><img src="app/sass/images/language.png"></li>
         </ul>
         <!--<div class="header_adress_language_active">-->
@@ -51,7 +50,7 @@
     </div>
   </header>
   <header class="header-mobile">
-    <div class="header-mobile_burger">
+    <div class="header-mobile_burger" (click)="showMenu()">
       <div class="header-mobile_burger_icon"></div>
     </div>
     <div class="header-mobile_logo"></div>
@@ -95,6 +94,25 @@
         <div class="menu-tabs_addit_socials_item vk"></div>
       </div>
 
+    </div>
+  </div>
+  <div *ngIf="show_menu" class="menu_mobile">
+    <div class="menu_mobile_header">
+     <a routerLink="/home"><div class="menu_mobile_header_logo"></div></a>
+      <div class="menu_mobile_header_close" (click)="closeMenu()"></div>
+    </div>
+    <div class="menu_mobile_tabs">
+      <div class="menu_mobile_tabs-main">
+        <a routerLink="/corners"> <div class="menu_mobile_tabs-main_item">корнеры</div></a>
+        <a routerLink="/events"> <div class="menu_mobile_tabs-main_item">события</div></a>
+        <a routerLink="/about"> <div class="menu_mobile_tabs-main_item">о проекте</div></a>
+        <a routerLink="/contacts"><div class="menu_mobile_tabs-main_item">контакты</div></a>
+      </div>
+      <div class="menu_mobile_tabs-sub">
+        <div class="menu_mobile_tabs-sub_item">Кешбек</div>
+        <a routerLink="/delivery"><div class="menu_mobile_tabs-sub_item">Доставка</div></a>
+        <div class="menu_mobile_tabs-sub_item">Кейтеринг</div>
+      </div>
     </div>
   </div>
 </div>

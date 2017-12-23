@@ -311,4 +311,40 @@
       }
     }
   }
+  .menu_mobile {
+    display: flex;
+    flex-direction: column;
+    background-color: #FFFFFF;
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    &_header {
+      display: flex;
+      flex-direction: row;
+
+      &_logo {
+        @include sp__Logo;
+      }
+      &_close {
+        @include sp__close-black;
+      }
+    }
+    &_tabs {
+
+      &-main {
+        &_item {
+          text-transform: uppercase;
+          margin: 10px 0;
+        }
+      }
+      &-sub {
+        &_item {
+          margin: 10px 0;
+        }
+      }
+    }
+  }
 }
