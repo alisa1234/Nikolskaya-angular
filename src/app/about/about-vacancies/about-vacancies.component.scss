@@ -8,6 +8,10 @@
     flex-direction: column;
     justify-content: flex-start;
     margin-bottom: 57px;
+    @media screen and (max-width: 1024px) {
+      margin-bottom: 0;
+      padding: 20px 20px 0;
+    }
 
     &_header {
       color: #231F20;
@@ -34,6 +38,10 @@
       justify-content: space-between;
       padding-top: 20px;
 
+      @media screen and (max-width: 1024px) {
+        width: 100%;
+      }
+
       &_group {
         position: relative;
         display: flex;
@@ -43,6 +51,14 @@
         width: 100%;
         margin-top: 10px;
 
+        @media screen and (max-width: 1024px) {
+          flex-direction: column;
+          width: fit-content;
+          align-items: flex-start;
+          min-width: 280px;
+
+        }
+
         &_label {
           color: #231F20;
           font-family: $font_ubuntu;
@@ -50,6 +66,11 @@
           font-weight: 500;
           line-height: 22px;
           text-align: right;
+          @media screen and (max-width: 1024px) {
+            margin-bottom: 10px;
+            font-size: 11px;
+            line-height: 11px;
+          }
         }
 
         select {
@@ -66,6 +87,10 @@
           cursor: pointer;
           outline: none;
 
+          @media screen and (max-width: 1024px) {
+            width: 100%;
+          }
+
         }
 
         &_arrow {
@@ -76,6 +101,10 @@
           right: 17px;
           transform: rotate(90deg);
           cursor: pointer;
+
+          @media screen and (max-width: 1024px) {
+            top: 32px;
+          }
 
         }
 
@@ -88,6 +117,9 @@
           font-family: $font_ubuntu;
           font-size: 14px;
           line-height: 16px;
+          @media screen and (max-width: 1024px) {
+            width: calc(100% - 40px);
+          }
         }
 
         &_resume-label {
@@ -101,6 +133,10 @@
           margin-right: 60px;
           border-radius: 2px;
 
+          @media screen and (max-width: 1024px) {
+            display: none;
+          }
+
         }
 
         &_inputfile {
@@ -111,6 +147,9 @@
           overflow: hidden;
           position: absolute;
           z-index: -1;
+          @media screen and (max-width: 1024px) {
+            display: none;
+          }
 
           &_icon {
             //@include sp__file_icon;
@@ -119,6 +158,27 @@
             height: 20px;
             position: absolute;
             left: 158px;
+            @media screen and (max-width: 1024px) {
+              display: none;
+            }
+          }
+        }
+
+        #resume_link {
+          @media screen and (max-width: 1024px) {
+            display: block;
+          }
+        }
+
+        #for_resume {
+          @media screen and (max-width: 1024px) {
+            display: none;
+          }
+        }
+
+        #for_resume_link {
+          @media screen and (max-width: 1024px) {
+            display: block;
           }
         }
 
@@ -135,6 +195,15 @@
           font-size: 14px;
           line-height: 16px;
           outline: none;
+          @media screen and (max-width: 1024px) {
+            display: none;
+          }
+        }
+
+        #comment_input {
+          @media screen and (max-width: 1024px) {
+            display: block;
+          }
         }
 
         &_submit {
@@ -151,6 +220,17 @@
           text-align: center;
           cursor: pointer;
           outline: none;
+
+          @media screen and (max-width: 1024px) {
+            height: auto;
+            padding: 14px 0 17px;
+            width: 100%;
+            max-width: 400px;
+            font-size: 13px;
+            line-height: 13px;
+            font-weight: normal;
+            margin: 0 auto;
+          }
         }
       }
     }
