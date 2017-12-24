@@ -12,7 +12,6 @@ export class RestaurantsMainComponent implements OnInit {
   constructor() {
     this.restaurant_list = JSON.parse(localStorage.getItem('restaurants_list'));
     console.log(this.restaurant_list)
-    debugger;
   }
 
   ngOnInit() {

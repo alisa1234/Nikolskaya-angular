@@ -26,7 +26,6 @@ export class RestaurantsListComponent implements OnInit {
 
     if(localStorage.getItem('restaurants_list') != null){
       this.restauants_list = JSON.parse(localStorage.getItem('restaurants_list'));
-      debugger;
     }else{
       this.http.get(this.base_url+this.getRestaurants_list)
           .subscribe(data => {

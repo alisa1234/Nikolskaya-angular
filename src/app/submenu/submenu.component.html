@@ -8,11 +8,18 @@
     <div (click)="chooseMenu('sandwiches')" class="menu-tabs_all_tabs_item" [class.active]="type_menu['sandwiches']">Сендвичи</div>
     <div (click)="chooseMenu('pizza')" class="menu-tabs_all_tabs_item" [class.active]="type_menu['pizza']">Пицца</div>
     <div class="menu-tabs_all_tabs_item">
-      <div class="menu-tabs_all_tabs_item_dropdown">
+      <div class="menu-tabs_all_tabs_item_dropdown" (click)="showSubmenu()" [class.active_dropdown]="show_submenu">
         <ul>
           <li>Еще</li>
+          <div *ngIf="show_submenu" class="menu-tabs_all_tabs_item_dropdown_list">
+            <ul>
+              <li>Лапша</li>
+              <li>Бургеры</li>
+              <li>Пельмешки</li>
+            </ul>
+          </div>
         </ul>
-        <div class="header_adress_language_triangle"></div>
+        <div class="menu-tabs_all_tabs_item_dropdown_triangle"></div>
       </div>
 
     </div>
