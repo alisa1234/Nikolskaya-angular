@@ -9,4 +9,7 @@ declare let $: any;
 })
 export class AppComponent {
   title = 'app';
+
+  constructor () {
+  }
 }

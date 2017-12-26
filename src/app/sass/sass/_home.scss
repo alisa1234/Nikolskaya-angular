@@ -4,7 +4,7 @@
   width: 100%;
   max-width: 1280px;
   margin: 0 auto;
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: 1023px) {
     width: 100%;
   }
 
@@ -12,7 +12,7 @@
     padding: 0 40px;
     position: relative;
 
-    @media screen and (max-width: 1024px) {
+    @media screen and (max-width: 1023px) {
       padding: 0;
       width: 100%;
       height: auto;
@@ -50,14 +50,14 @@
       }
       .item {
 
-        @media screen and (max-width: 1024px) {
+        @media screen and (max-width: 1023px) {
           width: 100%;
           height: 100%;
         }
 
         img {
 
-          @media screen and (max-width: 1024px) {
+          @media screen and (max-width: 1023px) {
             height: 100%;
           }
         }
@@ -70,7 +70,7 @@
       position: relative;
       padding: 0 40px;
 
-      @media screen and (max-width: 1024px) {
+      @media screen and (max-width: 1023px) {
         width: 100%;
         padding: 0;
       }

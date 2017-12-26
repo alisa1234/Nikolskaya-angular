@@ -11,7 +11,7 @@
   align-items: center;
   position: relative;
 
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: 1023px) {
     background: #1B2226;
     height: auto;
   }
@@ -100,7 +100,7 @@
     position: relative;
     z-index: 1;
 
-    @media screen and (max-width: 1024px) {
+    @media screen and (max-width: 1023px) {
       font-size: 20px;
       font-weight: 500;
       line-height: 28px;
@@ -120,7 +120,7 @@
     position: relative;
     z-index: 1;
 
-    @media screen and (max-width: 1024px) {
+    @media screen and (max-width: 1023px) {
       width: 100%;
       justify-content: center;
       margin: 0 auto 30px;
@@ -132,7 +132,7 @@
       align-items: center;
       width: 334px;
 
-      @media screen and (max-width: 1024px) {
+      @media screen and (max-width: 1023px) {
         width: 30%;
       }
 
@@ -146,7 +146,7 @@
         align-items: center;
         justify-content: center;
 
-        @media screen and (max-width: 1024px) {
+        @media screen and (max-width: 1023px) {
           width: 80px;
           height: 80px;
 
@@ -154,7 +154,7 @@
 
         &_time {
           @include sp__time_icon;
-          @media screen and (max-width: 1024px) {
+          @media screen and (max-width: 1023px) {
             transform: scale(0.8);
           }
         }
@@ -164,7 +164,7 @@
         }
         &_card {
           @include sp__card_icon;
-          @media screen and (max-width: 1024px) {
+          @media screen and (max-width: 1023px) {
             transform: scale(0.8);
           }
         }
@@ -177,7 +177,7 @@
         font-weight: bold;
         line-height: 21px;
 
-        @media screen and (max-width: 1024px) {
+        @media screen and (max-width: 1023px) {
           display: none;
         }
 
@@ -197,7 +197,7 @@
     position: relative;
     z-index: 1;
     cursor: pointer;
-    @media screen and (max-width: 1024px) {
+    @media screen and (max-width: 1023px) {
       margin-top: 0;
       width: calc(100% - 40px);
       max-width: 280px;
@@ -208,13 +208,13 @@
       font-family: $font_ubuntu;
       font-size: 16px;
       line-height: 18px;
-      @media screen and (max-width: 1024px) {
+      @media screen and (max-width: 10243px) {
         font-size: 13px;
         line-height: 13px;
       }
 
     }
-    @media screen and (max-width: 1024px) {
+    @media screen and (max-width: 1023px) {
       margin-bottom: 40px;
       margin-top: 0;
     }
@@ -229,7 +229,7 @@
   flex-direction: column;
   justify-content: flex-start;
   padding: 30px 40px 55px 50px;
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: 1023px) {
     width: 100%;
     padding: 30px 0 20px;
   }
@@ -241,7 +241,7 @@
     font-family: $font_ubuntu;
     padding-bottom: 27px;
 
-    @media screen and (max-width: 1024px) {
+    @media screen and (max-width: 1023px) {
       display: none;
     }
   }
@@ -250,7 +250,7 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    @media screen and (max-width: 1024px) {
+    @media screen and (max-width: 1023px) {
       padding: 0 20px;
     }
 
@@ -266,7 +266,7 @@
         font-family: $font_ubuntu;
         padding-bottom: 27px;
         padding-right: 16px;
-        @media screen and (max-width: 1024px) {
+        @media screen and (max-width: 1023px) {
           font-size: 20px;
           line-height: 20px;
           text-transform: uppercase;
@@ -288,7 +288,7 @@
         justify-content: center;
         align-items: center;
 
-        @media screen and (max-width: 1024px) {
+        @media screen and (max-width: 1023px) {
           display: none;
         }
 
@@ -318,7 +318,7 @@
       height: 203px;
       justify-content: space-between;
 
-      @media screen and (max-width: 1024px) {
+      @media screen and (max-width: 1023px) {
         font-size: 13px;
         line-height: 20px;
         padding-bottom: 0;
@@ -351,13 +351,13 @@
   }
 
   &_payments {
-    @media screen and (max-width: 1024px) {
+    @media screen and (max-width: 1023px) {
       display: none;
     }
   }
   .main_map {
     padding: 40px 0;
-    @media screen and (max-width: 1024px) {
+    @media screen and (max-width: 1023px) {
       padding: 0;
 
       &_buttons {

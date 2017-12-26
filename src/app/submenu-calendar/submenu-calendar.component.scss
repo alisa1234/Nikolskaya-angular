@@ -23,7 +23,7 @@
   padding: 0 50px;
   background-color: #FFFFFF;
 
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: 1023px) {
     padding: 10px 20px;
   }
 
@@ -35,7 +35,7 @@
     font-size: 16px;
     line-height: 18px;
     font-weight: 100;
-    @media screen and (max-width: 1024px) {
+    @media screen and (max-width: 1023px) {
       font-size: 14px;
       line-height: 20px
     }
@@ -46,7 +46,7 @@
       padding: 25px 0;
       cursor: pointer;
 
-      @media screen and (max-width: 1024px) {
+      @media screen and (max-width: 1023px) {
         padding: 0;
         margin-right: 10px;
       }
@@ -84,7 +84,7 @@
     line-height: 16px;
     font-weight: normal;
 
-    @media screen and (max-width: 1024px) {
+    @media screen and (max-width: 1023px) {
       background-color: transparent;
       box-shadow: none;
       width: auto;
@@ -104,7 +104,7 @@
       //@include sp__calendar;
       margin-right: 16px;
       //@extend %calendar_black;
-      @media screen and (max-width: 1024px) {
+      @media screen and (max-width: 1023px) {
         background-position: -49px -210px;
         width: 16px;
         height: 18px;

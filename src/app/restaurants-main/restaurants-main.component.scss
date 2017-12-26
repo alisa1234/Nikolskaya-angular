@@ -50,6 +50,8 @@
         display: flex;
         flex-direction: row;
         align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
 
         &_icon {
           @include sp__insta-restaurants;
@@ -83,12 +85,14 @@
     }
   }
   &_img {
-    width: 415px;
+    width: 100%;
     height: 250px;
+    max-width: 415px;
 
     img {
-      width: 415px;
+      width: 100%;
       height: 250px;
+      max-width: 415px;
     }
   }
 }
@@ -139,16 +143,22 @@
 
   &_menu {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     padding: 30px 40px 30px 50px;
     max-width: 1180px;
     flex-wrap: wrap;
 
     &_blocks {
-      max-width: 900px;
+      max-width: 1190px;
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
       flex-wrap: wrap;
+
+      &_wrapper {
+        display: flex;
+        flex-direction: row;
+        max-width: 1180px;
+      }
 
       &_lunch {
         display: flex;

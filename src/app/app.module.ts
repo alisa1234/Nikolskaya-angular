@@ -2,6 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
+import { RouterLinkActive } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 
 import { OwlModule } from 'ngx-owl-carousel';
 import {DpDatePickerModule} from 'ng2-date-picker';
@@ -38,6 +40,7 @@ import { SearchBlockComponent } from './search-block/search-block.component';
 import { RestaurantsStockBlockComponent } from './restaurants-stock-block/restaurants-stock-block.component';
 import { RestaurantsMainComponent } from './restaurants-main/restaurants-main.component';
 import { RestaurantBlockFooterComponent } from './restaurant-block-footer/restaurant-block-footer.component';
+import { MobileMenuComponent } from './mobile-menu/mobile-menu.component';
 
 const AppRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -50,7 +53,7 @@ const AppRoutes: Routes = [
   { path: 'corners', component: RestaurantsListComponent },
   { path: 'results', component: RestaurantsResultComponent },
   { path: 'stocks', component: StocksComponent },
-  { path: 'restaurants-main', component: RestaurantsMainComponent },
+  { path: 'restaurants-main/:id', component: RestaurantsMainComponent },
 ];
 
 @NgModule({
@@ -81,7 +84,8 @@ const AppRoutes: Routes = [
     SearchBlockComponent,
     RestaurantsStockBlockComponent,
     RestaurantsMainComponent,
-    RestaurantBlockFooterComponent
+    RestaurantBlockFooterComponent,
+    MobileMenuComponent
   ],
   imports: [
     BrowserModule,
@@ -89,6 +93,7 @@ const AppRoutes: Routes = [
     RouterModule.forRoot(
         AppRoutes
     ),
+
     OwlModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyDVwjBEb9XZk_YLCB5-Bv7S30YvpzDCJsc'
@@ -98,7 +103,8 @@ const AppRoutes: Routes = [
     HttpClientModule
   ],
   providers: [
-    UrlAdresses
+    UrlAdresses,
+    RouterLinkActive
   ],
   bootstrap: [AppComponent]
 })

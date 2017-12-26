@@ -1,5 +1,5 @@
 <div class="content_corners_items" >
-<div class="content_corners_items_item" *ngFor="let item of restaurants_list" routerLink="{{link}}">
+<div class="content_corners_items_item" *ngFor="let item of restaurants_list" [routerLink]="[link,item.Number]" id="{{item.Number}}">
   <div class="content_corners_items_item_img">
     <img class="content_corners_items_item_img_main" src="{{item.Picture}}">
     <img class="logo" src="{{item.Logo}}">
