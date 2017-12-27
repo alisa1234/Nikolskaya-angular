@@ -395,3 +395,11 @@
     }
   }
 }
+.main_content .content_corners {
+  display: flex;
+  flex-direction: row;
+  padding: 0 40px;
+  max-width: 1200px;
+  flex-wrap: wrap;
+  justify-content: center;
+}

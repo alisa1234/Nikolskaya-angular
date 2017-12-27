@@ -7,7 +7,7 @@
         <div class="header_about_text_back_text">Вернутся к списку ресторанов</div>
       </div>
       <div class="header_about_text_title">
-        <div class="header_about_text_title_text">Burger Factory</div>
+        <div class="header_about_text_title_text">{{restaurant_list_current.Name}}</div>
         <div class="header_about_text_title_instatags">
           <div class="header_about_text_title_instatags_icon"></div>
           <div class="header_about_text_title_instatags_tag">#BurgerFactory</div>
@@ -18,7 +18,7 @@
         <div class="header_about_text_title_icon-share"></div>
       </div>
       <div class="header_about_text_main-text">
-        За несколько десятков лет рамен превратился из еды японских рабочих кварталов в мировой культурный феномен. Безусловно, такой быстрый успех был бы невозможен без рамен-шопов, которые и популяризировали это блюдо среди европейцев и американцев.
+        {{restaurant_list_current.Description}}
       </div>
       <app-restaurant-block-footer></app-restaurant-block-footer>
     </div>
@@ -147,16 +147,17 @@
       </div>
 
     </div>
+    <div class="main_content">
     <div class="dishes_content_restaurants-title">рестораны европейской кухни</div>
-    <div class="dishes_content_restaurants">
-      <app-restaurant-block></app-restaurant-block>
-      <app-restaurant-block></app-restaurant-block>
-      <app-restaurant-block></app-restaurant-block>
-      <app-restaurant-block></app-restaurant-block>
-      <app-restaurant-block></app-restaurant-block>
-      <app-restaurant-block></app-restaurant-block>
+    <div class="content_corners">
+      <app-restaurant-block [restaurants_list]="restaurant_list"></app-restaurant-block>
+      <!--<app-restaurant-block></app-restaurant-block>-->
+      <!--<app-restaurant-block></app-restaurant-block>-->
+      <!--<app-restaurant-block></app-restaurant-block>-->
+      <!--<app-restaurant-block></app-restaurant-block>-->
+      <!--<app-restaurant-block></app-restaurant-block>-->
     </div>
-
+    </div>
     <div class="dishes_content_collections">
       <div class="dishes_content_collections_title">подборки</div>
       <div class="dishes_content_collections_items">
