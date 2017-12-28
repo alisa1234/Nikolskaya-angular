@@ -46,14 +46,14 @@
       </div>
 
     </div>
-    <div class="content_corners_items">
-      <app-restaurant-block></app-restaurant-block>
-      <app-restaurant-block></app-restaurant-block>
-      <app-restaurant-block></app-restaurant-block>
-      <app-restaurant-block></app-restaurant-block>
-      <app-restaurant-block></app-restaurant-block>
-      <app-restaurant-block></app-restaurant-block>
-    </div>
+    <!--<div class="content_corners_items">-->
+      <app-restaurant-block [restaurants_list]="restaurant_list"></app-restaurant-block>
+      <!--<app-restaurant-block></app-restaurant-block>-->
+      <!--<app-restaurant-block></app-restaurant-block>-->
+      <!--<app-restaurant-block></app-restaurant-block>-->
+      <!--<app-restaurant-block></app-restaurant-block>-->
+      <!--<app-restaurant-block></app-restaurant-block>-->
+    <!--</div>-->
     <div class="content_corners_moreinfo-text">
       <div class="content_corners_moreinfo-text_left-dash"></div>
       <div class="content_corners_moreinfo-text_text">Посмотреть все 46 корнеров</div>
@@ -136,7 +136,7 @@
 </div>
 <app-instagram-content></app-instagram-content>
 <div class="main">
-  <div class="main_map">
+  <div class="main_map" id="map">
     <div class="main_map_widget">
       <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom">
         <agm-marker [latitude]="lat" [longitude]="lng">

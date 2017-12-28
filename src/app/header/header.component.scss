@@ -22,6 +22,11 @@
       flex-direction: row;
       align-items: center;
 
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
       &_name {
         padding-right: 25px;
         display: flex;
@@ -114,6 +119,9 @@
           line-height: 17px;
           border: none;
           outline: none;
+        }
+        .active_search {
+          width: 320px;
         }
       }
       &_login {

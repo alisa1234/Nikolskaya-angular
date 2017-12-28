@@ -19,14 +19,10 @@ export class RestaurantsMainComponent implements OnInit {
     this.route.params.subscribe(params => {
       this.restaurant_id = +params['id'];
     });
-    console.log(this.restaurant_id);
-    debugger;
     for (let number in this.restaurant_list) {
-      debugger;
       if(this.restaurant_list[number].Number == this.restaurant_id) {
         this.restaurant_list_current = this.restaurant_list[number];
         this.restaurant_list_menu = this.restaurant_list[number].RestaurantCategories;
-        debugger;
       }
     }
   }

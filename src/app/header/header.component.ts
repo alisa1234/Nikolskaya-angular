@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { RouterLinkActive, Router } from '@angular/router';
+import { RouterLinkActive, Router, NavigationEnd, ActivatedRoute } from '@angular/router';
 declare let $: any;
 
 @Component({
@@ -12,8 +12,17 @@ export class HeaderComponent implements OnInit {
   show_language: boolean = false;
   show_menu: boolean;
   current_url: string;
-  constructor(private route: Router) {
+  open_search: boolean;
+  constructor(private route: Router, private router: ActivatedRoute) {
     this.current_url = this.route.url;
+
+    this.route.events.subscribe(s => {
+      if (s instanceof NavigationEnd) {
+        const tree = this.route.parseUrl(this.route.url);
+      }
+
+    });
+
   }
 
   ngOnInit() {
@@ -29,5 +38,22 @@ export class HeaderComponent implements OnInit {
     this.show_menu = true;
     $(document.body).css('position','fixed');
   }
+  goToMap() {
+    if(this.route.url == '/'){
+      this.router.fragment.subscribe ( f => {
+        let element = document.querySelector ( "#map");
+        element.scrollIntoView ()
+      });
+    }else{
+      this.route.navigate(['/contacts']).then(()=> this.router.fragment.subscribe ( f => {
+        let element = document.querySelector ( "#map_contacts");
+        element.scrollIntoView ()
+      }));
 
+    }
+
+  }
+  openSearch() {
+    this.open_search = true;
+  }
 }

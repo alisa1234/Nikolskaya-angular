@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import {UrlAdresses} from '../url_adresses'
+//TODO
 import { catchError, map, tap } from 'rxjs/operators';
 
 @Component({

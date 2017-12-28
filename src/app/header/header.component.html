@@ -3,7 +3,7 @@
     <div class="header_adress">
       <div class="header_adress_name">
         <div class="header_adress_name_location"></div>
-        <span>ул. Никольская 10</span>
+        <a  fragment="map" (click)="goToMap()"><span>ул. Никольская 10</span></a>
       </div>
       <div class="header_adress_time">
         <div class="header_adress_time_logo"></div>
@@ -37,7 +37,7 @@
     <div class="header_tabs">
       <div class="header_tabs_search">
         <div class="header_tabs_search_logo"></div>
-        <input type="search" placeholder="Поиск"/>
+        <input (click)="openSearch()" [class.active_search]="open_search" type="search" placeholder="Поиск"/>
       </div>
       <div class="header_tabs_login">
         <div class="header_tabs_login_logo"></div>
@@ -77,7 +77,7 @@
     <div class="menu-tabs_addit">
       <div class="menu-tabs_addit_delivery">
         <div class="menu-tabs_addit_delivery_item">
-          <span>Кешбек</span>
+          <span>Бонусы</span>
         </div>
         <div class="menu-tabs_addit_delivery_item">
           <a routerLink="/delivery"><span>Доставка</span></a>
@@ -89,8 +89,8 @@
       <div class="menu-tabs_addit_socials">
         <div class="menu-tabs_addit_socials_item facebook"></div>
         <div class="menu-tabs_addit_socials_item instagram"></div>
-        <div class="menu-tabs_addit_socials_item pinterest"></div>
-        <div class="menu-tabs_addit_socials_item twitter"></div>
+        <!--<div class="menu-tabs_addit_socials_item pinterest"></div>-->
+        <!--<div class="menu-tabs_addit_socials_item twitter"></div>-->
         <div class="menu-tabs_addit_socials_item vk"></div>
       </div>
 
