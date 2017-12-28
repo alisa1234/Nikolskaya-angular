@@ -8,7 +8,8 @@ import { ActivatedRoute } from '@angular/router';
 import { OwlModule } from 'ngx-owl-carousel';
 import {DpDatePickerModule} from 'ng2-date-picker';
 
-import {UrlAdresses} from './url_adresses'
+import {UrlAdresses} from './url_adresses';
+import { EventsListService } from './events-list/events-list.service';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -45,7 +46,7 @@ import { MobileMenuComponent } from './mobile-menu/mobile-menu.component';
 const AppRoutes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'events', component: EventsListComponent },
-  { path: 'event', component: EventComponent },
+  { path: 'event/:id', component: EventComponent },
   { path: 'about', component: AboutComponent },
   { path: 'banner', component: StockBannerComponent },
   { path: 'contacts', component: ContactsComponent },
@@ -104,7 +105,8 @@ const AppRoutes: Routes = [
   ],
   providers: [
     UrlAdresses,
-    RouterLinkActive
+    RouterLinkActive,
+    EventsListService
   ],
   bootstrap: [AppComponent]
 })

@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
-import {UrlAdresses} from '../url_adresses'
+import { Component, OnInit} from '@angular/core';
+import { EventsListService } from '../events-list/events-list.service'
+
 
 @Component({
   selector: 'app-events-list',
@@ -9,19 +9,11 @@ import {UrlAdresses} from '../url_adresses'
 })
 export class EventsListComponent implements OnInit {
 
-  getEvents_list: string;
-  base_url: string;
-  events_list: any;
+  index: string;
 
-  constructor(private http: HttpClient, urlAdresses: UrlAdresses) {
-    this.getEvents_list = urlAdresses.getEvents_list;
-    this.base_url = urlAdresses.base_url;
 
-    this.http.get(this.base_url+this.getEvents_list)
-        .subscribe(data => {
-          this.events_list = data;
-          // localStorage.setItem('restaurants_list',JSON.stringify(this.restauants_list));
-    })
+  constructor(public eventsListService:EventsListService) {
+    this.eventsListService.getEventsList();
   }
 
   ngOnInit() {

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output } from '@angular/core';
+import { EventsListService } from '../events-list/events-list.service';
 
 @Component({
   selector: 'app-events-block',
@@ -8,9 +9,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EventsBlockComponent implements OnInit {
 
-  constructor() { }
+  @Input() link: string;
+  events_list: any;
+  index: boolean = false;
+
+
+  constructor(private eventsListService:EventsListService) {
+
+    debugger;
+    this.eventsListService.change.subscribe(data => {
+      this.events_list = data.list;
+
+    })
+  }
 
   ngOnInit() {
+
   }
 
 }

@@ -1,16 +1,15 @@
-<div class="content_events_items_item">
-  <div class="content_events_items_item_img">
-    <img src="app/sass/images/7.png">
-  </div>
-  <div class="content_events_items_item_content">
-    <div class="content_events_items_item_content_name">Неделя итальянской еды</div>
-    <div class="content_events_items_item_content_date">28 июня - 03 июля</div>
-    <div class="content_events_items_item_content_text">Мероприятие длится один день
-      и направлено на увеличение продаж среди
-      владельцев карт.
+
+  <div class="content_events_items_item" *ngFor="let item of events_list" [routerLink]="[link,item.Id]" id="{{item.Id}}">
+    <div class="content_events_items_item_img">
+      <img src="{{item.ImagePath}}">
     </div>
-    <div class="content_events_items_item_content_time">Афиша</div>
-  </div>
+    <div class="content_events_items_item_content">
+      <div class="content_events_items_item_content_name">{{i}}{{item.Header}}</div>
+      <div class="content_events_items_item_content_date">{{item.StartDate}} - {{item.EndDate}}</div>
+      <div class="content_events_items_item_content_text">{{item.Body}}
+      </div>
+      <div class="content_events_items_item_content_time">Афиша</div>
+    </div>
   <!--<div class="content_events_items_item_content-kitchen">-->
   <!--<div class="content_events_items_item_content-kitchen_item">Европейская</div>-->
   <!--<div class="content_events_items_item_content-kitchen_delimiter"></div>-->
@@ -18,4 +17,7 @@
   <!--<div class="content_events_items_item_content-kitchen_delimiter"></div>-->
   <!--<div class="content_events_items_item_content-kitchen_item">Сендвичи</div>-->
   <!--</div>-->
+
 </div>
+
+

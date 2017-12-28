@@ -4,6 +4,19 @@
 
 :host(.root) {
   outline: none;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  @media screen and (max-width: 1024px) {
+    //width: calc(100% - 40px);
+    width: 100%;
+    //padding: 0 20px;
+    max-width: 380px;
+    margin: 0 auto;
+  }
 }
 
 .content_events_items_item {
@@ -15,6 +28,7 @@
 
   @media screen and (max-width: 1024px) {
     width: 100%;
+    margin-right: 0;
   }
 
   &_img {
