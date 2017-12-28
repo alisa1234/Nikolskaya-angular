@@ -10,7 +10,16 @@
   flex-direction: row;
   max-width: 1230px;
 
+  @media screen and (max-width: 1023px) {
+    display: none;
+  }
+
   &_text {
+    order: 1;
+
+    @media screen and (max-width: 1024px) {
+      order: 2;
+    }
     &_back {
       display: flex;
       flex-direction: row;
@@ -22,13 +31,13 @@
       }
 
       &_text {
-          color: #7F7873;
-          font-family: $font_ubuntu;
-          font-size: 13px;
-          font-weight: 500;
-          line-height: 13px;
-          text-align: right;
-          margin-left: 20px;
+        color: #7F7873;
+        font-family: $font_ubuntu;
+        font-size: 13px;
+        font-weight: 500;
+        line-height: 13px;
+        text-align: right;
+        margin-left: 20px;
       }
     }
     &_title {
@@ -40,11 +49,11 @@
       position: relative;
 
       &_text {
-          color: #231F20;
-          font-size: 40px;
-          font-weight: 500;
-          line-height: 44px;
-          margin-right: 40px;
+        color: #231F20;
+        font-size: 40px;
+        font-weight: 500;
+        line-height: 44px;
+        margin-right: 40px;
       }
       &_instatags {
         display: flex;
@@ -57,13 +66,12 @@
           @include sp__insta-restaurants;
           margin-right: 10px;
 
-
         }
         &_tag {
-            color: #7F7873;
-            font-size: 13px;
-            line-height: 13px;
-            margin-right: 10px;
+          color: #7F7873;
+          font-size: 13px;
+          line-height: 13px;
+          margin-right: 10px;
 
           &:last-child {
             margin-right: 0;
@@ -77,17 +85,23 @@
       }
     }
     &_main-text {
-        color: #7F7873;
-        font-family: $font_ubuntu;
-        font-size: 16px;
-        line-height: 24px;
+      color: #7F7873;
+      font-family: $font_ubuntu;
+      font-size: 16px;
+      line-height: 24px;
       margin-top: 8px;
     }
   }
   &_img {
+    order: 2;
     width: 100%;
     height: 250px;
     max-width: 415px;
+
+    @media screen and (max-width: 1023px) {
+      order: 1;
+
+    }
 
     img {
       width: 100%;
@@ -96,6 +110,70 @@
     }
   }
 }
+
+.header_about_mobile {
+  padding: 16px 20px 18px;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #CCC8C4;
+  border-top: 1px solid #CCC8C4;
+
+  .header_about_text_back {
+    margin-top: 0;
+    margin-bottom: 15px;
+    cursor: pointer;
+  }
+
+  &_info {
+    display: flex;
+    flex-direction: row;
+
+    &_img {
+      width: 40px;
+      height: 40px;
+      margin-right: 10px;
+
+      img {
+        width: 40px;
+        height: 40px;
+      }
+    }
+
+    &_text {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 40px;
+
+      &_title {
+        color: #231F20;
+        font-family: $font_ubuntu;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 20px;
+        cursor: default;
+      }
+
+      &_more {
+        color: #7F7873;
+        font-family: $font_ubuntu;
+        font-size: 13px;
+        line-height: 13px;
+        cursor: pointer;
+
+        &:after {
+          content: '>';
+          margin-left: 7px;
+        }
+      }
+    }
+  }
+
+  @media screen and (min-width: 1023px) {
+    display: none;
+  }
+}
+
 .menu_tabs_dishes {
   display: flex;
   flex-direction: row;
@@ -105,15 +183,15 @@
   align-items: center;
 
   &_dropdown {
-      color: #231F20;
-      font-family: $font_ubuntu;
-      font-size: 18px;
-      line-height: 21px;
-      display: flex;
-      flex-direction: row;
-      align-items: baseline;
-      position: relative;
-      cursor: pointer;
+    color: #231F20;
+    font-family: $font_ubuntu;
+    font-size: 18px;
+    line-height: 21px;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    position: relative;
+    cursor: pointer;
 
     ul {
       margin-right: 10px;
@@ -129,13 +207,12 @@
       }
     }
 
-
-
     &_arrow {
       @include sp__arrow-dishes;
     }
   }
 }
+
 .dishes_content {
   width: 100%;
   max-width: 1280px;
@@ -147,6 +224,9 @@
     padding: 30px 40px 30px 50px;
     max-width: 1180px;
     flex-wrap: wrap;
+    @media screen and (max-width: 1023px) {
+      padding: 20px;
+    }
 
     &_blocks {
       max-width: 1190px;
@@ -166,6 +246,12 @@
         max-width: 930px;
         flex-wrap: wrap;
 
+
+        @media screen and (max-width: 1023px) {
+          max-width: 400px;
+          margin: 0 auto;
+          width: 100%;
+        }
 
       }
       &_title {
@@ -193,6 +279,15 @@
         text-align: center;
         cursor: pointer;
 
+        @media screen and (max-width: 1023px) {
+          margin: 0 auto;
+          height: auto;
+          width: 100%;
+          text-align: center;
+          padding: 14px 0 17px;
+          max-width: 400px;
+        }
+
       }
     }
     &_banner {
@@ -201,20 +296,24 @@
       margin-top: 10px;
       height: fit-content;
       //display: none;
+
+      @media screen and (max-width: 1023px) {
+        display: none;
+      }
       &_text {
-          color: #231F20;
-          font-family: $font_ubuntu;
-          font-size: 26px;
-          font-weight: 500;
-          line-height: 30px;
-          margin: 40px 0 0 20px;
+        color: #231F20;
+        font-family: $font_ubuntu;
+        font-size: 26px;
+        font-weight: 500;
+        line-height: 30px;
+        margin: 40px 0 0 20px;
       }
       &_subtext {
-          color: #7F7873;
-          font-family: $font_ubuntu;
-          font-size: 18px;
-          line-height: 22px;
-          margin: 25px 0 0 20px;
+        color: #7F7873;
+        font-family: $font_ubuntu;
+        font-size: 18px;
+        line-height: 22px;
+        margin: 25px 0 0 20px;
       }
       &_app {
         display: flex;
@@ -237,6 +336,10 @@
       max-width: 260px;
       display: none;
 
+      @media screen and (max-width: 1023px) {
+        display: none;
+      }
+
       &_title {
         color: #231F20;
         font-family: $font_ubuntu;
@@ -248,13 +351,13 @@
         margin-top: 12px;
         &_item {
           margin-top: 12px;
-          border-bottom: 1px solid 	#D8D5D2;
+          border-bottom: 1px solid #D8D5D2;
           &_title {
-              color: #231F20;
-              font-family: $font_ubuntu;
-              font-size: 14px;
-              font-weight: 500;
-              line-height: 20px;
+            color: #231F20;
+            font-family: $font_ubuntu;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 20px;
           }
           &_content {
             display: flex;
@@ -298,12 +401,12 @@
         margin-top: 20px;
 
         &_text {
-            color: #231F20;
-            font-family: $font_ubuntu;
-            font-size: 16px;
-            font-weight: 500;
-            line-height: 22px;
-            margin-right: 89px;
+          color: #231F20;
+          font-family: $font_ubuntu;
+          font-size: 16px;
+          font-weight: 500;
+          line-height: 22px;
+          margin-right: 89px;
         }
         &_price {
           color: #231F20;
@@ -328,6 +431,16 @@
         line-height: 18px;
         text-align: center;
         cursor: pointer;
+
+        @media screen and (max-width: 1023px) {
+          margin: 0 auto;
+          height: auto;
+          width: 100%;
+          text-align: center;
+          padding: 14px 0 17px;
+          max-width: 400px;
+        }
+
 
       }
     }
@@ -354,11 +467,11 @@
     padding: 35px 40px 50px;
     max-width: 1200px;
     &_title {
-        color: #231F20;
-        font-family: $font_condensed;
-        font-size: 30px;
-        line-height: 30px;
-        text-align: center;
+      color: #231F20;
+      font-family: $font_condensed;
+      font-size: 30px;
+      line-height: 30px;
+      text-align: center;
       text-transform: uppercase;
     }
     &_items {
@@ -374,27 +487,27 @@
         position: relative;
         margin: 20px 20px 0 0;
 
-
         img {
           width: 280px;
           height: 140px;
         }
         span {
-            color: #FFFFFF;
-            font-family: $font_ubuntu;
-            font-size: 18px;
-            font-weight: 500;
-            line-height: 21px;
-            text-align: center;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+          color: #FFFFFF;
+          font-family: $font_ubuntu;
+          font-size: 18px;
+          font-weight: 500;
+          line-height: 21px;
+          text-align: center;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
         }
-    }
+      }
     }
   }
 }
+
 .main_content .content_corners {
   display: flex;
   flex-direction: row;

@@ -2,4 +2,16 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: center;
+
+  @media screen and (max-width: 1023px) {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .dish-output_result_items_item {
+    @media screen and (max-width: 1023px) {
+      margin: 10px 0;
+    }
+  }
 }
