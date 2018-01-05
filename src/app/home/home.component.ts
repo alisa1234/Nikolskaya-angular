@@ -11,9 +11,12 @@ export class HomeComponent implements OnInit {
   lng: number = 37.62465476989747;
   zoom: number = 16;
   restaurant_list: any;
+  restaurant_list_length: number;
 
   constructor() {
     this.restaurant_list = JSON.parse(localStorage.getItem('restaurants_list'));
+    this.restaurant_list_length = this.restaurant_list.length;
+    debugger;
   }
 
   ngOnInit() {

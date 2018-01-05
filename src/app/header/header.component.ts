@@ -42,12 +42,17 @@ export class HeaderComponent implements OnInit {
     if(this.route.url == '/'){
       this.router.fragment.subscribe ( f => {
         let element = document.querySelector ( "#map");
-        element.scrollIntoView ()
+        if(element != null ){
+          element.scrollIntoView ()
+        }
       });
     }else{
       this.route.navigate(['/contacts']).then(()=> this.router.fragment.subscribe ( f => {
-        let element = document.querySelector ( "#map_contacts");
-        element.scrollIntoView ()
+          let element = document.querySelector ( "#map_contacts");
+        if(element != null ){
+          element.scrollIntoView ()
+        }
+
       }));
 
     }

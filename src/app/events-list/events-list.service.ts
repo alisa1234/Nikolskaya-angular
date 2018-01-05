@@ -23,6 +23,7 @@ export class EventsListService {
     this.http.get(this.base_url+this.getEvents_list)
         .subscribe(data => {
           this.events_list.list = data;
+          debugger;
           this.change.emit(this.events_list);
           for(let i=0; i < this.events_list.list.length; i++) {
             if (i == 2) {

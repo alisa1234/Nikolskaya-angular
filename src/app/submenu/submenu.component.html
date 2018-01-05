@@ -10,7 +10,7 @@
     <div class="menu-tabs_all_tabs_item">
       <div class="menu-tabs_all_tabs_item_dropdown" (click)="showSubmenu()" [class.active_dropdown]="show_submenu">
         <ul>
-          <li>Еще</li>
+          <li [class.active_dropdown_li]="show_submenu">Еще</li>
           <div *ngIf="show_submenu" class="menu-tabs_all_tabs_item_dropdown_list">
             <ul>
               <li>Лапша</li>
@@ -19,7 +19,7 @@
             </ul>
           </div>
         </ul>
-        <div class="menu-tabs_all_tabs_item_dropdown_triangle"></div>
+        <div class="menu-tabs_all_tabs_item_dropdown_triangle" [class.active_triangle]="show_submenu"></div>
       </div>
 
     </div>

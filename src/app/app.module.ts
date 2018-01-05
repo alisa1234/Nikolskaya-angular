@@ -42,6 +42,10 @@ import { RestaurantsStockBlockComponent } from './restaurants-stock-block/restau
 import { RestaurantsMainComponent } from './restaurants-main/restaurants-main.component';
 import { RestaurantBlockFooterComponent } from './restaurant-block-footer/restaurant-block-footer.component';
 import { MobileMenuComponent } from './mobile-menu/mobile-menu.component';
+import { PersonalComponent } from './personal/personal.component';
+import { DataComponent } from './personal/data/data.component';
+import { HistoryComponent } from './personal/history/history.component';
+import { AddressComponent } from './personal/address/address.component';
 
 const AppRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -55,6 +59,7 @@ const AppRoutes: Routes = [
   { path: 'results', component: RestaurantsResultComponent },
   { path: 'stocks', component: StocksComponent },
   { path: 'restaurants-main/:id', component: RestaurantsMainComponent },
+  { path: 'personal', component: PersonalComponent },
 ];
 
 @NgModule({
@@ -86,7 +91,11 @@ const AppRoutes: Routes = [
     RestaurantsStockBlockComponent,
     RestaurantsMainComponent,
     RestaurantBlockFooterComponent,
-    MobileMenuComponent
+    MobileMenuComponent,
+    PersonalComponent,
+    DataComponent,
+    HistoryComponent,
+    AddressComponent
   ],
   imports: [
     BrowserModule,

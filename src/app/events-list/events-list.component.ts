@@ -13,6 +13,7 @@ export class EventsListComponent implements OnInit {
 
 
   constructor(public eventsListService:EventsListService) {
+    debugger
     this.eventsListService.getEventsList();
   }
 

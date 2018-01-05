@@ -50,7 +50,7 @@
                 margin: 0;
 
                 li {
-
+                  margin-bottom: 10px;
                 }
               }
             }
@@ -63,11 +63,18 @@
             background: #FFFFFF;
             position: absolute;
             align-items: unset;
-            height: 120px;
-            width: 105px;
+            height: 100px;
+            width: 83px;
             padding: 10px;
             margin-top: -10px;
             box-shadow: 0 3px 5px 0 rgba(0,0,0,0.07);
+
+            &_li {
+                color: #6C6560;
+            }
+          }
+          .active_triangle {
+            margin-top: 5px;
           }
 
 

@@ -131,6 +131,11 @@
         align-items: center;
         padding-right: 30px;
         cursor: pointer;
+
+        a {
+          color: inherit;
+          text-decoration: none;
+        }
         &_logo {
           @include sp__User;
           margin-right: 10px
