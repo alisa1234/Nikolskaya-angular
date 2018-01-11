@@ -154,6 +154,11 @@
         flex-direction: row;
         align-items: center;
         cursor: pointer;
+
+        a {
+          color: inherit;
+          text-decoration: none;
+        }
         &_logo {
           @include sp__basket;
           margin-right: 10px;

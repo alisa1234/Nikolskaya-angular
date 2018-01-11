@@ -46,6 +46,7 @@ import { PersonalComponent } from './personal/personal.component';
 import { DataComponent } from './personal/data/data.component';
 import { HistoryComponent } from './personal/history/history.component';
 import { AddressComponent } from './personal/address/address.component';
+import { OrderFormComponent } from './order-form/order-form.component';
 
 const AppRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -60,6 +61,7 @@ const AppRoutes: Routes = [
   { path: 'stocks', component: StocksComponent },
   { path: 'restaurants-main/:id', component: RestaurantsMainComponent },
   { path: 'personal', component: PersonalComponent },
+  { path: 'order', component: OrderFormComponent },
 ];
 
 @NgModule({
@@ -95,7 +97,9 @@ const AppRoutes: Routes = [
     PersonalComponent,
     DataComponent,
     HistoryComponent,
-    AddressComponent
+    AddressComponent,
+    OrderFormComponent,
+
   ],
   imports: [
     BrowserModule,
