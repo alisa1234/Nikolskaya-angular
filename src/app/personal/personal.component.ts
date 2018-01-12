@@ -12,6 +12,7 @@ export class PersonalComponent implements OnInit {
     this.type_content['history']=false;
     this.type_content['address']=true;
     this.type_content['data']=true;
+    this.type_content['bonus']=true;
   }
 
   ngOnInit() {

@@ -1,3 +1,51 @@
-<p>
-  data works!
-</p>
+<div class="about_container_content">
+  <div class="about_container_content_table">
+    <div class="about_container_content_table_header">Персональные данные</div>
+    <form>
+      <div class="form_item">
+        <label for="first-name">Имя</label>
+        <input id="first-name" type="text" placeholder="Введите имя">
+      </div>
+      <div class="form_item">
+        <label for="second-name">Фамилия</label>
+        <input id="second-name" type="text" placeholder="Введите фамилию">
+      </div>
+      <div class="form_item">
+        <label for="email">Email</label>
+        <input id="email" type="email" placeholder="Введите электронную почту">
+      </div>
+    </form>
+    <div class="personal_subscribe_wrapper">
+      <div class="personal_subscribe_wrapper_checkbox">
+        <input id="chb" type="checkbox">
+        <label for="chb"></label>
+      </div>
+      <div class="personal_subscribe_wrapper_text">
+        <span>Подписаться на новости</span>
+        <span>Узнайте об акциях и специальных предложениях первыми</span>
+      </div>
+      <div class="personal_subscribe_wrapper_img"></div>
+    </div>
+    <button type="submit" class="form_button">Сохранить изменения</button>
+
+  </div>
+  <div class="about_container_content_table">
+    <div class="about_container_content_table_header-password">Изменить пароль</div>
+    <form>
+      <div class="form_item">
+        <label for="old-pass">Старый пароль</label>
+        <input id="old-pass" type="password" placeholder="Введите текущий парроль">
+      </div>
+      <div class="form_item">
+        <label for="new-pass">Новый пароль</label>
+        <input id="new-pass" type="password" placeholder="Минимум 6 символов">
+      </div>
+      <div class="form_item">
+        <label for="repeat">Подтверидить</label>
+        <input id="repeat" type="password" placeholder="Повторите пароль еще раз">
+      </div>
+    </form>
+    <button type="submit" class="form_button">Изменить пароль</button>
+
+  </div>
+</div>

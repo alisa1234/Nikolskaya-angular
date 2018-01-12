@@ -1,1 +1,87 @@
 @import "../about/about.component";
+
+.about_container_wrapper_nav {
+  display: flex;
+  flex-direction: column;
+
+
+  .about_container_nav {
+    .bonus {
+      margin-bottom: 10px;
+    }
+    &:first-child {
+      margin-bottom: 20px;
+      height: fit-content;
+      padding-bottom: 20px;
+
+      .active {
+        color: #A97E30;
+        font-size: 16px;
+        font-weight: bold;
+        line-height: 22px;
+      }
+    }
+    &_bonus_count {
+      display: flex;
+      flex-direction: column;
+      font-family: $font_ubuntu;
+      &_points {
+        color: #231F20;
+        font-size: 22px;
+        font-weight: bold;
+        line-height: 30px;
+        margin-bottom: 5px;
+      }
+      &_currency {
+        color: #7F7873;
+        font-size: 14px;
+        line-height: 15px;
+      }
+    }
+    &_progress_bar {
+      margin-top: 15px;
+
+      &_wrapper {
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        padding: 0 5px;
+        border-bottom: 1px solid #E6E3E1;
+        &_item {
+
+          border-right: 1px solid #E6E3E1;
+          width: 70px;
+          height: 7px;
+
+          &:first-child{
+            border-left: 1px solid #E6E3E1;
+
+          }
+
+        }
+      }
+
+      &_item-color {
+        width: 170px;
+        height: 3px;
+        border-radius: 20px;
+        background: linear-gradient(90deg, #FDAE47 0%, #FDCF48 100%);
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+
+        .dot {
+          width: 5px;
+          height: 5px;
+          border-radius: 50%;
+          background-color: #FDC748;
+          position: absolute;
+          right: 0;
+          bottom: -1px;
+        }
+      }
+
+    }
+  }
+
+}

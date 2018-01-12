@@ -46,6 +46,8 @@ import { PersonalComponent } from './personal/personal.component';
 import { DataComponent } from './personal/data/data.component';
 import { HistoryComponent } from './personal/history/history.component';
 import { AddressComponent } from './personal/address/address.component';
+import { BonusComponent } from './personal/bonus/bonus.component';
+import { LastStepComponent } from './last-step/last-step.component';
 import { OrderFormComponent } from './order-form/order-form.component';
 
 const AppRoutes: Routes = [
@@ -61,6 +63,7 @@ const AppRoutes: Routes = [
   { path: 'stocks', component: StocksComponent },
   { path: 'restaurants-main/:id', component: RestaurantsMainComponent },
   { path: 'personal', component: PersonalComponent },
+  { path: 'last', component: LastStepComponent },
   { path: 'order', component: OrderFormComponent },
 ];
 
@@ -98,8 +101,9 @@ const AppRoutes: Routes = [
     DataComponent,
     HistoryComponent,
     AddressComponent,
+    BonusComponent,
+    LastStepComponent,
     OrderFormComponent,
-
   ],
   imports: [
     BrowserModule,
