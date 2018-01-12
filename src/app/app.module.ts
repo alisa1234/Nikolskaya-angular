@@ -46,6 +46,8 @@ import { PersonalComponent } from './personal/personal.component';
 import { DataComponent } from './personal/data/data.component';
 import { HistoryComponent } from './personal/history/history.component';
 import { AddressComponent } from './personal/address/address.component';
+import { BonusComponent } from './personal/bonus/bonus.component';
+import { LastStepComponent } from './last-step/last-step.component';
 
 const AppRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -60,6 +62,7 @@ const AppRoutes: Routes = [
   { path: 'stocks', component: StocksComponent },
   { path: 'restaurants-main/:id', component: RestaurantsMainComponent },
   { path: 'personal', component: PersonalComponent },
+  { path: 'last', component: LastStepComponent },
 ];
 
 @NgModule({
@@ -95,7 +98,9 @@ const AppRoutes: Routes = [
     PersonalComponent,
     DataComponent,
     HistoryComponent,
-    AddressComponent
+    AddressComponent,
+    BonusComponent,
+    LastStepComponent
   ],
   imports: [
     BrowserModule,

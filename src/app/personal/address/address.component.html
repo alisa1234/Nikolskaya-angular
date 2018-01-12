@@ -1,3 +1,57 @@
-<p>
-  adress works!
-</p>
+<div class="about_container_content">
+  <div class="about_container_content_table">
+    <div class="about_container_content_table_header">Персональные данные</div>
+    <div class="address">
+      <div class="address_item">
+        <div class="address_item_name">ул. Научная 22</div>
+        <div class="address_item_other">квартира 81, подъезд 2, этаж 9</div>
+        <div class="address_item_delete"><span></span></div>
+      </div>
+      <div class="address_item">
+        <div class="address_item_name">ул. Научная 22</div>
+        <div class="address_item_other">квартира 81, подъезд 2, этаж 9</div>
+        <div class="address_item_delete"><span></span></div>
+      </div>
+    </div>
+    <div class="add_address_form">
+      <div class="about_container_content_table_header-password">Добавить адреса</div>
+      <form>
+        <div class="form_item">
+          <label for="address">Адрес, улица</label>
+          <input id="address" type="text" placeholder="Введите адрес или выберите на карте">
+        </div>
+        <div class="form_item">
+          <div class="form_item_separated">
+            <label for="apartment">Квартира/Офис</label>
+            <div class="form_item_separated_right">
+              <div class="form_item_separated_left">
+                <input id="apartment" type="text" placeholder="Номер">
+              </div>
+              <div class="form_item_separated_right_item">
+                <label for="entrance">Подьезд</label>
+                <input id="entrance" type="text" placeholder="Номер">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form_item">
+          <div class="form_item_separated">
+            <label for="floor">Этаж</label>
+
+            <div class="form_item_separated_right">
+              <div class="form_item_separated_left">
+                <input id="floor" type="text" placeholder="Номер">
+              </div>
+              <div class="form_item_separated_right_item">
+                <label for="doorphone_code">Код домофона</label>
+                <input id="doorphone_code" type="text" placeholder="Номер">
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+      <button type="submit" class="form_add_address">Добавить адрес</button>
+    </div>
+  </div>
+
+</div>

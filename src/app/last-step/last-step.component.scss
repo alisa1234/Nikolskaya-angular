@@ -1,0 +1,106 @@
+@import "../sass/sass/svg-sprite";
+@import "../sass/sass/png-sprite";
+@import "../sass/sass/variables";
+//@import "../personal/data/data.component";
+
+:host(.root) {
+  position: absolute;
+  max-width: 1280px;
+  width: 100%;
+  height: 100%;
+  background-color: #FFFFFF;
+  top: 0;
+  left: 0;
+
+}
+.form_wrapper {
+  width: 550px;
+  margin: 0 auto;
+  font-family: $font_ubuntu;
+  position: relative;
+  margin-top: 30px;
+  &_title {
+      color: #231F20;
+      font-size: 30px;
+      font-weight: bold;
+      line-height: 30px;
+      text-align: center;
+  }
+  &_sub_title {
+      color: #7F7873;
+      font-size: 14px;
+      line-height: 16px;
+      text-align: center;
+      margin-top: 20px;
+  }
+  form {
+    margin-top: 30px;
+    font-family: $font_ubuntu;
+    display: flex;
+    flex-direction: column;
+
+    label {
+      color: #231F20;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 22px;
+    }
+    input {
+      padding: 15px 20px;
+      width: 252px;
+      border: 1px solid #E6E3E1;
+      border-radius: 2px;
+      box-shadow: 0 1px 3px 0 rgba(0,0,0,0.1);
+      color: #7F7873;
+      font-size: 14px;
+      line-height: 16px;
+    }
+    .form_item {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin-top: 5px;
+      align-items: center;
+
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+
+  }
+  &_btn_group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+    &_main_btn {
+      padding: 15px 0;
+      width: 263px;
+      border-radius: 2px;
+      background-color: #332C26;
+      box-shadow: 0 1px 3px 0 rgba(0,0,0,0.1);
+      color: #FFFFFF;
+      font-size: 18px;
+      line-height: 21px;
+      cursor: pointer;
+      outline: none;
+    }
+    &_sub_btn {
+      width: 77px;
+      color: #7F7873;
+      font-size: 14px;
+      line-height: 16px;
+      cursor: pointer;
+      outline: none;
+      border: none;
+      margin-top: 25px;
+    }
+  }
+  &_close {
+    @include sp__close-black_small;
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+  }
+}

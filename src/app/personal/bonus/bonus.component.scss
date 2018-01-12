@@ -1,0 +1,111 @@
+@import "../data/data.component";
+
+.about_container_content_table {
+  &_description {
+      margin-top: 20px;
+      margin-bottom: 60px;
+      color: #231F20;
+      font-family: $font_ubuntu;
+      font-size: 16px;
+      line-height: 18px;
+  }
+  &_bonus_description {
+    display: flex;
+    flex-direction: row;
+    font-family: $font_ubuntu;
+    margin: 25px 0;
+
+    &_points {
+      color: #231F20;
+      font-size: 44px;
+      font-weight: bold;
+      line-height: 30px;
+      margin-right: 15px;
+    }
+    &_sign {
+        color: #231F20;
+        font-size: 30px;
+        line-height: 35px;
+        margin-right: 25px;
+    }
+    &_currency {
+      color: #231F20;
+      font-size: 30px;
+      line-height: 35px;
+    }
+  }
+  &_btn {
+    padding: 15px;
+    width: 167px;
+    border-radius: 2px;
+    background-color: #332C26;
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,0.1);
+    color: #FFFFFF;
+    font-size: 16px;
+    line-height: 18px;
+    cursor: pointer;
+    outline: none;
+  }
+  .personal_bonus_progress_bar {
+    margin-top: 45px;
+    font-family: $font_ubuntu;
+    &_text {
+        color: #DDB238;
+        font-size: 22px;
+        font-weight: bold;
+        line-height: 30px;
+    }
+    &_main {
+      position: relative;
+      height: 20px;
+      border: 1px solid #E6E3E1;
+      border-radius: 20px;
+      padding: 0 10px;
+      margin: 25px 0 20px 0;
+      display: flex;
+      flex-direction: row;
+      &_item {
+        width: 120px;
+        height: 30px;
+        border-right:1px solid #000000;
+        opacity: 0.1;
+        z-index: 5;
+        margin-top: -5px;
+
+        &:first-child {
+          border-left: 1px solid #000000;
+        }
+
+      }
+      &_color {
+        width: 600px;
+        height: 20px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        border-radius: 20px 0 0 20px;
+        background: linear-gradient(90deg, #FDAE47 0%, #FEEF49 100%);
+        z-index: 0;
+      }
+    }
+    &_points_total {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding-bottom: 30px;
+
+      &_current {
+          color: #3B332C;
+          font-size: 14px;
+          font-weight: bold;
+          line-height: 19px;
+      }
+      &_left {
+          color: #3B332C;
+          font-size: 14px;
+          font-weight: bold;
+          line-height: 19px;
+      }
+    }
+  }
+}

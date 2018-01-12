@@ -1,19 +1,45 @@
 <div class="about_container">
-  <div class="about_container_nav">
-    <div class="about_container_nav_item" [class.active]="type_content['history']==false" (click)="showContent('history')">
-      <div class="about_container_nav_item_text">История заказов</div>
-      <div class="about_container_nav_item_icon">&rsaquo;</div>
+  <div class="about_container_wrapper_nav">
+    <div class="about_container_nav">
+      <div class="about_container_nav_item bonus" [class.active]="type_content['bonus']==false" (click)="showContent('bonus')">
+        <div class="about_container_nav_item_text">Бонусный счет</div>
+        <div class="about_container_nav_item_icon">&rsaquo;</div>
+      </div>
+      <div class="about_container_nav_bonus_count">
+        <span class="about_container_nav_bonus_count_points">1490 баллов </span>
+        <span class="about_container_nav_bonus_count_currency">745 руб.</span>
+      </div>
+      <div class="about_container_nav_progress_bar">
+        <div class="about_container_nav_progress_bar_wrapper">
+          <div class="about_container_nav_progress_bar_wrapper_item"></div>
+          <div class="about_container_nav_progress_bar_wrapper_item"></div>
+          <div class="about_container_nav_progress_bar_wrapper_item"></div>
+          <div class="about_container_nav_progress_bar_wrapper_item"></div>
+          <div class="about_container_nav_progress_bar_wrapper_item"></div>
+          <div class="about_container_nav_progress_bar_wrapper_item"></div>
+          <div class="about_container_nav_progress_bar_item-color"><div class="dot"></div></div>
+        </div>
+
+      </div>
     </div>
-    <div class="about_container_nav_item" [class.active]="type_content['data']==false" (click)="showContent('data')">
-      <div class="about_container_nav_item_text">Персональные данные</div>
-      <div class="about_container_nav_item_icon">&rsaquo;</div>
-    </div>
-    <div class="about_container_nav_item" [class.active]="type_content['address']==false" (click)="showContent('address')">
-      <div class="about_container_nav_item_text">Адреса</div>
-      <div class="about_container_nav_item_icon">&rsaquo;</div>
+    <div class="about_container_nav">
+      <div class="about_container_nav_item" [class.active]="type_content['history']==false" (click)="showContent('history')">
+        <div class="about_container_nav_item_text">История заказов</div>
+        <div class="about_container_nav_item_icon">&rsaquo;</div>
+      </div>
+      <div class="about_container_nav_item" [class.active]="type_content['data']==false" (click)="showContent('data')">
+        <div class="about_container_nav_item_text">Персональные данные</div>
+        <div class="about_container_nav_item_icon">&rsaquo;</div>
+      </div>
+      <div class="about_container_nav_item" [class.active]="type_content['address']==false" (click)="showContent('address')">
+        <div class="about_container_nav_item_text">Адреса</div>
+        <div class="about_container_nav_item_icon">&rsaquo;</div>
+      </div>
     </div>
   </div>
+
   <app-history [hidden]="type_content['history']"></app-history>
   <app-data [hidden]="type_content['data']"></app-data>
   <app-adress [hidden]="type_content['address']"></app-adress>
+  <app-bonus [hidden]="type_content['bonus']"></app-bonus>
 </div>

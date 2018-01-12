@@ -1,0 +1,91 @@
+@import "../data/data.component";
+
+.address {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  &_item {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    color: #231F20;
+    font-family: $font_ubuntu;
+    font-size: 16px;
+    line-height: 18px;
+    padding: 25px 0;
+    border-bottom: 1px solid #E6E3E1;
+
+    &_name {
+      margin-right: 50px;
+    }
+    &_other {
+
+    }
+    &_delete {
+      position: absolute;
+      right: 0;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background-color: #E6E3E1;
+
+      span {
+        width: 10px;
+        height: 10px;
+        background: url("../../sass/sass/icons/close-black_small.svg");
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+      }
+
+    }
+  }
+
+}
+.add_address_form {
+  margin-top: 40px;
+  form {
+    flex-direction: column;
+    margin-left: 0;
+    .form_item {
+
+      &_separated {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-between;
+
+        &_right {
+          display: flex;
+          flex-direction: row;
+          width: 395px;
+          justify-content: space-between;
+          input {
+            width: 68px;
+          }
+          &_item {
+            input {
+              margin-left: 10px;
+            }
+          }
+        }
+      }
+    }
+
+  }
+  .form_add_address {
+    padding: 15px;
+    width: 169px;
+    border-radius: 2px;
+    background-color: #332C26;
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,0.1);
+    color: #FFFFFF;
+    font-size: 16px;
+    line-height: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+    outline: none;
+  }
+}
