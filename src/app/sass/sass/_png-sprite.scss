@@ -1,14 +1,14 @@
 %sprite_png {
     content: '';
     background: url('../sass/sass/inc/png-sprite.png') no-repeat;
-    background-size: 210px 172px;
+    background-size: 218px 197px;
     display: inline-block;
 
 }
 
 @mixin sp__AMEX {
     @extend %sprite_png;
-    background-position: -0px -152px;
+    background-position: -66px -152px;
     width: 58px;
     height: 20px;
 }
@@ -20,49 +20,49 @@
 }
 @mixin sp__MasterCard {
     @extend %sprite_png;
-    background-position: -165px -0px;
+    background-position: -165px -91px;
     width: 45px;
     height: 28px;
 }
 @mixin sp__PayPal {
     @extend %sprite_png;
-    background-position: -63px -152px;
+    background-position: -129px -152px;
     width: 61px;
     height: 18px;
 }
 @mixin sp__Triangle2 {
     @extend %sprite_png;
-    background-position: -186px -99px;
+    background-position: -204px -60px;
     width: 8px;
     height: 6px;
 }
 @mixin sp__Visa {
     @extend %sprite_png;
-    background-position: -165px -57px;
+    background-position: -108px -98px;
     width: 41px;
     height: 14px;
 }
 @mixin sp__bar {
     @extend %sprite_png;
-    background-position: -108px -98px;
+    background-position: -165px -37px;
     width: 34px;
     height: 49px;
 }
 @mixin sp__basket_small {
     @extend %sprite_png;
-    background-position: -165px -99px;
+    background-position: -0px -177px;
     width: 16px;
     height: 20px;
 }
 @mixin sp__decus {
     @extend %sprite_png;
-    background-position: -165px -33px;
+    background-position: -165px -124px;
     width: 45px;
     height: 19px;
 }
 @mixin sp__facebook_sircle {
     @extend %sprite_png;
-    background-position: -54px -98px;
+    background-position: -0px -44px;
     width: 49px;
     height: 49px;
 }
@@ -72,6 +72,12 @@
     width: 49px;
     height: 49px;
 }
+@mixin sp__masterColor {
+    @extend %sprite_png;
+    background-position: -165px -0px;
+    width: 53px;
+    height: 32px;
+}
 @mixin sp__pinterest_sircle {
     @extend %sprite_png;
     background-position: -108px -44px;
@@ -80,7 +86,7 @@
 }
 @mixin sp__search_small {
     @extend %sprite_png;
-    background-position: -165px -76px;
+    background-position: -108px -117px;
     width: 18px;
     height: 18px;
 }
@@ -92,13 +98,19 @@
 }
 @mixin sp__user_small {
     @extend %sprite_png;
-    background-position: -188px -76px;
+    background-position: -204px -37px;
     width: 14px;
     height: 18px;
 }
+@mixin sp__visaColor {
+    @extend %sprite_png;
+    background-position: -0px -152px;
+    width: 61px;
+    height: 20px;
+}
 @mixin sp__vk_sircle {
     @extend %sprite_png;
-    background-position: -0px -44px;
+    background-position: -54px -98px;
     width: 49px;
     height: 49px;
 }
