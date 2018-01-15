@@ -49,6 +49,8 @@ import { AddressComponent } from './personal/address/address.component';
 import { BonusComponent } from './personal/bonus/bonus.component';
 import { LastStepComponent } from './last-step/last-step.component';
 import { OrderFormComponent } from './order-form/order-form.component';
+import { SelfdeliveryComponent } from './order-form/selfdelivery/selfdelivery.component';
+import { OrderDeliveryComponent } from './order-form/order-delivery/order-delivery.component';
 
 const AppRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -104,6 +106,8 @@ const AppRoutes: Routes = [
     BonusComponent,
     LastStepComponent,
     OrderFormComponent,
+    SelfdeliveryComponent,
+    OrderDeliveryComponent,
   ],
   imports: [
     BrowserModule,

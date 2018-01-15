@@ -1,0 +1,61 @@
+<div class="order-container_wrapper_form_group_item">
+  <div class="order-container_wrapper_form_switch">
+    <div class="order-container_wrapper_form_switch_item" [class.active]="new_buyer" (click)="new_buyer = true;regular_customer = false ">Новый покупатель</div>
+    <div class="order-container_wrapper_form_switch_item" [class.active]="regular_customer" (click)="regular_customer = true; new_buyer = false;">Постоянный клиент</div>
+  </div>
+</div>
+
+<div *ngIf="new_buyer">
+<div class="order-container_wrapper_form_group_item">
+  <div class="order-container_wrapper_form_group_item_label">Имя</div>
+  <div class="order-container_wrapper_form_group_item_input">
+    <input type="text" value="Как к вам обращаться?">
+  </div>
+</div>
+<div class="order-container_wrapper_form_group_item">
+  <div class="order-container_wrapper_form_group_item_label">Email</div>
+  <div class="order-container_wrapper_form_group_item_input">
+    <input type="email" value="user_email@gmail.com">
+  </div>
+</div >
+  <div class="order-container_wrapper_form_group_item">
+    <div class="order-container_wrapper_form_group_item_label">Мобильный номер</div>
+    <div class="order-container_wrapper_form_group_item_input">
+      <input type="text" value="+7(495)123-45-67">
+    </div>
+  </div>
+  <div class="order-container_wrapper_form_group_item">
+    <div class="order-container_wrapper_form_group_item_add-phone-description">
+      <div class="order-container_wrapper_form_group_item_add-phone-description_lock"></div>
+      <div class="order-container_wrapper_form_group_item_add-phone-description_text">Для СМС с
+        подтверждением заказа. Никакого спама!
+      </div>
+    </div>
+  </div>
+</div>
+<div *ngIf="regular_customer">
+  <div class="order-container_wrapper_form_group_item">
+    <div class="order-container_wrapper_form_group_item_not-logged-title">
+      Войдите в свой аккаунт
+    </div>
+  </div>
+  <div class="order-container_wrapper_form_group_item">
+    <div class="order-container_wrapper_form_group_item_label">Email</div>
+    <div class="order-container_wrapper_form_group_item_input">
+      <input type="email" value="user_email@gmail.com">
+    </div>
+  </div>
+  <div class="order-container_wrapper_form_group_item">
+    <div class="order-container_wrapper_form_group_item_label">Пароль</div>
+    <div class="order-container_wrapper_form_group_item_input">
+      <input type="password" value="12345678">
+    </div>
+  </div>
+  <div class="order-container_wrapper_form_group_item">
+    <div class="order-container_wrapper_form_group_item_submit">
+      <button class="order-container_wrapper_form_group_item_submit_button" type="submit">
+        Войти
+      </button>
+    </div>
+  </div>
+</div>

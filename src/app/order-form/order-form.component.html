@@ -3,8 +3,8 @@
         <div class="order-container_wrapper_title">Оформление заказа</div>
         <form class="order-container_wrapper_form">
             <div class="order-container_wrapper_form_switch">
-                <div class="order-container_wrapper_form_switch_item active">Доставка</div>
-                <div class="order-container_wrapper_form_switch_item">Самовынос</div>
+                <div class="order-container_wrapper_form_switch_item active" [class.active]="type_delivery['delivery']" (click)="showDescriptionDelivery()">Доставка</div>
+                <div class="order-container_wrapper_form_switch_item" [class.active]="type_delivery['selfdelivery']"  (click)="showDescriptionSelfdelivery()">Самовынос</div>
             </div>
             <div class="order-container_wrapper_form_group">
                 <div class="order-container_wrapper_form_group_item">
@@ -40,9 +40,9 @@
                     <div class="order-container_wrapper_form_group_item_label">Количество человек</div>
                     <div class="order-container_wrapper_form_group_item_input">
                         <div class="order-container_wrapper_form_group_item_input_people">
-                            <div class="order-container_wrapper_form_group_item_input_people_button">-</div>
-                            <input type="text" value="1">
-                            <div class="order-container_wrapper_form_group_item_input_people_button">+</div>
+                            <div class="order-container_wrapper_form_group_item_input_people_button" (click)="removePerson()">-</div>
+                            <input type="text" value="{{person_count}}">
+                            <div class="order-container_wrapper_form_group_item_input_people_button" (click)="addPerson()">+</div>
                         </div>
                     </div>
 
@@ -50,143 +50,51 @@
             </div>
 
             <div class="order-container_wrapper_form_group">
-                <div class="order-container_wrapper_form_group_item">
-                    <div class="order-container_wrapper_form_switch">
-                        <div class="order-container_wrapper_form_switch_item active">Новый покупатель</div>
-                        <div class="order-container_wrapper_form_switch_item">Постоянный клиент</div>
-                    </div>
-                </div>
-                <div class="order-container_wrapper_form_group_item">
-                    <div class="order-container_wrapper_form_group_item_name">
-                        <div class="order-container_wrapper_form_group_item_name_title-logged">
-                            <div class="order-container_wrapper_form_group_item_name_title-logged_name">Дмитрий Иванов
-                            </div>
-                            <div class="order-container_wrapper_form_group_item_name_title-logged_logout">Выйти</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="order-container_wrapper_form_group_item">
-                    <div class="order-container_wrapper_form_group_item_not-logged-title">
-                        Войдите в свой аккаунт
-                    </div>
-                </div>
-                <div class="order-container_wrapper_form_group_item">
-                    <div class="order-container_wrapper_form_group_item_label">Имя</div>
-                    <div class="order-container_wrapper_form_group_item_input">
-                        <input type="text" value="Как к вам обращаться?">
-                    </div>
-                </div>
-                <div class="order-container_wrapper_form_group_item">
-                    <div class="order-container_wrapper_form_group_item_label">Email</div>
-                    <div class="order-container_wrapper_form_group_item_input">
-                        <input type="email" value="user_email@gmail.com">
-                    </div>
-                </div>
-                <div class="order-container_wrapper_form_group_item">
-                    <div class="order-container_wrapper_form_group_item_label">Пароль</div>
-                    <div class="order-container_wrapper_form_group_item_input">
-                        <input type="password" value="12345678">
-                    </div>
-                </div>
-                <div class="order-container_wrapper_form_group_item">
-                    <div class="order-container_wrapper_form_group_item_label">Мобильный номер</div>
-                    <div class="order-container_wrapper_form_group_item_input">
-                        <input type="text" value="+7(495)123-45-67">
-                    </div>
-                </div>
-
-
-                <div class="order-container_wrapper_form_group_item">
-                    <div class="order-container_wrapper_form_group_item_add-phone">
-                        <div class="order-container_wrapper_form_group_item_add-phone_plus">+</div>
-                        <div class="order-container_wrapper_form_group_item_add-phone_text">Добавить новый тел. номер
-                        </div>
-                    </div>
-                </div>
-                <div class="order-container_wrapper_form_group_item">
-                    <div class="order-container_wrapper_form_group_item_add-phone-description">
-                        <div class="order-container_wrapper_form_group_item_add-phone-description_lock"></div>
-                        <div class="order-container_wrapper_form_group_item_add-phone-description_text">Для СМС с
-                            подтверждением заказа. Никакого спама!
-                        </div>
-                    </div>
-                </div>
-                <div class="order-container_wrapper_form_group_item">
-                    <div class="order-container_wrapper_form_group_item_submit">
-                        <button class="order-container_wrapper_form_group_item_submit_button" type="submit">
-                            Войти
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <div class="order-container_wrapper_form_group">
-                <div class="order-container_wrapper_form_group_item">
-                    <div class="order-container_wrapper_form_group_item_addresses">
-                        <div class="order-container_wrapper_form_group_item_addresses_item">
-                            <input type="checkbox">
-                            <div class="order-container_wrapper_form_group_item_addresses_item_text">ул. Научная 22
-                            </div>
-                            <div class="order-container_wrapper_form_group_item_addresses_item_text">квартира 81,
-                                подъезд 2, этаж 9
-                            </div>
-                        </div>
-                        <div class="order-container_wrapper_form_group_item_addresses_item">
-                            <input type="checkbox">
-                            <div class="order-container_wrapper_form_group_item_addresses_item_text">ул. Научная 22
-                            </div>
-                            <div class="order-container_wrapper_form_group_item_addresses_item_text">квартира 81,
-                                подъезд 2, этаж 9
-                            </div>
-                        </div>
-                        <div class="order-container_wrapper_form_group_item_addresses_add-new">
-                            <div class="order-container_wrapper_form_group_item_addresses_add-new_plus">+</div>
-                            <div class="order-container_wrapper_form_group_item_addresses_add-new_text">Добавить новый
-                                адрес
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <app-order-delivery *ngIf="type_delivery['delivery']"></app-order-delivery>
+                <app-selfdelivery *ngIf="type_delivery['selfdelivery']"></app-selfdelivery>
             </div>
 
-            <div class="order-container_wrapper_form_group">
-                <div class="order-container_wrapper_form_group_item">
-                    <div class="order-container_wrapper_form_group_item_label">Адрес, улица</div>
-                    <div class="order-container_wrapper_form_group_item_input">
-                        <input type="text" value="Введите адрес или выберите на карте">
-                    </div>
-                </div>
-                <div class="order-container_wrapper_form_group_item_building-group">
-                    <div class="order-container_wrapper_form_group_item_building-group_item">
-                        <div class="order-container_wrapper_form_group_item">
-                            <div class="order-container_wrapper_form_group_item_label">Квартира/Офис</div>
-                            <div class="order-container_wrapper_form_group_item_input">
-                                <input type="text" value="Номер">
-                            </div>
-                        </div>
 
-                        <div class="order-container_wrapper_form_group_item">
-                            <div class="order-container_wrapper_form_group_item_label">Подъезд</div>
-                            <div class="order-container_wrapper_form_group_item_input">
-                                <input type="text" value="Номер">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="order-container_wrapper_form_group_item_building-group_item">
-                        <div class="order-container_wrapper_form_group_item">
-                            <div class="order-container_wrapper_form_group_item_label">Этаж</div>
-                            <div class="order-container_wrapper_form_group_item_input">
-                                <input type="text" value="Номер">
-                            </div>
-                        </div>
-                        <div class="order-container_wrapper_form_group_item">
-                            <div class="order-container_wrapper_form_group_item_label">Код домофона</div>
-                            <div class="order-container_wrapper_form_group_item_input">
-                                <input type="text" value="Номер">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
+            <!--<div class="order-container_wrapper_form_group">-->
+                <!--<div class="order-container_wrapper_form_group_item">-->
+                    <!--<div class="order-container_wrapper_form_group_item_label">Адрес, улица</div>-->
+                    <!--<div class="order-container_wrapper_form_group_item_input">-->
+                        <!--<input type="text" value="Введите адрес или выберите на карте">-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div class="order-container_wrapper_form_group_item_building-group">-->
+                    <!--<div class="order-container_wrapper_form_group_item_building-group_item">-->
+                        <!--<div class="order-container_wrapper_form_group_item">-->
+                            <!--<div class="order-container_wrapper_form_group_item_label">Квартира/Офис</div>-->
+                            <!--<div class="order-container_wrapper_form_group_item_input">-->
+                                <!--<input type="text" value="Номер">-->
+                            <!--</div>-->
+                        <!--</div>-->
+
+                        <!--<div class="order-container_wrapper_form_group_item">-->
+                            <!--<div class="order-container_wrapper_form_group_item_label">Подъезд</div>-->
+                            <!--<div class="order-container_wrapper_form_group_item_input">-->
+                                <!--<input type="text" value="Номер">-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="order-container_wrapper_form_group_item_building-group_item">-->
+                        <!--<div class="order-container_wrapper_form_group_item">-->
+                            <!--<div class="order-container_wrapper_form_group_item_label">Этаж</div>-->
+                            <!--<div class="order-container_wrapper_form_group_item_input">-->
+                                <!--<input type="text" value="Номер">-->
+                            <!--</div>-->
+                        <!--</div>-->
+                        <!--<div class="order-container_wrapper_form_group_item">-->
+                            <!--<div class="order-container_wrapper_form_group_item_label">Код домофона</div>-->
+                            <!--<div class="order-container_wrapper_form_group_item_input">-->
+                                <!--<input type="text" value="Номер">-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
             <div class="order-container_wrapper_form_group">
                 <div class="order-container_wrapper_form_group_item">
                     <div class="order-container_wrapper_form_group_item_payment-title">Выберите способо оплаты</div>
@@ -204,16 +112,17 @@
                         </div>
                     </div>
                 </div>
-                <div class="order-container_wrapper_form_group_item active-item">
+                <div class="order-container_wrapper_form_group_item " [class.active-item]="checked">
                     <div class="order-container_wrapper_form_group_item_pay-by-points">
                         <div class="order-container_wrapper_form_group_item_pay-by-points_check">
-                            <input type="checkbox">
-                            <div class="order-container_wrapper_form_group_item_pay-by-points_check_text">
+                            <input type="checkbox" (change)="selectCheckbox($event)" id="chbox">
+                            <label for="chbox"></label>
+                            <div  class="order-container_wrapper_form_group_item_pay-by-points_check_text">
                                 Оплатить заказ баллами? На счету <span>1404 баллов</span>
                             </div>
 
                         </div>
-                        <div class="order-container_wrapper_form_group_item_pay-by-points_block">
+                        <div *ngIf="checked" class="order-container_wrapper_form_group_item_pay-by-points_block">
                             <div class="order-container_wrapper_form_group_item">
                                 <div class="order-container_wrapper_form_group_item_label">Списать</div>
                                 <div class="order-container_wrapper_form_group_item_input">
@@ -237,7 +146,7 @@
                 <div class="order-container_wrapper_form_group_item">
                     <div class="order-container_wrapper_form_group_item_label">Комментарий к заказу</div>
                     <div class="order-container_wrapper_form_group_item_input">
-                        <input type="text" value="" placeholder="Не обязательно">
+                        <textarea value="" placeholder="Не обязательно"></textarea>
                     </div>
                 </div>
             </div>
