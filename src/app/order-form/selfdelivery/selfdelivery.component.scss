@@ -1,1 +1,11 @@
 @import "../order-delivery/order-delivery.component";
+
+:host(.root) {
+  @media screen and (max-width: 1023px) {
+    width: 100%;
+
+    .order-container_wrapper_form_switch {
+      width: 100%;
+    }
+  }
+}
