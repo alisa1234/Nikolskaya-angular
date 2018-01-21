@@ -2,11 +2,19 @@
 //@import "../../sass/sass/svg-sprite";
 .about_container_content_table {
   &_header-password {
-      color: #231F20;
-      font-family: $font_ubuntu;
-      font-size: 22px;
-      font-weight: bold;
-      line-height: 26px;
+    color: #231F20;
+    font-family: $font_ubuntu;
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 26px;
+
+    @media screen and (max-width: 1023px) {
+      font-size: 20px;
+      line-height: 20px;
+      font-weight: normal;
+      font-family: $font_condensed;
+      text-transform: uppercase;
+    }
   }
   form {
     margin-top: 30px;
@@ -15,22 +23,41 @@
     flex-direction: column;
     margin-left: 10px;
     margin-right: 220px;
+    @media screen and (max-width: 1023px) {
+      margin: 30px 0 0;
+      width: calc(100% - 40px);
+    }
 
     label {
+      color: #231F20;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 22px;
+      @media screen and (max-width: 1023px) {
         color: #231F20;
-        font-size: 16px;
-        font-weight: 500;
-        line-height: 22px;
+        font-family: $font_ubuntu;
+        font-size: 11px;
+        line-height: 11px;
+        margin-bottom: 10px;
+      }
     }
     input {
-        padding: 15px 20px;
-        width: 353px;
-        border: 1px solid #E6E3E1;
-        border-radius: 2px;
-        box-shadow: 0 1px 3px 0 rgba(0,0,0,0.1);
-        color: #7F7873;
-        font-size: 14px;
-        line-height: 16px;
+      padding: 15px 20px;
+      width: 353px;
+      border: 1px solid #E6E3E1;
+      border-radius: 2px;
+      box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+      color: #7F7873;
+      font-size: 14px;
+      line-height: 16px;
+
+      &::placeholder {
+        color: transparent;
+      }
+
+      @media screen and (max-width: 1023px) {
+        width: 100%;
+      }
     }
     .form_item {
       display: flex;
@@ -38,6 +65,12 @@
       justify-content: space-between;
       margin-top: 5px;
       align-items: center;
+
+      @media screen and (max-width: 1023px) {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 20px;
+      }
 
       &:first-child {
         margin-top: 0;
@@ -53,16 +86,22 @@
     width: 206px;
     border-radius: 2px;
     background-color: #E6E3E1;
-    box-shadow: 0 1px 3px 0 rgba(0,0,0,0.1);
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
     font-family: $font_ubuntu;
     color: #FFFFFF;
     font-size: 16px;
     font-weight: bold;
     line-height: 22px;
     text-align: center;
-    margin:20px 10px 0;
+    margin: 20px 10px 0;
+
+    @media screen and (max-width: 1023px) {
+      width: 100%;
+      margin: 20px auto 0;
+    }
   }
 }
+
 .personal_subscribe_wrapper {
   display: flex;
   flex-direction: row;
@@ -74,6 +113,10 @@
   position: relative;
   align-items: center;
   //justify-content: center;
+
+  @media screen and (max-width: 1023px) {
+    margin: 10px 0 0;
+  }
   &_checkbox {
     position: relative;
     width: 24px;
@@ -124,11 +167,23 @@
     font-size: 14px;
     font-weight: bold;
     line-height: 30px;
+    @media screen and (max-width: 1023px) {
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 19px;
+      width: 200px;
+    }
 
     span:last-child {
-        color: #7F7873;
-        font-size: 14px;
-        line-height: 16px;
+      color: #7F7873;
+      font-size: 14px;
+      line-height: 16px;
+      @media screen and (max-width: 1023px) {
+        color: #231F20;
+        font-size: 11px;
+        line-height: 15px;
+
+      }
     }
 
   }

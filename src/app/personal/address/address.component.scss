@@ -15,10 +15,25 @@
     padding: 25px 0;
     border-bottom: 1px solid #E6E3E1;
 
+    @media screen and (max-width: 1023px) {
+      flex-direction: column;
+    }
+
     &_name {
       margin-right: 50px;
+      @media screen and (max-width: 1023px) {
+        color: #231F20;
+        font-size: 16px;
+        line-height: 18px;
+        margin-bottom: 10px;
+      }
     }
     &_other {
+      @media screen and (max-width: 1023px) {
+        color: #231F20;
+        font-size: 11px;
+        line-height: 11px;
+      }
 
     }
     &_delete {
@@ -44,28 +59,77 @@
   }
 
 }
+
 .add_address_form {
   margin-top: 40px;
+  @media screen and (max-width: 1023px) {
+    width: 100%;
+  }
   form {
     flex-direction: column;
     margin-left: 0;
+    @media screen and (max-width: 1023px) {
+      width: 100%;
+    }
     .form_item {
+      @media screen and (max-width: 1023px) {
+        width: 100%;
+      }
+
+      input {
+        @media screen and (max-width: 1023px) {
+          width: calc(100% - 40px);
+        }
+      }
 
       &_separated {
         display: flex;
         flex-direction: row;
         width: 100%;
         justify-content: space-between;
+        @media screen and (max-width: 1023px) {
+          flex-direction: column;
+          width: 100%;
+        }
 
         &_right {
           display: flex;
           flex-direction: row;
           width: 395px;
           justify-content: space-between;
+          @media screen and (max-width: 1023px) {
+            width: 100%;
+          }
+
           input {
             width: 68px;
           }
           &_item {
+            @media screen and (max-width: 1023px) {
+              display: flex;
+              flex-direction: column;
+            }
+            input {
+              margin-left: 10px;
+            }
+          }
+        }
+
+        &_left {
+          display: flex;
+          flex-direction: row;
+          width: 395px;
+          justify-content: space-between;
+          @media screen and (max-width: 1023px) {
+            flex-direction: column;
+            width: 100%;
+          }
+
+          input {
+            width: 68px;
+          }
+          &_item {
+
             input {
               margin-left: 10px;
             }
@@ -80,12 +144,17 @@
     width: 169px;
     border-radius: 2px;
     background-color: #332C26;
-    box-shadow: 0 1px 3px 0 rgba(0,0,0,0.1);
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
     color: #FFFFFF;
     font-size: 16px;
     line-height: 18px;
     margin-top: 20px;
     cursor: pointer;
     outline: none;
+    @media screen and (max-width: 1023px) {
+      width: 100%;
+      font-size: 13px;
+      line-height: 13px;
+    }
   }
 }
