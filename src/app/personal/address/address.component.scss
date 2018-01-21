@@ -95,7 +95,7 @@
         &_right {
           display: flex;
           flex-direction: row;
-          width: 395px;
+          width: 100%;
           justify-content: space-between;
           @media screen and (max-width: 1023px) {
             width: 100%;
@@ -105,6 +105,9 @@
             width: 68px;
           }
           &_item {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
             @media screen and (max-width: 1023px) {
               display: flex;
               flex-direction: column;
@@ -122,7 +125,7 @@
         &_left {
           display: flex;
           flex-direction: row;
-          width: 395px;
+          width: 48%;
           justify-content: space-between;
           @media screen and (max-width: 1023px) {
             flex-direction: column;
