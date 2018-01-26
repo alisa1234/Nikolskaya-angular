@@ -23,18 +23,8 @@ export class RestaurantsListComponent implements OnInit {
     this.getRestaurants_list = urlAdresses.getRestaurants_list;
 
 
-
-
-    if(localStorage.getItem('restaurants_list') != null){
       this.restauants_list = JSON.parse(localStorage.getItem('restaurants_list'));
-    }else{
-      this.http.get(this.base_url+this.getRestaurants_list)
-          .subscribe(data => {
-            this.restauants_list = data;
-            localStorage.setItem('restaurants_list',JSON.stringify(this.restauants_list));
-
-          })
-    }
+      debugger;
 
 
 

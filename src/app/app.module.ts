@@ -10,6 +10,7 @@ import {DpDatePickerModule} from 'ng2-date-picker';
 
 import {UrlAdresses} from './url_adresses';
 import { EventsListService } from './events-list/events-list.service';
+import { RestaurantsListService } from './restaurants-list/restaurants-list.service';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -51,6 +52,10 @@ import { LastStepComponent } from './last-step/last-step.component';
 import { OrderFormComponent } from './order-form/order-form.component';
 import { SelfdeliveryComponent } from './order-form/selfdelivery/selfdelivery.component';
 import { OrderDeliveryComponent } from './order-form/order-delivery/order-delivery.component';
+import { BucketComponent } from './bucket/bucket.component';
+import { PasswordComponent } from './password/password.component';
+import { PasswordSendComponent } from './password-send/password-send.component';
+import { LoginComponent } from './login/login.component';
 
 const AppRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -67,6 +72,9 @@ const AppRoutes: Routes = [
   { path: 'personal', component: PersonalComponent },
   { path: 'last', component: LastStepComponent },
   { path: 'order', component: OrderFormComponent },
+  { path: 'bucket', component: BucketComponent },
+  { path: 'repeatpass', component: PasswordComponent },
+  { path: 'login', component: LoginComponent },
 ];
 
 @NgModule({
@@ -108,6 +116,10 @@ const AppRoutes: Routes = [
     OrderFormComponent,
     SelfdeliveryComponent,
     OrderDeliveryComponent,
+    BucketComponent,
+    PasswordComponent,
+    PasswordSendComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
@@ -127,7 +139,8 @@ const AppRoutes: Routes = [
   providers: [
     UrlAdresses,
     RouterLinkActive,
-    EventsListService
+    EventsListService,
+    RestaurantsListService
   ],
   bootstrap: [AppComponent]
 })

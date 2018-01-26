@@ -9,12 +9,14 @@ import { EventsListService } from '../events-list/events-list.service'
 })
 export class EventsListComponent implements OnInit {
 
+  events_list: any;
   index: string;
 
 
   constructor(public eventsListService:EventsListService) {
-    debugger
-    this.eventsListService.getEventsList();
+    this.events_list = JSON.parse(localStorage.getItem('events_list'));
+    // debugger
+    // this.eventsListService.getEventsList();
   }
 
   ngOnInit() {

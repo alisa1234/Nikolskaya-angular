@@ -1,0 +1,126 @@
+@import "../order-form/order-form.component";
+
+.dishes_content_menu_bucket {
+  padding: 10px;
+  max-width: 380px;
+  margin: 0 auto;
+
+  @media screen and (max-width: 1023px) {
+    display: none;
+  }
+
+  &_title {
+    color: #231F20;
+    font-family: $font_ubuntu;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 30px;
+  }
+  &_items {
+    margin-top: 12px;
+    &_item {
+      margin-top: 12px;
+      border-bottom: 1px solid #D8D5D2;
+      &_title {
+        color: #231F20;
+        font-family: $font_ubuntu;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 20px;
+      }
+      &_content {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        &_count {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          padding: 12px 0 10px;
+
+          &_remove {
+            @include sp__remove-icon;
+          }
+          &_add {
+            @include sp__add-icon;
+
+          }
+          &_text {
+            color: #7F7873;
+            font-family: $font_ubuntu;
+            font-size: 13px;
+            line-height: 13px;
+            margin: 0 8px;
+          }
+        }
+        &_price {
+          color: #6C6560;
+          font-family: $font_ubuntu;
+          font-size: 16px;
+          line-height: 18px;
+          //margin-left: 140px;
+        }
+      }
+    }
+  }
+
+}
+.dishes_content_menu_bucket_total {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  margin-top: 65px;
+  border-top: 1px solid #D8D5D2;
+  justify-content: space-between;
+  padding: 0 30px;
+
+  &_text {
+    color: #231F20;
+    font-family: $font_ubuntu;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 22px;
+    //margin-right: 89px;
+  }
+  &_price {
+    color: #2E2927;
+    font-family: $font_ubuntu;
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 26px;
+  }
+  &_text_column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.events_show-more {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: 263px;
+  border-radius: 2px;
+  background-color: #4D4239;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+  margin: 30px 0;
+  color: #FFFFFF;
+  font-family: $font_ubuntu;
+  font-size: 16px;
+  line-height: 18px;
+  text-align: center;
+  cursor: pointer;
+
+  @media screen and (max-width: 1023px) {
+    margin: 0 auto;
+    height: auto;
+    width: 100%;
+    text-align: center;
+    padding: 14px 0 17px;
+    max-width: 400px;
+  }
+
+
+}

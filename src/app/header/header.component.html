@@ -37,7 +37,7 @@
     <div class="header_tabs">
       <div class="header_tabs_search">
         <div class="header_tabs_search_logo"></div>
-        <input (click)="openSearch()" [class.active_search]="open_search" type="search" placeholder="Поиск"/>
+        <input (click)="openSearch()" (mouseout)="open_search=false" [class.active_search]="open_search" type="search" placeholder="Поиск"/>
       </div>
       <div class="header_tabs_login">
         <div class="header_tabs_login_logo"></div>
@@ -61,7 +61,7 @@
   <div class="menu-tabs">
     <div class="menu-tabs_menu">
       <div class="menu-tabs_menu_item">
-        <a routerLink="/corners"><span>Рестораны</span></a>
+        <a routerLink="/corners"><span>Корнеры</span></a>
       </div>
       <div class="menu-tabs_menu_item">
         <a routerLink="/events"><span>События</span></a>
@@ -82,16 +82,16 @@
         <div class="menu-tabs_addit_delivery_item">
           <a routerLink="/delivery"><span>Доставка</span></a>
         </div>
-        <div class="menu-tabs_addit_delivery_item">
-          <span>Кейтеринг</span>
-        </div>
+        <!--<div class="menu-tabs_addit_delivery_item">-->
+          <!--<span>Кейтеринг</span>-->
+        <!--</div>-->
       </div>
       <div class="menu-tabs_addit_socials">
-        <div class="menu-tabs_addit_socials_item facebook"></div>
-        <div class="menu-tabs_addit_socials_item instagram"></div>
+        <div class="menu-tabs_addit_socials_item facebook"><a href="https://www.facebook.com/vokrugsvetamarket/" target="_blank"></a></div>
+        <div class="menu-tabs_addit_socials_item instagram"><a href="https://www.instagram.com/vokrugsvetamarket/" target="_blank"></a></div>
         <!--<div class="menu-tabs_addit_socials_item pinterest"></div>-->
         <!--<div class="menu-tabs_addit_socials_item twitter"></div>-->
-        <div class="menu-tabs_addit_socials_item vk"></div>
+        <div class="menu-tabs_addit_socials_item vk"><a href="https://vk.com/vokrugsvetamarket/" target="_blank"></a></div>
       </div>
 
     </div>

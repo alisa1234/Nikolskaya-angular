@@ -10,9 +10,9 @@
         <div class="header_about_text_title_text">{{restaurant_list_current.Name}}</div>
         <div class="header_about_text_title_instatags">
           <div class="header_about_text_title_instatags_icon"></div>
-          <div class="header_about_text_title_instatags_tag">#BurgerFactory</div>
-          <div class="header_about_text_title_instatags_tag">#едиммясо</div>
-          <div class="header_about_text_title_instatags_tag">#булочкавкусная</div>
+          <div class="header_about_text_title_instatags_tag"><a href="https://www.instagram.com/explore/tags/гастромаркетвокругсвета/" target="_blank">#BurgerFactory</a></div>
+          <div class="header_about_text_title_instatags_tag"><a href="https://www.instagram.com/explore/tags/гастромаркетвокругсвета/" target="_blank">#едиммясо</a></div>
+          <div class="header_about_text_title_instatags_tag"><a href="https://www.instagram.com/explore/tags/гастромаркетвокругсвета/" target="_blank">#булочкавкусная</a></div>
 
         </div>
         <div class="header_about_text_title_icon-share"></div>
@@ -65,7 +65,7 @@
       <div class="dishes_content_menu_blocks" *ngFor="let item of restaurant_list_menu, let i = index ">
         <div class="dishes_content_menu_blocks_title">{{item.Name}}</div>
         <div class="dishes_content_menu_blocks_wrapper">
-          <app-dish-block [menu_list]="item.MenuItems"></app-dish-block>
+          <app-dish-block [menu_list]="item.MenuItems" [ngStyle]="{'justify-content': 'unset'}"></app-dish-block>
           <div *ngIf="i == 0" class="dishes_content_menu_banner">
             <div class="dishes_content_menu_banner_text">Заказывайте еду с доставкой и делайте предзаказ</div>
             <div class="dishes_content_menu_banner_subtext">Cамым удобным способом -

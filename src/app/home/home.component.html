@@ -47,7 +47,7 @@
 
     </div>
     <!--<div class="content_corners_items">-->
-      <app-restaurant-block [restaurants_list]="restaurant_list"></app-restaurant-block>
+      <app-restaurant-block [restaurants_list]="restaurant_list" [link]="'/restaurants-main/'"></app-restaurant-block>
       <!--<app-restaurant-block></app-restaurant-block>-->
       <!--<app-restaurant-block></app-restaurant-block>-->
       <!--<app-restaurant-block></app-restaurant-block>-->
@@ -65,9 +65,9 @@
   <div class="content_events">
     <div class="content_events_title">События</div>
     <div class="content_events_items">
-     <app-events-block routerLink="/event"></app-events-block>
-     <app-events-block routerLink="/event"></app-events-block>
-     <app-events-block routerLink="/event"></app-events-block>
+     <app-events-block [events_list]="events_list" [link]="'/event/'"></app-events-block>
+     <!--<app-events-block routerLink="/event"></app-events-block>-->
+     <!--<app-events-block routerLink="/event"></app-events-block>-->
     </div>
     <div class="content_events_moreinfo-text">
       <div class="content_events_moreinfo-text_left-dash"></div>

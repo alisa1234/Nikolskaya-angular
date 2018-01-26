@@ -13,7 +13,7 @@ export class SearchBlockComponent implements OnInit {
 
   constructor(public eRef: ElementRef) {}
 
-  @HostListener('document:click', ['$event'])
+  @HostListener('document:mouseover', ['$event'])
 
   clickout(event) {
     if(this.eRef.nativeElement.contains(event.target) || event.target == this.clicker || event.target.closest('.menu_tabs_dishes_dropdown')) {

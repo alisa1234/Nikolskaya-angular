@@ -196,10 +196,11 @@
 
       &_contacts {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
 
         @media screen and (max-width: 1024px) {
           margin-top: 30px;
+          flex-direction: column;
         }
 
         &_header {
@@ -213,10 +214,20 @@
 
         &_blocks {
           display: flex;
-          flex-direction: row;
+          flex-direction: column;
+          margin-right: 40px;
+
+          &:last-child {
+            margin-right: 0;
+          }
 
           @media screen and (max-width: 1024px) {
             flex-direction: column;
+            margin-top: 15px;
+
+            &:first-child {
+              margin-top: 0;
+            }
           }
 
           &_items {

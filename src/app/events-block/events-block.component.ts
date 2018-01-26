@@ -10,15 +10,16 @@ import { EventsListService } from '../events-list/events-list.service';
 export class EventsBlockComponent implements OnInit {
 
   @Input() link: string;
-  events_list: any;
+  @Input() events_list: any;
   index: boolean = false;
 
 
   constructor(private eventsListService:EventsListService) {
 
-    debugger;
+
     this.eventsListService.change.subscribe(data => {
       this.events_list = data.list;
+      debugger;
 
     })
   }

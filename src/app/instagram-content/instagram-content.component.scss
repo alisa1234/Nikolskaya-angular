@@ -104,6 +104,12 @@
       top: 57%;
       left: 54%;
       transform: translate(-50%, -55%);
+      &_text {
+        a {
+          color: inherit;
+          text-decoration: none;
+        }
+      }
 
       @media screen and (max-width: 1024px) {
         display: flex;
