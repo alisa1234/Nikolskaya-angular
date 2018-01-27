@@ -1,7 +1,7 @@
 %sprite_png {
     content: '';
     background: url('../sass/sass/inc/png-sprite.png') no-repeat;
-    background-size: 218px 197px;
+    background-size: 218px 205px;
     display: inline-block;
 
 }
@@ -38,7 +38,7 @@
 }
 @mixin sp__Visa {
     @extend %sprite_png;
-    background-position: -108px -98px;
+    background-position: -108px -131px;
     width: 41px;
     height: 14px;
 }
@@ -50,9 +50,15 @@
 }
 @mixin sp__basket_small {
     @extend %sprite_png;
-    background-position: -0px -177px;
+    background-position: -49px -177px;
     width: 16px;
     height: 20px;
+}
+@mixin sp__ch {
+    @extend %sprite_png;
+    background-position: -108px -98px;
+    width: 44px;
+    height: 28px;
 }
 @mixin sp__decus {
     @extend %sprite_png;
@@ -86,7 +92,7 @@
 }
 @mixin sp__search_small {
     @extend %sprite_png;
-    background-position: -108px -117px;
+    background-position: -195px -152px;
     width: 18px;
     height: 18px;
 }
@@ -95,6 +101,12 @@
     background-position: -54px -44px;
     width: 49px;
     height: 49px;
+}
+@mixin sp__uk {
+    @extend %sprite_png;
+    background-position: -0px -177px;
+    width: 44px;
+    height: 28px;
 }
 @mixin sp__user_small {
     @extend %sprite_png;

@@ -14,4 +14,15 @@
       margin: 10px 0;
     }
   }
+  .active {
+    height: auto;
+
+    .dish-output_result_items_item_info {
+      height: auto;
+
+      &_order {
+        display: block;
+      }
+    }
+  }
 }
