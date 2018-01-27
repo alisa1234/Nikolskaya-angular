@@ -204,6 +204,7 @@
     align-items: baseline;
     position: relative;
     cursor: pointer;
+    background-color: #ffffff;
 
     ul {
       margin-right: 10px;
@@ -211,6 +212,8 @@
 
     &_submenu {
       position: absolute;
+      background-color: #ffffff;
+      width: 100%;
 
       ul {
         li {
@@ -302,160 +305,165 @@
 
       }
     }
-    &_banner {
-      width: 274px;
-      background-color: #ebe8e3;
-      margin-top: 10px;
-      height: fit-content;
-      //display: none;
-
-      @media screen and (max-width: 1023px) {
-        display: none;
-      }
-      &_text {
-        color: #231F20;
-        font-family: $font_ubuntu;
-        font-size: 26px;
-        font-weight: 500;
-        line-height: 30px;
-        margin: 40px 0 0 20px;
-      }
-      &_subtext {
-        color: #7F7873;
-        font-family: $font_ubuntu;
-        font-size: 18px;
-        line-height: 22px;
-        margin: 25px 0 0 20px;
-      }
-      &_app {
-        display: flex;
-        flex-direction: row;
-        margin: 20px 0 0 20px;
-        &_google {
-          @include sp__Playstore;
-          margin-right: 15px;
-        }
-        &_apple {
-          @include sp__Appstore;
-        }
-      }
-      img {
+    &_wrapper {
+      display: flex;
+      flex-direction: column;
+      &_banner {
         width: 274px;
-      }
-    }
-    &_bucket {
-      padding: 10px;
-      max-width: 260px;
-      display: none;
+        background-color: #ebe8e3;
+        margin-top: 10px;
+        height: fit-content;
+        //display: none;
 
-      @media screen and (max-width: 1023px) {
-        display: none;
-      }
-
-      &_title {
-        color: #231F20;
-        font-family: $font_ubuntu;
-        font-size: 18px;
-        font-weight: bold;
-        line-height: 30px;
-      }
-      &_items {
-        margin-top: 12px;
-        &_item {
-          margin-top: 12px;
-          border-bottom: 1px solid #D8D5D2;
-          &_title {
-            color: #231F20;
-            font-family: $font_ubuntu;
-            font-size: 14px;
-            font-weight: 500;
-            line-height: 20px;
-          }
-          &_content {
-            display: flex;
-            flex-direction: row;
-
-            &_count {
-              display: flex;
-              flex-direction: row;
-              align-items: center;
-              padding: 12px 0 10px;
-
-              &_remove {
-                @include sp__remove-icon;
-              }
-              &_add {
-                @include sp__add-icon;
-
-              }
-              &_text {
-                color: #7F7873;
-                font-family: $font_ubuntu;
-                font-size: 13px;
-                line-height: 13px;
-                margin: 0 8px;
-              }
-            }
-            &_price {
-              color: #6C6560;
-              font-family: $font_ubuntu;
-              font-size: 16px;
-              line-height: 18px;
-              margin-left: 140px;
-            }
-          }
+        @media screen and (max-width: 1023px) {
+          display: none;
         }
-      }
-      &_total {
-        display: flex;
-        flex-direction: row;
-        align-items: baseline;
-        margin-top: 20px;
-
         &_text {
           color: #231F20;
           font-family: $font_ubuntu;
-          font-size: 16px;
+          font-size: 26px;
           font-weight: 500;
-          line-height: 22px;
-          margin-right: 89px;
+          line-height: 30px;
+          margin: 40px 0 0 20px;
         }
-        &_price {
+        &_subtext {
+          color: #7F7873;
+          font-family: $font_ubuntu;
+          font-size: 18px;
+          line-height: 22px;
+          margin: 25px 0 0 20px;
+        }
+        &_app {
+          display: flex;
+          flex-direction: row;
+          margin: 20px 0 0 20px;
+          &_google {
+            @include sp__Playstore;
+            margin-right: 15px;
+          }
+          &_apple {
+            @include sp__Appstore;
+          }
+        }
+        img {
+          width: 274px;
+        }
+      }
+      &_bucket {
+        padding: 10px;
+        max-width: 260px;
+        //display: none;
+
+        @media screen and (max-width: 1023px) {
+          display: none;
+        }
+
+        &_title {
           color: #231F20;
+          font-family: $font_ubuntu;
+          font-size: 18px;
+          font-weight: bold;
+          line-height: 30px;
+        }
+        &_items {
+          margin-top: 12px;
+          &_item {
+            margin-top: 12px;
+            border-bottom: 1px solid #D8D5D2;
+            &_title {
+              color: #231F20;
+              font-family: $font_ubuntu;
+              font-size: 14px;
+              font-weight: 500;
+              line-height: 20px;
+            }
+            &_content {
+              display: flex;
+              flex-direction: row;
+
+              &_count {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                padding: 12px 0 10px;
+
+                &_remove {
+                  @include sp__remove-icon;
+                }
+                &_add {
+                  @include sp__add-icon;
+
+                }
+                &_text {
+                  color: #7F7873;
+                  font-family: $font_ubuntu;
+                  font-size: 13px;
+                  line-height: 13px;
+                  margin: 0 8px;
+                }
+              }
+              &_price {
+                color: #6C6560;
+                font-family: $font_ubuntu;
+                font-size: 16px;
+                line-height: 18px;
+                margin-left: 140px;
+              }
+            }
+          }
+        }
+        &_total {
+          display: flex;
+          flex-direction: row;
+          align-items: baseline;
+          margin-top: 20px;
+
+          &_text {
+            color: #231F20;
+            font-family: $font_ubuntu;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 22px;
+            margin-right: 89px;
+          }
+          &_price {
+            color: #231F20;
+            font-family: $font_ubuntu;
+            font-size: 16px;
+            line-height: 18px;
+          }
+        }
+        .events_show-more {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 40px;
+          width: 263px;
+          border-radius: 2px;
+          background-color: #4D4239;
+          box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+          margin: 40px auto 0;
+          color: #FFFFFF;
           font-family: $font_ubuntu;
           font-size: 16px;
           line-height: 18px;
-        }
-      }
-      .events_show-more {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 40px;
-        width: 263px;
-        border-radius: 2px;
-        background-color: #4D4239;
-        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
-        margin: 40px auto 0;
-        color: #FFFFFF;
-        font-family: $font_ubuntu;
-        font-size: 16px;
-        line-height: 18px;
-        text-align: center;
-        cursor: pointer;
-
-        @media screen and (max-width: 1023px) {
-          margin: 0 auto;
-          height: auto;
-          width: 100%;
           text-align: center;
-          padding: 14px 0 17px;
-          max-width: 400px;
+          cursor: pointer;
+
+          @media screen and (max-width: 1023px) {
+            margin: 0 auto;
+            height: auto;
+            width: 100%;
+            text-align: center;
+            padding: 14px 0 17px;
+            max-width: 400px;
+          }
+
+
         }
-
-
       }
     }
+
   }
   &_restaurants {
     display: flex;

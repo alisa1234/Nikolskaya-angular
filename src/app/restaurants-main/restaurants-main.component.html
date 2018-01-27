@@ -47,9 +47,8 @@
       <ul>
         <li>Избранные блюда</li>
         <div [hidden]="!show_dishes" class="menu_tabs_dishes_dropdown_submenu">
-          <ul>
-            <li>Избранные блюда</li>
-            <li>Избранные блюда</li>
+          <ul *ngFor="let item of restaurant_list_menu">
+            <li>{{item.Name}}</li>
           </ul>
         </div>
 
@@ -66,74 +65,89 @@
         <div class="dishes_content_menu_blocks_title">{{item.Name}}</div>
         <div class="dishes_content_menu_blocks_wrapper">
           <app-dish-block [menu_list]="item.MenuItems" [ngStyle]="{'justify-content': 'unset'}"></app-dish-block>
-          <div *ngIf="i == 0" class="dishes_content_menu_banner">
-            <div class="dishes_content_menu_banner_text">Заказывайте еду с доставкой и делайте предзаказ</div>
-            <div class="dishes_content_menu_banner_subtext">Cамым удобным способом -
-              Через сайт или мобильное приложение!</div>
-            <div class="dishes_content_menu_banner_app">
-              <div class="dishes_content_menu_banner_app_google"></div>
-              <div class="dishes_content_menu_banner_app_apple"></div>
-            </div>
-            <img src="app/sass/images/phones_restaurants.png">
-          </div>
-          <div *ngIf="i == 0" class="dishes_content_menu_bucket">
-            <div class="dishes_content_menu_bucket_title">
-              В корзине 6 шт.
-            </div>
-            <div class="dishes_content_menu_bucket_items">
-              <div class="dishes_content_menu_bucket_items_item">
-                <div class="dishes_content_menu_bucket_items_item_title">Сендвич с курицей</div>
-                <div class="dishes_content_menu_bucket_items_item_content">
-                  <div class="dishes_content_menu_bucket_items_item_content_count">
-                    <div class="dishes_content_menu_bucket_items_item_content_count_remove"></div>
-                    <div class="dishes_content_menu_bucket_items_item_content_count_text"><span>1</span>шт</div>
-                    <div class="dishes_content_menu_bucket_items_item_content_count_add"></div>
-                  </div>
-                  <div class="dishes_content_menu_bucket_items_item_content_price"><span>395 руб.</span></div>
-                </div>
+          <div class="dishes_content_menu_wrapper">
+            <div *ngIf="i == 0" class="dishes_content_menu_wrapper_bucket">
+              <div class="dishes_content_menu_wrapper_bucket_title">
+                В корзине 6 шт.
               </div>
-              <div class="dishes_content_menu_bucket_items_item">
-                <div class="dishes_content_menu_bucket_items_item_title">Сендвич с курицей</div>
-                <div class="dishes_content_menu_bucket_items_item_content">
-                  <div class="dishes_content_menu_bucket_items_item_content_count">
-                    <div class="dishes_content_menu_bucket_items_item_content_count_remove"></div>
-                    <div class="dishes_content_menu_bucket_items_item_content_count_text"><span>1</span>шт</div>
-                    <div class="dishes_content_menu_bucket_items_item_content_count_add"></div>
+              <div class="dishes_content_menu_wrapper_bucket_items">
+                <div class="dishes_content_menu_wrapper_bucket_items_item">
+                  <div class="dishes_content_menu_wrapper_bucket_items_item_title">Сендвич с курицей</div>
+                  <div class="dishes_content_menu_wrapper_bucket_items_item_content">
+                    <div class="dishes_content_menu_wrapper_bucket_items_item_content_count">
+                      <div class="dishes_content_menu_wrapper_bucket_items_item_content_count_remove"></div>
+                      <div class="dishes_content_menu_wrapper_bucket_items_item_content_count_text"><span>1</span>шт</div>
+                      <div class="dishes_content_menu_wrapper_bucket_items_item_content_count_add"></div>
+                    </div>
+                    <div class="dishes_content_menu_wrapper_bucket_items_item_content_price"><span>395 руб.</span></div>
                   </div>
-                  <div class="dishes_content_menu_bucket_items_item_content_price"><span>395 руб.</span></div>
                 </div>
-              </div>
-              <div class="dishes_content_menu_bucket_items_item">
-                <div class="dishes_content_menu_bucket_items_item_title">Сендвич с курицей Сендвич с курицей Сендвич с курицей</div>
-                <div class="dishes_content_menu_bucket_items_item_content">
-                  <div class="dishes_content_menu_bucket_items_item_content_count">
-                    <div class="dishes_content_menu_bucket_items_item_content_count_remove"></div>
-                    <div class="dishes_content_menu_bucket_items_item_content_count_text"><span>1</span>шт</div>
-                    <div class="dishes_content_menu_bucket_items_item_content_count_add"></div>
+                <div class="dishes_content_menu_wrapper_bucket_items_item">
+                  <div class="dishes_content_menu_wrapper_bucket_items_item_title">Сендвич с курицей</div>
+                  <div class="dishes_content_menu_wrapper_bucket_items_item_content">
+                    <div class="dishes_content_menu_wrapper_bucket_items_item_content_count">
+                      <div class="dishes_content_menu_wrapper_bucket_items_item_content_count_remove"></div>
+                      <div class="dishes_content_menu_wrapper_bucket_items_item_content_count_text"><span>1</span>шт</div>
+                      <div class="dishes_content_menu_wrapper_bucket_items_item_content_count_add"></div>
+                    </div>
+                    <div class="dishes_content_menu_wrapper_bucket_items_item_content_price"><span>395 руб.</span></div>
                   </div>
-                  <div class="dishes_content_menu_bucket_items_item_content_price"><span>395 руб.</span></div>
                 </div>
-              </div>
-              <div class="dishes_content_menu_bucket_items_item">
-                <div class="dishes_content_menu_bucket_items_item_title">Сендвич с курицей</div>
-                <div class="dishes_content_menu_bucket_items_item_content">
-                  <div class="dishes_content_menu_bucket_items_item_content_count">
-                    <div class="dishes_content_menu_bucket_items_item_content_count_remove"></div>
-                    <div class="dishes_content_menu_bucket_items_item_content_count_text"><span>1</span>шт</div>
-                    <div class="dishes_content_menu_bucket_items_item_content_count_add"></div>
+                <div class="dishes_content_menu_wrapper_bucket_items_item">
+                  <div class="dishes_content_menu_wrapper_bucket_items_item_title">Сендвич с курицей</div>
+                  <div class="dishes_content_menu_wrapper_bucket_items_item_content">
+                    <div class="dishes_content_menu_wrapper_bucket_items_item_content_count">
+                      <div class="dishes_content_menu_wrapper_bucket_items_item_content_count_remove"></div>
+                      <div class="dishes_content_menu_wrapper_bucket_items_item_content_count_text"><span>1</span>шт</div>
+                      <div class="dishes_content_menu_wrapper_bucket_items_item_content_count_add"></div>
+                    </div>
+                    <div class="dishes_content_menu_wrapper_bucket_items_item_content_price"><span>395 руб.</span></div>
                   </div>
-                  <div class="dishes_content_menu_bucket_items_item_content_price"><span>395 руб.</span></div>
                 </div>
-              </div>
+                <div class="dishes_content_menu_wrapper_bucket_items_item">
+                  <div class="dishes_content_menu_wrapper_bucket_items_item_title">Сендвич с курицей</div>
+                  <div class="dishes_content_menu_wrapper_bucket_items_item_content">
+                    <div class="dishes_content_menu_wrapper_bucket_items_item_content_count">
+                      <div class="dishes_content_menu_wrapper_bucket_items_item_content_count_remove"></div>
+                      <div class="dishes_content_menu_wrapper_bucket_items_item_content_count_text"><span>1</span>шт</div>
+                      <div class="dishes_content_menu_wrapper_bucket_items_item_content_count_add"></div>
+                    </div>
+                    <div class="dishes_content_menu_wrapper_bucket_items_item_content_price"><span>395 руб.</span></div>
+                  </div>
+                </div>
+                <div class="dishes_content_menu_wrapper_bucket_items_item">
+                  <div class="dishes_content_menu_wrapper_bucket_items_item_title">Сендвич с курицей</div>
+                  <div class="dishes_content_menu_wrapper_bucket_items_item_content">
+                    <div class="dishes_content_menu_wrapper_bucket_items_item_content_count">
+                      <div class="dishes_content_menu_wrapper_bucket_items_item_content_count_remove"></div>
+                      <div class="dishes_content_menu_wrapper_bucket_items_item_content_count_text"><span>1</span>шт</div>
+                      <div class="dishes_content_menu_wrapper_bucket_items_item_content_count_add"></div>
+                    </div>
+                    <div class="dishes_content_menu_wrapper_bucket_items_item_content_price"><span>395 руб.</span></div>
+                  </div>
+                </div>
 
 
+              </div>
+              <div class="dishes_content_menu_bucket_total">
+                <div class="dishes_content_menu_bucket_total_text">Общая сумма</div>
+                <div class="dishes_content_menu_bucket_total_price">1800руб.</div>
+              </div>
+              <div class="events_show-more">Оформить заказ</div>
             </div>
-            <div class="dishes_content_menu_bucket_total">
-              <div class="dishes_content_menu_bucket_total_text">Общая сумма</div>
-              <div class="dishes_content_menu_bucket_total_price">1800руб.</div>
+            <div *ngIf="i == 0" class="dishes_content_menu_wrapper_banner">
+              <div class="dishes_content_menu_wrapper_banner_text">Заказывайте еду с доставкой и делайте предзаказ</div>
+              <div class="dishes_content_menu_wrapper_banner_subtext">Cамым удобным способом -
+                Через сайт или мобильное приложение!</div>
+              <div class="dishes_content_menu_wrapper_banner_app">
+                <div class="dishes_content_menu_wrapper_banner_app_google"></div>
+                <div class="dishes_content_menu_wrapper_banner_app_apple"></div>
+              </div>
+              <img src="app/sass/images/phones_restaurants.png">
             </div>
-            <div class="events_show-more">Оформить заказ</div>
+
           </div>
+
         </div>
         <!--<app-dish-block></app-dish-block>-->
         <!--<app-dish-block></app-dish-block>-->

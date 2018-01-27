@@ -11,7 +11,12 @@
       </div>
       <div class="header_adress_language" (click)="selectLanguage()" [class.active]="show_language">
         <ul>
-          <li [hidden]="!show_language"><img src="app/sass/images/language.png"></li>
+          <li><img src="app/sass/images/language.png"></li>
+          <ul [hidden]="!show_language">
+            <li ><img src="app/sass/images/ch.png"></li>
+            <li ><img src="app/sass/images/uk.png"></li>
+          </ul>
+
         </ul>
         <!--<div class="header_adress_language_active">-->
           <!--<div class="header_adress_language_active_lang-icon">-->

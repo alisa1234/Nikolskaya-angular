@@ -12,10 +12,13 @@ export class RestaurantsMainComponent implements OnInit {
   restaurant_list: any;
   restaurant_list_current: any;
   restaurant_list_menu: any;
+  restaurant_categories: any;
   show_dishes: boolean = false;
   restaurant_id: any;
   constructor(private route: ActivatedRoute) {
     this.restaurant_list = JSON.parse(localStorage.getItem('restaurants_list'));
+    // this.restaurant_categories = this.restaurant_list.RestaurantCategories;
+    debugger;
     this.route.params.subscribe(params => {
       this.restaurant_id = +params['id'];
     });
@@ -23,6 +26,7 @@ export class RestaurantsMainComponent implements OnInit {
       if(this.restaurant_list[number].Number == this.restaurant_id) {
         this.restaurant_list_current = this.restaurant_list[number];
         this.restaurant_list_menu = this.restaurant_list[number].RestaurantCategories;
+        debugger;
       }
     }
   }
