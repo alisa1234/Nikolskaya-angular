@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {UrlAdresses} from '../../url_adresses';
 
 @Component({
   selector: 'app-about-news',
@@ -6,8 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./about-news.component.scss']
 })
 export class AboutNewsComponent implements OnInit {
+  base_url:string;
+  getEvents_list:string;
 
-  constructor() { }
+  constructor(private urlAdresses:UrlAdresses) { }
 
   ngOnInit() {
   }

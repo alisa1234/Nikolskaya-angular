@@ -6,8 +6,8 @@
         <div class="about_container_nav_item_icon">&rsaquo;</div>
       </div>
       <div class="about_container_nav_bonus_count">
-        <span class="about_container_nav_bonus_count_points">1490 баллов </span>
-        <span class="about_container_nav_bonus_count_currency">745 руб.</span>
+        <span class="about_container_nav_bonus_count_points">{{personalService.client_data.BonusLevelInfo.ForSpentSum}} баллов </span>
+        <span class="about_container_nav_bonus_count_currency">{{personalService.client_data.BonusLevelInfo.PaySum}} руб.</span>
       </div>
       <div class="about_container_nav_progress_bar">
         <div class="about_container_nav_progress_bar_wrapper">
@@ -26,7 +26,7 @@
       <div class="about_container_nav_item bonus_mobile" [class.active]="type_content['bonus']==false" (click)="showContent('bonus')">
         <div class="about_container_nav_item_text">Бонусы</div>
         <div class="about_container_nav_item_icon">&rsaquo;</div>
-      </div>hi
+      </div>
       <div class="about_container_nav_item" [class.active]="type_content['history']==false" (click)="showContent('history')">
         <div class="about_container_nav_item_text desktop">История заказов</div>
         <div class="about_container_nav_item_text mobile">История</div>

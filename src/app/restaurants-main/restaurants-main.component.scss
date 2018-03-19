@@ -30,6 +30,10 @@
       flex-direction: row;
       margin-top: 20px;
       align-items: center;
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
 
       &_arrow {
         @include sp__arrow-restaurants;
@@ -93,8 +97,47 @@
       &_icon-share {
         @include sp__share-icon;
         position: absolute;
-        right: 0;
+        right: -15px;
+        z-index: 1;
+
+        &-hover {
+          position: absolute;
+          display: flex;
+          flex-direction: row;
+          z-index: 1;
+
+          //&:last-child {
+            right: 20px;
+          //}
+          &_fb {
+            @include sp__share-icon;
+            margin-right: 10px;
+          }
+          &_vk {
+            @include sp__share-icon;
+            margin-right: 10px;
+          }
+          &_tw {
+            @include sp__share-icon;
+            margin-right: 10px;
+          }
+          &_email {
+            @include sp__share-icon;
+          }
+          &_background {
+            position: absolute;
+            height: 40px;
+            width: 160px;
+            border-radius: 20px;
+            background-color: #F7F6F2;
+            box-shadow: 0 2px 14px 0 rgba(0,0,0,0.2);
+            z-index: 0;
+            right: -35px;
+          }
+        }
+
       }
+
     }
     &_main-text {
       color: #7F7873;
@@ -214,6 +257,7 @@
       position: absolute;
       background-color: #ffffff;
       width: 100%;
+      z-index: 10;
 
       ul {
         li {
@@ -239,6 +283,7 @@
     padding: 30px 40px 30px 50px;
     max-width: 1180px;
     flex-wrap: wrap;
+    position: relative;
     @media screen and (max-width: 1023px) {
       padding: 20px;
     }
@@ -305,15 +350,12 @@
 
       }
     }
-    &_wrapper {
-      display: flex;
-      flex-direction: column;
-      &_banner {
-        width: 274px;
-        background-color: #ebe8e3;
-        margin-top: 10px;
-        height: fit-content;
-        //display: none;
+    &_banner {
+      width: 274px;
+      background-color: #ebe8e3;
+      margin-top: 10px;
+      height: fit-content;
+      //display: none;
 
         @media screen and (max-width: 1023px) {
           display: none;
@@ -352,7 +394,6 @@
       &_bucket {
         padding: 10px;
         max-width: 260px;
-        //display: none;
 
         @media screen and (max-width: 1023px) {
           display: none;
@@ -389,9 +430,11 @@
 
                 &_remove {
                   @include sp__remove-icon;
+                  cursor: pointer;
                 }
                 &_add {
                   @include sp__add-icon;
+                  cursor: pointer;
 
                 }
                 &_text {
@@ -460,10 +503,8 @@
           }
 
 
-        }
       }
     }
-
   }
   &_restaurants {
     display: flex;

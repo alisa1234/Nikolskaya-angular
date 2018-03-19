@@ -32,7 +32,10 @@
   }
 
   &_img {
+    width: 380px;
     height: 213px;
+    background-position: center;
+    background-size: cover;
     img {
       width: 380px;
       height: 213px;
@@ -74,10 +77,32 @@
       font-size: 16px;
       line-height: 24px;
       padding: 10px 0;
+      position: relative;
+      max-height: 4em;
+      overflow: hidden;
+      //overflow: hidden;
+      //display: -webkit-box;
+      //-webkit-line-clamp: 3;
+      //-webkit-box-orient: vertical;
       @media screen and (max-width: 1024px) {
         font-size: 13px;
         line-height: 20px;
         font-weight: normal;
+      }
+      &::before {
+        content: '';
+        position: absolute;
+        right: 0;
+        bottom: 0;
+      }
+      &::after {
+        content: '';
+        position: absolute;
+        right: 0;
+        width: 1em;
+        height:1em;
+        margin-top: 0.2em;
+        background: white;
       }
     }
     &_time {

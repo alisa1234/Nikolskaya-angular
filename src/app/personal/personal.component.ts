@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PersonalService } from './personal.service';
 
 @Component({
   selector: 'app-personal',
@@ -8,11 +9,13 @@ import { Component, OnInit } from '@angular/core';
 export class PersonalComponent implements OnInit {
   type_content: {[index:string]:boolean}={};
 
-  constructor() {
+
+  constructor(private personalService: PersonalService) {
     this.type_content['history']=false;
     this.type_content['address']=true;
     this.type_content['data']=true;
     this.type_content['bonus']=true;
+
   }
 
   ngOnInit() {

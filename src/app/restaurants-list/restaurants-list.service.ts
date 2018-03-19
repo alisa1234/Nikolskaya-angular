@@ -11,6 +11,7 @@ export class RestaurantsListService {
   change: EventEmitter<any>;
   restaurants_list = {list:(<any>Object)};
   index: boolean = false;
+  bucket_height:number = 0;
 
   constructor(private http: HttpClient, urlAdresses: UrlAdresses) {
     this.getEvents_list = urlAdresses.getRestaurants_list;
@@ -24,7 +25,7 @@ export class RestaurantsListService {
     this.http.get(this.base_url+this.getEvents_list)
         .subscribe(data => {
           this.restaurants_list.list = data;
-          debugger;
+
           this.change.emit(this.restaurants_list.list);
           for(let i=0; i < this.restaurants_list.list.length; i++) {
             if (i == 2) {

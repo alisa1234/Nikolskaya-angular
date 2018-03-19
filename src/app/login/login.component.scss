@@ -88,6 +88,7 @@
         font-weight: 500;
         line-height: 12px;
       }
+
     }
 
     .active {
@@ -118,6 +119,12 @@
       justify-content: space-between;
       align-items: center;
       margin: 10px 0 0;
+
+      input[type=number] {
+        -webkit-appearance: none;
+        margin: 0;
+        -moz-appearance: textfield;
+      }
 
       @media screen and (max-width: 1023px) {
         flex-direction: column;

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { RouterLinkActive, Router, NavigationEnd, ActivatedRoute } from '@angular/router';
+import { HeaderService } from './header.service';
 declare let $: any;
 
 @Component({
@@ -11,14 +12,14 @@ export class HeaderComponent implements OnInit {
 
   show_language: boolean = false;
   show_menu: boolean;
-  current_url: string;
   open_search: boolean;
-  constructor(private route: Router, private router: ActivatedRoute) {
-    this.current_url = this.route.url;
+  constructor(private route: Router, private router: ActivatedRoute, public headerService:HeaderService) {
+
 
     this.route.events.subscribe(s => {
       if (s instanceof NavigationEnd) {
         const tree = this.route.parseUrl(this.route.url);
+
       }
 
     });
@@ -60,5 +61,13 @@ export class HeaderComponent implements OnInit {
   }
   openSearch() {
     this.open_search = true;
+  }
+  closeSearch () {
+    setTimeout(()=>{this.open_search=false},2000)
+  }
+  ShowLoginForm() {
+    this.headerService.getUrl(this.route.url);
+    this.route.navigate(['/login']);
+
   }
 }

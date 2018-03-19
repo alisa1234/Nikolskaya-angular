@@ -19,7 +19,7 @@ export class EventsBlockComponent implements OnInit {
 
     this.eventsListService.change.subscribe(data => {
       this.events_list = data.list;
-      debugger;
+
 
     })
   }

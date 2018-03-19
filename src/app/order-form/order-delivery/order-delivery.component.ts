@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { OrderFormService } from '../order-form.service';
 
 @Component({
   selector: 'app-order-delivery',
@@ -8,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OrderDeliveryComponent implements OnInit {
 
-  constructor() { }
+  constructor(private orderFormService: OrderFormService) { }
 
   ngOnInit() {
   }
 
+  AddNewAdress() {
+    this.orderFormService.add_new_adress = true;
+  }
 }

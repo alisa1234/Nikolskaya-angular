@@ -15,10 +15,10 @@
     </div>
     <div class="add_address_form">
       <div class="about_container_content_table_header-password">Добавить адреса</div>
-      <form>
+      <form [formGroup]="form_adresses" novalidate>
         <div class="form_item">
           <label for="address">Адрес, улица</label>
-          <input id="address" type="text" placeholder="Введите адрес или выберите на карте">
+          <input id="address" type="text" formControlName="name" (keyup.enter)="GetStreetsId()" placeholder="Введите адрес или выберите на карте">
         </div>
         <div class="form_item">
           <div class="form_item_separated">
@@ -26,11 +26,11 @@
             <div class="form_item_separated_right">
               <div class="form_item_separated_left">
                 <label for="apartment">Квартира/Офис</label>
-                <input id="apartment" type="text" placeholder="Номер">
+                <input id="apartment" formControlName="Appartaments" type="number" placeholder="Номер">
               </div>
               <div class="form_item_separated_right_item">
                 <label for="entrance">Подьезд</label>
-                <input id="entrance" type="text" placeholder="Номер">
+                <input id="entrance" formControlName="Entry" type="number" placeholder="Номер">
               </div>
             </div>
           </div>
@@ -42,17 +42,17 @@
               <div class="form_item_separated_left">
                 <label for="floor">Этаж</label>
 
-                <input id="floor" type="text" placeholder="Номер">
+                <input id="floor" formControlName="Floor" type="number" placeholder="Номер">
               </div>
               <div class="form_item_separated_right_item">
                 <label for="doorphone_code">Код домофона</label>
-                <input id="doorphone_code" type="text" placeholder="Номер">
+                <input id="doorphone_code" formControlName="EntryCode" type="number" placeholder="Номер">
               </div>
             </div>
           </div>
         </div>
       </form>
-      <button type="submit" class="form_add_address">Добавить адрес</button>
+      <button type="submit" class="form_add_address" (click)="AddAdress()">Добавить адрес</button>
     </div>
   </div>
 

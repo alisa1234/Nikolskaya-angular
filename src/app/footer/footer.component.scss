@@ -21,8 +21,8 @@
     &_socials {
       display: flex;
       flex-direction: row;
-      justify-content: space-between;
-
+      //justify-content: space-between;
+      padding-top: 20px;
       @media screen and (max-width: 1024px) {
         margin: 0 auto 20px;
         max-width: 420px;
@@ -154,6 +154,10 @@
           display: flex;
           flex-direction: row;
           justify-content: space-between;
+          a {
+            color: inherit;
+            text-decoration: none;
+          }
 
           &_item {
             font-size: 16px;
@@ -182,6 +186,10 @@
           flex-direction: row;
           justify-content: space-between;
           padding: 20px 12px 0 0;
+          a {
+            color: inherit;
+            text-decoration: none;
+          }
           &_item {
             font-size: 13px;
             color: #7F7873;

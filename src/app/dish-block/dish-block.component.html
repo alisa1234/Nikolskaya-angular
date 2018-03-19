@@ -1,13 +1,13 @@
-<div *ngFor="let item of menu_list">
+<div *ngFor="let item of menu_list" id="{{restaurant_id}}">
   <!--<div class="dishes_content_menu_blocks_title">{{item.Name}}</div>-->
-<div class="dish-output_result_items_item active">
+<div class="dish-output_result_items_item" id="{{item.Number}}" [class.active]="order_btn[item.Number]"  (mouseenter)="order_btn[item.Number]=true" (mouseleave)="order_btn[item.Number]=false">
   <div class="dish-output_result_items_item_img">
     <!--<img src="{{item.Picture}}">-->
     <img src="app/sass/images/news1.png">
   </div>
   <div class="dish-output_result_items_item_info">
-    <div class="dish-output_result_items_item_info_name">{{item.Name}}
-    </div>
+    <div class="dish-output_result_items_item_info_name">{{item.Name}}</div>
+    <!--<div class="dish-output_result_items_item_info_descr">bmbmnbmnb</div>-->
 
     <div class="dish-output_result_items_item_info_content">
       <div class="dish-output_result_items_item_info_content_weight">
@@ -16,7 +16,7 @@
       </div>
       <div class="dish-output_result_items_item_info_content_item">{{item.Price}}₽</div>
     </div>
-    <div class="dish-output_result_items_item_info_order">Заказать</div>
+    <div class="dish-output_result_items_item_info_order" (click)="addOrder(item.Number,item.Name,item.Price,restaurant_id)">Заказать</div><!--*ngIf="order_btn[item.Number]"-->
   </div>
 
 </div>

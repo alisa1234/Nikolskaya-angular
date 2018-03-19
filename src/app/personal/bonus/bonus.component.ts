@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PersonalService } from '../personal.service';
 
 @Component({
   selector: 'app-bonus',
@@ -7,7 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BonusComponent implements OnInit {
 
-  constructor() { }
+  bonuses: any;
+
+  constructor(private personalService: PersonalService) {
+    this.bonuses = this.personalService.client_data.BonusLevelInfo;
+    debugger;
+  }
 
   ngOnInit() {
   }

@@ -6,27 +6,31 @@
       нашей команде профессионалов. Не упускайте возможность достойно зарабатывать,
       повышая и развивая собственные знания и навыки в направлении недвижимости.
     </div>
-    <form class="about_container_content_vacancy-form_form">
+    <form [formGroup]="form" (submit)="sendVacancies(form)" novalidate class="about_container_content_vacancy-form_form">
       <div class="about_container_content_vacancy-form_form_group">
         <label for="position" class="about_container_content_vacancy-form_form_group_label">Должность</label>
-        <select id='position' class="about_container_content_vacancy-form_form_group_select">
-          <option>Повар</option>
-          <option>Пекарь</option>
-          <option>Официант</option>
+        <select [(ngModel)]="id_vacancy" formControlName="IdVacancy" id='position' class="about_container_content_vacancy-form_form_group_select">
+          <option *ngFor="let item of vacancies" [id]="item.Id" [ngValue]="item.Id">{{item.Name}}</option>
+          <!--<option>Пекарь</option>-->
+          <!--<option>Официант</option>-->
         </select>
         <div class="about_container_content_vacancy-form_form_group_arrow">&rsaquo;</div>
       </div>
       <div class="about_container_content_vacancy-form_form_group">
         <label for="name" class="about_container_content_vacancy-form_form_group_label">Имя</label>
-        <input type="text" id="name" placeholder="Введите имя" class="about_container_content_vacancy-form_form_group_input">
+        <input formControlName="Name" type="text" id="name" placeholder="Введите имя" class="about_container_content_vacancy-form_form_group_input">
       </div>
       <div class="about_container_content_vacancy-form_form_group">
         <label for="secondname" class="about_container_content_vacancy-form_form_group_label">Фамилия</label>
-        <input type="text" id="secondname" placeholder="Введите фамилию" class="about_container_content_vacancy-form_form_group_input">
+        <input formControlName="Surname" type="text" id="secondname" placeholder="Введите фамилию" class="about_container_content_vacancy-form_form_group_input">
+      </div>
+      <div class="about_container_content_vacancy-form_form_group">
+        <label for="phoneNumber" class="about_container_content_vacancy-form_form_group_label">Номер телефона</label>
+        <input formControlName="PhoneNumber" type="text" id="phoneNumber" placeholder="Введите ваш номер телефона" class="about_container_content_vacancy-form_form_group_input">
       </div>
       <div class="about_container_content_vacancy-form_form_group">
         <label for="email" class="about_container_content_vacancy-form_form_group_label">Email</label>
-        <input type="text" id="email" placeholder="Введите email" class="about_container_content_vacancy-form_form_group_input">
+        <input formControlName="Email" type="text" id="email" placeholder="Введите email" class="about_container_content_vacancy-form_form_group_input">
       </div>
       <div class="about_container_content_vacancy-form_form_group">
         <label for="resume" id="for_resume" class="about_container_content_vacancy-form_form_group_label">Резюме</label>
@@ -40,12 +44,12 @@
       </div>
       <div class="about_container_content_vacancy-form_form_group">
         <label for="comments" class="about_container_content_vacancy-form_form_group_label">Комментарии</label>
-        <textarea id="comments" placeholder="Комментарии" class="about_container_content_vacancy-form_form_group_textarea"></textarea>
-        <input type="text" id="comment_input" placeholder="" class="about_container_content_vacancy-form_form_group_input">
+        <textarea formControlName="Comment" id="comments" placeholder="Комментарии" class="about_container_content_vacancy-form_form_group_textarea"></textarea>
+        <input formControlName="Comment" type="text" id="comment_input" placeholder="" class="about_container_content_vacancy-form_form_group_input">
       </div>
       <div class="about_container_content_vacancy-form_form_group">
         <!--<label for="email" class="about_container_content_vacancy-form_form_group_label">Email</label>-->
-        <button type="submit" id="submit" class="about_container_content_vacancy-form_form_group_submit">Сохранить изменения</button>
+        <button type="submit" id="submit" class="about_container_content_vacancy-form_form_group_submit">Отправить</button>
       </div>
 
     </form>

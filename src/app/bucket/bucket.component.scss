@@ -41,9 +41,11 @@
 
           &_remove {
             @include sp__remove-icon;
+            cursor: pointer;
           }
           &_add {
             @include sp__add-icon;
+            cursor: pointer;
 
           }
           &_text {

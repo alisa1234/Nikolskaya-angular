@@ -4,16 +4,23 @@ import { RouterModule, Routes } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterLinkActive } from '@angular/router';
 import { ActivatedRoute } from '@angular/router';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CookieService } from 'ngx-cookie-service';
 
 import { OwlModule } from 'ngx-owl-carousel';
 import {DpDatePickerModule} from 'ng2-date-picker';
+import { BucketModule } from './bucket-module'
 
 import {UrlAdresses} from './url_adresses';
 import { EventsListService } from './events-list/events-list.service';
 import { RestaurantsListService } from './restaurants-list/restaurants-list.service';
+import { OrderService } from './order.service';
+import { PersonalService } from './personal/personal.service';
+import { OrderFormService } from './order-form/order-form.service';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
+import { HeaderService } from './header/header.service';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { MenuTabsInsideComponent } from './menu-tabs-inside/menu-tabs-inside.component';
@@ -75,6 +82,7 @@ const AppRoutes: Routes = [
   { path: 'bucket', component: BucketComponent },
   { path: 'repeatpass', component: PasswordComponent },
   { path: 'login', component: LoginComponent },
+  { path: '', component: LoginComponent },
 ];
 
 @NgModule({
@@ -134,13 +142,22 @@ const AppRoutes: Routes = [
     }),
     AgmSnazzyInfoWindowModule,
     DpDatePickerModule,
-    HttpClientModule
+    HttpClientModule,
+    BucketModule,
+    FormsModule,
+    ReactiveFormsModule
+
   ],
   providers: [
     UrlAdresses,
     RouterLinkActive,
     EventsListService,
-    RestaurantsListService
+    RestaurantsListService,
+    OrderService,
+    CookieService,
+    HeaderService,
+    PersonalService,
+    OrderFormService
   ],
   bootstrap: [AppComponent]
 })

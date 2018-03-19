@@ -8,14 +8,14 @@
     </div>
     <div class="about_container_content_table_header-password">На вашем счету</div>
     <div class="about_container_content_table_bonus_description">
-      <div class="about_container_content_table_bonus_description_points">1490 баллов </div>
+      <div class="about_container_content_table_bonus_description_points">{{bonuses.ForSpentSum}} баллов </div>
       <div class="about_container_content_table_bonus_description_sign">=</div>
-      <div class="about_container_content_table_bonus_description_currency">745 руб.</div>
+      <div class="about_container_content_table_bonus_description_currency">{{bonuses.PaySum}} руб.</div>
     </div>
-    <button class="about_container_content_table_btn" type="submit">Потратить балы</button>
+    <button class="about_container_content_table_btn" type="submit">Потратить баллы</button>
 
     <div class="personal_bonus_progress_bar">
-      <div class="personal_bonus_progress_bar_text">Золотой уровень лояльности</div>
+      <div class="personal_bonus_progress_bar_text">{{bonuses.Name}}</div>
       <div class="personal_bonus_progress_bar_main">
         <div class="personal_bonus_progress_bar_main_item"></div>
         <div class="personal_bonus_progress_bar_main_item"></div>
@@ -26,8 +26,8 @@
         <div class="personal_bonus_progress_bar_main_color"></div>
       </div>
       <div class="personal_bonus_progress_bar_points_total">
-        <div class="personal_bonus_progress_bar_points_total_current">Заработано 19200 баллов</div>
-        <div class="personal_bonus_progress_bar_points_total_left">Осталось 3640 баллов</div>
+        <div class="personal_bonus_progress_bar_points_total_current">Заработано {{bonuses.ForSpentSum}} баллов</div>
+        <div class="personal_bonus_progress_bar_points_total_left">Осталось {{bonuses.MaxValue}} баллов</div>
       </div>
     </div>
   </div>

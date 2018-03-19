@@ -1,7 +1,7 @@
 
   <div class="content_events_items_item" *ngFor="let item of events_list" [routerLink]="[link,item.Id]" id="{{item.Id}}">
-    <div class="content_events_items_item_img">
-      <img src="{{item.ImagePath}}">
+    <div class="content_events_items_item_img" [style.backgroundImage]="'url(' + item.ImagePath + ')'">
+      <!--<img src="{{item.ImagePath}}">-->
     </div>
     <div class="content_events_items_item_content">
       <div class="content_events_items_item_content_name">{{i}}{{item.Header}}</div>

@@ -1,3 +1,4 @@
+
 <div class="main">
   <div class="slider">
       <owl-carousel [options]="{items: 1, dots: false,nav: true, navText: ['','']}" [carouselClasses]="['owl-theme', 'row', 'sliding']">
@@ -41,7 +42,7 @@
     <div class="content_corners_title">
       <div class="content_corners_title_text">Корнеры</div>
       <div class="content_corners_title_moreinfo-text-mobile">
-        <div class="content_corners_title_moreinfo-text-mobile_text">смотреть все</div>
+        <a routerLink="/corners"><div class="content_corners_title_moreinfo-text-mobile_text">смотреть все</div></a>
         <div class="content_corners_title_moreinfo-text-mobile_right-dash"></div>
       </div>
 
@@ -56,7 +57,7 @@
     <!--</div>-->
     <div class="content_corners_moreinfo-text">
       <div class="content_corners_moreinfo-text_left-dash"></div>
-      <div class="content_corners_moreinfo-text_text">Посмотреть все {{restaurant_list_length}} корнеров</div>
+      <a routerLink="/corners"><div class="content_corners_moreinfo-text_text">Посмотреть все {{restaurant_list_length}} корнеров</div></a>
       <div class="content_corners_moreinfo-text_right-dash"></div>
     </div>
   </div>
@@ -83,7 +84,7 @@
       <img src="app/sass/images/phones_bg_mobile.png" class="app_content_images_bg-mobile">
     </div>
     <div class="app_content_images_phones">
-      <img src="app/sass/images/phones.png" class="app_content_images_phones-desktop">
+      <img src="app/sass/images/phones2.png" class="app_content_images_phones-desktop">
       <img src="app/sass/images/phones_mobile.png" class="app_content_images_phones-mobile">
     </div>
   </div>
@@ -111,23 +112,20 @@
   <div class="about_content_number-logo"></div>
   <div class="about_content_items">
     <div class="about_content_items_text">
-      <div class="about_content_items_text_header">30 ресторанов и кафе Аркадия Новикова, Бориса Зарькова и
-        Владимира Мухина.
+      <div class="about_content_items_text_header">24 ресторана и кафе от Аркадия Новикова, Бориса Зарькова и Владимира Мухина.
       </div>
       <div class="about_content_items_text_mobile-img">
         <img src="app/sass/images/30eating-mobile.png">
 
       </div>
-      <div class="about_content_items_text_description"><span>Гастромаркет Вокруг Света - это микс национальных культур,
-                мнопродуктовых концепций, идей, вкусов,
-                актуальных трендов с использованием сезонных и локальных продуктов от лучших шефов Москвы и мира.</span>
-        <span>Этот проект беспрецедентная альтернатива традиционным фудкортам, место где гурманы найдут новые
-                интересные сочетания вкусов, а туристы утолят голод в любопытство, открывая для себя новую Москву.</span>
+      <div class="about_content_items_text_description"><span>Микс национальных культур, оригинальных концепций и актуальных трендов. Новое гастрономическое путешествие каждый день!</span>
+        <span>Позавтракать израильской шакшукой, пообедать гавайским поке и закончить день индийским карри. Или за пять минут пересечь океан, поставив рядом русский борщ и техасское барбекю. Гастромаркет Вокруг света приглашает отправиться в путешествие, не
+покидая центра Москвы.</span>
       </div>
       <div class="about_content_items_text_moreinfo">
         <div class="about_content_items_text_moreinfo_left-dash">
         </div>
-        <div class="about_content_items_text_moreinfo_text">Подробнее</div>
+        <a routerLink="/about"><div class="about_content_items_text_moreinfo_text">Подробнее</div></a>
         <div class="about_content_items_text_moreinfo_right-dash"></div>
       </div>
     </div>
@@ -136,23 +134,47 @@
 </div>
 <app-instagram-content></app-instagram-content>
 <div class="main">
-  <div class="main_map" id="map">
-    <div class="main_map_widget">
-      <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom">
-        <agm-marker [latitude]="lat" [longitude]="lng">
-          <agm-snazzy-info-window [maxWidth]="200" [closeWhenOthersOpen]="true" [isOpen]="true">
-            <ng-template>
-              My first Snazzy Info Window!
-            </ng-template>
-          </agm-snazzy-info-window>
-        </agm-marker>
-      </agm-map>
+  <div  class="main_map" id="map">
+    <div #gmap class="main_map_widget" >
+      <div id="gmap"></div>
+      <div *ngIf="map_button['scheme']" class="scheme"></div>
+
+      <!--<agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom" [streetViewControlOptions]="true" [draggable]="true">-->
+        <!--<agm-marker [latitude]="lat" [longitude]="lng" [iconUrl]="true" [openInfoWindow]="true">-->
+          <!--<agm-snazzy-info-window [maxWidth]="200" [closeWhenOthersOpen]="true" [isOpen]="true">-->
+            <!--<ng-template>-->
+              <!--Никольская, 10-->
+            <!--</ng-template>-->
+          <!--</agm-snazzy-info-window>-->
+        <!--</agm-marker>-->
+        <!--<agm-circle [latitude]="lat" [longitude]="lng"-->
+                    <!--[radius]="3000"-->
+                    <!--[fillColor]="'red'"-->
+                    <!--[circleDraggable]="false"-->
+                    <!--[editable]="true"-->
+                      <!--[visible]="false">-->
+        <!--</agm-circle>-->
+          <!--<agm-info-window [latitude]="lat" [longitude]="lng" [isOpen]="true">-->
+
+          <!--</agm-info-window>-->
+          <!--<agm-data-layer></agm-data-layer>-->
+
+      <!--</agm-map>-->
+        <iframe
+                *ngIf="map_button['gmap']"
+                width="100%"
+                height="500"
+                frameborder="0" style="border:0"
+                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBao-FJcku7uI2RZQ99gJhfmeiuGBdmTO4&q=place_id:ChIJ9WO7k1tKtUYRWulnJkbrrI4" allowfullscreen>
+        </iframe>
     </div>
+
     <div class="main_map_buttons">
-      <div class="main_map_buttons_button active"><div class="main_map_buttons_button_text">Зона доставки</div></div>
-      <div class="main_map_buttons_button"><div class="main_map_buttons_button_text">Парковки</div></div>
-      <div class="main_map_buttons_button"><div class="main_map_buttons_button_text">От метро</div></div>
-      <div class="main_map_buttons_button"><div class="main_map_buttons_button_text">Схема зала</div></div>
+      <div class="main_map_buttons_button" [class.active]="map_button['radius']&&!map_button['scheme']" (click)="setCircle('radius')"><div class="main_map_buttons_button_text">Зона доставки</div></div>
+      <!--<div class="main_map_buttons_button"><div class="main_map_buttons_button_text">Парковки</div></div>-->
+      <!--<div class="main_map_buttons_button"><div class="main_map_buttons_button_text">От метро</div></div>-->
+      <div class="main_map_buttons_button" [class.active]="map_button['scheme']&&!map_button['radius']" (click)="setScheme('scheme')"><div class="main_map_buttons_button_text">Схема зала</div></div>
     </div>
   </div>
+
 </div>

@@ -1,18 +1,18 @@
 <div class="about_container_content">
   <div class="about_container_content_table">
     <div class="about_container_content_table_header">Персональные данные</div>
-    <form>
+    <form [formGroup]="form_personal" novalidate>
       <div class="form_item">
         <label for="first-name">Имя</label>
-        <input id="first-name" type="text" placeholder="Введите имя">
+        <input formControlName="FirstName" [(ngModel)]="first_name" id="first-name" type="text" placeholder="Введите имя">
       </div>
       <div class="form_item">
         <label for="second-name">Фамилия</label>
-        <input id="second-name" type="text" placeholder="Введите фамилию">
+        <input formControlName="LastName" [(ngModel)]="last_name"  id="second-name" type="text" placeholder="Введите фамилию">
       </div>
       <div class="form_item">
         <label for="email">Email</label>
-        <input id="email" type="email" placeholder="Введите электронную почту">
+        <input formControlName="Email" [(ngModel)]="email"  id="email" type="email" placeholder="Введите электронную почту">
       </div>
     </form>
     <div class="personal_subscribe_wrapper">
@@ -26,26 +26,26 @@
       </div>
       <div class="personal_subscribe_wrapper_img"></div>
     </div>
-    <button type="submit" class="form_button">Сохранить изменения</button>
+    <button type="submit" class="form_button" (click)="changeData()">Сохранить изменения</button>
 
   </div>
   <div class="about_container_content_table">
     <div class="about_container_content_table_header-password">Изменить пароль</div>
-    <form>
+    <form [formGroup]="form_password" novalidate>
       <div class="form_item">
         <label for="old-pass">Старый пароль</label>
-        <input id="old-pass" type="password" placeholder="Введите текущий парроль">
+        <input formControlName="OldPassword"  id="old-pass" type="password" placeholder="Введите текущий парроль">
       </div>
       <div class="form_item">
         <label for="new-pass">Новый пароль</label>
-        <input id="new-pass" type="password" placeholder="Минимум 6 символов">
+        <input formControlName="NewPassword"  id="new-pass" type="password" placeholder="Минимум 6 символов">
       </div>
       <div class="form_item">
         <label for="repeat">Подтверидить</label>
-        <input id="repeat" type="password" placeholder="Повторите пароль еще раз">
+        <input formControlName="ConfirmPassword"  id="repeat" type="password" placeholder="Повторите пароль еще раз">
       </div>
     </form>
-    <button type="submit" class="form_button">Изменить пароль</button>
+    <button type="submit" class="form_button" (click)="changePass()">Изменить пароль</button>
 
   </div>
 </div>

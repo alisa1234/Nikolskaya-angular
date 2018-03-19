@@ -16,9 +16,11 @@ export class RestaurantBlockComponent implements OnInit {
   @Input() restaurants_list: any;
   @Input() link: string;
   time_hidden = false;
+  pct:string;
 
 
   constructor() {
+    this.pct = 'http://decusagency.westeurope.cloudapp.azure.com:8090/VirtualCardSecureService.svc/NewsImageFor?id=1'
     // if (this.restaurants_list.Time != null) {
     //   this.time_hidden = true;
     // }

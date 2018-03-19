@@ -25,6 +25,14 @@
       font-size: 18px;
       line-height: 21px;
     }
+  &_pdf {
+    margin-right: 20px;
+    color: #7F7873;
+    font-family: $font_ubuntu;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 13px;
+  }
     &_time {
       color: #867F7B;
       font-size: 13px;

@@ -24,7 +24,7 @@ export class RestaurantsListComponent implements OnInit {
 
 
       this.restauants_list = JSON.parse(localStorage.getItem('restaurants_list'));
-      debugger;
+
 
 
 
