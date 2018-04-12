@@ -26,38 +26,24 @@
     </div>
   </div>
 </div>
-
-<!--<div class="order-container_wrapper_form_group">-->
-  <div class="order-container_wrapper_form_group_item" *ngIf="!orderFormService.add_new_adress">
-    <div class="order-container_wrapper_form_group_item_addresses">
-      <div *ngFor="let item of orderFormService.adresses_arr" class="order-container_wrapper_form_group_item_addresses_item">
-        <input id="address_1" type="checkbox">
-        <label for="address_1"></label>
-        <div class="order-container_wrapper_form_group_item_addresses_item_text desktop">ул. Научная 22
-        </div>
-        <div class="order-container_wrapper_form_group_item_addresses_item_text desktop">квартира 81,
-          подъезд 2, этаж 9
-        </div>
-        <div class="order-container_wrapper_form_group_item_addresses_item_text mobile">ул. Научная, д.51, кв. 70
-        </div>
+<div class="order-container_wrapper_form_group_item" *ngIf="!orderFormService.add_new_adress">
+  <div class="order-container_wrapper_form_group_item_addresses">
+    <div *ngFor="let item of orderFormService.adresses_arr" class="order-container_wrapper_form_group_item_addresses_item">
+      <input id="address_1" type="checkbox">
+      <label for="address_1"></label>
+      <div class="order-container_wrapper_form_group_item_addresses_item_text desktop">ул. Научная 22
       </div>
-      <!--<div class="order-container_wrapper_form_group_item_addresses_item">-->
-        <!--<input type="checkbox" id="address_2">-->
-        <!--<label for="address_2"></label>-->
-        <!--<div class="order-container_wrapper_form_group_item_addresses_item_text desktop">ул. Научная 22-->
-        <!--</div>-->
-        <!--<div class="order-container_wrapper_form_group_item_addresses_item_text desktop">квартира 81,-->
-          <!--подъезд 2, этаж 9-->
-        <!--</div>-->
-        <!--<div class="order-container_wrapper_form_group_item_addresses_item_text mobile">ул. Научная, д.51, кв. 70-->
-        <!--</div>-->
-      <!--</div>-->
-      <div class="order-container_wrapper_form_group_item_addresses_add-new" (click)="AddNewAdress()">
-        <div class="order-container_wrapper_form_group_item_addresses_add-new_plus">+</div>
-        <div class="order-container_wrapper_form_group_item_addresses_add-new_text">Добавить новый
-          адрес
-        </div>
+      <div class="order-container_wrapper_form_group_item_addresses_item_text desktop">квартира 81,
+        подъезд 2, этаж 9
+      </div>
+      <div class="order-container_wrapper_form_group_item_addresses_item_text mobile">ул. Научная, д.51, кв. 70
+      </div>
+    </div>
+    <div class="order-container_wrapper_form_group_item_addresses_add-new" (click)="AddNewAdress()">
+      <div class="order-container_wrapper_form_group_item_addresses_add-new_plus">+</div>
+      <div class="order-container_wrapper_form_group_item_addresses_add-new_text">Добавить новый
+        адрес
       </div>
     </div>
   </div>
-<!--</div>-->
+</div>

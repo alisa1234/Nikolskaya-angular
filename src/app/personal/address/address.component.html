@@ -2,14 +2,9 @@
   <div class="about_container_content_table">
     <div class="about_container_content_table_header">Персональные данные</div>
     <div class="address">
-      <div class="address_item">
-        <div class="address_item_name">ул. Научная 22</div>
-        <div class="address_item_other">квартира 81, подъезд 2, этаж 9</div>
-        <div class="address_item_delete"><span></span></div>
-      </div>
-      <div class="address_item">
-        <div class="address_item_name">ул. Научная 22</div>
-        <div class="address_item_other">квартира 81, подъезд 2, этаж 9</div>
+      <div class="address_item" *ngFor="let item of client_adresses_arr">
+        <div class="address_item_name">ул.{{item.StreetName}}</div>
+        <div class="address_item_other">квартира {{item.Appartaments}}, подъезд {{item.Entry}}, этаж {{item.Floor}}</div>
         <div class="address_item_delete"><span></span></div>
       </div>
     </div>
@@ -18,11 +13,15 @@
       <form [formGroup]="form_adresses" novalidate>
         <div class="form_item">
           <label for="address">Адрес, улица</label>
-          <input id="address" type="text" formControlName="name" (keyup.enter)="GetStreetsId()" placeholder="Введите адрес или выберите на карте">
+          <input list="adresses" id="address" type="text" [(ngModel)]="name" [ngModelOptions]="{standalone: true}" (keypress)="GetStreetsId()" placeholder="Введите адрес или выберите на карте">
+          <datalist id="adresses">
+            <select>
+              <option *ngFor="let item of adresses_arr" id="{{item.Id}}">{{item.Name}}</option>
+            </select>
+          </datalist>
         </div>
         <div class="form_item">
           <div class="form_item_separated">
-
             <div class="form_item_separated_right">
               <div class="form_item_separated_left">
                 <label for="apartment">Квартира/Офис</label>
@@ -37,11 +36,9 @@
         </div>
         <div class="form_item">
           <div class="form_item_separated">
-
             <div class="form_item_separated_right">
               <div class="form_item_separated_left">
                 <label for="floor">Этаж</label>
-
                 <input id="floor" formControlName="Floor" type="number" placeholder="Номер">
               </div>
               <div class="form_item_separated_right_item">
@@ -55,5 +52,4 @@
       <button type="submit" class="form_add_address" (click)="AddAdress()">Добавить адрес</button>
     </div>
   </div>
-
 </div>

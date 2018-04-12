@@ -68,14 +68,10 @@
 
                 </div>
             </div>
-
             <div class="order-container_wrapper_form_group">
                 <app-order-delivery *ngIf="type_delivery['delivery']"></app-order-delivery>
                 <app-selfdelivery *ngIf="type_delivery['selfdelivery']"></app-selfdelivery>
             </div>
-
-
-
             <div *ngIf="orderFormService.add_new_adress" class="order-container_wrapper_form_group">
                 <div class="order-container_wrapper_form_group_item">
                     <div class="order-container_wrapper_form_group_item_label">Адрес, улица</div>
@@ -91,7 +87,6 @@
                                 <input type="text" value="Номер">
                             </div>
                         </div>
-
                         <div class="order-container_wrapper_form_group_item">
                             <div class="order-container_wrapper_form_group_item_label">Подъезд</div>
                             <div class="order-container_wrapper_form_group_item_input">
@@ -140,7 +135,6 @@
                             <div  class="order-container_wrapper_form_group_item_pay-by-points_check_text">
                                 Оплатить заказ баллами? На счету <span>1404 баллов</span>
                             </div>
-
                         </div>
                         <div *ngIf="checked" class="order-container_wrapper_form_group_item_pay-by-points_block">
                             <div class="order-container_wrapper_form_group_item">
@@ -157,7 +151,6 @@
                                 </div>
                                 <div class="order-container_wrapper_form_group_item_postfix">&#x20bd;</div>
                             </div>
-
                         </div>
                     </div>
                 </div>
@@ -170,7 +163,6 @@
                     </div>
                 </div>
             </div>
-
             <div class="order-container_wrapper_form_total">
                 <div class="order-container_wrapper_form_total_sum">
                     <div class="order-container_wrapper_form_total_sum_title">Общая сумма</div>
@@ -189,12 +181,7 @@
                 <div class="order-container_wrapper_form_total_submit">
                     Заказать
                 </div>
-
             </div>
-
-
         </form>
-
     </div>
-
 </div>

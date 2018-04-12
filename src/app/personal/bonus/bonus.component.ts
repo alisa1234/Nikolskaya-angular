@@ -6,16 +6,16 @@ import { PersonalService } from '../personal.service';
   templateUrl: './bonus.component.html',
   styleUrls: ['./bonus.component.scss']
 })
+
 export class BonusComponent implements OnInit {
 
   bonuses: any;
 
   constructor(private personalService: PersonalService) {
+
     this.bonuses = this.personalService.client_data.BonusLevelInfo;
-    debugger;
   }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
 }

@@ -22,11 +22,9 @@
   align-items: center;
   padding: 0 50px;
   background-color: #FFFFFF;
-
   @media screen and (max-width: 1023px) {
     padding: 10px 20px;
   }
-
   &_tabs {
     display: flex;
     flex-direction: row;
@@ -39,35 +37,29 @@
       font-size: 14px;
       line-height: 20px
     }
-
     &_item {
       margin-right: 44px;
       text-transform: uppercase;
       padding: 25px 0;
       cursor: pointer;
-
       @media screen and (max-width: 1023px) {
         padding: 0;
         margin-right: 10px;
       }
-
       &:last-child {
         margin-right: 0;
       }
-
       &_dropdown {
         display: flex;
         flex-direction: row;
         align-items: center;
       }
-
     }
     .active {
       color: #A67B2C;
       border-bottom: 3px solid #DAC69C;
     }
   }
-
   &_calendar {
     display: flex;
     align-items: center;
@@ -83,37 +75,29 @@
     font-size: 14px;
     line-height: 16px;
     font-weight: normal;
-
     @media screen and (max-width: 1023px) {
       background-color: transparent;
       box-shadow: none;
       width: auto;
       height: auto;
       padding: 10px;
-
       span {
         display: none;
       }
     }
-
     &_icon {
       @extend %sprite;
       background-position: -28px -210px;
       width: 16px;
       height: 18px;
-      //@include sp__calendar;
       margin-right: 16px;
-      //@extend %calendar_black;
       @media screen and (max-width: 1023px) {
         background-position: -49px -210px;
         width: 16px;
         height: 18px;
-    }
-
-
+      }
     }
   }
-
 }
 
 .calendar_widget {

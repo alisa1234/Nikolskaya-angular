@@ -6,34 +6,32 @@
       <div class="delivery_banner_mobile-images_arugula"></div>
       <div class="delivery_banner_mobile-images_meal"></div>
       <div class="delivery_banner_mobile-images_bread"></div>
-      <!--<div class="delivery_banner_mobile-images_grains"></div>-->
       <div class="delivery_banner_mobile-images_garlic"></div>
     </div>
-    <div class="delivery_banner_header">Идеальная доставка вкуснейшей еды</div>
+    <div class="delivery_banner_header">Заказывайте еду с доставкой и на вынос!</div>
     <div class="delivery_banner_info">
       <div class="delivery_banner_info_block">
         <div class="delivery_banner_info_block_circle">
           <div class="delivery_banner_info_block_circle_time"></div>
         </div>
-        <div class="delivery_banner_info_block_text">Доставка в течение часа</div>
+        <div class="delivery_banner_info_block_text">45-60 минут</div>
       </div>
       <div class="delivery_banner_info_block">
         <div class="delivery_banner_info_block_circle">
           <div class="delivery_banner_info_block_circle_currenсy"></div>
         </div>
-        <div class="delivery_banner_info_block_text">Бесплатно от 1000 рублей</div>
+        <div class="delivery_banner_info_block_text">От 700 р. бесплатно</div>
       </div>
       <div class="delivery_banner_info_block">
         <div class="delivery_banner_info_block_circle">
           <div class="delivery_banner_info_block_circle_card"></div>
         </div>
-        <div class="delivery_banner_info_block_text">Оплачивайте картами и наличными</div>
+        <div class="delivery_banner_info_block_text">Картами или наличными</div>
       </div>
     </div>
     <div class="delivery_banner_button">
       <div class="delivery_banner_button_text" ><a routerLink="/corners">Заказать доставку</a></div>
     </div>
-
   </div>
 </div>
 <div class="main">
@@ -42,52 +40,58 @@
     <div class="delivery_info_overview">
       <div class="delivery_info_overview_header">
         <div class="delivery_info_overview_header_text">Доставка и оплата</div>
-        <div class="delivery_info_overview_header_showmore"><span>Подробнее</span></div>
+        <div class="delivery_info_overview_header_showmore" (click)="OpenPayments()"><span>Подробнее</span></div>
       </div>
       <div class="delivery_info_overview_text">
-                <span>Купить очень просто — выбираете товар в разделе,
-                    который Вас интересует, нажимаете на «корзина»
-                    и товар попадает в корзину. Далее нажимаете на «корзина»,
-                    затем оформляете заказ: введя адрес доставки, электронную почту
-                    и Ваш контактный телефон. После чего, в течении нескольких минут
-                    (режим работы с 09.00 до 21.00 по МСК) с Вами свяжется личный менеджер
-                    и согласует условия оплаты и доставки товара.
-                </span>
-        <span>Ежегодно наш сайт проходит аудит безопасности по
-                    международному стандарту и у нас есть все сертификаты
-                    соответствия на хранение персональных данных в соответствии с
-                    законом ФЗ 152 «О персональных данных». Наличие криптографического
-                    протокола TLS гарантирует безопасность передачи данных в сети и
-                    защиту от фишинга.
-                </span>
+        <span>Вы можете оформить доставку или предзаказ с нашего сайта, мобильного приложения или по номеру +7 495 967 7777. Доставка действует в пределах Садового кольца Москвы и занимает не более 60 минут. Вы также можете оформить предзаказ и выбрать к какому времени вы бы хотели забрать блюдо готовым в маркете.</span>
+        <span>Информация деталях заказа и его статусе всегда доступна в вашем личном кабинете на сайт и в мобильном приложении. Если вы заказываете через наше приложение, вы сможете отслеживать маршрут курьера по пути к вам.</span>
       </div>
     </div>
-    <div class="delivery_info_mobile-showmore">
+    <div class="delivery_info_mobile-showmore" >
       Показать больше
     </div>
-    <div class="delivery_info_payments">
-      <div class="delivery_info_payments_header">Способ оплаты</div>
+    <div *ngIf="payments" class="delivery_info_payments">
       <div class="delivery_info_payments_methods">
-        <div class="delivery_info_payments_methods_item"></div>
+        <div class="delivery_info_payments_methods_item">
+          <h3>ВРЕМЯ И ЗОНА ДОСТАВКИ</h3>
+          <span>
+            Мы доставляем в пределах Садового кольца. Если вы находитесь за пределами зоны доставки, просим Вас забрать заказ самостоятельно из Гастромаркета. В этом случае Вам понадобится стойка “Возьми с собой”.
+            Среднее время доставки составляет 45-60 минут. Время доставки зависит от объема заказа, сложности приготовления блюд, а также от удаленности пункта доставки.
+          </span>
+          <pre>&nbsp;</pre>
+          <h3>СТОИМОСТЬ ДОСТАВКИ</h3>
+          <span>
+            Доставка в пределах Садового кольца осуществляется бесплатно при минимальной сумме заказа - 700 руб.<br>
+            Если стоимость заказа ниже минимальной, возможно забрать заказ самостоятельно непосредственно из Гастромаркета. В этом случае Вам понадобится стойка “Возьми с собой”.<br>
+
+            В случае, если стоимость заказа превышает 5 тысяч рублей, компания оставляет за собой право потребовать предоплату в размере 100% стоимости заказа. Заказы для проведения банкетных или фуршетных мероприятий, а так же, заказы на сумму свыше 10 тысяч рублей, просим вас оформлять заблаговременно - не менее чем за сутки до желаемого времени доставки.<br>
+          </span>
+          <pre>&nbsp;</pre>
+          <h3>СПОСОБЫ ОПЛАТЫ</h3>
+          <span>Оплатить заказ на доставку и предзаказ в Вокруг Света можно:<br>
+            - на нашем сайте электронным способом,<br>
+            - с помощью мобильного приложения электронным способом,<br>
+            - наличными средствами или с помощью банковской карты курьеру в момент передачи заказа,<br>
+            - любым способом непосредственно на стойке “Возьми с собой” Гастромаркета.<br>
+
+            К оплате принимаются банковские карты следующих платежных систем:<br>
+            VISA International,<br>
+            MasterCard Worldwide,<br>
+            American Express,<br>
+            Diners Club International,<br>
+            JCB International,<br>
+            МИР<br>
+
+            При оплате банковской картой, Вы попадаете на страницу оплаты, где будет необходимо ввести данные Вашей карты и подтвердить оплату. Вся передаваемая Вами информация конфиденциальна и не подлежит разглашению. Данные Вашей карты передаются в зашифрованном виде. Если на Вашей карте есть в наличии необходимая сумма, она будет заблокирована и списана. Все операции с банковскими картами происходят в соответствии с требованиями VISA International, MasterCard и других платежных систем. При передаче информации используются специальные технологии безопасности карточных онлайн-платежей, обработка данных ведется на безопасном удаленном сервере. При успешном завершении операции Вы увидите, что платеж подтвержден, в противном случае необходимо будет повторно совершить заказ. В таком случае Вы можете выбрать другую формы оплаты.</span>
+        </div>
       </div>
     </div>
     <div class="main_map">
-      <div class="main_map_widget">
-        <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom">
-          <agm-marker [latitude]="lat" [longitude]="lng">
-            <agm-snazzy-info-window [maxWidth]="200" [closeWhenOthersOpen]="true" [isOpen]="true">
-              <ng-template>
-                My first Snazzy Info Window!
-              </ng-template>
-            </agm-snazzy-info-window>
-          </agm-marker>
-        </agm-map>
-      </div>
-      <div class="main_map_buttons">
-        <div class="main_map_buttons_button active"><div class="main_map_buttons_button_text">Зона доставки</div></div>
-        <div class="main_map_buttons_button"><div class="main_map_buttons_button_text">Парковки</div></div>
-        <div class="main_map_buttons_button"><div class="main_map_buttons_button_text">От метро</div></div>
-        <div class="main_map_buttons_button"><div class="main_map_buttons_button_text">Схема зала</div></div>
+      <div #gmap class="main_map_widget" >
+        <div id="gmap"></div>
+        <div #scheme *ngIf="map_button['scheme']" class="scheme" >
+          <div #schemeImg class="scheme-img" (mouseover)="setZoom()" (mouseout)="removeZoom()" (mousemove)="moveZoom($event)"></div>
+        </div>
       </div>
     </div>
   </div>

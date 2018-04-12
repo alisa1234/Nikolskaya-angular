@@ -9,11 +9,7 @@
   <div class="stocks-menu-tabs-all_calendar">
     <div class="stocks-menu-tabs-all_calendar_icon"></div>
     <span>Календарь</span>
-    <dp-day-calendar
-            #dayPicker
-      *ngIf="hide_calendar"
-            theme="calendar_widget"
-    >
+    <dp-day-calendar #dayPicker *ngIf="hide_calendar" theme="calendar_widget">
     </dp-day-calendar>
   </div>
 </div>

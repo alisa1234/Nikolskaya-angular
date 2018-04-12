@@ -9,30 +9,28 @@
   align-items: center;
   justify-content: space-between;
 }
+
 .content_corners_items_item_content {
     display: flex;
     flex-direction: row;
     align-items: center;
     font-family: $font_ubuntu;
-    //padding: 15px 20px 10px;
-
     @media screen and (max-width: 1024px) {
       padding: 10% 20px 10px;
     }
-
     &_name {
       color: #231F20;
       font-size: 18px;
       line-height: 21px;
     }
-  &_pdf {
-    margin-right: 20px;
-    color: #7F7873;
-    font-family: $font_ubuntu;
-    font-size: 13px;
-    font-weight: 500;
-    line-height: 13px;
-  }
+    &_pdf {
+      margin-right: 20px;
+      color: #7F7873;
+      font-family: $font_ubuntu;
+      font-size: 13px;
+      font-weight: 500;
+      line-height: 13px;
+    }
     &_time {
       color: #867F7B;
       font-size: 13px;
@@ -42,41 +40,36 @@
       background-color: #F7F6F2;
       box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
     }
-  &_find {
-    margin-left: 20px;
+    &_find {
+      margin-left: 20px;
+      color: #7F7873;
+      font-family: $font_ubuntu;
+      font-size: 13px;
+      font-weight: 500;
+      line-height: 13px;
+    }
+    &-kitchen {
+    display: flex;
+    flex-direction: row;
     color: #7F7873;
-    font-family: $font_ubuntu;
     font-size: 13px;
-    font-weight: 500;
     line-height: 13px;
-  }
-  &-kitchen {
-  display: flex;
-  flex-direction: row;
-  color: #7F7873;
-  font-size: 13px;
-  line-height: 13px;
-  //padding: 10px 133px 20px 20px;
-  align-items: center;
-  font-family: $font_ubuntu;
-
-  @media screen and (max-width: 1024px) {
-    width: 195px;
-    font-size: 11px;
-    line-height: 11px;
-  }
-
-  &_item {
-    margin-right: 8px;
-
-    &:last-child {
-      margin-right: 0;
+    align-items: center;
+    font-family: $font_ubuntu;
+    @media screen and (max-width: 1024px) {
+      width: 195px;
+      font-size: 11px;
+      line-height: 11px;
+    }
+    &_item {
+      margin-right: 8px;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+    &_delimiter {
+      @include sp__rectangle;
+      margin-right: 8px;
     }
   }
-  &_delimiter {
-    @include sp__rectangle;
-    margin-right: 8px;
-  }
-}
-
 }

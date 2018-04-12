@@ -7,14 +7,16 @@ import { OrderFormService } from '../order-form.service';
   styleUrls: ['./order-delivery.component.scss'],
   host: {'class':'root'}
 })
+
 export class OrderDeliveryComponent implements OnInit {
 
-  constructor(private orderFormService: OrderFormService) { }
+  constructor(public orderFormService: OrderFormService) { }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   AddNewAdress() {
+
     this.orderFormService.add_new_adress = true;
   }
+
 }

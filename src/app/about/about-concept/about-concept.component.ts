@@ -8,6 +8,7 @@ import {HttpClient, HttpHeaders} from '@angular/common/http';
   styleUrls: ['./about-concept.component.scss'],
   host:{'class':'root'}
 })
+
 export class AboutConceptComponent implements OnInit {
 
   base_url: string;
@@ -22,12 +23,7 @@ export class AboutConceptComponent implements OnInit {
         .subscribe(data=>{
           this.about_title = data[0].Header;
           this.about_text = data[0].Body;
-          debugger;
         })
   }
-
-  ngOnInit() {
-  }
-
-
+  ngOnInit() {}
 }

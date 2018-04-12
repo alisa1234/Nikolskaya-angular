@@ -3,12 +3,10 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-
   @media screen and (max-width: 1023px) {
     max-width: 400px;
     margin: 0 auto;
   }
-
   .dish-output_result_items_item {
     @media screen and (max-width: 1023px) {
       margin: 10px 0;
@@ -17,8 +15,6 @@
   .active {
     height: auto;
     position: relative;
-
-
     .dish-output_result_items_item_info {
       height: auto;
       position: absolute;
@@ -27,20 +23,16 @@
       background-color: #FFFFFF;
       border-radius: 0 0 4px 4px;
       box-shadow: 0 1px 3px 0 rgba(0,0,0,0.1);
-
       &_name {
         word-wrap: break-word;
       }
-
       &_descr {
           color: #7F7873;
           font-family: inherit;
           font-size: 13px;
           line-height: 18px;
       }
-
       &_order {
-        //display: none;
         display: block;
       }
     }

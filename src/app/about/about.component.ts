@@ -5,6 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './about.component.html',
   styleUrls: ['./about.component.scss']
 })
+
 export class AboutComponent implements OnInit {
 
     type_content: {[index:string]:boolean}={};
@@ -15,13 +16,12 @@ export class AboutComponent implements OnInit {
         this.type_content['vacancies']=true;
     }
 
-    ngOnInit() {
-    }
+    ngOnInit() {}
+
     showContent(type_content: string) {
         for (let key in this.type_content){
             this.type_content[key]=true;
             this.type_content[type_content]=false;
         }
-
     }
 }

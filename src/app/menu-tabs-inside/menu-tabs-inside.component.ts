@@ -5,13 +5,11 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './menu-tabs-inside.component.html',
   styleUrls: ['./menu-tabs-inside.component.scss']
 })
-export class MenuTabsInsideComponent implements OnInit {
 
-  search: boolean = false;
+export class MenuTabsInsideComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
 }

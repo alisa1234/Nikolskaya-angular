@@ -18,6 +18,7 @@ export class AboutVacanciesComponent implements OnInit {
   form: FormGroup;
 
   constructor(private urlAdresses: UrlAdresses, private http: HttpClient) {
+
     this.base_url = urlAdresses.base_url;
     this.getVacancies = urlAdresses.getVacancies;
     this.sendVacansies = urlAdresses.sendVacansies;
@@ -29,33 +30,37 @@ export class AboutVacanciesComponent implements OnInit {
       Email: new FormControl(),
       FileName: new FormControl(),
       FileBytes: new FormControl(),
-      Comment: new FormControl(),
-    })
+      Comment: new FormControl()
+    });
 
     http.get(this.base_url+this.getVacancies)
         .subscribe(data=>{
-      this.vacancies = data;
-      console.log(typeof this.vacancies);
+          this.vacancies = data;
           this.form.controls['IdVacancy'].setValue(this.vacancies[0].Id);
-      debugger;
     })
-
   }
 
-  ngOnInit() {
-  }
-  sendVacancies(form) {
-    let vacancies = 'IdVacancy='+this.form.get('IdVacancy').value+'&Name='+this.form.get('Name').value+'&Surname='+this.form.get('Surname').value+'&PhoneNumber='+this.form.get('PhoneNumber').value+'&Email='+this.form.get('Email').value+'&Comment='+this.form.get('Comment').value;
+  ngOnInit() {}
+
+  sendVacancies() {
+
     let headers: HttpHeaders = new HttpHeaders();
+    headers = headers.append('Authorization',localStorage.getItem('access_token'));
     headers = headers.append('Content-Type', 'application/json');
-    // headers = headers.append('x-corralation-id', '12345');
-    // headers.append('Content-Type:','application/x-www-form-urlencoded');
-    this.http.post(this.base_url+this.sendVacansies,vacancies,{headers:headers})
-        .subscribe(res=>{})
 
-    // console.log(this.form,this.id_vacancy,form)
-    // debugger;
-    // return this.form.controls['IdVacancy'].setValue(item.Id);
+    this.http.post(this.base_url+this.sendVacansies,this.form.value,{headers:headers})
+        .subscribe(res=>{})
   }
 
+  onFileChange(event) {
+    let reader = new FileReader();
+    if(event.target.files && event.target.files.length > 0) {
+      let file = event.target.files[0];
+      reader.readAsDataURL(file);
+      reader.onload = () => {
+        this.form.get('FileBytes').setValue(reader.result.split(',')[1]);
+        this.form.get('FileName').setValue(file.name);
+      }
+    }
+  }
 }

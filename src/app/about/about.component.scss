@@ -1,14 +1,5 @@
 @import "../sass/sass/variables";
 
-//:host(.host) {
-//  width: 1180px;
-//  margin: 0 auto 40px;
-//  padding: 50px 50px 0;
-//  background-color: #F8F5F5;
-//  display: flex;
-//  flex-direction: row;
-//  justify-content: space-between;
-//}
 .about_container {
   max-width: 1180px;
   margin: 0 auto 40px;
@@ -16,23 +7,17 @@
   background-color: #F8F5F5;
   display: flex;
   flex-direction: row;
-  //justify-content: space-between;
-
   @media screen and (max-width: 1024px) {
     flex-direction: column;
     padding: 0;
-    //background-color: #FFFFFF;
     margin: 0 auto 20px;
-
   }
-
   &_nav {
     height: 160px;
     background-color: #FFFFFF;
     width: 230px;
     padding: 30px 20px 30px 30px;
     margin-right: 25px;
-
     @media screen and (max-width: 1024px) {
       padding: 10px 20px 0;
       width: calc(100% - 40px);
@@ -42,7 +27,6 @@
       border-top: 1px rgba(0, 0, 0, 0.1) solid;
       border-bottom: 1px rgba(0, 0, 0, 0.1) solid;
     }
-
     &_item {
       display: flex;
       flex-direction: row;
@@ -55,51 +39,40 @@
         margin-right: 20px;
         margin-bottom: 0;
         padding-bottom: 5px;
-
       }
-
       &:last-child {
-
         margin-bottom: 0;
       }
-
       &_text {
         color: #231F20;
         font-family: $font_ubuntu;
         text-transform: uppercase;
         font-size: 16px;
         line-height: 18px;
-
         @media screen and (max-width: 1024px) {
           color: #231F20;
           font-family: $font_condensed;
           font-size: 14px;
           line-height: 20px;
         }
-
       }
-
       &_icon {
         color: #231F20;
         font-family: $font_ubuntu;
         text-transform: uppercase;
         font-size: 16px;
         line-height: 18px;
-
         @media screen and (max-width: 1024px) {
           display: none;
         }
       }
     }
-
     .active {
       @media screen and (max-width: 1024px) {
         border-bottom: 3px #DAC69C solid;
       }
-
       .about_container_nav_item_text {
         color: #A67B2C;
-
         @media screen and (max-width: 1024px) {
           color: #231F20;
         }
@@ -112,5 +85,4 @@
       }
     }
   }
-
 }

@@ -3,13 +3,12 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterLinkActive } from '@angular/router';
-import { ActivatedRoute } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { CookieService } from 'ngx-cookie-service';
-
 import { OwlModule } from 'ngx-owl-carousel';
 import {DpDatePickerModule} from 'ng2-date-picker';
-import { BucketModule } from './bucket-module'
+import { BucketModule } from './bucket-module';
+import { AgmCoreModule } from '@agm/core';
+import { AgmSnazzyInfoWindowModule } from '@agm/snazzy-info-window';
 
 import {UrlAdresses} from './url_adresses';
 import { EventsListService } from './events-list/events-list.service';
@@ -17,19 +16,17 @@ import { RestaurantsListService } from './restaurants-list/restaurants-list.serv
 import { OrderService } from './order.service';
 import { PersonalService } from './personal/personal.service';
 import { OrderFormService } from './order-form/order-form.service';
+import { CookieService } from 'ngx-cookie-service';
+import { HeaderService } from './header/header.service';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
-import { HeaderService } from './header/header.service';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { MenuTabsInsideComponent } from './menu-tabs-inside/menu-tabs-inside.component';
 import { RestaurantBlockComponent } from './restaurant-block/restaurant-block.component';
 import { EventsBlockComponent } from './events-block/events-block.component';
 import { InstagramContentComponent } from './instagram-content/instagram-content.component';
-
-import { AgmCoreModule } from '@agm/core';
-import { AgmSnazzyInfoWindowModule } from '@agm/snazzy-info-window';
 import { EventsListComponent } from './events-list/events-list.component';
 import { EventComponent } from './event/event.component';
 import { AboutComponent } from './about/about.component';
@@ -135,7 +132,6 @@ const AppRoutes: Routes = [
     RouterModule.forRoot(
         AppRoutes
     ),
-
     OwlModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyDVwjBEb9XZk_YLCB5-Bv7S30YvpzDCJsc'
@@ -146,7 +142,6 @@ const AppRoutes: Routes = [
     BucketModule,
     FormsModule,
     ReactiveFormsModule
-
   ],
   providers: [
     UrlAdresses,

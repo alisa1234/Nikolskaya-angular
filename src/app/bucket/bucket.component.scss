@@ -4,11 +4,9 @@
   padding: 10px;
   max-width: 380px;
   margin: 0 auto;
-
   @media screen and (max-width: 1023px) {
     display: none;
   }
-
   &_title {
     color: #231F20;
     font-family: $font_ubuntu;
@@ -32,13 +30,11 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-
         &_count {
           display: flex;
           flex-direction: row;
           align-items: center;
           padding: 12px 0 10px;
-
           &_remove {
             @include sp__remove-icon;
             cursor: pointer;
@@ -46,7 +42,6 @@
           &_add {
             @include sp__add-icon;
             cursor: pointer;
-
           }
           &_text {
             color: #7F7873;
@@ -61,12 +56,10 @@
           font-family: $font_ubuntu;
           font-size: 16px;
           line-height: 18px;
-          //margin-left: 140px;
         }
       }
     }
   }
-
 }
 .dishes_content_menu_bucket_total {
   display: flex;
@@ -76,14 +69,12 @@
   border-top: 1px solid #D8D5D2;
   justify-content: space-between;
   padding: 0 30px;
-
   &_text {
     color: #231F20;
     font-family: $font_ubuntu;
     font-size: 16px;
     font-weight: 500;
     line-height: 22px;
-    //margin-right: 89px;
   }
   &_price {
     color: #2E2927;
@@ -114,7 +105,6 @@
   line-height: 18px;
   text-align: center;
   cursor: pointer;
-
   @media screen and (max-width: 1023px) {
     margin: 0 auto;
     height: auto;
@@ -123,6 +113,4 @@
     padding: 14px 0 17px;
     max-width: 400px;
   }
-
-
 }

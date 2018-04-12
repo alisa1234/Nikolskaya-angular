@@ -1,19 +1,24 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { FormGroup, FormControl } from '@angular/forms';
 import { UrlAdresses} from '../../url_adresses';
-import {HttpClient, HttpHeaders, HttpParams} from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Component({
   selector: 'app-adress',
   templateUrl: './address.component.html',
   styleUrls: ['./address.component.scss']
 })
+
 export class AddressComponent implements OnInit {
 
   base_url: string;
   GetStreets: string;
   AddClientAdress: string;
   form_adresses: FormGroup;
+  street_id= {Name: '', Count: '10'};
+  adresses_arr=[];
+  client_adresses_arr;
+  name: string;
 
   constructor(private urlAdresses: UrlAdresses, private http: HttpClient) {
 
@@ -21,33 +26,36 @@ export class AddressComponent implements OnInit {
     this.GetStreets = urlAdresses.GetStreets;
     this.AddClientAdress = urlAdresses.AddClientAdress;
     this.form_adresses = new FormGroup ({
-      name: new FormControl(),
-      // StreetId: new FormControl(),
-      // Building: new FormControl(),
+      StreetId: new FormControl(),
+      Building: new FormControl(),
       Entry: new FormControl(),
       EntryCode: new FormControl(),
       Floor: new FormControl(),
       Appartaments: new FormControl()
 
-    })
-
+    });
+    this.client_adresses_arr = JSON.parse(localStorage.getItem('client_adresses'));
   }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
+
   GetStreetsId() {
+
     let headers: HttpHeaders = new HttpHeaders();
-
+    this.street_id.Name = this.name;
     headers = headers.append('Authorization',localStorage.getItem('access_token'));
-    // headers = headers.append('Content-Type','application/x-www-form-urlencoded')
-    let params = {params: new HttpParams().set('name',this.form_adresses.get('name').value).set('count','10')};
-    // let params = this.form_adresses.get('name').value;
-    this.http.get(this.base_url+this.GetStreets+'?name='+this.form_adresses.get('name').value+'&count=10',{headers: headers})
-        .subscribe(res=>{
-        });
+    headers = headers.append('Content-Type', 'application/json');
 
+    this.http.post(this.base_url+this.GetStreets,this.street_id,{headers: headers})
+        .subscribe(res=>{
+          for(let key in res) {
+            this.adresses_arr.push(res[key]);
+          }
+        });
   }
+
   AddAdress() {
+
     let entry: string = this.form_adresses.get('Entry').value;
     let entryCode: string = this.form_adresses.get('EntryCode').value;
     let floor: string = this.form_adresses.get('Floor').value;
@@ -57,11 +65,19 @@ export class AddressComponent implements OnInit {
     this.form_adresses.controls['EntryCode'].setValue(entryCode.toString());
     this.form_adresses.controls['Floor'].setValue(floor.toString());
     this.form_adresses.controls['Appartaments'].setValue(appartaments.toString());
+    this.form_adresses.controls['Building'].setValue('1');
+
+    this.adresses_arr.map(index=>{
+      if(index.Name === this.name) {
+        this.form_adresses.controls['StreetId'].setValue(index.Id);
+      }
+    });
 
     let headers: HttpHeaders = new HttpHeaders();
     headers = headers.append('Authorization',localStorage.getItem('access_token'));
+
     this.http.post(this.base_url+this.AddClientAdress,this.form_adresses.value,{headers:headers})
-        .subscribe(res=>{
-        })
+        .subscribe(res=>{})
   }
+
 }

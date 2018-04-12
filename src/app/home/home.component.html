@@ -1,4 +1,3 @@
-
 <div class="main">
   <div class="slider">
       <owl-carousel [options]="{items: 1, dots: false,nav: true, navText: ['','']}" [carouselClasses]="['owl-theme', 'row', 'sliding']">
@@ -47,14 +46,7 @@
       </div>
 
     </div>
-    <!--<div class="content_corners_items">-->
       <app-restaurant-block [restaurants_list]="restaurant_list" [link]="'/restaurants-main/'"></app-restaurant-block>
-      <!--<app-restaurant-block></app-restaurant-block>-->
-      <!--<app-restaurant-block></app-restaurant-block>-->
-      <!--<app-restaurant-block></app-restaurant-block>-->
-      <!--<app-restaurant-block></app-restaurant-block>-->
-      <!--<app-restaurant-block></app-restaurant-block>-->
-    <!--</div>-->
     <div class="content_corners_moreinfo-text">
       <div class="content_corners_moreinfo-text_left-dash"></div>
       <a routerLink="/corners"><div class="content_corners_moreinfo-text_text">Посмотреть все {{restaurant_list_length}} корнеров</div></a>
@@ -67,12 +59,10 @@
     <div class="content_events_title">События</div>
     <div class="content_events_items">
      <app-events-block [events_list]="events_list" [link]="'/event/'"></app-events-block>
-     <!--<app-events-block routerLink="/event"></app-events-block>-->
-     <!--<app-events-block routerLink="/event"></app-events-block>-->
     </div>
     <div class="content_events_moreinfo-text">
       <div class="content_events_moreinfo-text_left-dash"></div>
-      <div class="content_events_moreinfo-text_text">Посмотреть события</div>
+      <a routerLink="/events"><div class="content_events_moreinfo-text_text">Посмотреть события</div></a>
       <div class="content_events_moreinfo-text_right-dash"></div>
     </div>
   </div>
@@ -100,10 +90,12 @@
       <div class="app_content_text_download_google"></div>
       <div class="app_content_text_download_apple"></div>
     </div>
+    <div class="app_content_text_main_adver">
+      СКОРО!
+    </div>
     <div class="app_content_text_logo"></div>
     <div class="app_content_text_url">Отправить ссылку <a href="">сообщением</a> или на <a href="">email</a></div>
   </div>
-
 </div>
 <div class="about_content">
   <div class="about_content_title">О Гастромаркете Вокруг Света</div>
@@ -116,11 +108,10 @@
       </div>
       <div class="about_content_items_text_mobile-img">
         <img src="app/sass/images/30eating-mobile.png">
-
       </div>
       <div class="about_content_items_text_description"><span>Микс национальных культур, оригинальных концепций и актуальных трендов. Новое гастрономическое путешествие каждый день!</span>
         <span>Позавтракать израильской шакшукой, пообедать гавайским поке и закончить день индийским карри. Или за пять минут пересечь океан, поставив рядом русский борщ и техасское барбекю. Гастромаркет Вокруг света приглашает отправиться в путешествие, не
-покидая центра Москвы.</span>
+          покидая центра Москвы.</span>
       </div>
       <div class="about_content_items_text_moreinfo">
         <div class="about_content_items_text_moreinfo_left-dash">
@@ -137,44 +128,15 @@
   <div  class="main_map" id="map">
     <div #gmap class="main_map_widget" >
       <div id="gmap"></div>
-      <div *ngIf="map_button['scheme']" class="scheme"></div>
-
-      <!--<agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom" [streetViewControlOptions]="true" [draggable]="true">-->
-        <!--<agm-marker [latitude]="lat" [longitude]="lng" [iconUrl]="true" [openInfoWindow]="true">-->
-          <!--<agm-snazzy-info-window [maxWidth]="200" [closeWhenOthersOpen]="true" [isOpen]="true">-->
-            <!--<ng-template>-->
-              <!--Никольская, 10-->
-            <!--</ng-template>-->
-          <!--</agm-snazzy-info-window>-->
-        <!--</agm-marker>-->
-        <!--<agm-circle [latitude]="lat" [longitude]="lng"-->
-                    <!--[radius]="3000"-->
-                    <!--[fillColor]="'red'"-->
-                    <!--[circleDraggable]="false"-->
-                    <!--[editable]="true"-->
-                      <!--[visible]="false">-->
-        <!--</agm-circle>-->
-          <!--<agm-info-window [latitude]="lat" [longitude]="lng" [isOpen]="true">-->
-
-          <!--</agm-info-window>-->
-          <!--<agm-data-layer></agm-data-layer>-->
-
-      <!--</agm-map>-->
-        <iframe
-                *ngIf="map_button['gmap']"
-                width="100%"
-                height="500"
-                frameborder="0" style="border:0"
-                src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBao-FJcku7uI2RZQ99gJhfmeiuGBdmTO4&q=place_id:ChIJ9WO7k1tKtUYRWulnJkbrrI4" allowfullscreen>
-        </iframe>
+      <div #scheme *ngIf="map_button['scheme']" class="scheme" >
+        <div #schemeImg class="scheme-img" (mouseover)="setZoom()" (mouseout)="removeZoom()" (mousemove)="moveZoom($event)"></div>
+      </div>
     </div>
-
     <div class="main_map_buttons">
-      <div class="main_map_buttons_button" [class.active]="map_button['radius']&&!map_button['scheme']" (click)="setCircle('radius')"><div class="main_map_buttons_button_text">Зона доставки</div></div>
-      <!--<div class="main_map_buttons_button"><div class="main_map_buttons_button_text">Парковки</div></div>-->
-      <!--<div class="main_map_buttons_button"><div class="main_map_buttons_button_text">От метро</div></div>-->
-      <div class="main_map_buttons_button" [class.active]="map_button['scheme']&&!map_button['radius']" (click)="setScheme('scheme')"><div class="main_map_buttons_button_text">Схема зала</div></div>
+      <div class="main_map_buttons_button" [class.active]="map_button['maps']&&!map_button['radius']&&!map_button['scheme']&&!map_button['metro']" (click)="setMaps('maps')"><div class="main_map_buttons_button_text">Карта</div></div>
+      <div class="main_map_buttons_button" [class.active]="map_button['radius']&&!map_button['scheme']&&!map_button['metro']" (click)="setCircle('radius')"><div class="main_map_buttons_button_text">Зона доставки</div></div>
+      <div class="main_map_buttons_button" [class.active]="map_button['metro']&&!map_button['scheme']&&!map_button['radius']" (click)="setMetro('metro')"><div class="main_map_buttons_button_text">От метро</div></div>
+      <div class="main_map_buttons_button" [class.active]="map_button['scheme']&&!map_button['radius']&&!map_button['metro']" (click)="setScheme('scheme')"><div class="main_map_buttons_button_text">Схема зала</div></div>
     </div>
   </div>
-
 </div>

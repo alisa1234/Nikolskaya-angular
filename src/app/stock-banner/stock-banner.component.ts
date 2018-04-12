@@ -5,11 +5,11 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './stock-banner.component.html',
   styleUrls: ['./stock-banner.component.scss']
 })
+
 export class StockBannerComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
 }

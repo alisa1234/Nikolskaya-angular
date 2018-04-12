@@ -3,9 +3,6 @@
     <div class="banner event">
       <img src="app/sass/images/events-list-banner2.png">
     </div>
-
-    <!--<app-submenu-calendar></app-submenu-calendar>-->
-
     <div class="events_list">
       <app-events-block [link]="'/event/'"></app-events-block>
       <div *ngIf="eventsListService.index" class="slider">
@@ -17,22 +14,8 @@
         </owl-carousel>
       </div>
       <app-events-block [events_list]="events_list" [link]="'/event/'"></app-events-block>
-      <!--<app-events-block></app-events-block>-->
-
-      <!--<app-events-block></app-events-block>-->
-      <!--<app-events-block></app-events-block>-->
-      <!--<app-events-block></app-events-block>-->
-      <!--<app-events-block></app-events-block>-->
-      <!--<app-events-block></app-events-block>-->
-      <!--<app-events-block></app-events-block>-->
-      <!--<app-events-block></app-events-block>-->
-      <!--<app-events-block></app-events-block>-->
-      <!--<app-events-block></app-events-block>-->
-
     </div>
-
     <div class="events_show-more">Показать еще</div>
-
   </div>
 </div>
 <app-instagram-content></app-instagram-content>

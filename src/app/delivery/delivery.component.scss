@@ -10,12 +10,10 @@
   flex-direction: column;
   align-items: center;
   position: relative;
-
   @media screen and (max-width: 1023px) {
     background: #1B2226;
     height: auto;
   }
-
   &_mobile-images {
     position: absolute;
     width: 100%;
@@ -24,7 +22,6 @@
     left: 0;
     z-index: 0;
     overflow: hidden;
-
     &_cabbage {
       position: absolute;
       left: -34px;
@@ -33,9 +30,7 @@
       width: 136px;
       height: 192px;
       transform: scale(0.5);
-
     }
-
     &_white-dots {
       position: absolute;
       bottom: -40px;
@@ -45,7 +40,6 @@
       height: 208px;
       transform: scale(0.5);
     }
-
     &_arugula {
       position: absolute;
       bottom: -21px;
@@ -55,7 +49,6 @@
       height: 86px;
       transform: scale(0.5);
     }
-
     &_meal {
       position: absolute;
       bottom: -41px;
@@ -65,7 +58,6 @@
       height: 162px;
       transform: scale(0.5);
     }
-
     &_bread {
       position: absolute;
       top: -17px;
@@ -75,7 +67,6 @@
       height: 370px;
       transform: scale(0.5);
     }
-
     &_garlic {
       position: absolute;
       top: -43px;
@@ -89,7 +80,6 @@
       display: none;
     }
   }
-
   &_header {
     color: #FFFFFF;
     font-family: $font_ubuntu;
@@ -99,7 +89,6 @@
     padding: 69px 0 50px;
     position: relative;
     z-index: 1;
-
     @media screen and (max-width: 1023px) {
       font-size: 20px;
       font-weight: 500;
@@ -108,10 +97,8 @@
       text-align: center;
       margin: 60px auto 30px;
       width: 70%;
-
     }
   }
-
   &_info {
     display: flex;
     flex-direction: row;
@@ -119,23 +106,19 @@
     margin: 0 auto;
     position: relative;
     z-index: 1;
-
     @media screen and (max-width: 1023px) {
       width: 100%;
       justify-content: center;
       margin: 0 auto 30px;
     }
-
     &_block {
       display: flex;
       flex-direction: column;
       align-items: center;
       width: 334px;
-
       @media screen and (max-width: 1023px) {
         width: 30%;
       }
-
       &_circle {
         width: 140px;
         height: 140px;
@@ -145,13 +128,10 @@
         display: flex;
         align-items: center;
         justify-content: center;
-
         @media screen and (max-width: 1023px) {
           width: 80px;
           height: 80px;
-
         }
-
         &_time {
           @include sp__time_icon;
           @media screen and (max-width: 1023px) {
@@ -160,7 +140,6 @@
         }
         &_currenсy {
           @include sp__rub_icon;
-
         }
         &_card {
           @include sp__card_icon;
@@ -169,23 +148,18 @@
           }
         }
       }
-
       &_text {
         color: #FFFFFF;
         font-family: $font_ubuntu;
         font-size: 18px;
         font-weight: bold;
         line-height: 21px;
-
         @media screen and (max-width: 1023px) {
           display: none;
         }
-
       }
-
     }
   }
-
   &_button {
     display: flex;
     justify-content: center;
@@ -202,7 +176,6 @@
       width: calc(100% - 40px);
       max-width: 280px;
     }
-
     &_text {
       color: #FFFFFF;
       font-family: $font_ubuntu;
@@ -216,16 +189,13 @@
         font-size: 13px;
         line-height: 13px;
       }
-
     }
     @media screen and (max-width: 1023px) {
       margin-bottom: 40px;
       margin-top: 0;
     }
-
   }
 }
-
 .delivery_info {
   max-width: 1200px;
   background-color: #F8F5F5;
@@ -237,19 +207,16 @@
     width: 100%;
     padding: 30px 0 20px;
   }
-
   &_breadcrumbs {
     color: #7F7873;
     font-size: 13px;
     line-height: 14px;
     font-family: $font_ubuntu;
     padding-bottom: 27px;
-
     @media screen and (max-width: 1023px) {
       display: none;
     }
   }
-
   &_overview {
     display: flex;
     flex-direction: column;
@@ -257,11 +224,9 @@
     @media screen and (max-width: 1023px) {
       padding: 0 20px;
     }
-
     &_header {
       display: flex;
       flex-direction: row;
-
       &_text {
         color: #231F20;
         font-size: 30px;
@@ -277,10 +242,8 @@
           font-weight: normal;
           font-family: $font_condensed;
           padding-bottom: 20px;
-
         }
       }
-
       &_showmore {
         height: 34px;
         width: 134px;
@@ -291,26 +254,20 @@
         display: flex;
         justify-content: center;
         align-items: center;
-
         @media screen and (max-width: 1023px) {
           display: none;
         }
-
         span {
           color: #231F20;
           font-size: 14px;
           line-height: 16px;
-
           &:before {
             content: '↓';
             padding-right: 10px;
-
           }
-
         }
       }
     }
-
     &_text {
       color: #7F7873;
       font-size: 16px;
@@ -319,9 +276,7 @@
       padding-bottom: 27px;
       display: flex;
       flex-direction: column;
-      height: 203px;
       justify-content: space-between;
-
       @media screen and (max-width: 1023px) {
         font-size: 13px;
         line-height: 20px;
@@ -331,11 +286,8 @@
           display: none;
         }
       }
-
     }
-
   }
-
   &_mobile-showmore {
     width: calc(100% - 20px);
     max-width: 280px;
@@ -353,25 +305,54 @@
       display: none;
     }
   }
-
   &_payments {
     @media screen and (max-width: 1023px) {
       display: none;
+    }
+    &_methods {
+      &_item {
+        color: #7F7873;
+        font-size: 16px;
+        line-height: 24px;
+        font-family: $font_ubuntu;
+        padding-bottom: 27px;
+      }
     }
   }
   .main_map {
     padding: 40px 0;
     @media screen and (max-width: 1023px) {
       padding: 0;
-
       &_buttons {
         width: calc(100% - 20px);
       }
     }
   }
-
 }
 
 agm-map {
   height: 500px;
+}
+
+.scheme {
+  height: 500px;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+  div {
+    background: url("../sass/images/scheme.jpg");
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    transition: transform .5s ease-out;
+  }
+  img {
+    max-width: 100%;
+    max-height: 100%;
+  }
 }

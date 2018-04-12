@@ -3,7 +3,6 @@
 .about_container_content {
   display: flex;
   flex-direction: column;
-
   &_project {
     display: flex;
     flex-direction: column;
@@ -16,9 +15,7 @@
       border: none;
       padding: 20px 20px 0;
       margin-bottom: 0;
-
     }
-
     &_header {
       color: #231F20;
       font-family: $font_ubuntu;
@@ -27,7 +24,6 @@
       padding-bottom: 16px;
       width: 606px;
       line-height: 42px;
-
       @media screen and (max-width: 1024px) {
         font-size: 24px;
         font-weight: 500;
@@ -45,13 +41,11 @@
         margin-bottom: 25px;
         display: block;
       }
-
       @media screen and (max-width: 1024px) {
         font-size: 13px;
         line-height: 20px;
         width: 100%;
       }
     }
-
   }
 }

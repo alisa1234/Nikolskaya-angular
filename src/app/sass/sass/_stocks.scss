@@ -1,17 +1,12 @@
-
-
 .wrapper {
-
   .stock {
     padding: 0;
     width: 100%;
-
     img {
       width: 100%;
       max-width: 1280px;
     }
   }
-
   .stocks_list {
     max-width: 1200px;
     display: flex;
@@ -20,7 +15,6 @@
     flex-wrap: wrap;
     background-color: #F8F5F5;
     padding: 30px 40px 30px;
-
     .content_events {
       padding: 30px 0 0 33px;
       &_title {
@@ -28,7 +22,6 @@
         font-family: $font_ubuntu;
         font-size: 24px;
       }
-
       &_items {
         display: flex;
         flex-direction: row;
@@ -42,17 +35,13 @@
           margin: 0 15px 20px 0;
           cursor: pointer;
           &_img {
-
             img {
               width: 380px;
             }
-
           }
-
           &_content {
             font-family: $font_ubuntu;
             padding: 15px 20px 10px;
-
             &_name {
               color: #231F20;
               font-size: 18px;
@@ -67,7 +56,6 @@
               padding-bottom: 4px;
               margin-bottom: 23px;
             }
-
             &_time {
               color: #867F7B;
               font-size: 13px;
@@ -78,7 +66,6 @@
               display: inline-block;
               box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
               margin-bottom: 10px;
-
             }
             &-kitchen {
               display: flex;
@@ -89,15 +76,10 @@
               line-height: 13px;
               padding: 10px 133px 20px 20px;
               align-items: center;
-
-              &_item {
-
-              }
             }
           }
         }
       }
-
     }
   }
   .stocks_show-more {
@@ -116,6 +98,5 @@
     line-height: 21px;
     text-align: center;
     cursor: pointer;
-
   }
 }

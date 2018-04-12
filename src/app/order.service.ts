@@ -6,8 +6,6 @@ export class OrderService {
 
   order_arr: Array<IDishArr>=[];
   total_price: number = 0;
-  constructor() {
-
-  }
+  constructor() {}
 
 }

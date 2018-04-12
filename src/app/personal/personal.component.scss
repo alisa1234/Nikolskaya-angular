@@ -1,7 +1,6 @@
 @import "../about/about.component";
 
 .about_container {
-
   @media screen and (max-width: 1023px){
     background-color: #FFFFFF;
   }
@@ -13,37 +12,29 @@
   @media screen and (max-width: 1023px){
     background-color: #FFFFFF;
   }
-
-
   .about_container_nav {
-
     @media screen and (max-width: 1023px){
       margin: 0 auto;
       order: 1;
     }
     .bonus {
       margin-bottom: 10px;
-
       &_mobile {
         display: none;
         @media screen and (max-width: 1023px){
           display: block;
         }
       }
-
       @media screen and (max-width: 1023px){
         display: none;
       }
     }
-
     .desktop {
       display: block;
-
       @media screen and (max-width: 1023px){
         display: none;
       }
     }
-
     .mobile {
       display: none;
       @media screen and (max-width: 1023px){
@@ -54,7 +45,6 @@
       margin-bottom: 20px;
       height: fit-content;
       padding-bottom: 20px;
-
       @media screen and (max-width: 1023px){
         margin-bottom: 0;
         flex-direction: column;
@@ -64,7 +54,6 @@
         border: none;
         padding: 20px 0;
       }
-
       .active {
         color: #A97E30;
         font-size: 16px;
@@ -91,11 +80,9 @@
     }
     &_progress_bar {
       margin-top: 15px;
-
       @media screen and (max-width: 1023px){
         max-width: 100%;
       }
-
       &_wrapper {
         display: flex;
         flex-direction: row;
@@ -103,23 +90,17 @@
         padding: 0 5px;
         border-bottom: 1px solid #E6E3E1;
         &_item {
-
           border-right: 1px solid #E6E3E1;
           width: 70px;
           height: 7px;
-
           @media screen and (max-width: 1023px){
             width: calc(100% / 6);
           }
-
           &:first-child{
             border-left: 1px solid #E6E3E1;
-
           }
-
         }
       }
-
       &_item-color {
         width: 170px;
         height: 3px;
@@ -128,11 +109,9 @@
         position: absolute;
         bottom: -2px;
         left: 0;
-
         @media screen and (max-width: 1023px){
           width: 75%;
         }
-
         .dot {
           width: 5px;
           height: 5px;
@@ -143,7 +122,6 @@
           bottom: -1px;
         }
       }
-
     }
   }
 }

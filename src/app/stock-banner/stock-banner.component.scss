@@ -2,13 +2,11 @@
 @import "../sass/sass/_svg-sprite";
 @import "../sass/sass/_png-sprite";
 
-
 .wrapper_banner {
   padding: 100px 0;
   @media screen and (max-width: 1024px) {
     padding: 35px 0;
   }
-
   .banner_main {
     padding: 60px 100px 72px;
     position: relative;
@@ -46,7 +44,6 @@
           font-size: 11px;
           line-height: 11px;
           font-weight: normal;
-
         }
       }
       &_tag {
@@ -61,14 +58,12 @@
           font-size: 11px;
           line-height: 11px;
           text-transform: uppercase;
-
         }
       }
       &_img {
         img {
           width: 100%;
         }
-
       }
       &_text {
         color: #7F7873;
@@ -79,7 +74,6 @@
           font-size: 13px;
           line-height: 20px;
           margin-top: 20px;
-
         }
       }
     }
@@ -98,20 +92,16 @@
         top: 10px;
         right: 10px;
       }
-
       &_icon {
         @include sp__close;
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-
         @media screen and (max-width: 1024px) {
-          transform: translate(-50%, -50%) scale(0.65) ;
-
+          transform: translate(-50%, -50%) scale(0.65);
         }
       }
-
     }
   }
   &:before {
@@ -124,6 +114,5 @@
     width: 100%;
     background: rgba(0, 0, 0, .5);
     z-index: 100;
-
   }
 }

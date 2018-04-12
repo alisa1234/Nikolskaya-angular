@@ -1,23 +1,11 @@
-
-  <div class="content_events_items_item" *ngFor="let item of events_list" [routerLink]="[link,item.Id]" id="{{item.Id}}">
-    <div class="content_events_items_item_img" [style.backgroundImage]="'url(' + item.ImagePath + ')'">
-      <!--<img src="{{item.ImagePath}}">-->
-    </div>
-    <div class="content_events_items_item_content">
-      <div class="content_events_items_item_content_name">{{i}}{{item.Header}}</div>
-      <div class="content_events_items_item_content_date">{{item.StartDate}} - {{item.EndDate}}</div>
-      <div class="content_events_items_item_content_text">{{item.Body}}
-      </div>
-      <div class="content_events_items_item_content_time">Афиша</div>
-    </div>
-  <!--<div class="content_events_items_item_content-kitchen">-->
-  <!--<div class="content_events_items_item_content-kitchen_item">Европейская</div>-->
-  <!--<div class="content_events_items_item_content-kitchen_delimiter"></div>-->
-  <!--<div class="content_events_items_item_content-kitchen_item">Гриль</div>-->
-  <!--<div class="content_events_items_item_content-kitchen_delimiter"></div>-->
-  <!--<div class="content_events_items_item_content-kitchen_item">Сендвичи</div>-->
-  <!--</div>-->
-
+<div class="content_events_items_item" *ngFor="let item of events_list" [routerLink]="[link,item.Id]" id="{{item.Id}}">
+  <div class="content_events_items_item_img" [style.backgroundImage]="'url(' + item.ImagePath + ')'"></div>
+  <div class="content_events_items_item_content">
+    <div class="content_events_items_item_content_name">{{i}}{{item.Header}}</div>
+    <div class="content_events_items_item_content_date">{{item.StartDate}} - {{item.EndDate}}</div>
+    <div class="content_events_items_item_content_text">{{item.Body}}</div>
+    <div class="content_events_items_item_content_time">Афиша</div>
+  </div>
 </div>
 
 

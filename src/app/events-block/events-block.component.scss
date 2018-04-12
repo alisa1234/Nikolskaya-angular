@@ -9,11 +9,8 @@
   flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
-
   @media screen and (max-width: 1024px) {
-    //width: calc(100% - 40px);
     width: 100%;
-    //padding: 0 20px;
     max-width: 380px;
     margin: 0 auto;
   }
@@ -25,12 +22,10 @@
   background-color: #FFFFFF;
   margin: 30px 15px 0 0;
   cursor: pointer;
-
   @media screen and (max-width: 1024px) {
     width: 100%;
     margin-right: 0;
   }
-
   &_img {
     width: 380px;
     height: 213px;
@@ -39,18 +34,14 @@
     img {
       width: 380px;
       height: 213px;
-
       @media screen and (max-width: 1024px) {
         width: 100%;
       }
     }
-
   }
-
   &_content {
     font-family: $font_ubuntu;
     padding: 15px 20px 10px;
-
     &_name {
       color: #231F20;
       font-size: 18px;
@@ -80,10 +71,6 @@
       position: relative;
       max-height: 4em;
       overflow: hidden;
-      //overflow: hidden;
-      //display: -webkit-box;
-      //-webkit-line-clamp: 3;
-      //-webkit-box-orient: vertical;
       @media screen and (max-width: 1024px) {
         font-size: 13px;
         line-height: 20px;
@@ -115,7 +102,6 @@
       display: inline-block;
       box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
       margin-bottom: 10px;
-
       @media screen and (max-width: 1024px) {
         text-transform: uppercase;
         font-size: 11px;
@@ -131,10 +117,6 @@
       line-height: 13px;
       padding: 10px 133px 20px 20px;
       align-items: center;
-
-      &_item {
-
-      }
       &_delimiter {
         @include sp__rectangle;
       }

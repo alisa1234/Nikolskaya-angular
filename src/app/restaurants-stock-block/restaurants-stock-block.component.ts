@@ -5,11 +5,11 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './restaurants-stock-block.component.html',
   styleUrls: ['./restaurants-stock-block.component.scss']
 })
+
 export class RestaurantsStockBlockComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
 }

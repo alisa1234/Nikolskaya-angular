@@ -1,4 +1,5 @@
 import {NgModule, ElementRef} from '@angular/core';
+
 export interface IDishArr {
     id: number,
     name: string,
@@ -8,11 +9,13 @@ export interface IDishArr {
     restaurant_id: number
 }
 export interface IDishArrs extends Array<IDishArr> {}
+
 @NgModule()
 export class BucketModule {
     quantity: number = 1;
 
     addItem(id:number,arr:Array<IDishArr>,total_price: number) {
+
         this.quantity = 1;
         for(let i=0; i<arr.length;i++) {
             if(arr[i].id == id) {
@@ -24,14 +27,11 @@ export class BucketModule {
                              'arr':arr,
                             'total':total_price};
                 }
-
             }
-
         }
-
-
     }
-    removeItem(id:number,arr:Array<IDishArr>,total_price: number, bucket_item: ElementRef) {
+
+    removeItem (id:number,arr:Array<IDishArr>,total_price: number, bucket_item: ElementRef) {
 
         for(let i=0; i<arr.length;i++) {
             if(arr[i].id == id) {
@@ -45,9 +45,7 @@ export class BucketModule {
                 return {
                     'arr':arr,
                     'total':total_price};
-
             }
-
         }
     }
 }

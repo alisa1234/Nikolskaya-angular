@@ -14,11 +14,9 @@
     line-height: 18px;
     padding: 25px 0;
     border-bottom: 1px solid #E6E3E1;
-
     @media screen and (max-width: 1023px) {
       flex-direction: column;
     }
-
     &_name {
       margin-right: 50px;
       @media screen and (max-width: 1023px) {
@@ -34,7 +32,6 @@
         font-size: 11px;
         line-height: 11px;
       }
-
     }
     &_delete {
       position: absolute;
@@ -43,7 +40,6 @@
       height: 30px;
       border-radius: 50%;
       background-color: #E6E3E1;
-
       span {
         width: 10px;
         height: 10px;
@@ -52,12 +48,9 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-
       }
-
     }
   }
-
 }
 
 .add_address_form {
@@ -75,13 +68,11 @@
       @media screen and (max-width: 1023px) {
         width: 100%;
       }
-
       input {
         @media screen and (max-width: 1023px) {
           width: calc(100% - 40px);
         }
       }
-
       &_separated {
         display: flex;
         flex-direction: row;
@@ -91,7 +82,6 @@
           flex-direction: column;
           width: 100%;
         }
-
         &_right {
           display: flex;
           flex-direction: row;
@@ -100,7 +90,6 @@
           @media screen and (max-width: 1023px) {
             width: 100%;
           }
-
           input {
             width: 68px;
           }
@@ -122,7 +111,6 @@
             }
           }
         }
-
         &_left {
           display: flex;
           flex-direction: row;
@@ -133,12 +121,10 @@
             flex-direction: column;
             width: 100%;
           }
-
           input {
             width: 68px;
           }
           &_item {
-
             input {
               margin-left: 10px;
             }
@@ -146,7 +132,6 @@
         }
       }
     }
-
   }
   .form_add_address {
     padding: 15px;

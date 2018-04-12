@@ -6,11 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./restaurant-block-footer.component.scss'],
   host: {'class': 'root'}
 })
+
 export class RestaurantBlockFooterComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
 }

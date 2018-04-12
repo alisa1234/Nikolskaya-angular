@@ -10,51 +10,23 @@
         <span>8:00 - 23:00</span>
       </div>
       <div class="header_adress_time">
+        <div class="header_adress_phone_logo"></div>
         <a href="tel.: +74959677777"><span>+74959677777</span></a>
       </div>
-      <!--<div class="header_adress_language" (click)="selectLanguage()" [class.active]="show_language">-->
-        <!--<ul>-->
-          <!--<li><img src="app/sass/images/language.png"></li>-->
-          <!--<ul [hidden]="!show_language">-->
-            <!--<li ><img src="app/sass/images/ch.png"></li>-->
-            <!--<li ><img src="app/sass/images/uk.png"></li>-->
-          <!--</ul>-->
-
-        <!--</ul>-->
-        <!--&lt;!&ndash;<div class="header_adress_language_active">&ndash;&gt;-->
-          <!--&lt;!&ndash;<div class="header_adress_language_active_lang-icon">&ndash;&gt;-->
-            <!--&lt;!&ndash;<img src="app/sass/images/language.png">&ndash;&gt;-->
-          <!--&lt;!&ndash;</div>&ndash;&gt;-->
-          <!--&lt;!&ndash;<div class="header_adress_language_active_arrow"></div>&ndash;&gt;-->
-        <!--&lt;!&ndash;</div>&ndash;&gt;-->
-        <!--&lt;!&ndash;<div class="header_adress_language_list">&ndash;&gt;-->
-          <!--&lt;!&ndash;<div class="header_adress_language_list_item">&ndash;&gt;-->
-            <!--&lt;!&ndash;<div class="header_adress_language_list_item_lang-icon">&ndash;&gt;-->
-              <!--&lt;!&ndash;<img src="app/sass/images/language.png">&ndash;&gt;-->
-            <!--&lt;!&ndash;</div>&ndash;&gt;-->
-            <!--<div class="header_adress_language_triangle"></div>-->
-          <!--&lt;!&ndash;</div>&ndash;&gt;-->
-          <!--&lt;!&ndash;<div class="header_adress_language_list_item">&ndash;&gt;-->
-            <!--&lt;!&ndash;<div class="header_adress_language_list_item_lang-icon">&ndash;&gt;-->
-              <!--&lt;!&ndash;<img src="app/sass/images/language.png">&ndash;&gt;-->
-            <!--&lt;!&ndash;</div>&ndash;&gt;-->
-          <!--&lt;!&ndash;</div>&ndash;&gt;-->
-        <!--&lt;!&ndash;</div>&ndash;&gt;-->
-      <!--</div>-->
     </div>
     <div class="header_tabs">
-      <div class="header_tabs_search">
-        <div class="header_tabs_search_logo"></div>
-        <input (click)="openSearch()" (mouseout)="closeSearch()" [class.active_search]="open_search" type="search" placeholder="Поиск"/>
-      </div>
-      <div class="header_tabs_login">
+      <div class="header_tabs_login" *ngIf="!headerService.login">
         <div class="header_tabs_login_logo"></div>
-        <!--<a routerLink="/login"><span>Вход</span></a>-->
         <a (click)="ShowLoginForm()"><span>Вход</span></a>
       </div>
+      <div class="header_tabs_logout" *ngIf="headerService.login" routerLink="/personal">
+          <div class="header_tabs_logout_logo"></div>
+          <a><span>{{headerService.client_about.FirstName}}</span></a>
+      </div>
+      <div *ngIf="headerService.login" class="header_tabs_logout_icon"></div>
       <div class="header_tabs_bucket">
         <div class="header_tabs_bucket_logo"></div>
-        <a *ngIf="headerService.login" routerLink="/bucket"><span>Корзина</span></a>
+        <a routerLink="/bucket"><span>Корзина</span></a>
       </div>
     </div>
   </header>
@@ -91,18 +63,12 @@
         <div class="menu-tabs_addit_delivery_item">
           <a routerLink="/delivery"><span>Доставка</span></a>
         </div>
-        <!--<div class="menu-tabs_addit_delivery_item">-->
-          <!--<span>Кейтеринг</span>-->
-        <!--</div>-->
       </div>
       <div class="menu-tabs_addit_socials">
         <a href="https://www.facebook.com/vokrugsvetamarket/" target="_blank"><div class="menu-tabs_addit_socials_item facebook"></div></a>
         <a href="https://www.instagram.com/vokrugsvetamarket/" target="_blank"><div class="menu-tabs_addit_socials_item instagram"></div></a>
-        <!--<div class="menu-tabs_addit_socials_item pinterest"></div>-->
-        <!--<div class="menu-tabs_addit_socials_item twitter"></div>-->
         <a href="https://vk.com/vokrugsvetamarket/" target="_blank"> <div class="menu-tabs_addit_socials_item vk"></div></a>
       </div>
-
     </div>
   </div>
 </div>

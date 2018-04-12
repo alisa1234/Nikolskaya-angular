@@ -4,44 +4,35 @@
 agm-map {
   height: 500px;
 }
+
 .contacts {
-  //width: auto;
   margin: 0 auto;
   background-color: #F8F5F5;
   padding: 32px 50px 38px 50px;
   display: flex;
   flex-direction: column;
-
   @media screen and (max-width: 1024px) {
     padding: 0;
     width: 100%;
   }
-
   &_breadcrumbs {
     color: #7F7873;
     font-size: 13px;
     line-height: 14px;
     font-family: $font_ubuntu;
     padding-bottom: 27px;
-
     @media screen and (max-width: 1024px) {
       display: none;
     }
-
-
   }
-
   &_info {
-
     @media screen and (max-width: 1024px) {
      padding:30px 20px 0;
       width:calc(100% - 40px);
     }
-
     .delivery_info_overview_header {
       padding-bottom: 0;
     }
-
     &_header {
         color: #231F20;
         font-family: $font_ubuntu;
@@ -49,39 +40,32 @@ agm-map {
         font-weight: 500;
         line-height: 35px;
     }
-
     &_main {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
       align-items: flex-start;
-
       @media screen and (max-width: 1024px) {
         width: 100%;
         flex-direction: column;
       }
-
       &_connections {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         align-items: flex-start;
-
         @media screen and (max-width: 1024px) {
           width: 100%;
         }
-
         &_delivery {
           padding-top: 70px;
           margin-bottom: 100px;
-
           @media screen and (max-width: 1024px) {
             padding-top: 4px;
             margin-bottom: 40px;
           }
         }
         &_subscribe_content_socials {
-
           @media screen and (max-width: 1024px) {
             display: flex;
             flex-direction: row;
@@ -89,53 +73,41 @@ agm-map {
             width: 100%;
             margin-bottom: 20px;
           }
-
           &_vk {
             @include sp__vk_circle-white;
             cursor: pointer;
-
           }
           &_fb {
             @include sp__facebook_circle-white;
             cursor: pointer;
-
-
           }
           &_twit {
             @include sp__twitter-circle-white;
             cursor: pointer;
-
-
           }
           &_inst {
             @include sp__instagram_circle-white;
             cursor: pointer;
-
-
           }
           &_pint {
             @include sp__pinterest-circle-white;
             cursor: pointer;
-
-
           }
         }
       }
-
       &_form {
         padding: 23px 30px 30px 30px;
         background-color: #FFFFFF;
         display: flex;
         flex-direction: column;
         margin-right: 67px;
-
+        margin-top: -27px;
         @media screen and (max-width: 1024px) {
          padding: 0;
           margin: 0;
           width: 100%;
           background-color: transparent;
         }
-
         &_header {
           color: #231F20;
           font-family: $font_ubuntu;
@@ -144,7 +116,6 @@ agm-map {
           line-height: 21px;
           padding-bottom: 17px;
           border-bottom: 1px solid #CCC8C4;
-
           @media screen and (max-width: 1024px) {
             border-radius: 2px;
             background-color: #332c26;
@@ -159,10 +130,8 @@ agm-map {
             padding: 14px 0 17px;
             min-width: 360px;
             margin: 0 auto;
-
           }
         }
-
         &_form {
           margin: 0 auto;
           display: flex;
@@ -170,20 +139,14 @@ agm-map {
           align-items: center;
           justify-content: space-between;
           padding-top: 20px;
-
           @media screen and (max-width: 1024px) {
             display: none;
           }
-
-
-
           &_rectangle {
             height: 1px;
             width: 442px;
             background-color: #CCC8C4;
-            //box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
           }
-
           &_group {
             position: relative;
             display: flex;
@@ -192,7 +155,6 @@ agm-map {
             align-items: center;
             width: 100%;
             margin-top: 10px;
-
             &_label {
               color: #231F20;
               font-family: $font_ubuntu;
@@ -201,7 +163,6 @@ agm-map {
               line-height: 22px;
               text-align: right;
             }
-
             select {
               padding: 13px 20px;
               width: 395px;
@@ -215,9 +176,7 @@ agm-map {
               line-height: 16px;
               cursor: pointer;
               outline: none;
-
             }
-
             &_arrow {
               position: absolute;
               font-size: 24px;
@@ -226,9 +185,7 @@ agm-map {
               right: 17px;
               transform: rotate(90deg);
               cursor: pointer;
-
             }
-
             &_input {
               border: 1px solid #E6E3E1;
               border-radius: 2px;
@@ -239,7 +196,6 @@ agm-map {
               font-size: 14px;
               line-height: 16px;
             }
-
             &_textarea {
               margin-left: 33px;
               width: 361px;
@@ -254,7 +210,6 @@ agm-map {
               line-height: 16px;
               outline: none;
             }
-
             &_submit {
               height: 44px;
               padding: 0 15px;
@@ -272,61 +227,71 @@ agm-map {
             }
           }
         }
-
       }
     }
   }
-
-
   &_all {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     margin-top: 40px;
-
     @media screen and (max-width: 1024px) {
      padding: 0 20px 5px;
       flex-direction: column;
       margin-top: 0;
     }
-
     &_block {
       display: flex;
       flex-direction: column;
-
       @media screen and (max-width: 1024px) {
         margin-bottom: 20px;
         font-size: 13px;
         line-height: 20px;
       }
-
       .footer_main_contacts_header {
         padding-bottom: 20px;
-
         @media screen and (max-width: 1024px) {
           padding-bottom: 0;
         }
       }
     }
   }
-
   .subscribe_content_socials {
     padding-top: 101px;
     width: 285px;
   }
-
   .main_map {
     padding:40px 0;
   }
-
 }
 
 .contacts-main {
   .subscribe_content {
     padding: 0 0 30px;
-
     .subscribe_content_socials {
       padding-top: 0;
     }
+  }
+}
+.scheme {
+  height: 500px;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+  div {
+    background: url("../sass/images/scheme.jpg");
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    transition: transform .5s ease-out;
+  }
+  img {
+    max-width: 100%;
+    max-height: 100%;
   }
 }

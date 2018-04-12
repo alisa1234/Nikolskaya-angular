@@ -11,16 +11,12 @@
   margin: 30px 18px 0 0;
   position: relative;
   cursor: pointer;
-
-
   @media screen and (max-width: 1024px) {
     display: none;
   }
-
   &_img {
     position: relative;
     height: 214px;
-
     &_main {
       width: 380px;
       height: 214px;
@@ -28,19 +24,15 @@
         width: 100%;
         height: auto;
       }
-
     }
-
   }
   &-hover {
     font-family: $font_ubuntu;
-
     &_main {
       background-color: rgba(0, 0, 0, 0.5);
       padding: 55px 30px 50px;
       position: absolute;
       top: 0;
-
       &_text {
         font-size: 18px;
         font-weight: 500;
@@ -66,7 +58,6 @@
             line-height: 19px;
             text-align: center;
           }
-
           &:last-child {
             margin-right: 0;
           }

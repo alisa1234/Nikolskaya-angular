@@ -3,7 +3,6 @@
 .about_container_content {
   display: flex;
   flex-direction: column;
-  //margin: 20px 0;
   &_item {
     display: flex;
     flex-direction: row;
@@ -14,7 +13,6 @@
     border-radius: 0 0 4px 4px;
     border: 1px solid #E6E3E1;
     align-items: flex-end;
-
     @media screen and (max-width: 1024px) {
       flex-direction: column;
       width: calc(100% - 40px);
@@ -22,27 +20,22 @@
       max-width: 400px;
       padding: 0;
     }
-
     &_image {
-
       img {
         width: 286px;
         height: 160px;
-
         @media screen and (max-width: 1024px) {
           width: 100%;
           height: 100%;
         }
       }
     }
-
     &_text {
       padding-left: 30px;
       padding-right: 20px;
       word-wrap: break-word;
       overflow-wrap: break-word;
       max-width: 475px;
-
       @media screen and (max-width: 1024px) {
         width: calc(100% - 40px);
         max-width: 100%;
@@ -50,37 +43,31 @@
         flex-direction: column;
         padding: 20px;
       }
-
       &_header {
         color: #231F20;
         font-family: $font_ubuntu;
         font-size: 18px;
         line-height: 21px;
         padding-bottom: 9px;
-
         @media screen and (max-width: 1024px) {
           order: 1;
           font-size: 16px;
           line-height: 16px;
         }
       }
-
       &_overview {
         color: #7F7873;
         font-family: $font_ubuntu;
         font-size: 16px;
         line-height: 24px;
         padding-bottom: 9px;
-
         @media screen and (max-width: 1024px) {
           order: 3;
           font-size: 13px;
           line-height: 20px;
           margin-top: 10px;
-
         }
       }
-
       &_date {
         color: #A67B2C;
         font-family: $font_ubuntu;
@@ -95,7 +82,6 @@
           color: #B68D39;
         }
       }
-
       &_tag-mobile {
         color: #867F7B;
         padding: 4px 7px;;
@@ -109,8 +95,6 @@
         line-height: 11px;
         order: 4;
         width: fit-content;
-
-
         @media screen and (min-width: 1024px) {
           display: none;
         }

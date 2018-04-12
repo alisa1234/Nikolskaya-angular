@@ -19,7 +19,6 @@
           <div class="about_container_nav_progress_bar_wrapper_item"></div>
           <div class="about_container_nav_progress_bar_item-color"><div class="dot"></div></div>
         </div>
-
       </div>
     </div>
     <div class="about_container_nav">
@@ -28,22 +27,21 @@
         <div class="about_container_nav_item_icon">&rsaquo;</div>
       </div>
       <div class="about_container_nav_item" [class.active]="type_content['history']==false" (click)="showContent('history')">
-        <div class="about_container_nav_item_text desktop">История заказов</div>
+        <div class="about_container_nav_item_text desktop">Мои заказы</div>
         <div class="about_container_nav_item_text mobile">История</div>
         <div class="about_container_nav_item_icon">&rsaquo;</div>
       </div>
       <div class="about_container_nav_item" [class.active]="type_content['data']==false" (click)="showContent('data')">
-        <div class="about_container_nav_item_text desktop">Персональные данные</div>
+        <div class="about_container_nav_item_text desktop">Мои данные</div>
         <div class="about_container_nav_item_text mobile">Данные</div>
         <div class="about_container_nav_item_icon">&rsaquo;</div>
       </div>
       <div class="about_container_nav_item" [class.active]="type_content['address']==false" (click)="showContent('address')">
-        <div class="about_container_nav_item_text">Адреса</div>
+        <div class="about_container_nav_item_text">Мои адреса</div>
         <div class="about_container_nav_item_icon">&rsaquo;</div>
       </div>
     </div>
   </div>
-
   <app-history [hidden]="type_content['history']"></app-history>
   <app-data [hidden]="type_content['data']"></app-data>
   <app-adress [hidden]="type_content['address']"></app-adress>

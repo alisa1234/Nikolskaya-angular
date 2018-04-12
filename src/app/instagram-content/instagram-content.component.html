@@ -8,9 +8,10 @@
         <div class="slider-footer_delivery_moreinfo-text_right-dash"></div>
       </div>
     </div>
-    <div class="instagram_content_item" *ngFor="let item of images.data"><img src="{{item.images.low_resolution.url}}"></div>
-    <!--<div class="instagram_content_item"><img src="app/sass/images/Bitmap8.png"></div>-->
-    <!--<div class="instagram_content_item"><img src="app/sass/images/Bitmap10.png"></div>-->
-    <!--<div class="instagram_content_item"><img src="app/sass/images/ImageInsta.png"></div>-->
+    <div class="instagram_content_item" *ngFor="let item of images.data">
+      <a href="{{item.link}}">
+        <div class="instagram_content_item_img" [style.backgroundImage]="'url(' + item.images.low_resolution.url + ')'"></div>
+      </a>
+    </div>
   </div>
 </div>

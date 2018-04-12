@@ -7,18 +7,14 @@
   @media screen and (max-width: 1023px) {
     width: 100%;
   }
-
   .slider {
     padding: 0 20px;
     position: relative;
-
     @media screen and (max-width: 1023px) {
       padding: 0;
       width: 100%;
       height: auto;
-      //height: 188px;
     }
-
     .owl-carousel {
       .owl-nav {
         position: absolute;
@@ -26,7 +22,6 @@
         width: 100%;
         transform: translateY(-50%);
         background: none;
-
         .owl-prev {
           background: url(../images/array.png) no-repeat;
           display: inline-block;
@@ -35,7 +30,6 @@
           width: 13px;
           height: 22px;
         }
-
         .owl-next {
           display: inline-block;
           float: right;
@@ -45,36 +39,29 @@
           transform: rotate(180deg);
           -webkit-transform: rotate(180deg);
           margin-right: 30px;
-
         }
       }
       .item {
-
         @media screen and (max-width: 1023px) {
           width: 100%;
           height: 100%;
         }
-
         img {
-
           @media screen and (max-width: 1023px) {
             height: 100%;
           }
         }
       }
     }
-
     &-footer {
       display: flex;
       flex-direction: row;
       position: relative;
       padding: 0 40px;
-
       @media screen and (max-width: 1023px) {
         width: 100%;
         padding: 0;
       }
-
       &_delivery {
         height: 170px;
         width: 600px;
@@ -82,14 +69,12 @@
         padding-bottom: 10px;
         font-family: $font_ubuntu;
         position: relative;
-
         @media screen and (max-width: 1024px) {
           width: 50%;
           height: auto;
           padding: 5% 0;
           background-color: #FFFFFF;
         }
-
         &_main-text {
           color: #EBE8DD;
           font-size: 90px;
@@ -100,7 +85,6 @@
           top: 50%;
           left: 50%;
           transform: translate(-50%, -50%);
-
           @media screen and (max-width: 1024px) {
             font-size: 24px;
             line-height: 24px;
@@ -116,7 +100,6 @@
           font-size: 18px;
           line-height: 24px;
           text-align: center;
-
           @media screen and (max-width: 1024px) {
             font-size: 12px;
             line-height: 18px;
@@ -135,7 +118,6 @@
           font-size: 18px;
           line-height: 24px;
           text-align: center;
-
           @media screen and (max-width: 1024px) {
             font-size: 12px;
             line-height: 18px;
@@ -153,11 +135,9 @@
           left: 50%;
           transform: translate(-50%, -50%);
           cursor: pointer;
-
           @media screen and (max-width: 1024px) {
             display: none;
           }
-
           &_left-dash, &_right-dash {
             height: 2px;
             width: 21px;
@@ -178,29 +158,24 @@
           position: absolute;
           bottom: 0;
           right: 65px;
-
           @media screen and (max-width: 1024px) {
             right: 50%;
             transform: translateX(50%);
             width: 80px;
             z-index: 0;
-
             img {
               width: 80px;
             }
           }
-
           &_right {
             position: absolute;
             top: 0;
             right: 133px;
-
             @media screen and (max-width: 1024px) {
               right: 50%;
               transform: translateX(50%);
               width: 80px;
               z-index: 0;
-
               img {
                 width: 80px;
               }
@@ -217,23 +192,19 @@
         position: absolute;
         top: 50%;
         left: 46%;
-
         @media screen and (max-width: 1024px) {
           display: none;
         }
       }
     }
   }
-
   .main_map {
     padding: 40px 40px 0;
     position: relative;
-
     @media screen and (max-width: 1024px) {
       padding: 0;
       margin-top: 40px;
     }
-
     &_buttons {
       position: absolute;
       width: 187px;
@@ -244,7 +215,6 @@
       left: 40px;
       transform: translateY(-50%);
       font-family: $font_ubuntu;
-
       @media screen and (max-width: 1024px) {
         position: absolute;
         top: 20px;
@@ -256,14 +226,12 @@
         background-color: #231f20;
         padding: 0 15px;
       }
-
       &_button {
         margin-bottom: 10px;
         border-radius: 2px;
         cursor: pointer;
         width: 147px;
         color: #FFFFFF;
-
         @media screen and (max-width: 1024px) {
           margin-bottom: 0;
           border-radius: 0;
@@ -271,9 +239,6 @@
           width: auto;
           color: #FFFFFF;
         }
-
-
-
         &_text {
           padding: 12px 0 14px 20px;
           background-color: rgba(35, 31, 32, 0.8);
@@ -283,36 +248,29 @@
           font-size: 16px;
           line-height: 24px;
           font-weight: normal;
-
           @media screen and (max-width: 1024px) {
             padding: 14px 0 14px 15px;
             font-size: 11px;
             line-height: 11px;
           }
-
         }
-
       }
       .active {
         width: 187px;
-
         @media screen and (max-width: 1024px) {
           width: auto;
         }
-
         .main_map_buttons_button_text {
           padding: 17px 0 17px 20px;
           background-color: #FFFFFF;
           box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
           color: #1A1718;
-
           @media screen and (max-width: 1024px) {
             padding: 14px 0 11px 0;
             background-color: rgba(35, 31, 32, 1);
             box-shadow: none;
             color: #BFAF8C;
             border-bottom: 4px #CBBC9D solid;
-
           }
         }
       }
@@ -324,11 +282,9 @@
   background-color: #F7F6F2;
   max-width: 1280px;
   margin: 0 auto;
-
   @media screen and (max-width: 1024px) {
     width: 100%;
   }
-
   .content_corners {
     padding: 0 30px 40px;
     margin: 0 auto;
@@ -336,29 +292,24 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-
     @media screen and (max-width: 1024px) {
       max-width: 100%;
       width: 100%;
       padding: 0 0 30px;
       align-items: flex-start;
-
     }
-
     &_title {
       color: #231F20;
       font-family: $font_condensed;
       font-size: 30px;
       line-height: 30px;
       text-align: center;
-
       @media screen and (max-width: 1024px) {
         margin: 0 20px;
         width: calc(100% - 40px);
         display: flex;
         justify-content: space-between;
       }
-
       &_text {
         color: #231F20;
         font-family: $font_condensed;
@@ -366,15 +317,12 @@
         line-height: 30px;
         text-align: center;
         margin-top: 40px;
-
-
         @media screen and (max-width: 1024px) {
           font-size: 20px;
           line-height: 20px;
           text-transform: uppercase;
         }
       }
-
       &_moreinfo-text-mobile {
         display: flex;
         align-items: center;
@@ -383,16 +331,13 @@
         margin-top: 40px;
         cursor: pointer;
         flex-direction: row;
-        //margin-right: 40px;
         a {
           color: inherit;
           text-decoration: none;
         }
-
         @media screen and (min-width: 1024px) {
           display: none;
         }
-
         &_left-dash, &_right-dash {
           height: 2px;
           width: 21px;
@@ -415,18 +360,14 @@
       flex-wrap: wrap;
       max-width: 1200px;
       justify-content: center;
-
       @media screen and (max-width: 1024px) {
         max-width: 400px;
         margin: 0 auto;
         width: 100%;
-
         .content_corners_items_item:nth-child(3) ~ .content_corners_items_item {
           display: none;
         }
-
       }
-
       &_item {
         width: 380px;
         border: 1px solid #E6E3E1;
@@ -436,17 +377,13 @@
         margin: 30px 0 0;
         position: relative;
         cursor: pointer;
-
         @media screen and (max-width: 1024px) {
           width: calc(100% - 40px);
           padding: 0;
           margin: 20px auto 0;
-          //padding: 0 40px;
         }
-
         &_img {
           position: relative;
-
           &_main {
             width: 380px;
             height: 214px;
@@ -454,7 +391,6 @@
               width: 100%;
               height: auto;
             }
-
           }
           .logo {
             position: absolute;
@@ -463,18 +399,15 @@
             transform: translate(-50%, -50%);
           }
         }
-
         &_content {
           display: flex;
           flex-direction: row;
           justify-content: space-between;
           font-family: $font_ubuntu;
           padding: 15px 20px 10px;
-
           @media screen and (max-width: 1024px) {
             padding: 10% 20px 10px;
           }
-
           &_name {
             color: #231F20;
             font-size: 18px;
@@ -499,15 +432,10 @@
             padding: 10px 133px 20px 20px;
             align-items: center;
             font-family: $font_ubuntu;
-
             @media screen and (max-width: 1024px) {
               width: 195px;
               font-size: 11px;
               line-height: 11px;
-            }
-
-            &_item {
-
             }
             &_delimiter {
               @include sp__rectangle;
@@ -516,13 +444,11 @@
         }
         &-hover {
           font-family: $font_ubuntu;
-
           &_main {
             background-color: rgba(0, 0, 0, 0.5);
             padding: 55px 30px 50px;
             position: absolute;
             top: 0;
-
             &_text {
               font-size: 18px;
               font-weight: 500;
@@ -548,7 +474,6 @@
                   line-height: 19px;
                   text-align: center;
                 }
-
                 &:last-child {
                   margin-right: 0;
                 }
@@ -556,9 +481,7 @@
             }
           }
         }
-
       }
-
       &_item-shadow {
         width: 380px;
         border: 1px solid #E6E3E1;
@@ -568,15 +491,12 @@
         margin: 30px 0 0;
         position: relative;
         cursor: pointer;
-
         @media screen and (max-width: 1024px) {
           display: none;
         }
-
         &_img {
           position: relative;
           height: 214px;
-
           &_main {
             width: 380px;
             height: 214px;
@@ -584,19 +504,15 @@
               width: 100%;
               height: auto;
             }
-
           }
-
         }
         &-hover {
           font-family: $font_ubuntu;
-
           &_main {
             background-color: rgba(0, 0, 0, 0.5);
             padding: 55px 30px 50px;
             position: absolute;
             top: 0;
-
             &_text {
               font-size: 18px;
               font-weight: 500;
@@ -622,7 +538,6 @@
                   line-height: 19px;
                   text-align: center;
                 }
-
                 &:last-child {
                   margin-right: 0;
                 }
@@ -631,9 +546,7 @@
           }
         }
       }
-
     }
-
     &_moreinfo-text {
       display: flex;
       align-items: center;
@@ -645,14 +558,9 @@
         color: inherit;
         text-decoration: none;
       }
-
-
       @media screen and (max-width: 1024px) {
         margin: 40px auto 0;
-        //width: calc(100% - 20px);
-
       }
-
       &_left-dash, &_right-dash {
         height: 2px;
         width: 21px;
@@ -666,23 +574,18 @@
         font-weight: bold;
         line-height: 16px;
         text-align: center;
-
         @media screen and (max-width: 1024px) {
           font-size: 12px;
           line-height: 12px;
-
         }
-
       }
     }
   }
-
 }
 
 .main_content_events {
   background-color: #ffffff;
   max-width: 1280px;
-
   .content_events {
     padding: 40px;
     margin: 0 auto;
@@ -690,11 +593,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-
     @media screen and (max-width: 1024px) {
       display: none;
     }
-
     &_title {
       color: #231F20;
       font-family: $font_condensed;
@@ -716,7 +617,10 @@
       text-transform: uppercase;
       margin-top: 40px;
       cursor: pointer;
-
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
       &_left-dash, &_right-dash {
         height: 2px;
         width: 21px;
@@ -742,33 +646,27 @@
   max-width: 1280px;
   margin: 0 auto;
   background-color: #F7F6F2;
-
   @media screen and (max-width: 1024px) {
     width: 100%;
     height: auto;
     padding-bottom: 100px;
   }
-
   &_images {
     position: absolute;
     height: 710px;
     right: 0;
     bottom: 0;
     width: 100%;
-
     &_bg {
       width: 100%;
       height: 710px;
       position: relative;
-
       @media screen and (max-width: 1024px) {
         position: absolute;
         bottom: 0;
         right: 0;
         height: auto;
-
       }
-
       &-desktop {
         display: block;
         position: absolute;
@@ -777,37 +675,26 @@
         @media screen and (max-width: 1024px) {
           display: none;
         }
-
       }
-
       &-mobile {
         display: none;
-
         @media screen and (max-width: 1024px) {
           position: absolute;
           display: block;
           width: 80%;
-          //max-width: 340px;
           right: 0;
           bottom: 0;
-
         }
-
       }
-
     }
-
     &_phones {
       position: absolute;
       right: 40px;
       bottom: 0;
-      //width: 100%;
-
       @media screen and (max-width: 1024px) {
         right: 0;
         width: 100%;
       }
-
       &-desktop {
         display: block;
         width: 563px;
@@ -815,25 +702,19 @@
         @media screen and (max-width: 1024px) {
           display: none;
         }
-
       }
-
       &-mobile {
         display: none;
-
         @media screen and (max-width: 1024px) {
           display: block;
           width: 44%;
           position: absolute;
           right: 0;
           bottom: 0;
-
         }
-
       }
     }
   }
-
   &_text {
     display: block;
     font-family: $font_ubuntu;
@@ -843,14 +724,23 @@
       padding: 80px 20px 0 20px;
       max-width: 280px;
     }
-
     &_main {
       color: #231F20;
       font-size: 40px;
       font-weight: 500;
       line-height: 44px;
       width: 442px;
-
+      &_adver {
+        margin-top: 20px;
+        color: #231F20;
+        font-size: 40px;
+        font-weight: 500;
+        line-height: 44px;
+        position: absolute;
+        @media screen and (max-width: 1024px) {
+          display: none;
+        }
+      }
       @media screen and (max-width: 1024px) {
         font-size: 24px;
         line-height: 26px;
@@ -875,20 +765,17 @@
     &_download {
       display: flex;
       flex-direction: row;
-
       @media screen and (max-width: 1024px) {
         flex-direction: column;
         position: absolute;
         bottom: -70px;
       }
-
       &_google {
         background: url(../images/Playstore.png) center no-repeat;
         background-size: 100%;
         height: 45px;
         width: 150px;
         margin-right: 20px;
-
         @media screen and (max-width: 1024px) {
           margin-bottom: 10px;
         }
@@ -916,7 +803,6 @@
       font-size: 16px;
       line-height: 18px;
       margin-top: 145px;
-
       @media screen and (max-width: 1024px) {
         display: none;
       }
@@ -925,7 +811,6 @@
         text-decoration: none;
       }
     }
-
   }
 }
 
@@ -934,11 +819,9 @@
   width: 100%;
   max-width: 1280px;
   margin: 0 auto;
-
   @media screen and (max-width: 1024px) {
     width: 100%;
   }
-  //flex-direction: column;
   &_title {
     position: relative;
     font-family: $font_ubuntu;
@@ -949,7 +832,6 @@
     margin: 0 auto;
     width: 640px;
     padding: 50px 0 0 0;
-
     @media screen and (max-width: 1024px) {
       width: 60%;
       margin: 0 20px;
@@ -957,7 +839,6 @@
       font-weight: 500;
       line-height: 26px;
     }
-
   }
   &_footer-grey {
     position: absolute;
@@ -967,12 +848,10 @@
     background-color: #F7F6F2;
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
     z-index: 0;
-
     @media screen and (max-width: 1024px) {
       display: none;
     }
   }
-
   &_column-grey {
     position: absolute;
     top: 0;
@@ -982,7 +861,6 @@
     left: 697px;
     background-color: #F7F6F2;
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
-
     @media screen and (max-width: 1024px) {
       display: none;
     }
@@ -995,7 +873,6 @@
     top: 35px;
     left: 81px;
     z-index: 0;
-
     @media screen and (max-width: 1024px) {
       background-size: cover;
       width: 140px;
@@ -1010,18 +887,14 @@
     flex-direction: row;
     padding: 70px 104px 0 253px;
     align-items: flex-start;
-
     @media screen and (max-width: 1024px) {
       padding: 0;
     }
-
     &_text {
       width: 400px;
       display: flex;
       flex-direction: column;
-      //padding-bottom: 106px;
       padding-top: 10px;
-
       @media screen and (max-width: 1024px) {
         width: calc(100% - 40px);
         margin: 0 auto;
@@ -1033,7 +906,6 @@
         color: #7F7873;
         text-align: left;
         font-weight: 500;
-
         @media screen and (max-width: 1024px) {
           font-size: 16px;
           font-weight: 500;
@@ -1057,7 +929,6 @@
           padding: 0;
         }
       }
-
       &_mobile-img {
         display: none;
         @media screen and (max-width: 1024px) {
@@ -1067,9 +938,7 @@
             margin: 20px auto 20px;
           }
         }
-
       }
-
       &_moreinfo {
         display: flex;
         align-items: center;
@@ -1080,11 +949,9 @@
           color: inherit;
           text-decoration: none;
         }
-
         @media screen and (max-width: 1024px) {
           margin: 20px auto;
         }
-
         &_left-dash, &_right-dash {
           height: 2px;
           width: 21px;
@@ -1102,7 +969,6 @@
           text-transform: uppercase;
         }
       }
-
     }
     &_img {
       background: url(../images/30eating.png) center no-repeat;
@@ -1110,7 +976,6 @@
       width: 396px;
       height: 545px;
       margin-left: 127px;
-
       @media screen and (max-width: 1024px) {
         display: none;
       }

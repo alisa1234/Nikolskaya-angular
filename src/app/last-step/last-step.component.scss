@@ -1,7 +1,6 @@
 @import "../sass/sass/svg-sprite";
 @import "../sass/sass/png-sprite";
 @import "../sass/sass/variables";
-//@import "../personal/data/data.component";
 
 :host(.root) {
   position: absolute;
@@ -11,7 +10,6 @@
   background-color: #FFFFFF;
   top: 0;
   left: 0;
-
 }
 .form_wrapper {
   width: 550px;
@@ -38,7 +36,6 @@
     font-family: $font_ubuntu;
     display: flex;
     flex-direction: column;
-
     label {
       color: #231F20;
       font-size: 16px;
@@ -61,12 +58,10 @@
       justify-content: space-between;
       margin-top: 5px;
       align-items: center;
-
       &:first-child {
         margin-top: 0;
       }
     }
-
   }
   &_btn_group {
     display: flex;
@@ -86,7 +81,6 @@
       outline: none;
     }
     &_sub_btn {
-      //width: 77px;
       color: #7F7873;
       font-size: 14px;
       line-height: 16px;
