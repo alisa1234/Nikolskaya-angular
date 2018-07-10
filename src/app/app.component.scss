@@ -1,12 +1,14 @@
+@import "sass/sass/variables";
 .mobile_block {
   min-height: calc(100vh - 444px);
   @media screen and (max-width: 1023px) {
-    max-height: 700px;
-    overflow: auto;
+    //max-height: 700px;
+    //overflow: auto;
     -webkit-overflow-scrolling: touch;
   }
   @media screen and (max-height: 700px) {
-    overflow: auto;
+    //overflow: auto;
     -webkit-overflow-scrolling: touch;
   }
 }
+

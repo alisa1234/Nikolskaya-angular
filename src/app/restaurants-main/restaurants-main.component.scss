@@ -1,6 +1,35 @@
 @import "../sass/sass/_variables";
 @import "../sass/sass/_svg-sprite";
 @import "../sass/sass/_png-sprite";
+@import "../submenu/submenu.component";
+
+.sb-custom {
+  padding: 0;
+  &.sb-group {
+    /** ... share buttons container */
+  }
+  .sb-wrapper { /** ... share button wrapper */
+    //background-color: var(--button-color);
+    background: transparent;
+    border: none;
+
+    .sb-inner { /** ... inner wrapper */
+      .sb-content { /** ... content wrapper */
+        .sb-icon { /** ... icon wrapper */ }
+        .sb-text { /** ... text wrapper */ }
+      }
+      .sb-count { /** ... count wrapper */ }
+    }
+
+    // For conditional styles
+    &.sb-show-icon.sb-show-text.sb-show-count {
+      display: none;
+      /** ... Apply when icon, text and count are shown */
+      .sb-icon { /** ... icon wrapper */ }
+      .sb-text { /** ... text wrapper */ }
+    }
+  }
+}
 
 .header_about {
   padding-left: 50px;
@@ -10,16 +39,26 @@
   flex-direction: row;
   max-width: 1230px;
   justify-content: space-between;
-  @media screen and (max-width: 1023px) {
-    display: none;
+  @media screen and (max-width: 768px) {
+    //display: none;
+    padding: 0 50px;
+  }
+  @media screen and (max-width: 767px) {
+    padding: 15px 15px;
   }
   &_text {
     order: 1;
     max-width: 800px;
     width: 100%;
     @media screen and (max-width: 1024px) {
-      order: 2;
+      //order: 2;
+
     }
+    @media screen and (max-width: 768px) and (min-width: 360px){
+      //padding-right: 50px;
+      margin-bottom: 20px;
+    }
+
     &_back {
       display: flex;
       flex-direction: row;
@@ -44,27 +83,52 @@
     }
     &_title {
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
       font-family: $font_ubuntu;
       margin-top: 15px;
-      align-items: center;
+      //align-items: center;
       position: relative;
+      @media screen and (max-width: 767px) {
+        margin-top: 0;
+      }
       &_text {
         color: #231F20;
         font-size: 40px;
         font-weight: 500;
         line-height: 44px;
-        margin-right: 40px;
+        //margin-right: 40px;
+        font-family: $font_ubuntu;
+        @media screen and (max-width: 768px) {
+          margin-right: 0;
+        }
+        @media screen and (max-width: 767px) {
+          margin-right: 0;
+            color: #231F20;
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 20px;
+        }
       }
       &_instatags {
         display: flex;
         flex-direction: row;
         align-items: center;
-        justify-content: center;
+        //justify-content: center;
+        //flex-wrap: wrap;
+        font-family: $font_ubuntu;
+        margin-top: 10px;
+        position: relative;
         flex-wrap: wrap;
+        @media screen and (max-width: 360px) {
+          margin-top: 20px
+        }
         &_icon {
           @include sp__insta-restaurants;
           margin-right: 10px;
+          margin-left: 30px;
+          @media screen and (max-width: 1024px) {
+            margin-left: 0px;
+          }
         }
         &_tag {
           color: #7F7873;
@@ -82,29 +146,44 @@
       }
       &_icon-share {
         @include sp__share-icon;
-        position: absolute;
-        right: -15px;
-        z-index: 1;
+        //position: absolute;
+        //right: -15px;
+        z-index: 4;
+        padding-right: 10px;
+        margin-left: 10px;
+        @media screen and (max-width: 1024px) {
+          display: none;
+          //width: 195px;
+          //font-size: 11px;
+          //line-height: 11px;
+        }
         &-hover {
           position: absolute;
           display: flex;
           flex-direction: row;
-          z-index: 1;
-          right: 20px;
+          z-index: 5;
+          left: 30px;
+          //left: 20px;
+
           &_fb {
-            @include sp__share-icon;
+            @include sp__fb_sharing;
             margin-right: 10px;
+            cursor: pointer;
+
           }
           &_vk {
-            @include sp__share-icon;
+            @include sp__vk_sharing;
             margin-right: 10px;
+            cursor: pointer;
           }
           &_tw {
-            @include sp__share-icon;
+            @include sp__tw_sharing;
             margin-right: 10px;
+            cursor: pointer;
           }
           &_email {
-            @include sp__share-icon;
+            @include sp__email_sharing;
+            cursor: pointer;
           }
           &_background {
             position: absolute;
@@ -113,8 +192,9 @@
             border-radius: 20px;
             background-color: #F7F6F2;
             box-shadow: 0 2px 14px 0 rgba(0,0,0,0.2);
-            z-index: 0;
-            right: -35px;
+            z-index: 3;
+            left: 0;
+            top: -8px;
           }
         }
       }
@@ -125,6 +205,13 @@
       font-size: 16px;
       line-height: 24px;
       margin-top: 8px;
+      font-weight: 300;
+
+      @media screen and (max-width: 767px) {
+        margin-top: 15px;
+        font-size: 13px;
+        line-height: 20px;
+      }
     }
   }
   &_img {
@@ -132,23 +219,35 @@
     width: 100%;
     height: 250px;
     max-width: 415px;
+    position: relative;
+    z-index: 1;
     @media screen and (max-width: 1023px) {
       order: 1;
+    }
+    @media screen and (max-width: 768px) {
+      display: none;
     }
     img {
       width: 100%;
       height: 250px;
       max-width: 415px;
     }
+    &_angle {
+      @include sp__angle_rest;
+      position: absolute;
+      top: -2px;
+      left: -1px;
+    }
   }
 }
 
 .header_about_mobile {
   padding: 16px 20px 18px;
-  display: flex;
+  //display: flex;
   flex-direction: column;
   border-bottom: 1px solid #CCC8C4;
   border-top: 1px solid #CCC8C4;
+  display: none;
   .header_about_text_back {
     margin-top: 0;
     margin-bottom: 15px;
@@ -200,28 +299,72 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 20px 50px;
-  max-width: 1200px;
+  padding: 0px 50px;
+  max-width: 1280px;
   align-items: center;
+  box-sizing: border-box;
+  height: 60px;
+  position: absolute;
+  background-color: #ffffff;
+  width: 100%;
+  @media screen and (max-width: 1023px) {
+    padding: 0  0 0 50px;
+  }
+  @media screen and (max-width: 767px) {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+
   &_dropdown {
     color: #231F20;
     font-family: $font_ubuntu;
     font-size: 18px;
     line-height: 21px;
+    font-weight: 300;
     display: flex;
     flex-direction: row;
-    align-items: baseline;
     position: relative;
     cursor: pointer;
     background-color: #ffffff;
+    width: 100%;
+    overflow: auto;
+    white-space: nowrap;
+    align-items: center;
+    height: calc(100% + 20px);
+    @media screen and (max-width: 1023px) {
+      width: 100%;
+      font-size: 16px;
+    }
+    @media (min-width: 1022px) and (max-width: 1024px) {
+      width: 70%;
+    }
+
     ul {
       margin-right: 10px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      li {
+        padding-bottom: 5px;
+      }
+      .active {
+        border-bottom: 2px solid grey;
+      }
     }
     &_submenu {
-      position: absolute;
-      background-color: #ffffff;
-      width: 100%;
-      z-index: 10;
+      //position: absolute;
+      //background-color: #ffffff;
+      //width: 100%;
+      //z-index: 10;
+      display: flex;
+      flex-direction: row;
+      height: 30px;
+      //justify-content: space-around;
+      //position: absolute;
+      //left: 0;
     }
     &_arrow {
       @include sp__arrow-dishes;
@@ -233,6 +376,7 @@
   width: 100%;
   max-width: 1280px;
   background-color: #F7F6F4;
+  position: relative;
   &_menu {
     display: flex;
     flex-direction: column;
@@ -242,6 +386,9 @@
     position: relative;
     @media screen and (max-width: 1023px) {
       padding: 20px;
+    }
+    @media screen and (max-width: 360px) {
+      padding: 20px 15px;
     }
     &_blocks {
       max-width: 1190px;
@@ -270,7 +417,15 @@
         font-size: 30px;
         line-height: 30px;
         text-transform: uppercase;
-        margin: 40px 10px 20px;
+        margin: 40px 0 20px;
+
+        @media (min-width: 768px) and (max-width: 1023px) {
+          padding: 20px 30px;
+        }
+        @media screen and (max-width: 767px) {
+          padding: 20px 0;
+        }
+
       }
       .events_show-more {
         display: flex;
@@ -353,6 +508,7 @@
     &_bucket {
       padding: 10px;
       max-width: 260px;
+      height: fit-content;
       @media screen and (max-width: 1023px) {
         display: none;
       }
@@ -550,4 +706,310 @@
   max-width: 1200px;
   flex-wrap: wrap;
   justify-content: center;
+}
+.wrapper_banner {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  z-index: 9;
+
+  @media screen and(max-width: 1024px) {
+    padding: 35px 0;
+    height: calc(100% - 111px);
+  }
+
+  .banner_main {
+    padding: 32px 0;
+    position: relative;
+    z-index: 200;
+    width: 550px;
+    background: #FFFFFF;
+    margin: 50px auto;
+
+    @media screen and(max-width: 1024px) {
+      padding: 20px;
+      width: calc(100vw - 20px);
+      max-width: 600px;
+
+    }
+    @media screen and(max-width: 768px) {
+      max-width: 280px
+    }
+    @media screen and(max-width: 374px) {
+      max-width: 235px;
+    }
+
+    &_title {
+      color: #231F20;
+      font-family: $font_ubuntu;
+      font-size: 30px;
+      font-weight: bold;
+      line-height: 30px;
+      text-align: center;
+    }
+    &_items {
+      display: flex;
+      flex-direction: column;
+      width: 375px;
+      margin: 40px auto 0;
+      @media screen and(max-width: 1024px) {
+        width: 100%;
+      }
+
+      &_item {
+        display: flex;
+        flex-direction: row;
+        border-bottom: 1px solid #D9D8D4;
+        padding: 12px 0px;
+        align-items: center;
+        position: relative;
+
+        &:first-child {
+          border-top: 1px solid #D9D8D4;
+        }
+
+        &_price {
+          font-family: $font_ubuntu;
+          font-size: 16px;
+          font-weight: normal;
+          font-style: normal;
+          font-stretch: normal;
+          line-height: 2.13;
+          letter-spacing: normal;
+          text-align: left;
+          color: #7f7873;
+          position: absolute;
+          right: 0;
+
+        }
+        &_btn {
+          text-align: center;
+          padding: 15px 0;
+          border-radius: 2px;
+          cursor: pointer;
+          box-shadow: 0 1px 3px 0 rgba(0,0,0,0.1);
+          color: #FFFFFF;
+          font-family: $font_ubuntu;
+          font-size: 18px;
+          line-height: 21px;
+          width: 263px;
+          margin: 44px auto 0;
+
+          @media screen and(max-width: 1024px) {
+            width: 100%;
+          }
+
+        }
+
+        &_sub_btn {
+          height: 16px;
+          width: 77px;
+          color: #7F7873;
+          font-family: $font_ubuntu;
+          font-size: 14px;
+          line-height: 16px;
+          text-align: center;
+          margin: 25px auto 0;
+        }
+      }
+    }
+    &_close {
+      width: 50px;
+      height: 50px;
+      background-color: #ffffff;
+      position: absolute;
+      top: -25px;
+      right: -25px;
+      border-radius: 50%;
+      cursor: pointer;
+      @media screen and (max-width: 1024px) {
+        width: 30px;
+        height: 30px;
+        top: 10px;
+        right: 10px;
+      }
+      &_icon {
+        background: url("../sass/sass/icons/close-black_small.svg");
+        width: 10px;
+        height: 10px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        @media screen and (max-width: 1024px) {
+          transform: translate(-50%, -50%) scale(0.65);
+        }
+      }
+    }
+    .dishes_content {
+      width: 100%;
+      max-width: 1280px;
+      background-color: #F7F6F4;
+      position: relative;
+      &_menu {
+        display: flex;
+        flex-direction: column;
+        padding: 30px 40px 30px 50px;
+        max-width: 1180px;
+        flex-wrap: wrap;
+        position: relative;
+        @media screen and (max-width: 1023px) {
+          padding: 20px;
+        }
+        @media screen and (max-width: 360px) {
+          padding: 20px 15px;
+        }
+        &_bucket {
+          padding: 10px;
+          max-width: 260px;
+          height: fit-content;
+          display: block;
+          &_title {
+            color: #231F20;
+            font-family: $font_ubuntu;
+            font-size: 18px;
+            font-weight: bold;
+            line-height: 30px;
+          }
+          &_items {
+            margin-top: 12px;
+            position: relative;
+            &_item {
+              margin-top: 12px;
+              border-bottom: 1px solid #D8D5D2;
+              &_head {
+                color: #231F20;
+                font-family: $font_ubuntu;
+                font-size: 18px;
+                line-height: 21px;
+                border-bottom: 1px solid 	#D8D5D2;
+                padding-bottom: 10px;
+              }
+              &_title {
+                color: #231F20;
+                font-family: $font_ubuntu;
+                font-size: 14px;
+                font-weight: 500;
+                line-height: 20px;
+                margin-top: 15px;
+              }
+              &_content {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                &_count {
+                  display: flex;
+                  flex-direction: row;
+                  align-items: center;
+                  padding: 12px 0 10px;
+                  &_wrapper {
+                    padding: 5px;
+                    position: relative;
+                    width: 8px;
+                    height: 8px;
+                    cursor: pointer;
+                    &_remove {
+                      background: url("../sass/sass/icons/remove-icon.svg");
+                      position: absolute;
+                      top: 50%;
+                      transform: translate(0, -50%);
+                    }
+                    &_add {
+                      background: url("../sass/sass/icons/add-icon.svg");
+                      position: absolute;
+                    }
+                  }
+                  &_text {
+                    color: #7F7873;
+                    font-family: $font_ubuntu;
+                    font-size: 13px;
+                    line-height: 13px;
+                    margin: 0 8px;
+                  }
+                }
+                &_price {
+                  color: #6C6560;
+                  font-family: $font_ubuntu;
+                  font-size: 16px;
+                  line-height: 18px;
+                }
+              }
+            }
+            .subs {
+              width: 100%;
+              height: 170px;
+              background: linear-gradient(180deg, rgba(247,246,245,0) 0%, #F7F6F5 100%);
+              bottom:0;
+              position: absolute;
+            }
+          }
+          &_total {
+            display: flex;
+            flex-direction: row;
+            align-items: baseline;
+            margin-top: 20px;
+            justify-content: space-between;
+            &_text {
+              color: #231F20;
+              font-family: $font_ubuntu;
+              font-size: 16px;
+              font-weight: 500;
+              line-height: 22px;
+              margin-right: 89px;
+            }
+            &_price {
+              color: #231F20;
+              font-family: $font_ubuntu;
+              font-size: 16px;
+              line-height: 18px;
+            }
+          }
+          .events_show-more {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 40px;
+            width: 263px;
+            border-radius: 2px;
+            background-color: #4D4239;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+            margin: 40px auto 0;
+            color: #FFFFFF;
+            font-family: $font_ubuntu;
+            font-size: 16px;
+            line-height: 18px;
+            text-align: center;
+            cursor: pointer;
+            @media screen and (max-width: 1023px) {
+              margin: 0 auto;
+              height: auto;
+              width: 100%;
+              text-align: center;
+              padding: 14px 0 17px;
+              max-width: 400px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+}
+.overlay {
+  display: none;
+  @media screen and (max-width: 1023px) {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, .5);
+    z-index: 100;
+    cursor: pointer;
+  }
+
 }

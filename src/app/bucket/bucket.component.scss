@@ -85,8 +85,28 @@
   }
   &_text_column {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
+    justify-content: space-around;
+    margin-top: 30px;
+  }
+  &_back {
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+
+    &_icon {
+      @include sp__arrow-left_bucket;
+      margin-right: 10px;
+    }
+    &_text {
+        width: 104px;
+        color: #7F7873;
+        font-family: $font_ubuntu;
+        font-size: 13px;
+        font-weight: 500;
+        line-height: 13px;
+    }
   }
 }
 .events_show-more {

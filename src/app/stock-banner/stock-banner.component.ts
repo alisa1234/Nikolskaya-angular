@@ -1,15 +1,46 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, Input, HostListener} from '@angular/core';
+declare let $: any;
 
 @Component({
-  selector: 'app-stock-banner',
-  templateUrl: './stock-banner.component.html',
-  styleUrls: ['./stock-banner.component.scss']
+    selector: 'app-stock-banner',
+    templateUrl: './stock-banner.component.html',
+    styleUrls: ['./stock-banner.component.scss'],
+    host: {'class': 'root'}
 })
 
 export class StockBannerComponent implements OnInit {
 
-  constructor() { }
+    @Input() id: number;
+    @Input() main_text: string;
+    @Input() start_date: string;
+    @Input() end_date: string;
+    @Input() header: string;
+    @Input() image: any;
+    @Input() _parent: any;
+    @Input() hidden: boolean = false;
 
-  ngOnInit() {}
+    constructor() {
+    }
+
+    ngOnInit() {
+    }
+
+    @HostListener('document:click', ['$event'])
+
+    clickLink(event) {
+
+        if (event.target.closest('.overlay')) {
+            this._parent.open_event = false;
+            $(document.body).css('overflow', 'unset');
+        } else {
+
+        }
+    }
+
+    closeEvent() {
+        this._parent.open_event = false;
+        $(document.body).css('overflow', 'unset');
+        $(document.body).css({position: 'unset'});
+    }
 
 }

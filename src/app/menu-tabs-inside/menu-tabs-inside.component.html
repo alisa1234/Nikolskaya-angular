@@ -1,14 +1,13 @@
-<div class="main">
+<div #submenu class="main" [hidden]="scrolling">
   <div class="content_menu">
-    <div class="content_menu_about">
-    </div>
+    <a routerLink="/"><div class="content_menu_about"></div></a>
     <div class="content_menu_other">
       <div class="content_menu_other_item"><a routerLink="/corners">Корнеры</a></div>
       <div class="content_menu_other_item"><a routerLink="/events">События</a></div>
       <div class="content_menu_other_item"><a routerLink="/about">О проекте</a></div>
       <div class="content_menu_other_item"></div>
-      <div class="content_menu_other_personality"></div>
-      <div class="content_menu_other_basket"></div>
+      <!--<div class="content_menu_other_personality"></div>-->
+      <!--<div class="content_menu_other_basket"></div>-->
     </div>
   </div>
 </div>

@@ -1,11 +1,17 @@
-<div class="content_events_items_item" *ngFor="let item of events_list" [routerLink]="[link,item.Id]" id="{{item.Id}}">
-  <div class="content_events_items_item_img" [style.backgroundImage]="'url(' + item.ImagePath + ')'"></div>
-  <div class="content_events_items_item_content">
-    <div class="content_events_items_item_content_name">{{i}}{{item.Header}}</div>
-    <div class="content_events_items_item_content_date">{{item.StartDate}} - {{item.EndDate}}</div>
-    <div class="content_events_items_item_content_text">{{item.Body}}</div>
-    <div class="content_events_items_item_content_time">Афиша</div>
+<div *ngFor="let item of events_list; let i=index" class="event_wrapper">
+<div *ngIf="i<6?'true':show_more" class="content_events_items_item"   id="{{item.Id}}" (click)="_parent.openEvent(item.Id,item.ImagePath,item.Header,item.StartDate,item.EndDate,item.Body)"> <!--[routerLink]="[link,item.Id]"-->
+  <div>
+    <div class="content_events_items_item_img" [style.backgroundImage]="'url(' + item.ImagePath + ')'"></div>
+    <div class="content_events_items_item_content">
+      <div class="content_events_items_item_content_name">{{item.Header}}</div>
+      <div class="content_events_items_item_content_date" *ngIf="item.StartDate!=null&& item.EndDate!=null"><span>{{item.StartDate | amLocale:'ru' | amDateFormat:'D MMMM'}}</span> <span *ngIf="item.StartDate!=item.EndDate">- {{item.EndDate| amLocale:'ru' | amDateFormat:'D MMMM '}}</span></div>
+      <div class="content_events_items_item_content_text">{{item.Body}}</div>
+      <!--<div class="content_events_items_item_content_time">Афиша</div>-->
+    </div>
   </div>
 </div>
+</div>
+
+
 
 

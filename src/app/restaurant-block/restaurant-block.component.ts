@@ -9,12 +9,11 @@ import { Component, OnInit, Input } from '@angular/core';
 
 export class RestaurantBlockComponent implements OnInit {
 
-  @Input() tag: string;
-  @Input() time: string;
   @Input() restaurants_list: any;
   @Input() link: string;
 
-  constructor() {}
+  constructor() {
+  }
 
   ngOnInit() {}
 

@@ -12,14 +12,12 @@ export class EventsBlockComponent implements OnInit {
 
   @Input() link: string;
   @Input() events_list: any;
+  @Input() _parent: any;
   index: boolean = false;
+  @Input() show_more: boolean=false;
+  @Input() hide_btn: boolean=false;
 
-  constructor(private eventsListService:EventsListService) {
-
-    this.eventsListService.change.subscribe(data => {
-      this.events_list = data.list;
-    })
-  }
+  constructor(private eventsListService:EventsListService) {}
 
   ngOnInit() {}
 

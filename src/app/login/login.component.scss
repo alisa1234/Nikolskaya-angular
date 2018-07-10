@@ -3,19 +3,22 @@
 @import "../sass/sass/svg-sprite";
 
 :host(.root) {
-  position: absolute;
-  max-width: 1280px;
-  width: 100%;
-  height: 100%;
-  background-color: #FFFFFF;
-  top: 0;
-  left: 0;
+  //position: absolute;
+  //max-width: 1280px;
+  //width: 100%;
+  //height: 100%;
+  //opacity: 0.8;
+  //background-color: #000000;
+  //top: 0;
+  //left: 0;
 }
 .form_wrapper {
   width: 470px;
   margin: 0 auto;
-  padding: 20px 20px 0;
+  padding: 30px;
+  background-color: #ffffff;
   position: relative;
+  z-index: 200;
   &_btn_group {
     display: flex;
     flex-direction: column;
@@ -43,12 +46,33 @@
       margin-top: 25px;
     }
   }
-  &_close {
-    @include sp__close-black_small;
+  &_close_wrapper {
     position: absolute;
-    top: 22px;
-    right: 0;
-    cursor: pointer;
+    top: -15px;
+    right: -15px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #FFFFFF;
+    &_close {
+      @include sp__close-black_small;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      cursor: pointer;
+      transform: translate(-50%,-50%);
+      cursor: pointer;
+    }
+  }
+
+  &_subtext {
+      color: #7F7873;
+      font-family: $font_ubuntu;
+      font-size: 13px;
+      line-height: 13px;
+      margin-left: 180px;
+      margin-top: 5px;
+  ;
   }
 }
 .order-container_wrapper_form {
@@ -166,4 +190,27 @@
       }
     }
   }
+}
+.error {
+  border: 1px solid #FF2E00;
+  border-radius: 2px;
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,0.1);
+}
+.error_text {
+  color: #FF2E00;
+  font-family: $font_ubuntu;
+  font-size: 12px;
+  line-height: 17px;
+
+}
+.overlay {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, .8);
+  z-index: 100;
+  cursor: pointer;
 }

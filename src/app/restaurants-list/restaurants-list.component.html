@@ -1,6 +1,6 @@
-<app-submenu></app-submenu>
+<app-submenu [_parent]="this"></app-submenu>
 <div class="main_content">
   <div class="content_corners">
-      <app-restaurant-block [restaurants_list]="restauants_list" [link]="'/restaurants-main/'"></app-restaurant-block>
+      <app-restaurant-block [restaurants_list]="filter ? filter_res_list:restauants_list" [link]="'/restaurants-main/'"></app-restaurant-block>
   </div>
 </div>

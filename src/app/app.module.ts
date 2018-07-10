@@ -9,6 +9,11 @@ import {DpDatePickerModule} from 'ng2-date-picker';
 import { BucketModule } from './bucket-module';
 import { AgmCoreModule } from '@agm/core';
 import { AgmSnazzyInfoWindowModule } from '@agm/snazzy-info-window';
+import { ShareModule } from '@ngx-share/core';
+import { ShareButtonsModule } from '@ngx-share/buttons';
+import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
+import { MomentModule } from 'ngx-moment';
+import {NgxMaskModule} from 'ngx-mask';
 
 import {UrlAdresses} from './url_adresses';
 import { EventsListService } from './events-list/events-list.service';
@@ -60,25 +65,30 @@ import { BucketComponent } from './bucket/bucket.component';
 import { PasswordComponent } from './password/password.component';
 import { PasswordSendComponent } from './password-send/password-send.component';
 import { LoginComponent } from './login/login.component';
+import { MidifiersComponent } from './restaurants-main/midifiers/midifiers.component';
+import { BusketMobComponent } from './busket-mob/busket-mob.component';
+import { ErrorPopupComponent } from './error-popup/error-popup.component';
+import { LoaderComponent } from './loader/loader.component';
 
 const AppRoutes: Routes = [
-  { path: '', component: HomeComponent },
-  { path: 'events', component: EventsListComponent },
+  { path: '', component: HomeComponent,  data: { title: 'Вокруг Света' }  },
+  { path: 'events', component: EventsListComponent,  data: { title: 'События' }  },
   { path: 'event/:id', component: EventComponent },
-  { path: 'about', component: AboutComponent },
+  { path: 'about', component: AboutComponent,  data: { title: 'О проекте' }  },
   { path: 'banner', component: StockBannerComponent },
-  { path: 'contacts', component: ContactsComponent },
-  { path: 'delivery', component: DeliveryComponent },
-  { path: 'corners', component: RestaurantsListComponent },
+  { path: 'contacts', component: ContactsComponent,  data: { title: 'Контакты' }  },
+  { path: 'delivery', component: DeliveryComponent,  data: { title: 'Доставка' }  },
+  { path: 'corners', component: RestaurantsListComponent,  data: { title: 'Корнеры' }  },
   { path: 'results', component: RestaurantsResultComponent },
   { path: 'stocks', component: StocksComponent },
   { path: 'restaurants-main/:id', component: RestaurantsMainComponent },
-  { path: 'personal', component: PersonalComponent },
+  { path: 'personal', component: PersonalComponent,  data: { title: 'Личный кабинет' }  },
   { path: 'last', component: LastStepComponent },
-  { path: 'order', component: OrderFormComponent },
-  { path: 'bucket', component: BucketComponent },
+  { path: 'order', component: OrderFormComponent,  data: { title: 'Оформление заказа' }  },
+  { path: 'bucket', component: BucketComponent,  data: { title: 'Корзина' }  },
   { path: 'repeatpass', component: PasswordComponent },
-  { path: 'login', component: LoginComponent },
+  { path: 'modifiers', component: MidifiersComponent },
+  { path: 'login', component: LoginComponent,  data: { title: 'Логин' }  },
   { path: '', component: LoginComponent },
 ];
 
@@ -121,6 +131,10 @@ const AppRoutes: Routes = [
     OrderFormComponent,
     SelfdeliveryComponent,
     OrderDeliveryComponent,
+    MidifiersComponent,
+    BusketMobComponent,
+    ErrorPopupComponent,
+    LoaderComponent,
     BucketComponent,
     PasswordComponent,
     PasswordSendComponent,
@@ -141,7 +155,12 @@ const AppRoutes: Routes = [
     HttpClientModule,
     BucketModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ShareModule.forRoot(),
+    ShareButtonsModule.forRoot(),
+    ScrollToModule.forRoot(),
+    MomentModule,
+    NgxMaskModule.forRoot()
   ],
   providers: [
     UrlAdresses,

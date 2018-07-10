@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-restaurant-block-footer',
@@ -9,6 +9,7 @@ import { Component, OnInit } from '@angular/core';
 
 export class RestaurantBlockFooterComponent implements OnInit {
 
+  @Input() tags;
   constructor() { }
 
   ngOnInit() {}

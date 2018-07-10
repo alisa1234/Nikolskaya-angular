@@ -5,9 +5,15 @@
 :host(.root) {
   display: flex;
   flex-direction: row;
-  margin-top: 20px;
+  margin-top: 10px;
   align-items: center;
-  justify-content: space-between;
+  //justify-content: space-between;
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    max-width: 280px;
+    flex-wrap: wrap;
+  }
+
 }
 
 .content_corners_items_item_content {
@@ -54,12 +60,13 @@
     color: #7F7873;
     font-size: 13px;
     line-height: 13px;
+      font-weight: 300;
     align-items: center;
     font-family: $font_ubuntu;
     @media screen and (max-width: 1024px) {
-      width: 195px;
-      font-size: 11px;
-      line-height: 11px;
+      //width: 195px;
+      //font-size: 11px;
+      //line-height: 11px;
     }
     &_item {
       margin-right: 8px;

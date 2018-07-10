@@ -21,8 +21,10 @@ export class AboutConceptComponent implements OnInit {
     this.getAbout =  urlAdresses.getAbout;
     this.http.get(this.base_url+this.getAbout)
         .subscribe(data=>{
-          this.about_title = data[0].Header;
-          this.about_text = data[0].Body;
+          let newData:any;
+          newData = data;
+          this.about_title = newData.Header;
+          this.about_text = newData.Body;
         })
   }
   ngOnInit() {}

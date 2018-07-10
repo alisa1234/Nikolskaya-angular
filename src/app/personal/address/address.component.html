@@ -25,11 +25,11 @@
             <div class="form_item_separated_right">
               <div class="form_item_separated_left">
                 <label for="apartment">Квартира/Офис</label>
-                <input id="apartment" formControlName="Appartaments" type="number" placeholder="Номер">
+                <input id="apartment" formControlName="Appartaments" type="text" placeholder="Номер">
               </div>
               <div class="form_item_separated_right_item">
                 <label for="entrance">Подьезд</label>
-                <input id="entrance" formControlName="Entry" type="number" placeholder="Номер">
+                <input id="entrance" formControlName="Entry" type="text" placeholder="Номер">
               </div>
             </div>
           </div>
@@ -39,11 +39,35 @@
             <div class="form_item_separated_right">
               <div class="form_item_separated_left">
                 <label for="floor">Этаж</label>
-                <input id="floor" formControlName="Floor" type="number" placeholder="Номер">
+                <input id="floor" formControlName="Floor" type="text" placeholder="Номер">
               </div>
               <div class="form_item_separated_right_item">
                 <label for="doorphone_code">Код домофона</label>
-                <input id="doorphone_code" formControlName="EntryCode" type="number" placeholder="Номер">
+                <input id="doorphone_code" formControlName="EntryCode" type="text" placeholder="Номер">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form_item">
+          <div class="form_item_separated">
+            <div class="form_item_separated_right">
+              <div class="form_item_separated_left">
+                <label for="number_building">Номер дома</label>
+                <input id="number_building" formControlName="Building" type="text" placeholder="Номер">
+              </div>
+              <div class="form_item_separated_right_item">
+                <label for="building">Строение</label>
+                <input id="building" formControlName="BuildingNumber" type="text" placeholder="Номер">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form_item">
+          <div class="form_item_separated">
+            <div class="form_item_separated_right">
+              <div class="form_item_separated_left">
+                <label for="building_appartment">Корпус</label>
+                <input id="building_appartment" formControlName="BuildingAppartment" type="text" placeholder="Номер">
               </div>
             </div>
           </div>

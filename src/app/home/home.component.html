@@ -1,78 +1,82 @@
 <div class="main">
   <div class="slider">
-      <owl-carousel [options]="{items: 1, dots: false,nav: true, navText: ['','']}" [carouselClasses]="['owl-theme', 'row', 'sliding']">
-        <div class="item"><img src="app/sass/images/slider-banner.png"></div>
-        <div class="item"><img src="app/sass/images/slider-banner.png"></div>
-        <div class="item"><img src="app/sass/images/slider-banner.png"></div>
-        <div class="item"><img src="app/sass/images/slider-banner.png"></div>
+      <owl-carousel [options]="{items: 1, dots: false,nav: true, navText: ['',''], autoplay: true,  autoplaySpeed: 1000, rewind: true, sideNav: true,URLhashListener: true}" [carouselClasses]="['owl-theme', 'row', 'sliding']">
+        <div class="item" *ngFor="let item of favorite_events"><a routerLink="/events"><img src="{{item.ImagePath}}"></a></div>
+        <!--<div class="item"><a routerLink="/events"><img src="app/sass/images/slider1.jpg"></a></div>-->
+        <!--<div class="item"><a routerLink="/events"><img src="app/sass/images/slider2.jpg"></a></div>-->
+        <!--<div class="item"><img src="app/sass/images/slider-banner.png"></div>-->
       </owl-carousel>
   </div>
-  <div class="slider-footer">
-    <div class="slider-footer_delivery">
-      <div class="slider-footer_delivery_main-text">Доставка</div>
-      <div class="slider-footer_delivery_secondary-text">Заказывайте доставку из всех ресторанов маркета</div>
-      <div class="slider-footer_delivery_moreinfo-text">
-        <div class="slider-footer_delivery_moreinfo-text_left-dash"></div>
-        <div class="slider-footer_delivery_moreinfo-text_text">Подробнее</div>
-        <div class="slider-footer_delivery_moreinfo-text_right-dash"></div>
-      </div>
-      <div class="slider-footer_delivery_img">
-        <img src="app/sass/images/meat.png">
-      </div>
-    </div>
-    <div class="slider-footer_delivery">
-      <div class="slider-footer_delivery_main-text">Предзаказ</div>
-      <div class="slider-footer_delivery_secondary-text_preorder">Мы подготовим Ваш заказ пока Вы в пути</div>
-      <div class="slider-footer_delivery_moreinfo-text">
-        <div class="slider-footer_delivery_moreinfo-text_left-dash"></div>
-        <div class="slider-footer_delivery_moreinfo-text_text">Подробнее</div>
-        <div class="slider-footer_delivery_moreinfo-text_right-dash"></div>
-      </div>
-      <div class="slider-footer_delivery_img_right">
-        <img src="app/sass/images/cacao.png">
-      </div>
-    </div>
-    <div class="slider-footer_rectangle"></div>
-  </div>
+  <!--<div class="slider-footer">-->
+    <!--<div class="slider-footer_delivery">-->
+      <!--<a routerLink="/delivery">-->
+        <!--<div class="slider-footer_delivery_main-text">Доставка</div>-->
+        <!--<div class="slider-footer_delivery_secondary-text">Заказывайте доставку из всех ресторанов маркета</div>-->
+        <!--<div class="slider-footer_delivery_moreinfo-text">-->
+          <!--<div class="slider-footer_delivery_moreinfo-text_left-dash"></div>-->
+          <!--<div class="slider-footer_delivery_moreinfo-text_text"><a routerLink="/delivery">Подробнее</a></div>-->
+          <!--<div class="slider-footer_delivery_moreinfo-text_right-dash"></div>-->
+        <!--</div>-->
+        <!--<div class="slider-footer_delivery_img">-->
+          <!--<img src="app/sass/images/meat.png">-->
+        <!--</div>-->
+      <!--</a>-->
+    <!--</div>-->
+    <!--<div class="slider-footer_delivery">-->
+      <!--<a routerLink="/delivery">-->
+        <!--<div class="slider-footer_delivery_main-text">Предзаказ</div>-->
+        <!--<div class="slider-footer_delivery_secondary-text_preorder">Мы подготовим Ваш заказ пока Вы в пути</div>-->
+        <!--<div class="slider-footer_delivery_moreinfo-text">-->
+          <!--<div class="slider-footer_delivery_moreinfo-text_left-dash"></div>-->
+          <!--<div class="slider-footer_delivery_moreinfo-text_text"><a routerLink="/delivery">Подробнее</a></div>-->
+          <!--<div class="slider-footer_delivery_moreinfo-text_right-dash"></div>-->
+        <!--</div>-->
+        <!--<div class="slider-footer_delivery_img_right">-->
+          <!--<img src="app/sass/images/cacao.png">-->
+        <!--</div>-->
+      <!--</a>-->
+    <!--</div>-->
+    <!--<div class="slider-footer_rectangle"></div>-->
+  <!--</div>-->
 </div>
-<app-menu-tabs-inside></app-menu-tabs-inside>
+
 <div class="main_content">
   <div class="content_corners">
     <div class="content_corners_title">
-      <div class="content_corners_title_text">Корнеры</div>
+      <div class="content_corners_title_text"><a routerLink="/corners">Корнеры</a></div>
       <div class="content_corners_title_moreinfo-text-mobile">
         <a routerLink="/corners"><div class="content_corners_title_moreinfo-text-mobile_text">смотреть все</div></a>
         <div class="content_corners_title_moreinfo-text-mobile_right-dash"></div>
       </div>
 
     </div>
-      <app-restaurant-block [restaurants_list]="restaurant_list" [link]="'/restaurants-main/'"></app-restaurant-block>
+      <app-restaurant-block [restaurants_list]="home_res_list" [link]="'/restaurants-main/'"></app-restaurant-block>
     <div class="content_corners_moreinfo-text">
       <div class="content_corners_moreinfo-text_left-dash"></div>
-      <a routerLink="/corners"><div class="content_corners_moreinfo-text_text">Посмотреть все {{restaurant_list_length}} корнеров</div></a>
+      <a routerLink="/corners"><div class="content_corners_moreinfo-text_text">Все корнеры</div></a>
       <div class="content_corners_moreinfo-text_right-dash"></div>
     </div>
   </div>
 </div>
 <div class="main_content_events">
   <div class="content_events">
-    <div class="content_events_title">События</div>
+    <div class="content_events_title"><a routerLink="/events">События</a></div>
     <div class="content_events_items">
-     <app-events-block [events_list]="events_list" [link]="'/event/'"></app-events-block>
+     <app-events-block [events_list]="home_event_list" [_parent]="this"></app-events-block>
     </div>
     <div class="content_events_moreinfo-text">
       <div class="content_events_moreinfo-text_left-dash"></div>
-      <a routerLink="/events"><div class="content_events_moreinfo-text_text">Посмотреть события</div></a>
+      <a routerLink="/events"><div class="content_events_moreinfo-text_text">Все события</div></a>
       <div class="content_events_moreinfo-text_right-dash"></div>
     </div>
   </div>
 </div>
 <div class="app_content">
   <div class="app_content_images">
-    <div class="app_content_images_bg">
-      <img src="app/sass/images/phones_bg.png" class="app_content_images_bg-desktop">
-      <img src="app/sass/images/phones_bg_mobile.png" class="app_content_images_bg-mobile">
-    </div>
+    <!--<div class="app_content_images_bg">-->
+      <!--<img src="app/sass/images/phones_bg.png" class="app_content_images_bg-desktop">-->
+      <!--<img src="app/sass/images/phones_bg_mobile.png" class="app_content_images_bg-mobile">-->
+    <!--</div>-->
     <div class="app_content_images_phones">
       <img src="app/sass/images/phones2.png" class="app_content_images_phones-desktop">
       <img src="app/sass/images/phones_mobile.png" class="app_content_images_phones-mobile">
@@ -80,21 +84,24 @@
   </div>
   <div class="app_content_text">
     <div class="app_content_text_main">
-      Заказывайте еду с доставкой и делайте предзаказ
+      Заказывайте доставку с сайта
     </div>
+    <!--<div class="app_content_text_main_adver">-->
+      <!--+7 495 967 7777-->
+    <!--</div>-->
     <div class="app_content_text_other">
-      Cамым удобным способом -
-      через мобильное приложение!
+      и по телефону
     </div>
-    <div class="app_content_text_download">
-      <div class="app_content_text_download_google"></div>
-      <div class="app_content_text_download_apple"></div>
+    <div class="app_content_text_main">
+      +7 495 967 7777
     </div>
-    <div class="app_content_text_main_adver">
-      СКОРО!
-    </div>
+    <!--<div class="app_content_text_download">-->
+      <!--<div class="app_content_text_download_google"></div>-->
+      <!--<div class="app_content_text_download_apple"></div>-->
+    <!--</div>-->
+
     <div class="app_content_text_logo"></div>
-    <div class="app_content_text_url">Отправить ссылку <a href="">сообщением</a> или на <a href="">email</a></div>
+    <!--<div class="app_content_text_url">Отправить ссылку <a href="">сообщением</a> или на <a href="">email</a></div>-->
   </div>
 </div>
 <div class="about_content">
@@ -107,11 +114,13 @@
       <div class="about_content_items_text_header">24 ресторана и кафе от Аркадия Новикова, Бориса Зарькова и Владимира Мухина.
       </div>
       <div class="about_content_items_text_mobile-img">
-        <img src="app/sass/images/30eating-mobile.png">
+        <img src="app/sass/images/eating_main_mob.jpg">
       </div>
       <div class="about_content_items_text_description"><span>Микс национальных культур, оригинальных концепций и актуальных трендов. Новое гастрономическое путешествие каждый день!</span>
         <span>Позавтракать израильской шакшукой, пообедать гавайским поке и закончить день индийским карри. Или за пять минут пересечь океан, поставив рядом русский борщ и техасское барбекю. Гастромаркет Вокруг света приглашает отправиться в путешествие, не
           покидая центра Москвы.</span>
+        <pre> </pre>
+        <span>Вокруг света - гастрономическое пространство нового поколения. Для тех, кто разбирается в еде, следит за своим здоровьем, путешествует и сравнивает.</span>
       </div>
       <div class="about_content_items_text_moreinfo">
         <div class="about_content_items_text_moreinfo_left-dash">
@@ -138,5 +147,14 @@
       <div class="main_map_buttons_button" [class.active]="map_button['metro']&&!map_button['scheme']&&!map_button['radius']" (click)="setMetro('metro')"><div class="main_map_buttons_button_text">От метро</div></div>
       <div class="main_map_buttons_button" [class.active]="map_button['scheme']&&!map_button['radius']&&!map_button['metro']" (click)="setScheme('scheme')"><div class="main_map_buttons_button_text">Схема зала</div></div>
     </div>
+    <div *ngIf="open_metro" class="main_map_buttons_metro">
+      <div class="main_map_buttons_metro_button_back" (click)="open_metro=false"></div>
+
+      <div class="main_map_buttons_metro_button" [class.active]="metro_button['lubyanka']&&!map_button['ploshad']&&!map_button['kitai']" (click)="setLubyanka('lubyanka')"><div class="main_map_buttons_button_text">Лубянка</div></div>
+      <div class="main_map_buttons_metro_button" [class.active]="metro_button['ploshad']&&!map_button['lubyanka']&&!map_button['kitai']" (click)="setPloshad('ploshad')"><div class="main_map_buttons_button_text">Площадь Революции</div></div>
+      <div class="main_map_buttons_metro_button" [class.active]="metro_button['kitai']&&!map_button['lubyanka']&&!map_button['ploshad']" (click)="setKitai('kitai')"><div class="main_map_buttons_button_text">Китай-Город</div></div>
+    </div>
   </div>
 </div>
+<app-stock-banner [class.active]="open_event" [hidden]="open_event" [id]="id" [image]="image" [header]="header" [start_date]="start_date" [end_date]="end_date" [main_text]="main_text" [_parent]="this"></app-stock-banner>
+<app-menu-tabs-inside [_parent]="this"></app-menu-tabs-inside>

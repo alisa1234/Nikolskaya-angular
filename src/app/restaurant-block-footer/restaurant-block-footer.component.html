@@ -1,12 +1,12 @@
-<div class="content_corners_items_item_content-kitchen">
-  <div class="content_corners_items_item_content-kitchen_item">Европейская</div>
-  <div class="content_corners_items_item_content-kitchen_delimiter"></div>
-  <div class="content_corners_items_item_content-kitchen_item">Гриль</div>
-  <div class="content_corners_items_item_content-kitchen_delimiter"></div>
-  <div class="content_corners_items_item_content-kitchen_item">Сендвичи</div>
+<div class="content_corners_items_item_content-kitchen" *ngFor="let tag of tags; let i=index">
+  <div class="content_corners_items_item_content-kitchen_item" *ngIf="i<3">{{tag.Name}}</div>
+  <div class="content_corners_items_item_content-kitchen_delimiter" *ngIf="i<2"></div>
+  <!--<div class="content_corners_items_item_content-kitchen_item">Гриль</div>-->
+  <!--<div class="content_corners_items_item_content-kitchen_delimiter"></div>-->
+  <!--<div class="content_corners_items_item_content-kitchen_item">Сендвичи</div>-->
 </div>
-<div class="content_corners_items_item_content">
-  <div class="content_corners_items_item_content_pdf">Смотреть меню в PDF</div>
-  <div class="content_corners_items_item_content_time">15 мин</div>
-  <div class="content_corners_items_item_content_find">Найти на схеме маркета</div>
-</div>
+<!--<div class="content_corners_items_item_content">-->
+  <!--<div class="content_corners_items_item_content_pdf">Смотреть меню в PDF</div>-->
+  <!--<div class="content_corners_items_item_content_time">15 мин</div>-->
+  <!--<div class="content_corners_items_item_content_find">Найти на схеме маркета</div>-->
+<!--</div>-->

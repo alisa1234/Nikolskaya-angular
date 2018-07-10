@@ -7,7 +7,7 @@
       </div>
       <div class="header_adress_time">
         <div class="header_adress_time_logo"></div>
-        <span>8:00 - 23:00</span>
+        <span>11:00 - 23:00</span>
       </div>
       <div class="header_adress_time">
         <div class="header_adress_phone_logo"></div>
@@ -15,15 +15,15 @@
       </div>
     </div>
     <div class="header_tabs">
-      <div class="header_tabs_login" *ngIf="!headerService.login">
-        <div class="header_tabs_login_logo"></div>
-        <a (click)="ShowLoginForm()"><span>Вход</span></a>
-      </div>
-      <div class="header_tabs_logout" *ngIf="headerService.login" routerLink="/personal">
-          <div class="header_tabs_logout_logo"></div>
-          <a><span>{{headerService.client_about.FirstName}}</span></a>
-      </div>
-      <div *ngIf="headerService.login" class="header_tabs_logout_icon"></div>
+      <!--<div class="header_tabs_login" *ngIf="!headerService.login">-->
+        <!--<div class="header_tabs_login_logo"></div>-->
+        <!--<a (click)="ShowLoginForm()"><span>Вход</span></a>-->
+      <!--</div>-->
+      <!--<div class="header_tabs_logout" *ngIf="headerService.login" routerLink="/personal">-->
+          <!--<div class="header_tabs_logout_logo"></div>-->
+          <!--<a><span>{{headerService.client_about.FirstName}}</span></a>-->
+      <!--</div>-->
+      <!--<div *ngIf="headerService.login" class="header_tabs_logout_icon"></div>-->
       <div class="header_tabs_bucket">
         <div class="header_tabs_bucket_logo"></div>
         <a routerLink="/bucket"><span>Корзина</span></a>
@@ -35,31 +35,31 @@
       <div class="header-mobile_burger_icon"></div>
     </div>
     <a routerLink="/"><div class="header-mobile_logo"></div></a>
-    <div class="header-mobile_bucket">
-      <div class="header-mobile_bucket_icon"></div>
+    <div class="header-mobile_bucket" (click)="openBusket()" style="border-left: none">
+      <div class="header-mobile_bucket_icon" ></div>
     </div>
   </header>
   <div class="menu-tabs">
     <div class="menu-tabs_menu">
       <div class="menu-tabs_menu_item">
-        <a routerLink="/corners"><span>Корнеры</span></a>
+        <a routerLink="/corners" routerLinkActive="active"><span>Корнеры</span></a>
       </div>
       <div class="menu-tabs_menu_item">
-        <a routerLink="/events"><span>События</span></a>
+        <a routerLink="/events" routerLinkActive="active"><span>События</span></a>
       </div>
       <div class="menu-tabs_menu_item">
-        <a routerLink="/about"><span>О проекте</span></a>
+        <a routerLink="/about" routerLinkActive="active"><span>О маркете</span></a>
       </div>
       <div class="menu-tabs_menu_item">
-        <a routerLink="/contacts"><span>Контакты</span></a>
+        <a routerLink="/contacts" routerLinkActive="active"><span>Контакты</span></a>
       </div>
     </div>
     <a routerLink="/"><div class="menu-tabs_logo"></div></a>
     <div class="menu-tabs_addit">
       <div class="menu-tabs_addit_delivery">
-        <div class="menu-tabs_addit_delivery_item">
-          <span>Бонусы</span>
-        </div>
+        <!--<div class="menu-tabs_addit_delivery_item">-->
+          <!--<span>Бонусы</span>-->
+        <!--</div>-->
         <div class="menu-tabs_addit_delivery_item">
           <a routerLink="/delivery"><span>Доставка</span></a>
         </div>
@@ -67,9 +67,10 @@
       <div class="menu-tabs_addit_socials">
         <a href="https://www.facebook.com/vokrugsvetamarket/" target="_blank"><div class="menu-tabs_addit_socials_item facebook"></div></a>
         <a href="https://www.instagram.com/vokrugsvetamarket/" target="_blank"><div class="menu-tabs_addit_socials_item instagram"></div></a>
-        <a href="https://vk.com/vokrugsvetamarket/" target="_blank"> <div class="menu-tabs_addit_socials_item vk"></div></a>
+        <a href="https://vk.com/vokrugsvetamarket" target="_blank"> <div class="menu-tabs_addit_socials_item vk"></div></a>
       </div>
     </div>
   </div>
 </div>
 <app-mobile-menu [show_menu]="show_menu" [_parent]="this"></app-mobile-menu>
+<app-busket-mob></app-busket-mob>

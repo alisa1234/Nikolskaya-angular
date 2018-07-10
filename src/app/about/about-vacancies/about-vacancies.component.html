@@ -5,7 +5,7 @@
       «Вокруг Света» приглашает на работу энергичных, аккуратных и пунктуальных людей. Оставьте свое резюме, если вы – именно тот человек, который действительно хочет работать в самом центре столицы в дружном коллективе культового гастромаркета. Гарантируем
       достойный заработок и возможность карьерного роста.
     </div>
-    <form [formGroup]="form" (submit)="sendVacancies()" novalidate class="about_container_content_vacancy-form_form">
+    <form [formGroup]="form"  class="about_container_content_vacancy-form_form">
       <div class="about_container_content_vacancy-form_form_group">
         <label for="position" class="about_container_content_vacancy-form_form_group_label">Должность</label>
         <select [(ngModel)]="id_vacancy" formControlName="IdVacancy" id='position' class="about_container_content_vacancy-form_form_group_select">
@@ -15,20 +15,26 @@
       </div>
       <div class="about_container_content_vacancy-form_form_group">
         <label for="name" class="about_container_content_vacancy-form_form_group_label">Имя</label>
-        <input formControlName="Name" type="text" id="name" placeholder="Введите имя" class="about_container_content_vacancy-form_form_group_input">
+        <input formControlName="Name" type="text" id="name" placeholder="Введите имя" class="about_container_content_vacancy-form_form_group_input" required>
       </div>
+      <div *ngIf="Name.errors && (Name.dirty || Name.touched)&& Name.errors.required" class="error_text">Заполните поле!</div>
       <div class="about_container_content_vacancy-form_form_group">
         <label for="secondname" class="about_container_content_vacancy-form_form_group_label">Фамилия</label>
-        <input formControlName="Surname" type="text" id="secondname" placeholder="Введите фамилию" class="about_container_content_vacancy-form_form_group_input">
+        <input formControlName="Surname" type="text" id="secondname" placeholder="Введите фамилию" class="about_container_content_vacancy-form_form_group_input" required>
       </div>
+      <div *ngIf="Surname.errors && (Surname.dirty || Surname.touched)&& Surname.errors.required" class="error_text">Заполните поле!</div>
       <div class="about_container_content_vacancy-form_form_group">
         <label for="phoneNumber" class="about_container_content_vacancy-form_form_group_label">Номер телефона</label>
-        <input formControlName="PhoneNumber" type="text" id="phoneNumber" placeholder="Введите ваш номер телефона" class="about_container_content_vacancy-form_form_group_input">
+        <input formControlName="PhoneNumber" type="text" id="phoneNumber" placeholder="Введите ваш номер телефона" class="about_container_content_vacancy-form_form_group_input" [class.error]="error['PhoneNumber']" required>
       </div>
+      <div *ngIf="PhoneNumber.errors && (PhoneNumber.dirty || PhoneNumber.touched)&& PhoneNumber.errors.required" class="error_text">Заполните поле!</div>
+      <div *ngIf="error['PhoneNumber']" class="error_text">{{error_text['PhoneNumber']}}</div>
       <div class="about_container_content_vacancy-form_form_group">
         <label for="email" class="about_container_content_vacancy-form_form_group_label">Email</label>
-        <input formControlName="Email" type="text" id="email" placeholder="Введите email" class="about_container_content_vacancy-form_form_group_input">
+        <input formControlName="Email" type="text" id="email" placeholder="Введите email" class="about_container_content_vacancy-form_form_group_input" [class.error]="error['Email']" required>
       </div>
+      <div *ngIf="Email.errors && (Email.dirty || Email.touched)&& Email.errors.required" class="error_text">Заполните поле!</div>
+      <div *ngIf="error['Email']" class="error_text">{{error_text['Email']}}</div>
       <div class="about_container_content_vacancy-form_form_group">
         <label for="resume" id="for_resume" class="about_container_content_vacancy-form_form_group_label">Резюме</label>
         <label for="resume" id="for_resume_link" class="about_container_content_vacancy-form_form_group_label">Ссылка на резюме</label>
@@ -37,13 +43,15 @@
         <div class="about_container_content_vacancy-form_form_group_inputfile_icon"></div>
         <input type="text" id="resume_link" placeholder="" class="about_container_content_vacancy-form_form_group_input">
       </div>
+      <div *ngIf="error['Resume']" class="error_text">{{error_text['Resume']}}</div>
       <div class="about_container_content_vacancy-form_form_group">
         <label for="comments" class="about_container_content_vacancy-form_form_group_label">Комментарии</label>
         <textarea formControlName="Comment" id="comments" placeholder="Комментарии" class="about_container_content_vacancy-form_form_group_textarea"></textarea>
-        <input formControlName="Comment" type="text" id="comment_input" placeholder="" class="about_container_content_vacancy-form_form_group_input">
+        <input formControlName="Comment" type="text" id="comment_input" placeholder="" class="about_container_content_vacancy-form_form_group_input" [class.error]="error['Comment']" required>
       </div>
+      <div *ngIf="error['Comment']" class="error_text">{{error_text['Comment']}}</div>
       <div class="about_container_content_vacancy-form_form_group">
-        <button type="submit" id="submit" class="about_container_content_vacancy-form_form_group_submit">Отправить</button>
+        <button type="submit" id="submit" class="about_container_content_vacancy-form_form_group_submit" (click)="sendVacancies()">Отправить</button>
       </div>
     </form>
   </div>

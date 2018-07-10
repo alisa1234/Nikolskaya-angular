@@ -58,11 +58,41 @@ agm-map {
           width: 100%;
         }
         &_delivery {
-          padding-top: 70px;
+          padding-top: 30px;
           margin-bottom: 100px;
           @media screen and (max-width: 1024px) {
             padding-top: 4px;
             margin-bottom: 40px;
+          }
+
+          &_item {
+            margin-top: 30px;
+
+            &:first-child {
+              margin-top: 0;
+            }
+            &_header {
+              color: #231F20;
+              font-family: $font_ubuntu;
+              font-size: 16px;
+              line-height: 16px;
+              margin-bottom: 20px;
+
+
+            }
+            &_info {
+              color: #231F20;
+              font-family: $font_ubuntu;
+              font-size: 13px;
+              line-height: 26px;
+            }
+            &_small {
+              color: #7F7873;
+              font-family: $font_ubuntu;
+              font-size: 13px;
+              line-height: 13px;
+              margin-bottom: 15px;
+            }
           }
         }
         &_subscribe_content_socials {
@@ -130,6 +160,7 @@ agm-map {
             padding: 14px 0 17px;
             min-width: 360px;
             margin: 0 auto;
+            display: none;
           }
         }
         &_form {
@@ -227,6 +258,31 @@ agm-map {
             }
           }
         }
+        &_state {
+          width: 500px;
+          height: 420px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          @media screen and (max-width: 1024px) {
+            display: none;
+          }
+
+          &_icon {
+            @include sp__mail;
+          }
+          &_text {
+              color: #231F20;
+              font-family: $font_ubuntu;
+              font-size: 18px;
+              line-height: 24px;
+              text-align: center;
+              width: 226px;
+              margin-top: 20px;
+              margin-left: 36px;
+          }
+        }
       }
     }
   }
@@ -279,7 +335,7 @@ agm-map {
   overflow: hidden;
   position: relative;
   div {
-    background: url("../sass/images/scheme.jpg");
+    background: url("../sass/images/scheme2.jpg");
     position: absolute;
     top: 0;
     left: 0;
@@ -294,4 +350,16 @@ agm-map {
     max-width: 100%;
     max-height: 100%;
   }
+}
+.error {
+  border: 1px solid #FF2E00;
+  border-radius: 2px;
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,0.1);
+}
+.error_text {
+  color: #FF2E00;
+  font-family: $font_ubuntu;
+  font-size: 12px;
+  line-height: 17px;
+
 }

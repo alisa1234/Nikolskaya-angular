@@ -1,0 +1,49 @@
+:host(.root) {
+  //position: relative;
+}
+.wrapper_btn {
+  .showmore-restaurants {
+    border-radius: 2px;
+    background-color: #332C26;
+    text-align: center;
+    color: #FFFFFF;
+    cursor: pointer;
+    padding: 22px 0 17px;
+    width: 348px;
+    max-width: 360px;
+    font-family: Ubuntu,sans-serif;
+    font-size: 18px;
+    line-height: 21px;
+    left: 0;
+    transform: translate(0);
+    position: relative;
+    margin: 20px auto;
+    @media screen and (max-width: 1023px) {
+      font-size: 13px;
+      line-height: 13px;
+      width: 100%;
+      margin: 20px 0;
+      left: 0;
+      transform: translate(0);
+    }
+    @media screen and (max-width: 767px) {
+      left: 0;
+      transform: translate(0);
+
+      //max-width: 360px;
+
+    }
+  }
+  @media screen and (max-width: 1023px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  @media screen and (max-width: 767px) {
+    //left: 0;
+    //transform: translate(0);
+    max-width: 360px;
+    padding: 0 20px;
+
+  }
+}

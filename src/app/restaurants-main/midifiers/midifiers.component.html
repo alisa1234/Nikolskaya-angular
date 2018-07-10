@@ -1,0 +1,39 @@
+<div class="wrapper_banner" [hidden]="!hidden">
+  <div class="banner_main">
+    <div class="banner_main_title">Добавьте к заказу </div>
+    <div *ngIf="_parent.necessarily" style="text-align: center">Выбор обязательный!</div>
+    <div *ngIf="!_parent.necessarily" style="text-align: center">Выбор не обязательный!</div>
+    <div *ngIf="_parent.necessarily" style="text-align: center">Вы можете выбрать {{_parent.max_selected_modifiers}} дополнений!</div>
+    <div class="banner_main_items" >
+      <div class="banner_main_items_item" *ngFor="let item of _parent.modifiers">
+        <input *ngIf="_parent.max_selected_modifiers>1" type="checkbox" id="{{item.Number}}" class="chbox_mod" (change)="selectModifiers($event,item.Number,item.Name, item.Price)">
+        <input *ngIf="_parent.max_selected_modifiers==1" type="radio" name="modifiers" value="{{item.Number}}" id="{{item.Number}}" class="chbox_mod" (change)="selectModifiers($event,item.Number,item.Name, item.Price)">
+        <label for="{{item.Number}}"></label>
+        <span>{{item.Name}}</span>
+        <div class="banner_main_items_item_price" *ngIf="item.Price==0">Бесплатно</div>
+        <div class="banner_main_items_item_price" *ngIf="item.Price>0">{{item.Price}}</div>
+      </div>
+      <!--<div class="banner_main_items_item">-->
+        <!--<input type="checkbox" id="chbox">-->
+        <!--<label for="chbox"></label>-->
+        <!--<span>Sous</span>-->
+        <!--<div class="banner_main_items_item_price">wewewqr</div>-->
+      <!--</div>-->
+      <!--<div class="banner_main_items_item">-->
+        <!--<input type="checkbox" id="chbox">-->
+        <!--<label for="chbox"></label>-->
+        <!--<span>Sous</span>-->
+        <!--<div class="banner_main_items_item_price">wewewqr</div>-->
+      <!--</div>-->
+
+    </div>
+    <div *ngIf="!_parent.disable" [class.active]="!_parent.disable" class="banner_main_items_item_btn" (click)="addModifiers(_parent.modifiers['dish_id'],_parent.modifiers['rest_id'])">Добавить</div>
+    <div *ngIf="_parent.disable" [class.disable]="_parent.disable" class="banner_main_items_item_btn">Добавить</div>
+    <div class="banner_main_items_item_sub_btn">Пропустить</div>
+    <div class="banner_main_close" (click)="closeEvent()">
+      <div class="banner_main_close_icon"></div>
+    </div>
+  </div>
+  <div class="overlay"></div>
+</div>
+

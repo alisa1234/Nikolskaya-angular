@@ -13,11 +13,11 @@
         </div>
         <div class="footer_main_menu_items">
           <a routerLink="/delivery"><div class="footer_main_menu_items_item">Доставка</div></a>
-          <div class="footer_main_menu_items_item">Кейтеринг</div>
-          <div class="footer_main_menu_items_item">Обратная связь</div>
+          <!--<div class="footer_main_menu_items_item">Кейтеринг</div>-->
+          <div class="footer_main_menu_items_item" routerLink="/contacts">Обратная связь</div>
         </div>
         <div class="subscribe_content_socials">
-          <a href="https://vk.com/vokrugsvetamarket/" target="_blank"><div class="subscribe_content_socials_vk"></div></a>
+          <a href="https://vk.com/vokrugsvetamarket" target="_blank"><div class="subscribe_content_socials_vk"></div></a>
           <a href="https://www.facebook.com/vokrugsvetamarket/" target="_blank"><div class="subscribe_content_socials_fb"></div></a>
           <a href="https://www.instagram.com/vokrugsvetamarket/" target="_blank"><div class="subscribe_content_socials_inst"></div></a>
         </div>
@@ -28,31 +28,42 @@
           <div class="footer_main_contacts_blocks_items">
             <div class="footer_main_contacts_blocks_items_item">Адрес: г. Москва, ул. Никольская 10</div>
             <div class="footer_main_contacts_blocks_items_item">E-mail: info@vokrugsvetamarket.ru</div>
-            <div class="footer_main_contacts_blocks_items_item">Тел.: +7 (123) 456-78-90</div>
+            <div class="footer_main_contacts_blocks_items_item">Ежедневно, с 11.00 до 23.00</div>
           </div>
         </div>
         <div class="footer_main_contacts_blocks">
           <div class="footer_main_contacts_header">Доставка:</div>
           <div class="footer_main_contacts_blocks_items">
+            <div class="footer_main_contacts_blocks_items_item">Тел.: +7 495 967 7777</div>
             <div class="footer_main_contacts_blocks_items_item">E-mail: delivery@vokrugsvetamarket.ru</div>
-            <div class="footer_main_contacts_blocks_items_item">Ежедневно, с 9.00 до 23.00</div>
-            <div class="footer_main_contacts_blocks_items_item">Тел.: +7 (495) 951-19-47</div>
+            <div class="footer_main_contacts_blocks_items_item">Ежедневно, с  11.00 до 22.00</div>
+
           </div>
         </div>
       </div>
     </div>
-    <div class="footer_info">
-      <div class="footer_info_copyright">&copy; 2017 Nikolskaya. Все права сохранены.</div>
-      <div class="footer_info_payments">
-        <div class="footer_info_payments_visa"></div>
-        <div class="footer_info_payments_american-express"></div>
-        <div class="footer_info_payments_master-card"></div>
-        <div class="footer_info_payments_paypal"></div>
-      </div>
-      <div class="footer_info_made-by">
-        <div class="footer_info_made-by_text">Сделано в</div>
-        <div class="footer_info_made-by_icon"></div>
+    <div *ngIf="!orderService.show_bucket_mob" class="footer_info">
+      <!--<div class="footer_info_copyright">&copy; 2017 Nikolskaya. Все права сохранены.</div>-->
+      <!--<div class="footer_info_payments">-->
+        <!--<div class="footer_info_payments_visa"></div>-->
+        <!--<div class="footer_info_payments_american-express"></div>-->
+        <!--<div class="footer_info_payments_master-card"></div>-->
+        <!--<div class="footer_info_payments_paypal"></div>-->
+      <!--</div>-->
+      <!--<div class="footer_info_made-by">-->
+        <!--<div class="footer_info_made-by_text">Сделано в</div>-->
+        <!--<div class="footer_info_made-by_icon"></div>-->
+      <!--</div>-->
+      <div #banner class="footer_info_phone"><a href="tel:+7 495 967 7777">Доставка: +7 495 967 7777</a></div>
+    </div>
+    <div *ngIf="orderService.show_bucket_mob" class="busket_footer_wrapper">
+      <div  class="busket_footer" style="position: fixed;bottom: 0">
+        <div class="busket_footer_count">{{orderService.arr_bucket_length}}</div>
+        <!--<div *ngIf="!orderService.other_rest" class="busket_footer_count">{{orderService.dishes_arr.length}}</div>-->
+        <div class="busket_footer_total_price">{{orderService.total_price}}</div>
+        <div class="busket_footer_total_go" (click)="openBusket()">Перейти в корзину<span></span></div>
       </div>
     </div>
   </footer>
+
 </div>

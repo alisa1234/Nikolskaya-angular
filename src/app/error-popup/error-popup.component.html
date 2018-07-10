@@ -1,0 +1,20 @@
+<div class="wrapper_banner" [hidden]="!hidden">
+  <div class="banner_main">
+    <div class="banner_main_content">
+      <div class="banner_main_content_title">
+        Ошибка
+      </div>
+      <!--<div class="banner_main_content_date">{{start_date | amLocale:'ru' | amDateFormat:'D MMMM'}} <span *ngIf="start_date!=end_date">- {{end_date | amLocale:'ru' | amDateFormat:'D MMMM'}}</span></div>-->
+      <!--<div class="banner_main_content_tag">Все рестораны</div>-->
+      <!--<div class="banner_main_content_img"><img src="{{image}}"></div>-->
+      <div class="banner_main_content_text" style="white-space: pre-line">
+        К сожалению, заказ не оформлен. Пожалуйста, свяжитесь с нами по номеру +74959677777.
+      </div>
+    </div>
+    <div class="banner_main_close" (click)="closeEvent()">
+      <div class="banner_main_close_icon"></div>
+    </div>
+  </div>
+  <div class="overlay"></div>
+</div>
+

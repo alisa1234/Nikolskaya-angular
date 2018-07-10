@@ -24,13 +24,13 @@ export class EventsListService {
           this.events_list.list = data;
           this.change.emit(this.events_list.list);
 
+
           for(let i=0; i < this.events_list.list.length; i++) {
 
             if (i == 2) {
               this.index = true;
             }
           }
-          localStorage.setItem('events_list',JSON.stringify(this.events_list.list));
         })
   }
 

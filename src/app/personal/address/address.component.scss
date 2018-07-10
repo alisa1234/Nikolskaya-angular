@@ -14,11 +14,12 @@
     line-height: 18px;
     padding: 25px 0;
     border-bottom: 1px solid #E6E3E1;
+    justify-content: space-between;
     @media screen and (max-width: 1023px) {
       flex-direction: column;
     }
     &_name {
-      margin-right: 50px;
+      //margin-right: 50px;
       @media screen and (max-width: 1023px) {
         color: #231F20;
         font-size: 16px;
@@ -27,6 +28,7 @@
       }
     }
     &_other {
+      width: 50%;
       @media screen and (max-width: 1023px) {
         color: #231F20;
         font-size: 11px;

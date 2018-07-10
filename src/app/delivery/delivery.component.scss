@@ -254,6 +254,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        cursor: pointer;
         @media screen and (max-width: 1023px) {
           display: none;
         }
@@ -264,8 +265,19 @@
           &:before {
             content: '↓';
             padding-right: 10px;
+            display: inline-block;
           }
         }
+
+      }
+      .close {
+        span {
+          &:before {
+            transform: rotate(180deg);
+            padding: 0 0 0 10px;
+          }
+        }
+
       }
     }
     &_text {
@@ -307,7 +319,8 @@
   }
   &_payments {
     @media screen and (max-width: 1023px) {
-      display: none;
+      //display: none;
+      padding: 20px 20px;
     }
     &_methods {
       &_item {

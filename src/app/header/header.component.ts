@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, NavigationEnd, ActivatedRoute } from '@angular/router';
 import { HeaderService } from './header.service';
+import {OrderService} from "../order.service";
 declare let $: any;
 
 @Component({
@@ -15,9 +16,10 @@ export class HeaderComponent implements OnInit {
   show_menu: boolean;
   open_search: boolean;
   client_about: Object;
+  hover:boolean = false;
 
-  constructor(private route: Router, private router: ActivatedRoute, public headerService:HeaderService) {
-
+  constructor(private route: Router, private router: ActivatedRoute, public headerService:HeaderService, public orderService:OrderService) {
+    this.orderService = orderService;
     this.route.events.subscribe(s => {
       if (s instanceof NavigationEnd) {
         const tree = this.route.parseUrl(this.route.url);
@@ -54,6 +56,9 @@ export class HeaderComponent implements OnInit {
   ShowLoginForm() {
     this.headerService.getUrl(this.route.url);
     this.route.navigate(['/login']);
+  }
+  openBusket() {
+    this.orderService.show_bucket_mob_other = false;
   }
 
 }

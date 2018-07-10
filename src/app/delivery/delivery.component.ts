@@ -49,7 +49,7 @@ export class DeliveryComponent implements OnInit, AfterViewInit {
 
       this.map = new google.maps.Map(document.getElementById('gmap'), {
         center: new google.maps.LatLng(55.758151, 37.624112),
-        zoom: 13,
+        zoom: 12,
         mapTypeId: google.maps.MapTypeId.ROADMAP,
         styles: [ {
           "featureType": "poi",
@@ -73,7 +73,7 @@ export class DeliveryComponent implements OnInit, AfterViewInit {
     let infowindow = new google.maps.InfoWindow({
       content: info
     });
-
+    infowindow.open(this.map, marker);
     marker.addListener('click', function() {
       infowindow.open(this.map, marker);
     });
@@ -98,10 +98,10 @@ export class DeliveryComponent implements OnInit, AfterViewInit {
 
     let circle =  new google.maps.Polygon({
       paths: paths,
-      strokeColor: '#FF0000',
+      strokeColor: '#00CD00',
       strokeOpacity: 0.8,
       strokeWeight: 2,
-      fillColor: '#FF0000',
+      fillColor: '#00CD00',
       fillOpacity: 0.35,
     });
 
@@ -109,6 +109,9 @@ export class DeliveryComponent implements OnInit, AfterViewInit {
   }
 
   OpenPayments() {
-    this.payments = true;
+    if(this.payments == true) {
+      this.payments = false;
+    }else this.payments = true;
+
   }
 }

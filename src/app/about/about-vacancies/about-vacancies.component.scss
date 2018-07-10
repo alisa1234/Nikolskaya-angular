@@ -211,3 +211,15 @@
     }
   }
 }
+.error {
+  border: 1px solid #FF2E00;
+  border-radius: 2px;
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,0.1);
+}
+.error_text {
+  color: #FF2E00;
+  font-family: $font_ubuntu;
+  font-size: 12px;
+  line-height: 17px;
+
+}

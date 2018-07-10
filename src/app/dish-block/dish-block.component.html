@@ -1,18 +1,43 @@
-<div *ngFor="let item of menu_list" id="{{restaurant_id}}">
-<div class="dish-output_result_items_item" id="{{item.Number}}" [class.active]="order_btn[item.Number]"  (mouseenter)="order_btn[item.Number]=true" (mouseleave)="order_btn[item.Number]=false">
+<div *ngFor="let item of menu_list; let i=index" id="{{restaurant_id}}" class="wrapper_block">
+<div *ngIf="i<9?'true':show_more" class="dish-output_result_items_item" id="{{item.Number}}" [class.active]="order_btn[item.Number] && _parent.in_bucket[item.Number]!=true"><!--[class.active]="order_btn[item.Number] && _parent.in_bucket[item.Number]!=true"  (mouseenter)="order_btn[item.Number]=true && _parent.in_bucket[item.Number]!=true" (mouseleave)="order_btn[item.Number]=false"-->
   <div class="dish-output_result_items_item_img">
     <img src="{{item.Picture}}">
   </div>
   <div class="dish-output_result_items_item_info">
-    <div class="dish-output_result_items_item_info_name">{{item.Name}}</div>
+    <div class="dish-output_result_items_item_info_name" title="{{item.Name}}">{{item.Name}}</div>
     <div class="dish-output_result_items_item_info_content">
+      <div class="dish-output_result_items_item_info_content_item_price">{{item.Price}}₽</div>
       <div class="dish-output_result_items_item_info_content_weight">
         <div class="dish-output_result_items_item_info_content_weight_item">{{item.Weight}}</div>
-        <div class="dish-output_result_items_item_info_content_weight_item">775 ккал</div>
+        <!--<div class="dish-output_result_items_item_info_content_weight_item">775 ккал</div>-->
       </div>
-      <div class="dish-output_result_items_item_info_content_item">{{item.Price}}₽</div>
+      <div  class="dish-output_result_items_item_info_content_item_add" (click)="addOrder(item.Number,item.Name,item.Price,restaurant_id,item.ModifierGroups)"></div><!--*ngIf="!_parent.in_bucket[item.Number]"-->
+      <!--<div class="dish-output_result_items_item_info_content" >-->
+        <!--<div class="dish-output_result_items_item_info_content_item" *ngIf="_parent.in_bucket[item.Number]">-->
+          <!--<div class="dishes_content_menu_bucket_items_item_content_count">-->
+            <!--<div class="dishes_content_menu_bucket_items_item_content_count_wrapper" (click)="removeItem(item.Number)"><div class="dishes_content_menu_bucket_items_item_content_count_wrapper_remove" ></div></div>-->
+            <!--<div class="dishes_content_menu_bucket_items_item_content_count_text"><span>{{_parent.quantity_last[item.Number] ? _parent.quantity_last[item.Number]: quantity[item.Number]}}</span>шт</div>-->
+            <!--<div class="dishes_content_menu_bucket_items_item_content_count_wrapper" (click)="addItem(item.Number)"><div class="dishes_content_menu_bucket_items_item_content_count_wrapper_add" ></div></div>-->
+          <!--</div>-->
+        <!--</div>-->
+      <!--</div>-->
     </div>
-    <div class="dish-output_result_items_item_info_order" (click)="addOrder(item.Number,item.Name,item.Price,restaurant_id)">Заказать</div>
+    <div class="dish-output_result_items_item_info_content" *ngIf="_parent.in_bucket[item.Number]">
+      <div class="dish-output_result_items_item_info_content_weight">
+        <div class="dish-output_result_items_item_info_content_weight_item_bucket">Блюдо в корзине</div>
+      </div>
+      <div class="dish-output_result_items_item_info_content_item">
+        <div class="dishes_content_menu_bucket_items_item_content_count">
+          <div class="dishes_content_menu_bucket_items_item_content_count_wrapper" (click)="removeItem(item.Number)"><div class="dishes_content_menu_bucket_items_item_content_count_wrapper_remove" ></div></div>
+          <div class="dishes_content_menu_bucket_items_item_content_count_text"><span>{{_parent.quantity_last[item.Number] ? _parent.quantity_last[item.Number]: quantity[item.Number]}}</span>шт</div>
+          <div class="dishes_content_menu_bucket_items_item_content_count_wrapper" (click)="addItem(item.Number)"><div class="dishes_content_menu_bucket_items_item_content_count_wrapper_add" ></div></div>
+        </div>
+      </div>
+    </div>
+    <!--<div class="dish-output_result_items_item_info_order" (click)="addOrder(item.Number,item.Name,item.Price,restaurant_id,item.ModifierGroups[0])">Заказать</div>-->
   </div>
 </div>
+</div>
+<div class="wrapper_btn">
+<div class="showmore-restaurants" *ngIf="menu_list.length>9 && hide_btn==false" (click)="show_more=true;hide_btn=true">Показать еще</div>
 </div>

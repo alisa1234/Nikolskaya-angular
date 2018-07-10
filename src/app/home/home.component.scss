@@ -1,3 +1,7 @@
+@import "../sass/sass/_variables";
+@import "../sass/sass/_svg-sprite";
+@import "../sass/sass/_png-sprite";
+
 agm-map {
   height: 500px;
 }
@@ -22,5 +26,13 @@ agm-map {
   img {
     max-width: 100%;
     max-height: 100%;
+  }
+}
+.main_map_buttons_metro_button_back {
+  display: none;
+  @include sp__arrow-left;
+  @media screen and (max-width: 1024px) {
+    display: block;
+    margin: 10px 0 0 10px;
   }
 }

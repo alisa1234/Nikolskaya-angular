@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="106px" height="50px" viewBox="0 0 106 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>FE9753FA-07D4-4B38-8F31-1898BA6F0FA6</title>
+    <desc>Created with sketchtool.</desc>
+    <defs></defs>
+    <g id="08-Контакты-state" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-838.000000, -390.000000)">
+        <g id="Form" transform="translate(661.000000, 230.000000)">
+            <g id="mail" transform="translate(177.000000, 161.000000)">
+                <path d="M51,0 L99,0 C102.3,0 105,2.7 105,6 L105,42 C105,45.3 102.3,48 99,48 L51,48 C47.7,48 45,45.3 45,42 L45,6 C45,2.7 47.7,0 51,0 Z" id="Shape" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                <polyline id="Shape" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" points="105 6 75 27 45 6"></polyline>
+                <g id="Group-8" transform="translate(0.000000, 13.000000)" fill="#000000">
+                    <rect id="Rectangle-4" x="10" y="0" width="25" height="1" rx="0.5"></rect>
+                    <rect id="Rectangle-4" x="0" y="11" width="35" height="1" rx="0.5"></rect>
+                    <rect id="Rectangle-4" x="20" y="22" width="15" height="1" rx="0.5"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

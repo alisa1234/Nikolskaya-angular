@@ -21,12 +21,12 @@
     justify-content: center;
     flex-wrap: wrap;
     background-color: #F8F5F5;
-    padding: 30px 40px 30px;
+    padding: 30px 50px 30px;
     @media screen and (max-width: 1024px) {
-      width: calc(100% - 40px);
-      padding: 0 20px;
-      max-width: 380px;
-      margin: 0 auto;
+      //width: calc(100% - 40px);
+      padding: 30px 0;
+      //max-width: 380px;
+      //margin: 0 auto;
     }
     .content_events {
       padding: 30px 0 0 33px;

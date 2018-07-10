@@ -1,42 +1,43 @@
+<!--<div class="order-container_wrapper_form_group_item">-->
+  <!--<div class="order-container_wrapper_form_group_item_name">-->
+    <!--<div class="order-container_wrapper_form_group_item_name_title-logged">-->
+      <!--<div class="order-container_wrapper_form_group_item_name_title-logged_name">Дмитрий Иванов-->
+      <!--</div>-->
+      <!--<div class="order-container_wrapper_form_group_item_name_title-logged_logout">Выйти</div>-->
+    <!--</div>-->
+  <!--</div>-->
+<!--</div>-->
+<!--<div class="order-container_wrapper_form_group_item">-->
+  <!--<div class="order-container_wrapper_form_group_item_label">Email</div>-->
+  <!--<div class="order-container_wrapper_form_group_item_input">-->
+    <!--<input type="email" value="user_email@gmail.com">-->
+  <!--</div>-->
+<!--</div>-->
+<!--<div class="order-container_wrapper_form_group_item">-->
+  <!--<div class="order-container_wrapper_form_group_item_label">Мобильный номер</div>-->
+  <!--<div class="order-container_wrapper_form_group_item_input">-->
+    <!--<input type="text" value="+7(495)123-45-67">-->
+  <!--</div>-->
+<!--</div>-->
+<!--<div class="order-container_wrapper_form_group_item">-->
+  <!--<div class="order-container_wrapper_form_group_item_add-phone">-->
+    <!--<div class="order-container_wrapper_form_group_item_add-phone_plus">+</div>-->
+    <!--<div class="order-container_wrapper_form_group_item_add-phone_text">Добавить новый тел. номер-->
+    <!--</div>-->
+  <!--</div>-->
+<!--</div>-->
 <div class="order-container_wrapper_form_group_item">
-  <div class="order-container_wrapper_form_group_item_name">
-    <div class="order-container_wrapper_form_group_item_name_title-logged">
-      <div class="order-container_wrapper_form_group_item_name_title-logged_name">Дмитрий Иванов
-      </div>
-      <div class="order-container_wrapper_form_group_item_name_title-logged_logout">Выйти</div>
-    </div>
-  </div>
-</div>
-<div class="order-container_wrapper_form_group_item">
-  <div class="order-container_wrapper_form_group_item_label">Email</div>
-  <div class="order-container_wrapper_form_group_item_input">
-    <input type="email" value="user_email@gmail.com">
-  </div>
-</div>
-<div class="order-container_wrapper_form_group_item">
-  <div class="order-container_wrapper_form_group_item_label">Мобильный номер</div>
-  <div class="order-container_wrapper_form_group_item_input">
-    <input type="text" value="+7(495)123-45-67">
-  </div>
-</div>
-<div class="order-container_wrapper_form_group_item">
-  <div class="order-container_wrapper_form_group_item_add-phone">
-    <div class="order-container_wrapper_form_group_item_add-phone_plus">+</div>
-    <div class="order-container_wrapper_form_group_item_add-phone_text">Добавить новый тел. номер
-    </div>
-  </div>
-</div>
-<div class="order-container_wrapper_form_group_item" *ngIf="!orderFormService.add_new_adress">
   <div class="order-container_wrapper_form_group_item_addresses">
     <div *ngFor="let item of orderFormService.adresses_arr" class="order-container_wrapper_form_group_item_addresses_item">
-      <input id="address_1" type="checkbox">
-      <label for="address_1"></label>
-      <div class="order-container_wrapper_form_group_item_addresses_item_text desktop">ул. Научная 22
+      <input id="{{item.Id}}" type="checkbox" (change)="getAddressId(item.Id)">
+      <label for="{{item.Id}}"></label>
+      <div class="order-container_wrapper_form_group_item_addresses_item_text desktop">ул.{{item.StreetName}}
       </div>
-      <div class="order-container_wrapper_form_group_item_addresses_item_text desktop">квартира 81,
-        подъезд 2, этаж 9
+      <div class="order-container_wrapper_form_group_item_addresses_item_text desktop">квартира {{item.Appartaments}},
+        подъезд {{item.Entry}}, этаж {{item.Floor}}
       </div>
-      <div class="order-container_wrapper_form_group_item_addresses_item_text mobile">ул. Научная, д.51, кв. 70
+      <div class="order-container_wrapper_form_group_item_addresses_item_text mobile">ул.{{item.StreetName}}, д.51, кв. {{item.Appartaments}}, э. {{item.Floor}},
+        п. {{item.Entry}}
       </div>
     </div>
     <div class="order-container_wrapper_form_group_item_addresses_add-new" (click)="AddNewAdress()">

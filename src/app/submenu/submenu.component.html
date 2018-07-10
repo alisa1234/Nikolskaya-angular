@@ -1,27 +1,33 @@
-<div class="main">
+<div #submenu_corners class="main">
   <div class="menu-tabs_hide-icon"></div>
   <div class="menu-tabs_all">
     <div class="menu-tabs_all_tabs">
-      <div (click)="chooseMenu('all')" class="menu-tabs_all_tabs_item" [class.active]="type_menu['all']">Все</div>
-      <div (click)="chooseMenu('burgers')" class="menu-tabs_all_tabs_item" [class.active]="type_menu['burgers']">Бургеры</div>
-      <div (click)="chooseMenu('noodles')" class="menu-tabs_all_tabs_item" [class.active]="type_menu['noodles']">Лапша</div>
-      <div (click)="chooseMenu('sandwiches')" class="menu-tabs_all_tabs_item" [class.active]="type_menu['sandwiches']">Сендвичи</div>
-      <div (click)="chooseMenu('pizza')" class="menu-tabs_all_tabs_item" [class.active]="type_menu['pizza']">Пицца</div>
-      <div class="menu-tabs_all_tabs_item">
-        <div class="menu-tabs_all_tabs_item_dropdown" (click)="showSubmenu()" [class.active_dropdown]="show_submenu">
-          <ul>
-            <li [class.active_dropdown_li]="show_submenu">Еще</li>
-            <div *ngIf="show_submenu" class="menu-tabs_all_tabs_item_dropdown_list">
-              <ul>
-                <li>Лапша</li>
-                <li>Бургеры</li>
-                <li>Пельмешки</li>
-              </ul>
-            </div>
-          </ul>
-          <div class="menu-tabs_all_tabs_item_dropdown_triangle" [class.active_triangle]="show_submenu"></div>
-        </div>
-      </div>
+      <div (click)="chooseMenu(0)" class="menu-tabs_all_tabs_item" [class.active]="type_menu[0]">Все</div>
+      <div *ngFor="let item of tags" (click)="chooseMenu(item.Id)" class="menu-tabs_all_tabs_item" [class.active]="type_menu[item.Id]">{{item.Name}}</div>
+      <!--<div (click)="chooseMenu('middle_azia')" class="menu-tabs_all_tabs_item" [class.active]="type_menu['middle_azia']">Средняя Азия</div>-->
+      <!--<div (click)="chooseMenu('europe')" class="menu-tabs_all_tabs_item" [class.active]="type_menu['europe']">Европа</div>-->
+      <!--<div (click)="chooseMenu('zoj')" class="menu-tabs_all_tabs_item" [class.active]="type_menu['zoj']">Здоровое питание</div>-->
+      <!--<div (click)="chooseMenu('street')" class="menu-tabs_all_tabs_item" [class.active]="type_menu['street']">Стритфуд</div>-->
+      <!--<div (click)="chooseMenu('sandwiches')" class="menu-tabs_all_tabs_item" [class.active]="type_menu['sandwiches']"> Сэндвичи</div>-->
+      <!--<div class="menu-tabs_all_tabs_item">-->
+        <!--<div class="menu-tabs_all_tabs_item_dropdown" (click)="showSubmenu()" [class.active_dropdown]="show_submenu">-->
+          <!--<ul>-->
+            <!--<li [class.active_dropdown_li]="show_submenu">Еще</li>-->
+            <!--<div *ngIf="show_submenu" class="menu-tabs_all_tabs_item_dropdown_list">-->
+              <!--<ul>-->
+                <!--<li>Лапша</li>-->
+                <!--<li>Бургеры</li>-->
+                <!--<li>Пельмешки</li>-->
+              <!--</ul>-->
+            <!--</div>-->
+          <!--</ul>-->
+          <!--<div class="menu-tabs_all_tabs_item_dropdown_triangle" [class.active_triangle]="show_submenu"></div>-->
+        <!--</div>-->
+      <!--</div>-->
+
+
     </div>
+    <div class="menu-tabs_all_phone"></div>
+    <div class="menu-tabs_all_phone-text"><span>Доставка: </span>+7 495 967 7777</div>
   </div>
 </div>

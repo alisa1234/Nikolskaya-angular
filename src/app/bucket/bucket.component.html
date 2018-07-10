@@ -4,23 +4,40 @@
 
     <div class="dishes_content_menu_bucket">
       <div #bucketItem class="dishes_content_menu_bucket_items" >
-        <div  id="{{item.id}}" class="dishes_content_menu_bucket_items_item" *ngFor="let item of orderService.order_arr">
-          <div class="dishes_content_menu_bucket_items_item_title">{{item.name}}</div>
+        <div  id="{{key}}" class="dishes_content_menu_bucket_items_item" *ngFor="let key of orderService.order_arr_bucket_keys">
+          <div class="order-container_wrapper_title">{{orderService.order_arr_bucket[key].rest_name}}</div>
+          <div *ngFor="let dish of orderService.order_arr_bucket[key].items">
+          <div class="dishes_content_menu_bucket_items_item_title">{{dish.name}}</div>
           <div class="dishes_content_menu_bucket_items_item_content">
             <div class="dishes_content_menu_bucket_items_item_content_count">
-              <div class="dishes_content_menu_bucket_items_item_content_count_remove" (click)="removeItem(item.id)"></div>
-              <div class="dishes_content_menu_bucket_items_item_content_count_text"><span>{{item.quantity}}</span>шт</div>
-              <div class="dishes_content_menu_bucket_items_item_content_count_add" (click)="addItem(item.id)"></div>
+              <div class="dishes_content_menu_bucket_items_item_content_count_remove" (click)="removeItem(dish.id,dish.Modifiers.length!=0?dish.Modifiers[0].Code:'', key)"></div>
+              <div class="dishes_content_menu_bucket_items_item_content_count_text"><span>{{dish.quantity}}</span>шт</div>
+              <div class="dishes_content_menu_bucket_items_item_content_count_add" (click)="addItem(dish.id,dish.Modifiers.length!=0?dish.Modifiers[0].Code:'', key)"></div>
             </div>
-            <div class="dishes_content_menu_bucket_items_item_content_price"><span>{{item.quantity_price}} руб.</span></div>
+            <div class="dishes_content_menu_bucket_items_item_content_price"><span>{{dish.quantity_price}} руб.</span></div>
           </div>
+            <div class="dishes_content_menu_bucket_items_item_content_count" *ngFor="let mod of dish.Modifiers">
+              <div class="dishes_content_menu_bucket_items_item_content_count_add"></div>
+              <div class="dishes_content_menu_bucket_items_item_content_count_text" ><span>{{mod.Name}}</span></div>
+              <div class="dishes_content_menu_bucket_items_item_content_count_text"  *ngIf="mod.Price==0"><span>Бесплатно</span></div>
+              <div class="dishes_content_menu_bucket_items_item_content_count_text"  *ngIf="mod.Price>0"><span>{{mod.Price}}</span></div>
+            </div>
+        </div>
         </div>
       </div>
     </div>
+    <div class="dishes_content_menu_bucket_total_text_column">
+      <div class="dishes_content_menu_bucket_total_text">Общая сумма</div>
+      <div class="dishes_content_menu_bucket_total_price">{{orderService.total_price}} руб.</div>
+      <div class="order-container_wrapper_form_total_sum_items_cash" style="font-size: 13px;">
+        <span class="sum">Минимальная сумма заказа 500 руб.</span>
+      </div>
+    </div>
+
     <div class="dishes_content_menu_bucket_total">
-      <div class="dishes_content_menu_bucket_total_text_column">
-        <div class="dishes_content_menu_bucket_total_text">Общая сумма</div>
-        <div class="dishes_content_menu_bucket_total_price">{{orderService.total_price}} руб.</div>
+      <div class="dishes_content_menu_bucket_total_back" routerLink="/corners">
+        <div class="dishes_content_menu_bucket_total_back_icon"></div>
+        <div class="dishes_content_menu_bucket_total_back_text">Перейти в меню</div>
       </div>
       <div class="events_show-more" (click)="makeOrder()">Оформить заказ</div>
     </div>

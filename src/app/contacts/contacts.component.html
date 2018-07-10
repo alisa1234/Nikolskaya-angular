@@ -1,61 +1,90 @@
 <div class="main">
   <div class="contacts">
-    <div class="contacts_breadcrumbs">Главная / Контакты</div>
+    <!--<div class="contacts_breadcrumbs">Главная / Контакты</div>-->
     <div class="contacts_info">
       <div class="contacts_info_header">Контакты</div>
       <div class="contacts_info_main">
         <div class="contacts_info_main_connections">
           <div class="contacts_info_main_connections_delivery">
-            <div class="footer_main_contacts_header">Служба доставки:</div>
-            <div class="footer_main_contacts_blocks">
-              <div class="footer_main_contacts_blocks_items">
-                <div class="footer_main_contacts_blocks_items_item">E-mail: delivery@nikolskaya.org
-                </div>
-                <div class="footer_main_contacts_blocks_items_item">Ежедневно, с 8.00 до 23.00</div>
-                <div class="footer_main_contacts_blocks_items_item">Тел.: +7 (495) 951-19-47</div>
-              </div>
-              <div class="footer_main_contacts_blocks_items">
-                <div class="footer_main_contacts_blocks_items_item">Адрес: г. Москва, ул. Никольская 10
-                </div>
-                <div class="footer_main_contacts_blocks_items_item">E-mail: info@nikolskaya.org</div>
-                <div class="footer_main_contacts_blocks_items_item">Тел.: +7 (123) 456-78-90</div>
-              </div>
+            <div class="contacts_info_main_connections_delivery_item">
+              <div class="contacts_info_main_connections_delivery_item_header">График работы</div>
+              <div class="contacts_info_main_connections_delivery_item_info"> Ежедневно, с 11.00 до 23.00</div>
+              <div class="contacts_info_main_connections_delivery_item_small">Проект 24 - круглосуточно</div>
+              <div class="contacts_info_main_connections_delivery_item_info"> Последний заказ доставки - 22.00</div>
             </div>
+            <div class="contacts_info_main_connections_delivery_item">
+              <div class="contacts_info_main_connections_delivery_item_header">Адрес</div>
+              <div class="contacts_info_main_connections_delivery_item_info"> г. Москва, ул. Никольская 10,<br/>
+                ТЦ Никольскяа Плаза, 1-й этаж</div>
+            </div>
+            <div class="contacts_info_main_connections_delivery_item">
+              <div class="contacts_info_main_connections_delivery_item_header">Связь</div>
+              <div class="contacts_info_main_connections_delivery_item_info">Тел.: +7 495 9677777
+              </div>
+              <div class="contacts_info_main_connections_delivery_item_info">
+                E-mail: info@vokrugsvetamarket.ru</div>
+            </div>
+            <!--<div class="footer_main_contacts_header">График работы</div>-->
+            <!--<div class="footer_main_contacts_blocks">-->
+              <!--<div class="footer_main_contacts_blocks_items">-->
+                <!--&lt;!&ndash;<div class="footer_main_contacts_blocks_items_item">E-mail: delivery@nikolskaya.org</div>&ndash;&gt;-->
+                <!--<div class="footer_main_contacts_blocks_items_item">Ежедневно, с 8.00 до 23.00</div>-->
+                <!--&lt;!&ndash;<div class="footer_main_contacts_blocks_items_item">Тел.: +7 (495) 951-19-47</div>&ndash;&gt;-->
+                <!--<div class="footer_main_contacts_blocks_items_item_small">Проект 24 - круглосуточно</div>-->
+              <!--</div>-->
+              <!--<div class="footer_main_contacts_blocks_items">-->
+                <!--<div class="footer_main_contacts_blocks_items_item">Адрес: г. Москва, ул. Никольская 10-->
+                <!--</div>-->
+                <!--<div class="footer_main_contacts_blocks_items_item">E-mail: info@nikolskaya.org</div>-->
+                <!--<div class="footer_main_contacts_blocks_items_item">Тел.: +7 (123) 456-78-90</div>-->
+              <!--</div>-->
+            <!--</div>-->
           </div>
           <div class="contacts_info_main_connections_subscribe_content_socials">
-            <a href="https://vk.com/vokrugsvetamarket/" target="_blank"><div class="contacts_info_main_connections_subscribe_content_socials_vk"></div></a>
+            <a href="https://vk.com/vokrugsvetamarket" target="_blank"><div class="contacts_info_main_connections_subscribe_content_socials_vk"></div></a>
             <a href="https://www.facebook.com/vokrugsvetamarket/" target="_blank"><div class="contacts_info_main_connections_subscribe_content_socials_fb"></div></a>
             <a href="https://www.instagram.com/vokrugsvetamarket/" target="_blank"><div class="contacts_info_main_connections_subscribe_content_socials_inst"></div></a>
           </div>
         </div>
         <div class="contacts_info_main_form">
-          <div class="contacts_info_main_form_header">Напишите нам</div>
-          <form class="contacts_info_main_form_form">
-            <div class="contacts_info_main_form_form_group">
+          <div *ngIf="!open_state"  class="contacts_info_main_form_header">Напишите нам</div>
+          <form *ngIf="!open_state"  [formGroup]="form"  class="contacts_info_main_form_form">
+            <div class="contacts_info_main_form_form_group" >
               <label for="name" class="contacts_info_main_form_form_group_label">Имя</label>
-              <input type="text" id="name" placeholder="Введите имя" class="contacts_info_main_form_form_group_input">
+              <input formControlName="Name"  type="text" id="Name" placeholder="Введите имя" class="contacts_info_main_form_form_group_input" [class.error]="error['Name']" required>
+
             </div>
+            <div *ngIf="Name.errors && (Name.dirty || Name.touched)&& Name.errors.required" class="error_text">Заполните поле!</div>
+
+            <div *ngIf="error['Name']" class="error_text">{{error_text['Name']}}</div>
             <div class="contacts_info_main_form_form_group">
               <label for="email" class="contacts_info_main_form_form_group_label">Email</label>
-              <input type="text" id="email" placeholder="Введите email" class="contacts_info_main_form_form_group_input">
+              <input formControlName="Email" type="text" id="email" placeholder="Введите email" class="contacts_info_main_form_form_group_input" [class.error]="error['Email']" required>
             </div>
+            <div *ngIf="Email.errors && (Email.dirty || Email.touched)&& Email.errors.required" class="error_text">Заполните поле!</div>
+            <div *ngIf="error['Email']" class="error_text">{{error_text['Email']}}</div>
             <div class="contacts_info_main_form_form_group">
-              <label for="direction" class="contacts_info_main_form_form_group_label">Направление</label>
-              <select id='direction' class="contacts_info_main_form_form_group_select">
-                <option>Отзыв</option>
-                <option>Тест</option>
-                <option>Тест2</option>
+              <label for="direction" class="contacts_info_main_form_form_group_label">Тема</label>
+              <select formControlName="TypeId" id='direction' class="contacts_info_main_form_form_group_select">
+                <option *ngFor="let item of types" [id]="item.Id" [ngValue]="item.Id">{{item.Name}}</option>
               </select>
               <div class="contacts_info_main_form_form_group_arrow">&rsaquo;</div>
             </div>
             <div class="contacts_info_main_form_form_group">
               <label for="message" class="contacts_info_main_form_form_group_label">Сообщение</label>
-              <textarea id="message" class="contacts_info_main_form_form_group_textarea"></textarea>
+              <textarea formControlName="Message" id="message" class="contacts_info_main_form_form_group_textarea" [class.error]="error['Massage']" required></textarea>
             </div>
+            <div *ngIf="Message.errors && (Message.dirty || Message.touched)&& Message.errors.required" class="error_text">Заполните поле!</div>
+            <div *ngIf="error['Message']" class="error_text">{{error_text['Message']}}</div>
             <div class="contacts_info_main_form_form_group">
-              <button type="submit" id="submit" class="contacts_info_main_form_form_group_submit">Отправить сообщение</button>
+              <button type="submit" id="submit" class="contacts_info_main_form_form_group_submit" (click)="sendContacts()">Отправить сообщение</button>
             </div>
           </form>
+          <div *ngIf="open_state" class="contacts_info_main_form_state">
+            <div class="contacts_info_main_form_state_icon"></div>
+            <div class="contacts_info_main_form_state_text">Спасибо, ваше сообщение
+              отправлено</div>
+          </div>
         </div>
       </div>
     </div>
@@ -72,41 +101,46 @@
         <div class="main_map_buttons_button" [class.active]="map_button['metro']&&!map_button['scheme']&&!map_button['radius']&&!map_button['maps']" (click)="setMetro('metro')"><div class="main_map_buttons_button_text">От метро</div></div>
         <div class="main_map_buttons_button" [class.active]="map_button['scheme']&&!map_button['radius']&&!map_button['metro']&&!map_button['maps']" (click)="setScheme('scheme')"><div class="main_map_buttons_button_text">Схема зала</div></div>
       </div>
-    </div>
-    <div class="contacts_all">
-      <div class="contacts_all_block">
-        <div class="footer_main_contacts_header">Партнерство</div>
-        <div class="footer_main_contacts_blocks">
-          <div class="footer_main_contacts_blocks_items">
-            <div class="footer_main_contacts_blocks_items_item">Тел.: Тел.: +7 (123) 456-78-90</div>
-            <div class="footer_main_contacts_blocks_items_item">Пн – Пт с 10.00 до 18.00</div>
-            <div class="footer_main_contacts_blocks_items_item">Кроме выходных и официальных праздников.</div>
-            <div class="footer_main_contacts_blocks_items_item">E-mail: partner@nikolskaya.org</div>
-          </div>
-        </div>
-      </div>
-      <div class="contacts_all_block">
-        <div class="footer_main_contacts_header">Для прессы</div>
-        <div class="footer_main_contacts_blocks">
-          <div class="footer_main_contacts_blocks_items">
-            <div class="footer_main_contacts_blocks_items_item">Тел.: Тел.: +7 (123) 456-78-90</div>
-            <div class="footer_main_contacts_blocks_items_item">Пн – Пт с 10.00 до 18.00</div>
-            <div class="footer_main_contacts_blocks_items_item">Кроме выходных и официальных праздников.</div>
-            <div class="footer_main_contacts_blocks_items_item">E-mail: press@nikolskaya.org</div>
-          </div>
-        </div>
-      </div>
-      <div class="contacts_all_block">
-        <div class="footer_main_contacts_header">Карьера</div>
-        <div class="footer_main_contacts_blocks">
-          <div class="footer_main_contacts_blocks_items">
-            <div class="footer_main_contacts_blocks_items_item">Тел.: Тел.: +7 (123) 456-78-90</div>
-            <div class="footer_main_contacts_blocks_items_item">Пн – Пт с 10.00 до 18.00</div>
-            <div class="footer_main_contacts_blocks_items_item">Кроме выходных и официальных праздников.</div>
-            <div class="footer_main_contacts_blocks_items_item">E-mail: career@nikolskaya.org</div>
-          </div>
-        </div>
+      <div *ngIf="open_metro" class="main_map_buttons_metro">
+        <div class="main_map_buttons_metro_button" [class.active]="metro_button['lubyanka']&&!map_button['ploshad']&&!map_button['kitai']" (click)="setLubyanka('lubyanka')"><div class="main_map_buttons_button_text">Лубянка</div></div>
+        <div class="main_map_buttons_metro_button" [class.active]="metro_button['ploshad']&&!map_button['lubyanka']&&!map_button['kitai']" (click)="setPloshad('ploshad')"><div class="main_map_buttons_button_text">Площадь Революции</div></div>
+        <div class="main_map_buttons_metro_button" [class.active]="metro_button['kitai']&&!map_button['lubyanka']&&!map_button['ploshad']" (click)="setKitai('kitai')"><div class="main_map_buttons_button_text">Китай-Город</div></div>
       </div>
     </div>
+    <!--<div class="contacts_all">-->
+      <!--<div class="contacts_all_block">-->
+        <!--<div class="footer_main_contacts_header">Партнерство</div>-->
+        <!--<div class="footer_main_contacts_blocks">-->
+          <!--<div class="footer_main_contacts_blocks_items">-->
+            <!--<div class="footer_main_contacts_blocks_items_item">Тел.: Тел.: +7 (123) 456-78-90</div>-->
+            <!--<div class="footer_main_contacts_blocks_items_item">Пн – Пт с 10.00 до 18.00</div>-->
+            <!--<div class="footer_main_contacts_blocks_items_item">Кроме выходных и официальных праздников.</div>-->
+            <!--<div class="footer_main_contacts_blocks_items_item">E-mail: partner@nikolskaya.org</div>-->
+          <!--</div>-->
+        <!--</div>-->
+      <!--</div>-->
+      <!--<div class="contacts_all_block">-->
+        <!--<div class="footer_main_contacts_header">Для прессы</div>-->
+        <!--<div class="footer_main_contacts_blocks">-->
+          <!--<div class="footer_main_contacts_blocks_items">-->
+            <!--<div class="footer_main_contacts_blocks_items_item">Тел.: Тел.: +7 (123) 456-78-90</div>-->
+            <!--<div class="footer_main_contacts_blocks_items_item">Пн – Пт с 10.00 до 18.00</div>-->
+            <!--<div class="footer_main_contacts_blocks_items_item">Кроме выходных и официальных праздников.</div>-->
+            <!--<div class="footer_main_contacts_blocks_items_item">E-mail: press@nikolskaya.org</div>-->
+          <!--</div>-->
+        <!--</div>-->
+      <!--</div>-->
+      <!--<div class="contacts_all_block">-->
+        <!--<div class="footer_main_contacts_header">Карьера</div>-->
+        <!--<div class="footer_main_contacts_blocks">-->
+          <!--<div class="footer_main_contacts_blocks_items">-->
+            <!--<div class="footer_main_contacts_blocks_items_item">Тел.: Тел.: +7 (123) 456-78-90</div>-->
+            <!--<div class="footer_main_contacts_blocks_items_item">Пн – Пт с 10.00 до 18.00</div>-->
+            <!--<div class="footer_main_contacts_blocks_items_item">Кроме выходных и официальных праздников.</div>-->
+            <!--<div class="footer_main_contacts_blocks_items_item">E-mail: career@nikolskaya.org</div>-->
+          <!--</div>-->
+        <!--</div>-->
+      <!--</div>-->
+    <!--</div>-->
   </div>
 </div>

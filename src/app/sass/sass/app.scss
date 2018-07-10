@@ -9,6 +9,7 @@
 @import "events-list";
 @import "restaurants-result";
 
+
 body {
   @media screen and (max-width: 768px) {
     overflow-x: hidden;
@@ -17,4 +18,5 @@ body {
     padding-top: 60px;
   }
 }
+
 

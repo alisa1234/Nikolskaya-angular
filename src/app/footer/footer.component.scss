@@ -11,6 +11,7 @@
     padding: 35px 40px;
     margin: 0 auto;
     max-width: 1200px;
+    display: none;
     @media screen and (max-width: 1024px) {
       width: 100%;
       flex-direction: column;
@@ -160,12 +161,15 @@
                 display: block;
               }
             }
+            &:hover {
+              opacity: .5;
+            }
           }
         }
         &_items {
           display: flex;
           flex-direction: row;
-          justify-content: space-between;
+          //justify-content: space-between;
           padding: 20px 12px 0 0;
           a {
             color: inherit;
@@ -177,6 +181,10 @@
             line-height: 13px;
             font-family: $font_ubuntu;
             cursor: pointer;
+            margin-right: 20px;
+            &:hover {
+              opacity: .5;
+            }
           }
         }
       }
@@ -261,19 +269,19 @@
           margin: 0;
         }
         &_visa {
-          @include sp__Visa;
+          @include sp__Visa_svg;
           margin-right: 19px;
         }
         &_american-express {
-          @include sp__AMEX;
+          @include sp__AMEX_svg;
           margin-right: 21px;
         }
         &_master-card {
-          @include sp__MasterCard;
+          @include sp__MasterCard_svg;
           margin-right: 24px;
         }
         &_paypal {
-          @include sp__PayPal;
+          @include sp__PayPal_svg;
         }
       }
       &_made-by {
@@ -294,6 +302,72 @@
           cursor: pointer;
         }
       }
+      &_phone {
+        display: none;
+        width: 100%;
+        position: absolute;
+        background-color: #332C26;
+        color: #FFFFFF;
+        font-family: $font_ubuntu;
+        font-size: 18px;
+        font-weight: bold;
+        line-height: 21px;
+        bottom: 0;
+        text-align: center;
+        padding: 15px 0;
+        z-index: 2;
+
+        a {
+          text-decoration: none;
+          color: inherit;
+        }
+        @media screen and (max-width: 1023px) {
+          display: block;
+        }
+      }
     }
+  }
+}
+.busket_footer_wrapper {
+  width: 100%;
+  padding: 0 0 32px;
+  .busket_footer {
+    display: none;
+    width: 100%;
+    position: absolute;
+    background-color: #332C26;
+    color: #FFFFFF;
+    font-family: $font_ubuntu;
+    font-size: 16px;
+    line-height: 20px;
+    bottom: 0;
+    padding: 15px 0;
+    z-index: 2;
+    left: 0;
+    @media screen and (max-width: 1024px) {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    &_total {
+      &_go {
+        margin-right: 15px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        cursor: pointer;
+
+        span {
+          @include sp__arrow-left_bucket;
+          transform: rotate(180deg);
+          margin-left: 10px;
+        }
+      }
+
+    }
+    &_count {
+      margin-left: 15px;
+    }
+
   }
 }

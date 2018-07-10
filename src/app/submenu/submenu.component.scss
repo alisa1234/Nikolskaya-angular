@@ -10,6 +10,7 @@
       justify-content: space-between;
       align-items: center;
       padding: 0 40px;
+      border-top: 1px solid rgba(0,0,0,0.1);
       &_tabs {
         display: flex;
         flex-direction: row;
@@ -66,10 +67,41 @@
           .active_triangle {
             margin-top: 5px;
           }
+
         }
+
         .active {
           color: #A67B2C;
           border-bottom: 3px solid #DAC69C;
+        }
+      }
+      &_phone {
+        width: 245px;
+        background-color: #EDEAE0;
+        -webkit-transform: skew(-30deg);
+        -moz-transform: skew(-30deg);
+        -o-transform: skew(-30deg);
+        transform: skew(-30deg);
+        padding: 35px 0;
+        //margin-right: 20px;
+        text-align: center;
+        margin-right: 23px;
+        box-sizing: border-box;
+        @media screen and (max-width: 768px) {
+          display: none;
+        }
+      }
+      &_phone-text {
+        color: #231F20;
+        font-family: $font_ubuntu;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 21px;
+        position: absolute;
+        right: 75px;
+
+        @media screen and (max-width: 768px) {
+          display: none;
         }
       }
     }

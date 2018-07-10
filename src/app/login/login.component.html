@@ -1,8 +1,8 @@
 <div class="form_wrapper">
   <div class="order-container_wrapper_form_group_item">
     <div class="order-container_wrapper_form_switch">
-      <div class="order-container_wrapper_form_switch_item" [class.active]="sign_in" (click)="sign_in = true;login = false ">Регистрация</div>
-      <div class="order-container_wrapper_form_switch_item" [class.active]="login" (click)="login = true; sign_in = false;">Вход</div>
+      <div class="order-container_wrapper_form_switch_item" [class.active]="sign_in||sign_in_step2" (click)="sign_in = true;login = false ">Регистрация</div>
+      <div class="order-container_wrapper_form_switch_item" [class.active]="login|| login_step2" (click)="login = true; sign_in = false;">Вход</div>
     </div>
   </div>
   <div *ngIf="sign_in">
@@ -13,26 +13,58 @@
           <input  formControlName="FirstName"   type="text" placeholder="Введите Ваше имя"/>
         </div>
       </div>
-      <div class="order-container_wrapper_form_group_item">
-        <div class="order-container_wrapper_form_group_item_label">Фамилия</div>
-        <div class="order-container_wrapper_form_group_item_input">
-          <input  formControlName="LastName"  type="text" placeholder="Введите Вашу фамилию"/>
-        </div>
-      </div>
+      <!--<div class="order-container_wrapper_form_group_item">-->
+        <!--<div class="order-container_wrapper_form_group_item_label">Фамилия</div>-->
+        <!--<div class="order-container_wrapper_form_group_item_input">-->
+          <!--<input  formControlName="LastName"  type="text" placeholder="Введите Вашу фамилию"/>-->
+        <!--</div>-->
+      <!--</div>-->
       <div class="order-container_wrapper_form_group_item">
         <div class="order-container_wrapper_form_group_item_label">Номер телефона</div>
         <div class="order-container_wrapper_form_group_item_input">
           <input  formControlName="PhoneNumber" type="number" placeholder="+709567893"/>
         </div>
       </div >
+      <!--<div class="order-container_wrapper_form_group_item">-->
+        <!--<div class="order-container_wrapper_form_group_item_label">Email</div>-->
+        <!--<div class="order-container_wrapper_form_group_item_input">-->
+          <!--<input  formControlName="Email" type="text" placeholder="sdsfds@dwfewf.com"/>-->
+        <!--</div>-->
+      <!--</div>-->
+      <div class="form_wrapper_btn_group">
+        <button class="form_wrapper_btn_group_main_btn" (click)="SignIn()">Получить код в SMS</button>
+      </div>
+    </form>
+  </div>
+  <div *ngIf="sign_in_step2">
+    <form [formGroup]="form_sign_in_step2" novalidate>
+      <!--<div class="order-container_wrapper_form_group_item">-->
+        <!--<div class="order-container_wrapper_form_group_item_label">Имя</div>-->
+        <!--<div class="order-container_wrapper_form_group_item_input">-->
+          <!--<input  formControlName="FirstName"   type="text" placeholder="Введите Ваше имя"/>-->
+        <!--</div>-->
+      <!--</div>-->
+      <!--<div class="order-container_wrapper_form_group_item">-->
+      <!--<div class="order-container_wrapper_form_group_item_label">Фамилия</div>-->
+      <!--<div class="order-container_wrapper_form_group_item_input">-->
+      <!--<input  formControlName="LastName"  type="text" placeholder="Введите Вашу фамилию"/>-->
+      <!--</div>-->
+      <!--</div>-->
       <div class="order-container_wrapper_form_group_item">
-        <div class="order-container_wrapper_form_group_item_label">Email</div>
+        <div class="order-container_wrapper_form_group_item_label">Код из SMS</div>
         <div class="order-container_wrapper_form_group_item_input">
-          <input  formControlName="Email" type="text" placeholder="sdsfds@dwfewf.com"/>
+          <input  formControlName="Password" type="number" placeholder=""/>
+        </div>
+      </div >
+      <span class="form_wrapper_subtext">SMS придет в течение 40 сек</span>
+      <div class="order-container_wrapper_form_group_item">
+        <div class="order-container_wrapper_form_group_item_label">Ваш Email</div>
+        <div class="order-container_wrapper_form_group_item_input">
+        <input  formControlName="Email" type="text" placeholder="email@email.com"/>
         </div>
       </div>
       <div class="form_wrapper_btn_group">
-        <button class="form_wrapper_btn_group_main_btn" (click)="SignIn()">Зарегистрироваться</button>
+        <button class="form_wrapper_btn_group_main_btn" (click)="SignIn_step2()">Зарегистрироваться</button>
       </div>
     </form>
   </div>
@@ -44,18 +76,45 @@
         <input formControlName="PhoneNumber"  type="number" placeholder="+709567893">
       </div>
     </div>
-    <div class="order-container_wrapper_form_group_item">
-      <div class="order-container_wrapper_form_group_item_label">Пароль</div>
-      <div class="order-container_wrapper_form_group_item_input">
-        <input formControlName="Password" type="password" placeholder="12345678">
-      </div>
-    </div>
+    <!--<div class="order-container_wrapper_form_group_item">-->
+      <!--<div class="order-container_wrapper_form_group_item_label">Пароль</div>-->
+      <!--<div class="order-container_wrapper_form_group_item_input">-->
+        <!--<input formControlName="Password" type="password" placeholder="12345678">-->
+      <!--</div>-->
+    <!--</div>-->
     <div class="form_wrapper_btn_group">
-      <button class="form_wrapper_btn_group_main_btn" (click)="LogIn()"> Войти</button>
-      <button class="form_wrapper_btn_group_sub_btn" (click)="remind_pass=false;">Забыли пароль?</button>
+      <button class="form_wrapper_btn_group_main_btn" (click)="LogIn()"> Получить код в SMS</button>
+      <!--<button class="form_wrapper_btn_group_sub_btn" (click)="remind_pass=false;">Забыли пароль?</button>-->
     </div>
     </form>
   </div>
-  <div class="form_wrapper_close" (click)="CloseForm()"></div>
+  <div *ngIf="login_step2">
+    <form [formGroup]="form_log_in_step2" novalidate>
+      <div class="order-container_wrapper_form_group_item">
+        <div class="order-container_wrapper_form_group_item_label">Код из SMS</div>
+        <div class="order-container_wrapper_form_group_item_input">
+          <input formControlName="Password"  type="number" placeholder="">
+        </div>
+
+      </div>
+        <!--<button class="form_wrapper_btn_group_main_btn" (click)="LogIn()"> Войти</button>-->
+        <span class="form_wrapper_subtext">SMS придет в течение 40 сек</span>
+      <!--<div class="order-container_wrapper_form_group_item">-->
+      <!--<div class="order-container_wrapper_form_group_item_label">Пароль</div>-->
+      <!--<div class="order-container_wrapper_form_group_item_input">-->
+      <!--<input formControlName="Password" type="password" placeholder="12345678">-->
+      <!--</div>-->
+      <!--</div>-->
+      <div class="form_wrapper_btn_group">
+        <button class="form_wrapper_btn_group_main_btn" (click)="LogIn_step2()"> Войти</button>
+        <!--<button class="form_wrapper_btn_group_sub_btn" (click)="remind_pass=false;">Забыли пароль?</button>-->
+      </div>
+    </form>
+  </div>
+  <div class="form_wrapper_close_wrapper">
+    <div class="form_wrapper_close_wrapper_close" (click)="CloseForm()"></div>
+  </div>
+
 </div>
+<div class="overlay"></div>
 <app-password [ngStyle]="{display: remind_pass===true?'none':''}" [(hidden)]="remind_pass" [_parent]="this"></app-password>
